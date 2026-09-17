@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 700" width="720" height="700" role="img" aria-labelledby="t">
+  <title id="t">Instalasi modul videotron indoor dengan pengukuran presisi</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#eef4ff"/>
+    </linearGradient>
+    <linearGradient id="scr" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1560f0"/>
+      <stop offset="0.6" stop-color="#0b45c4"/>
+      <stop offset="1" stop-color="#071a52"/>
+    </linearGradient>
+    <linearGradient id="flr" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f2f6fd"/>
+      <stop offset="1" stop-color="#dde6f4"/>
+    </linearGradient>
+    <pattern id="px" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="1.25" fill="#ffffff" opacity="0.2"/>
+    </pattern>
+  </defs>
+
+  <rect width="720" height="700" fill="url(#bg)"/>
+  <rect y="500" width="720" height="200" fill="url(#flr)"/>
+  <rect y="499" width="720" height="2" fill="#dde6f4"/>
+
+  <!-- mounted wall -->
+  <rect x="52" y="96" width="420" height="300" rx="12" fill="#0a1633" opacity="0.1"/>
+  <rect x="56" y="100" width="412" height="292" rx="10" fill="url(#scr)"/>
+  <rect x="56" y="100" width="412" height="292" rx="10" fill="url(#px)"/>
+
+  <g stroke="#0a1633" stroke-opacity="0.16" stroke-width="2">
+    <path d="M194 100v292M332 100v292"/>
+    <path d="M56 246h412"/>
+  </g>
+
+  <g opacity="0.9">
+    <rect x="88" y="140" width="200" height="14" rx="7" fill="#ffffff" opacity="0.7"/>
+    <rect x="88" y="166" width="132" height="12" rx="6" fill="#ffffff" opacity="0.4"/>
+  </g>
+  <g>
+    <rect x="88" y="232" width="26" height="96" rx="6" fill="#ffffff" opacity="0.72"/>
+    <rect x="124" y="206" width="26" height="122" rx="6" fill="#ffffff" opacity="0.5"/>
+    <rect x="160" y="252" width="26" height="76" rx="6" fill="#ffffff" opacity="0.36"/>
+    <rect x="196" y="218" width="26" height="110" rx="6" fill="#ffffff" opacity="0.62"/>
+    <rect x="232" y="244" width="26" height="84" rx="6" fill="#ffffff" opacity="0.44"/>
+  </g>
+  <circle cx="392" cy="176" r="36" fill="#ffffff" opacity="0.16"/>
+  <circle cx="392" cy="176" r="20" fill="#ffffff" opacity="0.85"/>
+
+  <!-- floating modules -->
+  <g opacity="0.96">
+    <rect x="506" y="120" width="120" height="120" rx="10" fill="url(#scr)"/>
+    <rect x="506" y="120" width="120" height="120" rx="10" fill="url(#px)"/>
+    <rect x="506" y="264" width="120" height="120" rx="10" fill="url(#scr)" opacity="0.9"/>
+    <rect x="506" y="264" width="120" height="120" rx="10" fill="url(#px)"/>
+  </g>
+
+  <!-- dimension lines -->
+  <g stroke="#1157ee" stroke-width="2" stroke-dasharray="6 6">
+    <path d="M52 62h420"/>
+    <path d="M52 52v20M472 52v20"/>
+    <path d="M56 430v58"/>
+    <path d="M46 430h20M46 488h20"/>
+  </g>
+  <g>
+    <rect x="206" y="34" width="112" height="38" rx="12" fill="#ffffff" stroke="#e4e9f2"/>
+    <rect x="222" y="47" width="80" height="11" rx="5" fill="#1157ee" opacity="0.85"/>
+  </g>
+  <g>
+    <rect x="86" y="440" width="104" height="38" rx="12" fill="#ffffff" stroke="#e4e9f2"/>
+    <rect x="102" y="453" width="72" height="11" rx="5" fill="#1157ee" opacity="0.85"/>
+  </g>
+
+  <!-- technician -->
+  <g fill="#0a1633" opacity="0.9">
+    <circle cx="352" cy="452" r="18"/>
+    <path d="M326 560c0-28 12-46 26-46s26 18 26 46z"/>
+  </g>
+  <path d="M378 486l54-38" stroke="#0a1633" stroke-opacity="0.9" stroke-width="8" stroke-linecap="round"/>
+  <path d="M330 500l-36 12" stroke="#0a1633" stroke-opacity="0.9" stroke-width="8" stroke-linecap="round"/>
+
+  <!-- cabinet / rack -->
+  <g>
+    <rect x="486" y="452" width="166" height="116" rx="12" fill="#ffffff" stroke="#e2e9f5"/>
+    <rect x="506" y="474" width="60" height="8" rx="4" fill="#1157ee" opacity="0.85"/>
+    <rect x="506" y="494" width="126" height="7" rx="4" fill="#cfdaea"/>
+    <rect x="506" y="512" width="104" height="7" rx="4" fill="#dde5f1"/>
+    <rect x="506" y="530" width="118" height="7" rx="4" fill="#e6ecf6"/>
+    <circle cx="628" cy="478" r="5" fill="#48d18a"/>
+    <circle cx="628" cy="498" r="5" fill="#9dc0ff"/>
+  </g>
+</svg>
