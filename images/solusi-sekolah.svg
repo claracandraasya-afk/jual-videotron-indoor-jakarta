@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 550" width="800" height="550" role="img" aria-labelledby="t">
+  <title id="t">Videotron indoor untuk sekolah dan kampus</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#eef4ff"/>
+    </linearGradient>
+    <linearGradient id="scr" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1560f0"/>
+      <stop offset="0.6" stop-color="#0b45c4"/>
+      <stop offset="1" stop-color="#071a52"/>
+    </linearGradient>
+    <linearGradient id="flr" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f2f6fd"/>
+      <stop offset="1" stop-color="#dde6f4"/>
+    </linearGradient>
+    <pattern id="px" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="1.25" fill="#ffffff" opacity="0.2"/>
+    </pattern>
+  </defs>
+
+  <rect width="800" height="550" fill="url(#bg)"/>
+  <rect y="380" width="800" height="170" fill="url(#flr)"/>
+  <rect y="379" width="800" height="2" fill="#dde6f4"/>
+
+  <!-- windows -->
+  <g>
+    <rect x="620" y="54" width="150" height="240" rx="10" fill="#eaf1fd"/>
+    <path d="M695 54v240M620 174h150" stroke="#dbe4f2" stroke-width="2"/>
+  </g>
+
+  <!-- LED presentation screen -->
+  <rect x="64" y="82" width="500" height="272" rx="14" fill="#0a1633" opacity="0.1"/>
+  <rect x="68" y="86" width="492" height="264" rx="12" fill="url(#scr)"/>
+  <rect x="68" y="86" width="492" height="264" rx="12" fill="url(#px)"/>
+
+  <g opacity="0.9">
+    <rect x="104" y="122" width="222" height="16" rx="8" fill="#ffffff" opacity="0.75"/>
+    <rect x="104" y="154" width="150" height="12" rx="6" fill="#ffffff" opacity="0.4"/>
+  </g>
+  <rect x="104" y="196" width="196" height="118" rx="10" fill="#ffffff" opacity="0.14"/>
+  <path d="M124 292 L176 250 L228 268 L280 226" fill="none" stroke="#ffffff" stroke-opacity="0.85" stroke-width="4" stroke-linecap="round"/>
+  <g>
+    <rect x="348" y="196" width="176" height="12" rx="6" fill="#ffffff" opacity="0.7"/>
+    <rect x="348" y="222" width="140" height="12" rx="6" fill="#ffffff" opacity="0.48"/>
+    <rect x="348" y="248" width="164" height="12" rx="6" fill="#ffffff" opacity="0.32"/>
+    <rect x="348" y="274" width="112" height="12" rx="6" fill="#ffffff" opacity="0.24"/>
+    <rect x="348" y="306" width="92" height="28" rx="14" fill="#ffffff" opacity="0.85"/>
+  </g>
+
+  <!-- teacher -->
+  <g fill="#0a1633" opacity="0.9">
+    <circle cx="612" cy="316" r="16"/>
+    <path d="M590 380c0-24 10-40 22-40s22 16 22 40z"/>
+  </g>
+  <path d="M634 344l42-24" stroke="#0a1633" stroke-opacity="0.9" stroke-width="7" stroke-linecap="round"/>
+
+  <!-- desks -->
+  <g>
+    <rect x="86" y="404" width="168" height="14" rx="7" fill="#cdd8e9"/>
+    <rect x="86" y="418" width="10" height="46" rx="5" fill="#e0e7f3"/>
+    <rect x="244" y="418" width="10" height="46" rx="5" fill="#e0e7f3"/>
+  </g>
+  <g>
+    <rect x="316" y="404" width="168" height="14" rx="7" fill="#cdd8e9"/>
+    <rect x="316" y="418" width="10" height="46" rx="5" fill="#e0e7f3"/>
+    <rect x="474" y="418" width="10" height="46" rx="5" fill="#e0e7f3"/>
+  </g>
+  <g>
+    <rect x="546" y="404" width="168" height="14" rx="7" fill="#cdd8e9"/>
+    <rect x="546" y="418" width="10" height="46" rx="5" fill="#e0e7f3"/>
+    <rect x="704" y="418" width="10" height="46" rx="5" fill="#e0e7f3"/>
+  </g>
+
+  <!-- students -->
+  <g fill="#33415c" opacity="0.7">
+    <circle cx="170" cy="452" r="14"/>
+    <path d="M150 520c0-22 9-34 20-34s20 12 20 34z"/>
+  </g>
+  <g fill="#0a1633" opacity="0.82">
+    <circle cx="252" cy="458" r="14"/>
+    <path d="M232 520c0-22 9-34 20-34s20 12 20 34z"/>
+  </g>
+  <g fill="#33415c" opacity="0.6">
+    <circle cx="400" cy="455" r="13"/>
+    <path d="M382 520c0-21 8-32 18-32s18 11 18 32z"/>
+  </g>
+</svg>

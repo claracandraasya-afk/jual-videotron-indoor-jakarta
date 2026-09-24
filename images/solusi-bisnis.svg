@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 550" width="800" height="550" role="img" aria-labelledby="t">
+  <title id="t">Videotron indoor untuk bisnis dan perkantoran</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#eef4ff"/>
+    </linearGradient>
+    <linearGradient id="scr" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1560f0"/>
+      <stop offset="0.6" stop-color="#0b45c4"/>
+      <stop offset="1" stop-color="#071a52"/>
+    </linearGradient>
+    <linearGradient id="flr" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f2f6fd"/>
+      <stop offset="1" stop-color="#dde6f4"/>
+    </linearGradient>
+    <pattern id="px" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="1.25" fill="#ffffff" opacity="0.2"/>
+    </pattern>
+  </defs>
+
+  <rect width="800" height="550" fill="url(#bg)"/>
+  <rect y="366" width="800" height="184" fill="url(#flr)"/>
+  <rect y="365" width="800" height="2" fill="#dde6f4"/>
+
+  <!-- glass partitions -->
+  <g stroke="#dbe4f2" stroke-width="2">
+    <path d="M520 70v296M614 70v296M708 70v296"/>
+    <path d="M520 150h188"/>
+  </g>
+
+  <!-- LED wall -->
+  <rect x="72" y="96" width="404" height="238" rx="12" fill="#0a1633" opacity="0.1"/>
+  <rect x="76" y="100" width="396" height="230" rx="10" fill="url(#scr)"/>
+  <rect x="76" y="100" width="396" height="230" rx="10" fill="url(#px)"/>
+
+  <circle cx="176" cy="176" r="40" fill="#ffffff" opacity="0.16"/>
+  <rect x="152" y="164" width="48" height="26" rx="6" fill="#ffffff" opacity="0.9"/>
+  <g opacity="0.85">
+    <rect x="240" y="146" width="196" height="13" rx="6" fill="#ffffff" opacity="0.7"/>
+    <rect x="240" y="172" width="140" height="13" rx="6" fill="#ffffff" opacity="0.42"/>
+    <rect x="240" y="198" width="164" height="13" rx="6" fill="#ffffff" opacity="0.26"/>
+  </g>
+  <g>
+    <rect x="106" y="246" width="30" height="62" rx="7" fill="#ffffff" opacity="0.7"/>
+    <rect x="146" y="222" width="30" height="86" rx="7" fill="#ffffff" opacity="0.5"/>
+    <rect x="186" y="262" width="30" height="46" rx="7" fill="#ffffff" opacity="0.36"/>
+    <rect x="226" y="234" width="30" height="74" rx="7" fill="#ffffff" opacity="0.6"/>
+  </g>
+  <path d="M300 300 L364 262 L428 278" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- reception desk -->
+  <rect x="504" y="318" width="266" height="74" rx="12" fill="#ffffff" stroke="#e2e9f5"/>
+  <rect x="504" y="318" width="266" height="14" rx="7" fill="#e7eefa"/>
+  <rect x="540" y="344" width="14" height="14" rx="3" fill="#1157ee" opacity="0.85"/>
+  <rect x="564" y="346" width="96" height="9" rx="4" fill="#cdd8e9"/>
+  <rect x="540" y="366" width="140" height="7" rx="3" fill="#e0e7f3"/>
+
+  <!-- plant -->
+  <g>
+    <rect x="64" y="352" width="46" height="44" rx="8" fill="#e7eefa"/>
+    <circle cx="87" cy="326" r="22" fill="#9dc0ff" opacity="0.85"/>
+    <circle cx="66" cy="342" r="15" fill="#c8dcff"/>
+    <circle cx="108" cy="342" r="15" fill="#c8dcff"/>
+  </g>
+
+  <!-- people -->
+  <g fill="#0a1633" opacity="0.9">
+    <circle cx="470" cy="346" r="15"/>
+    <path d="M450 424c0-24 9-38 20-38s20 14 20 38z"/>
+  </g>
+  <g fill="#33415c" opacity="0.72">
+    <circle cx="652" cy="356" r="13"/>
+    <path d="M634 424c0-21 8-33 18-33s18 12 18 33z"/>
+  </g>
+</svg>

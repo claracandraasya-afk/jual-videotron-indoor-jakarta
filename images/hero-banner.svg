@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 900" width="1920" height="900" role="img" aria-labelledby="heroBannerTitle heroBannerDesc">
+  <title id="heroBannerTitle">Videotron indoor di lobi kantor modern</title>
+  <desc id="heroBannerDesc">Ilustrasi banner videotron indoor LED berukuran besar yang terpasang di lobi kantor dengan konten digital biru.</desc>
+  <defs>
+    <linearGradient id="hbWall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#f4f8ff"/>
+    </linearGradient>
+    <linearGradient id="hbScreen" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1560f0"/>
+      <stop offset="0.55" stop-color="#0b45c4"/>
+      <stop offset="1" stop-color="#071a52"/>
+    </linearGradient>
+    <linearGradient id="hbFloor" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f0f4fc"/>
+      <stop offset="1" stop-color="#dfe7f4"/>
+    </linearGradient>
+    <linearGradient id="hbBar" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#9dc0ff" stop-opacity="0.25"/>
+    </linearGradient>
+    <radialGradient id="hbGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#7fb0ff" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#7fb0ff" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="hbPixels" width="8" height="8" patternUnits="userSpaceOnUse">
+      <circle cx="4" cy="4" r="1.8" fill="#ffffff" opacity="0.16"/>
+    </pattern>
+    <pattern id="hbGrid" width="56" height="56" patternUnits="userSpaceOnUse">
+      <path d="M56 0H0v56" fill="none" stroke="#e9eefb" stroke-width="1"/>
+    </pattern>
+    <filter id="hbBlur" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="30"/>
+    </filter>
+  </defs>
+
+  <!-- wall & floor -->
+  <rect width="1920" height="900" fill="url(#hbWall)"/>
+  <rect width="1920" height="650" fill="url(#hbGrid)" opacity="0.8"/>
+  <rect y="650" width="1920" height="250" fill="url(#hbFloor)"/>
+  <rect y="649" width="1920" height="2" fill="#dfe7f4"/>
+  <ellipse cx="1200" cy="650" rx="700" ry="70" fill="#ffffff" opacity="0.6"/>
+
+  <!-- glow behind the video wall -->
+  <ellipse cx="1250" cy="330" rx="520" ry="280" fill="url(#hbGlow)" filter="url(#hbBlur)"/>
+
+  <!-- video wall frame -->
+  <rect x="866" y="112" width="936" height="470" rx="22" fill="#0a1633" opacity="0.08"/>
+  <rect x="874" y="120" width="920" height="454" rx="18" fill="url(#hbScreen)"/>
+  <rect x="874" y="120" width="920" height="454" rx="18" fill="url(#hbPixels)"/>
+
+  <!-- content: halo + headline bars + charts -->
+  <circle cx="1080" cy="270" r="104" fill="#ffffff" opacity="0.1"/>
+  <circle cx="1080" cy="270" r="62" fill="#ffffff" opacity="0.14"/>
+  <circle cx="1080" cy="270" r="28" fill="#ffffff" opacity="0.9"/>
+
+  <g opacity="0.95">
+    <rect x="1240" y="216" width="420" height="18" rx="9" fill="#ffffff" opacity="0.55"/>
+    <rect x="1240" y="256" width="320" height="18" rx="9" fill="#ffffff" opacity="0.35"/>
+    <rect x="1240" y="296" width="372" height="18" rx="9" fill="#ffffff" opacity="0.22"/>
+  </g>
+
+  <g>
+    <rect x="1240" y="408" width="44" height="112" rx="10" fill="url(#hbBar)"/>
+    <rect x="1300" y="366" width="44" height="154" rx="10" fill="url(#hbBar)"/>
+    <rect x="1360" y="432" width="44" height="88" rx="10" fill="url(#hbBar)"/>
+    <rect x="1420" y="330" width="44" height="190" rx="10" fill="url(#hbBar)"/>
+    <rect x="1480" y="392" width="44" height="128" rx="10" fill="url(#hbBar)"/>
+    <rect x="1540" y="348" width="44" height="172" rx="10" fill="url(#hbBar)"/>
+  </g>
+
+  <path d="M930 520 L1040 452 L1150 486 L1260 404 L1370 442 L1480 372 L1590 402 L1700 330 L1770 352"
+        fill="none" stroke="#ffffff" stroke-opacity="0.75" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- module seams -->
+  <g stroke="#0a1633" stroke-opacity="0.14" stroke-width="2">
+    <path d="M1186 120v454M1498 120v454"/>
+    <path d="M874 347h920"/>
+  </g>
+
+  <!-- slim media bar under the wall -->
+  <rect x="1250" y="586" width="270" height="16" rx="8" fill="#cfd9ea"/>
+  <rect x="1250" y="586" width="270" height="7" rx="4" fill="#a9bdd9"/>
+
+  <!-- floor reflection -->
+  <g opacity="0.2" filter="url(#hbBlur)">
+    <rect x="960" y="632" width="760" height="86" rx="18" fill="#1560f0"/>
+  </g>
+
+  <!-- console table on the left -->
+  <g>
+    <rect x="120" y="640" width="240" height="12" rx="6" fill="#c7d4e8"/>
+    <rect x="138" y="652" width="10" height="64" rx="5" fill="#d7e0ef"/>
+    <rect x="332" y="652" width="10" height="64" rx="5" fill="#d7e0ef"/>
+  </g>
+
+  <!-- soft light accent on the left -->
+  <g opacity="0.55">
+    <circle cx="300" cy="470" r="96" fill="#e5eeff"/>
+    <circle cx="300" cy="470" r="46" fill="#ffffff" opacity="0.85"/>
+  </g>
+
+  <!-- people silhouettes for scale -->
+  <g>
+    <circle cx="1790" cy="646" r="24" fill="#0a1633" opacity="0.9"/>
+    <path d="M1758 800c0-38 15-58 32-58s32 20 32 58z" fill="#0a1633" opacity="0.9"/>
+    <circle cx="1858" cy="668" r="20" fill="#33415c" opacity="0.75"/>
+    <path d="M1830 800c0-32 13-50 28-50s28 18 28 50z" fill="#33415c" opacity="0.75"/>
+  </g>
+
+  <!-- floating specification badge -->
+  <g>
+    <rect x="1560" y="86" width="230" height="68" rx="18" fill="#ffffff" stroke="#e4e9f2"/>
+    <circle cx="1596" cy="120" r="16" fill="#f2f7ff"/>
+    <path d="M1589 120l5 5 10-11" fill="none" stroke="#1157ee" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="1626" y="104" width="130" height="12" rx="6" fill="#0a1633" opacity="0.72"/>
+    <rect x="1626" y="126" width="88" height="9" rx="4.5" fill="#8b95a9" opacity="0.7"/>
+  </g>
+</svg>
