@@ -1,0 +1,36 @@
+<script>
+window.addEventListener('load', function () {
+  setTimeout(function () {
+    function box(sel) {
+      var el = document.querySelector(sel);
+      if (!el) return null;
+      var b = el.getBoundingClientRect();
+      var cs = getComputedStyle(el);
+      return {
+        l: Math.round(b.left), r: Math.round(b.right), w: Math.round(b.width),
+        t: Math.round(b.top), h: Math.round(b.height),
+        cx: Math.round((b.left + b.right) / 2),
+        display: cs.display, justifySelf: cs.justifySelf, gridRow: cs.gridRow, gridColumn: cs.gridColumn
+      };
+    }
+    var hm = box('.header-main');
+    var out = {
+      vw: window.innerWidth,
+      header: box('.site-header'),
+      headerMain: hm,
+      brand: box('.brand'),
+      brandImg: box('.brand-logo'),
+      nav: box('.nav'),
+      navList: box('.nav-list'),
+      cta: box('.nav > .btn'),
+      actions: box('.header-actions'),
+      gridCols: getComputedStyle(document.querySelector('.header-main')).gridTemplateColumns,
+      gridRows: getComputedStyle(document.querySelector('.header-main')).gridTemplateRows
+    };
+    out.menuOffsetFromCenter = out.navList.cx - hm.cx;
+    out.ctaGapFromViewportRight = out.vw - out.cta.r;
+    out.brandGapFromViewportLeft = out.brandImg.l;
+    document.title = 'PROBE:' + JSON.stringify(out) + ':ENDPROBE';
+  }, 600);
+});
+</script>

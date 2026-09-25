@@ -1,0 +1,13 @@
+﻿diff --git a/index.html b/index.html
+index e7befee..45793e4 100644
+--- a/index.html
++++ b/index.html
+@@ -84,7 +84,7 @@
+       <div class="container">
+         <div class="hero-grid">
+           <div class="hero-copy" data-reveal>
+-            <h1>Jual Videotron Indoor Jakarta untuk Kebutuhan <span class="accent">Display Digital Profesional</span></h1>
++            <h1>Jual Videotron Indoor Jakarta untuk Kebutuhan</h1>
+             <p class="hero-lead">
+               Kami menyediakan videotron indoor berkualitas dari Hikvision, Samsung, dan LG untuk lobi kantor,
+               mall, showroom, sekolah, hotel, hingga ruang event di Jakarta dan Jabodetabek. Mulai dari konsultasi

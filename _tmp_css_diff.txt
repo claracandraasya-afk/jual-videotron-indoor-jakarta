@@ -1,0 +1,42 @@
+﻿diff --git a/css/style.css b/css/style.css
+index 427eaec..0fb288b 100644
+--- a/css/style.css
++++ b/css/style.css
+@@ -307,7 +307,6 @@ button { cursor: pointer; }
+ .header-main {
+   display: flex;
+   align-items: center;
+-  justify-content: space-between;
+   gap: 24px;
+   min-height: var(--header-h);
+   padding-block: 10px;
+@@ -325,7 +324,29 @@ button { cursor: pointer; }
+ }
+ .brand:hover .brand-logo { opacity: 0.86; }
+ 
++@media (min-width: 1025px) {
++  /* Header 3 kolom: logo kiri (1fr) ┬╖ menu tepat di tengah (auto) ┬╖ CTA pojok kanan (1fr).
++     .nav memakai display:contents agar <ul> menu dan tombol CTA di dalamnya
++     menjadi item grid langsung, sehingga menu bisa dipusatkan sempurna dan
++     CTA terdorong ke ujung kanan tanpa mengubah HTML apa pun. */
++  .header-main {
++    display: grid;
++    grid-template-columns: 1fr auto 1fr;
++  }
++  .nav { display: contents; }
++  .nav-list { grid-column: 2; justify-self: center; }
++  .nav > .btn { grid-column: 3; justify-self: end; margin-left: auto; }
++  /* Container dibatasi max-width 1200px + padding 24px, sehingga di layar lebar
++     CTA masih jauh dari tepi layar. Margin kanan negatif sebesar sisa ruang
++     tersebut (dihitung dari lebar viewport) menggeser CTA hingga berjarak
++     ┬▒24px (gutter) dari tepi kanan layar ΓÇö tanpa position:absolute.
++     Pada lebar Γëñ1248px nilainya 0, jadi tidak memengaruhi apa pun. */
++  .nav > .btn { margin-right: calc(-1 * ((100vw - 100%) / 2 - var(--gutter))); }
++}
++
++/* Fallback flex (tablet/mobile & browser lama): CTA tetap terdorong ke kanan. */
+ .nav { display: flex; align-items: center; gap: 18px; }
++.nav > .btn { margin-left: auto; }
+ .nav-list {
+   display: flex;
+   align-items: center;

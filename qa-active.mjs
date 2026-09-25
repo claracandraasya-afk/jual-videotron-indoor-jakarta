@@ -1,53 +1,66 @@
-export default async function run(page, ui) {
+﻿// File: qa-active.mjs
+// QA: card keunggulan saat HOVER (bukan klik).
+// - Card normal: background putih, ikon biru (kotak ikon biru), judul/deskripsi warna normal.
+// - Saat hover: card besar biru, kotak ikon putih, ikon di dalamnya biru, judul & deskripsi putih.
+// - Saat keluar hover, card kembali normal.
+// - Screenshot: qa-active.png.
+// - Tidak ada klik; tidak ada class is-active.
+
+export default async function run(page) {
   await page.locator("#keunggulan").scrollIntoViewIfNeeded();
   await page.waitForTimeout(600);
 
   const cards = page.locator(".advantage-item");
 
-  // Aktifkan card ke-2
-  await cards.nth(1).click();
-  await page.waitForTimeout(400);
-
-  const readCard = (n) =>
-    page.evaluate((idx) => {
-      const li = document.querySelectorAll(".advantage-list > li")[idx];
-      const item = li.querySelector(".advantage-item");
+  const readCard = (idx) =>
+    page.evaluate((i) => {
+      const item = document.querySelectorAll(".advantage-item")[i];
       const svg = item.querySelector(".advantage-icon svg");
-      const path = svg ? svg.querySelector("path, rect, polygon") : null;
       const cs = (el) => (el ? getComputedStyle(el) : null);
+      const itemC = cs(item);
       const ic = cs(item.querySelector(".advantage-icon"));
       const svgc = cs(svg);
-      const pathc = cs(path);
-      const h3c = cs(item.querySelector("h3"));
-      const pc = cs(item.querySelector("p"));
       return {
-        active: li.classList.contains("is-active"),
-        itemBg: cs(item).backgroundImage,
-        itemColor: cs(item).color,
-        h3: h3c.color,
-        p: pc.color,
+        hovered: item.matches(":hover"),
+        itemBg: itemC.backgroundColor,
+        itemColor: itemC.color,
+        h3: cs(item.querySelector("h3")).color,
+        p: cs(item.querySelector("p")).color,
         iconColor: ic.color,
-        iconBg: ic.backgroundImage,
         iconBgColor: ic.backgroundColor,
-        iconFilter: svgc.filter,
         svgColor: svgc.color,
-        svgFill: svgc.fill,
         svgStroke: svgc.stroke,
-        pathFill: pathc ? pathc.fill : null,
-        pathStroke: pathc ? pathc.stroke : null,
       };
-    }, n);
+    }, idx);
 
-  const activeCard2 = await readCard(1);
+  const results = {};
 
-  // Klik card ke-4 -> card 2 harus kembali normal
-  await cards.nth(3).click();
-  await page.waitForTimeout(400);
-  const card2Reverted = await readCard(1);
-  const activeCard4 = await readCard(3);
-  const activeCount = await page.locator(".advantage-list > li.is-active").count();
+  // Normal card 1
+  results.normalCard1 = await readCard(0);
+
+  // Hover card 1
+  await cards.nth(0).hover();
+  await page.waitForTimeout(600);
+  results.hoverCard1 = await readCard(0);
+
+  // Move out
+  await page.mouse.move(0, 0);
+  await page.waitForTimeout(600);
+  results.card1AfterLeave = await readCard(0);
+
+  // Hover card 2
+  await cards.nth(1).hover();
+  await page.waitForTimeout(600);
+  results.hoverCard2 = await readCard(1);
+
+  // Move out again
+  await page.mouse.move(0, 0);
+  await page.waitForTimeout(600);
+  results.card2AfterLeave = await readCard(1);
+
+  // No active classes expected
+  results.activeCount = await page.locator(".advantage-list > li.is-active").count();
 
   await page.locator("#keunggulan").screenshot({ path: "qa-active.png" });
-
-  return { activeCount, activeCard2, card2Reverted, activeCard4 };
+  return results;
 }
