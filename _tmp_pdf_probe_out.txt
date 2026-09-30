@@ -1,0 +1,30 @@
+[
+  {
+    "name": "DS-D4012CW-2FQ",
+    "url": "https://assets.hikvision.com/prd/normal/all/doc/m000190013/DS-D4012CW-2FQ_Datasheet_20260605.pdf",
+    "status": 200,
+    "bytes": 732209,
+    "jpegs": [
+      {
+        "file": "_tmp_pdf\\img\\DS-D4012CW-2FQ-jpeg-0.jpg",
+        "size": 51902,
+        "w": 1185,
+        "h": 512
+      }
+    ]
+  },
+  {
+    "name": "DS-D4015CW-2FQ",
+    "url": "https://assets.hikvision.com/prd/normal/all/doc/m000190012/DS-D4015CW-2FQ_Datasheet_20260605.pdf",
+    "status": 200,
+    "bytes": 733705,
+    "jpegs": [
+      {
+        "file": "_tmp_pdf\\img\\DS-D4015CW-2FQ-jpeg-0.jpg",
+        "size": 51902,
+        "w": 1185,
+        "h": 512
+      }
+    ]
+  }
+]

@@ -1,0 +1,10 @@
+﻿chrome.exe : 230765 bytes written to file 
+C:\Users\WINDOW~1\AppData\Local\Temp\video_samsung_desktop.png
+At line:1 char:304
++ ... mmary3.txt; & 'C:\Program Files\Google\Chrome\Application\chrome.exe' ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (230765 bytes wr...ung_desktop.png:String) [], RemoteExcep 
+   tion
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+SHOT_OK 230765

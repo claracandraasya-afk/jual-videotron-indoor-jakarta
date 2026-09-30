@@ -1,0 +1,5 @@
+tag        REF  GEN  selisih
+li          58   52  -6
+span        58   46  -12
+
+Total tag: 280 vs 262

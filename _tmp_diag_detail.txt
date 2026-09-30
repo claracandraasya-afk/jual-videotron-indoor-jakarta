@@ -1,0 +1,30 @@
+REF   detail Hikvision: CRLF=0 loneLF=191
+GEN   detail Samsung  : CRLF=0 loneLF=179
+GEN   katalog Samsung : CRLF=411
+jumlah tag: ref=221 gen=203
+
+Perbedaan pertama pada indeks tag 17
+  [13] REF <a class="nav-link" href="index.html#produk" aria-haspopup="true" aria-expanded="false">
+       GEN <a class="nav-link" href="index.html#produk" aria-haspopup="true" aria-expanded="false">
+  [14] REF </a>
+       GEN </a>
+  [15] REF <ul class="dropdown">
+       GEN <ul class="dropdown">
+  [16] REF <li>
+       GEN <li>
+  [17] REF <a href="produk-hikvision.html">
+       GEN <a href="produk-samsung.html"> <<<
+  [18] REF </a>
+       GEN </a>
+  [19] REF </li>
+       GEN </li>
+  [20] REF <li>
+       GEN <li>
+  [21] REF <a href="produk-samsung.html">
+       GEN <a href="produk-samsung.html">
+  [22] REF </a>
+       GEN </a>
+  [23] REF </li>
+       GEN </li>
+  [24] REF <li>
+       GEN <li>

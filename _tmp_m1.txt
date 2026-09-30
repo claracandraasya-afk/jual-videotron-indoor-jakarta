@@ -1,0 +1,361 @@
+﻿100:       item.classList.toggle("is-open", willOpen);
+101:       button.setAttribute("aria-expanded", willOpen ? "true" : "false");
+102:       if (answer) answer.hidden = !willOpen;
+103:     });
+104: 
+105:     if (answer && !item.classList.contains("is-open")) answer.hidden = true;
+106:   });
+107: 
+108:   /* ------------------------------------------------------------------
+109:      Smooth reveal saat scroll
+110:      - Fade-up (opacity 0â†’1, translateY 30pxâ†’0) 0.6s ease-out
+111:      - Stagger 0.1â€“0.15s untuk elemen di dalam satu section
+112:      - Hanya opacity/transform (GPU) sehingga tidak ada layout shift
+113:      - prefers-reduced-motion: semua langsung tampil tanpa animasi
+114:      ------------------------------------------------------------------ */
+115:   var revealSelector = [
+116:     ".hero-copy",
+117:     ".hero-media",
+118:     ".page-hero .breadcrumb",
+119:     ".page-hero h1",
+120:     ".page-hero .hero-lead",
+121:     ".page-hero .btn-group",
+122:     ".page-media",
+123:     ".section-head",
+124:     ".split-note",
+125:     ".advantage-media",
+126:     ".product-card",
+127:     ".solution-card",
+128:     ".article-feature",
+129:     ".article-mini",
+130:     ".info-card",
+131:     ".portfolio-card",
+132:     ".note-card",
+133:     ".spec-table",
+134:     ".form-panel",
+135:     ".cta-inner",
+136:     ".footer-brand",
+137:     ".footer-col",
+138:     ".footer-bottom",
+139:     ".prose > h2",
+140:     ".prose > h3",
+141:     ".prose > p",
+142:     ".prose > ul",
+143:     ".prose > ol",
+144:     ".prose > blockquote",
+145:     ".prose > img"
+146:   ].join(",");
+147: 
+148:   var revealTargets = [];
+149: 
+150:   function addRevealTarget(el, index) {
+151:     if (!el || el.hasAttribute("data-reveal")) return;
+152:     el.setAttribute("data-reveal", "");
+153:     el.setAttribute("data-reveal-delay", String(Math.min(index || 0, 4)));
+154:     revealTargets.push(el);
+155:   }
+156: 
+157:   /* Tandai elemen utama yang memang perlu muncul bertahap.
+158:      Tidak menyentuh struktur, ukuran, atau posisi elemen. */
+159:   Array.prototype.forEach.call(document.querySelectorAll(revealSelector), function (el) {
+160:     if (el.closest("[data-reveal]")) return;
+161:     var parent = el.parentElement;
+162:     var index = 0;
+163: 
+164:     if (parent) {
+165:       var siblings = parent.querySelectorAll(":scope > " + el.tagName.toLowerCase());
+166:       for (var i = 0; i < siblings.length; i++) {
+167:         if (siblings[i] === el) break;
+168:         index++;
+169:       }
+170:     }
+171: 
+172:     addRevealTarget(el, index);
+173:   });
+174: 
+175:   /* Section yang belum memiliki target tetap diberi reveal, sehingga tidak ada
+176:      bagian halaman yang terasa muncul mendadak. */
+177:   Array.prototype.forEach.call(
+178:     document.querySelectorAll("main > section, main > .section, footer.site-footer"),
+179:     function (section) {
+180:       if (!section.hasAttribute("data-reveal") && !section.querySelector("[data-reveal]")) {
+181:         addRevealTarget(section, 0);
+182:       }
+183:     }
+184:   );
+185: 
+186:   /* Semua elemen yang sudah diberi data-reveal oleh HTML ikut dipantau. */
+187:   Array.prototype.forEach.call(document.querySelectorAll("[data-reveal]"), function (el) {
+188:     if (revealTargets.indexOf(el) === -1) revealTargets.push(el);
+189:   });
+190: 
+191:   var reduceMotion =
+192:     "matchMedia" in window &&
+193:     window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+194: 
+195:   function revealAll() {
+196:     Array.prototype.forEach.call(revealTargets, function (target) {
+197:       target.classList.add("show");
+198:     });
+199:   }
+200: 
+201:   var heroSection = document.querySelector(".hero");
+202: 
+203:   /* Entrance animation hero: dijalankan sekali lewat class .is-entered,
+204:      dipicu setelah frame pertama agar transisi sempat terpasang. */
+205:   function playHeroEntrance() {
+206:     if (!heroSection) return;
+207:     heroSection.classList.add("is-entered");
+208:   }
+209: 
+210:   if (reduceMotion || !("IntersectionObserver" in window) || !revealTargets.length) {
+211:     revealAll();
+212:     playHeroEntrance();
+213:   } else {
+214:     /* Transisi baru dipasang saat reveal dimulai, sehingga tidak ada perbedaan
+215:        tampilan sebelum/sesudah JS aktif dan tidak ada flicker. */
+216:     function prepareReveal(target) {
+217:       if (target.classList.contains("reveal-ready")) return;
+218:       target.classList.add("reveal-ready");
+219:       void target.offsetHeight;
+220:     }
+221: 
+222:     var observer = new IntersectionObserver(function (entries) {
+223:       for (var i = 0; i < entries.length; i++) {
+224:         var entry = entries[i];
+225:         if (!entry.isIntersecting) continue;
+226:         prepareReveal(entry.target);
+227:         entry.target.classList.add("show");
+228:         observer.unobserve(entry.target);
+229:       }
+230:     }, {
+231:       threshold: 0.08,
+232:       rootMargin: "0px 0px -6% 0px"
+233:     });
+234: 
+235:     Array.prototype.forEach.call(revealTargets, function (target) {
+236:       observer.observe(target);
+237:     });
+238: 
+239:     /* Elemen yang sudah terlihat saat halaman dibuka (mis. hero) langsung
+240:        dijadwalkan, jadi tidak pernah tertinggal dalam keadaan transparan. */
+241:     window.requestAnimationFrame(function () {
+242:       window.requestAnimationFrame(function () {
+243:         Array.prototype.forEach.call(revealTargets, function (target) {
+244:           var rect = target.getBoundingClientRect();
+245:           var visible =
+246:             rect.top < (window.innerHeight || 0) * 0.94 && rect.bottom > 0;
+247:           if (visible) prepareReveal(target);
+248:         });
+249:         playHeroEntrance();
+250:       });
+251:     });
+252:   }
+253: 
+254:   /* ------------------------------------------------------------------
+255:      Keunggulan produk: pergantian gambar kolom kiri via hover.
+256:      Card 1 -> Gambar 1, Card 2 -> Gambar 2, dst. Saat kursor keluar,
+257:      kembali ke gambar default (gambar pertama). Warna kartu, ikon,
+258:      judul, dan deskripsi tidak diubah oleh JavaScript sama sekali.
+259:      ------------------------------------------------------------------ */
+260:   var advantageMedia = document.querySelector("[data-advantage-media]");
+261:   var advantageList = document.querySelector("[data-advantage-list]");
+262:   var advantageImages = advantageMedia
+263:     ? advantageMedia.querySelectorAll(".advantage-media-img")
+264:     : [];
+265:   var advantageCards = advantageList
+266:     ? advantageList.querySelectorAll(":scope > li")
+267:     : [];
+268: 
+269:   var advantageActive = -1;
+270: 
+271:   function setActiveAdvantage(index) {
+272:     if (index === advantageActive) return;
+273:     advantageActive = index;
+274: 
+275:     /* Hanya gambar yang tampil yang diumkan pembaca layar. */
+276:     Array.prototype.forEach.call(advantageImages, function (image, i) {
+277:       var isActive = i === index;
+278:       image.classList.toggle("is-active", isActive);
+279:       image.setAttribute("aria-hidden", isActive ? "false" : "true");
+280:     });
+281:   }
+282: 
+283:   /* Warna kartu tidak diubah di sini. JavaScript hanya mengganti gambar kolom
+284:      kiri mengikuti kartu yang di-hover: Card 1 -> Gambar 1, dst. Saat kursor
+285:      keluar, kembali ke gambar default (gambar pertama). */
+286:   Array.prototype.forEach.call(advantageCards, function (card, i) {
+287:     card.addEventListener("mouseenter", function () {
+288:       setActiveAdvantage(Math.min(i, advantageImages.length - 1));
+289:     });
+290:     card.addEventListener("mouseleave", function () {
+291:       setActiveAdvantage(0);
+292:     });
+293:   });
+294: 
+295: /* ------------------------------------------------------------------
+296:      Form konsultasi (validasi ringan, dilanjutkan ke WhatsApp)
+297:      ------------------------------------------------------------------ */
+298:   var consultForm = document.querySelector("[data-consult-form]");
+299: 
+300:   if (consultForm) {
+301:     consultForm.addEventListener("submit", function (event) {
+302:       event.preventDefault();
+303: 
+304:       var status = consultForm.querySelector(".form-status");
+305:       var nama = consultForm.querySelector("#nama");
+306:       var telepon = consultForm.querySelector("#telepon");
+307:       var pesan = consultForm.querySelector("#pesan");
+308: 
+309:       if (!nama || !nama.value.trim() || !telepon || !telepon.value.trim()) {
+310:         if (status) {
+311:           status.style.color = "#b42318";
+312:           status.textContent = "Mohon lengkapi nama dan nomor WhatsApp Anda terlebih dahulu.";
+313:         }
+314:         return;
+315:       }
+316: 
+317:       var pesanSingkat = [
+318:         "Halo, saya " + nama.value.trim() + ".",
+319:         "Saya ingin konsultasi videotron indoor.",
+320:         "Kebutuhan: " + (pesan && pesan.value.trim() ? pesan.value.trim() : "belum diisi detailnya."),
+321:         "Nomor saya: " + telepon.value.trim()
+322:       ].join(" ");
+323: 
+324:       var waNumber = consultForm.getAttribute("data-wa") || "6281200000000";
+325:       var waUrl = "https://wa.me/" + waNumber + "?text=" + encodeURIComponent(pesanSingkat);
+326: 
+327:       if (status) {
+328:         status.style.color = "";
+329:         status.textContent = "Terima kasih! Kami arahkan Anda ke WhatsApp untuk melanjutkan konsultasi.";
+330:       }
+331: 
+332:       window.open(waUrl, "_blank", "noopener");
+333:       consultForm.reset();
+334:     });
+335:   }
+336: 
+337:   /* ------------------------------------------------------------------
+338:      Modal detail produk ("Lihat Detail" pada card)
+339:      - Satu elemen modal diisi sesuai tombol yang diklik (data per produk).
+340:      - Tutup: tombol X, klik area di luar modal, atau tombol Escape.
+341:      - Animasi fade + scale murni lewat class .is-open (CSS).
+342:      ------------------------------------------------------------------ */
+343:   var PRODUCT_DETAILS = {
+344:     hikvision: {
+345:       brand: "Hikvision",
+346:       title: "Videotron Indoor Hikvision",
+347:       desc:
+348:         "Pilihan populer untuk lobi, showroom, dan ruang meeting. Modul LED indoor Hikvision menghadirkan tampilan tajam dengan pixel pitch rapat, sistem kontrol yang mudah dioperasikan, serta perawatan sederhana sehingga layar tetap prima untuk pemakaian harian jangka panjang.",
+349:       specs: [
+350:         "Pixel pitch indoor: P1.25 / P1.56 / P1.86 (disesuaikan jarak pandang)",
+351:         "Kecerahan 600â€“800 nits, nyaman untuk ruangan dengan pencahayaan campuran",
+352:         "Refresh rate tinggi, tampilan mulus tanpa flicker di depan kamera",
+353:         "Sistem kontrol user-friendly, bisa dijalankan tim non-IT",
+354:         "Garansi resmi + dukungan sparepart modul dan receiving card",
+355:         "Instalasi rapi di Jakarta & sekitarnya oleh teknisi berpengalaman"
+356:       ],
+357:       image: "images/videotron-hikvision.png",
+358:       link: "produk-hikvision.html"
+359:     },
+360:     samsung: {
+361:       brand: "Samsung",
+362:       title: "Videotron Indoor Samsung",
+363:       desc:
+364:         "Untuk kebutuhan tampilan premium tanpa sambungan terlihat. Videotron indoor Samsung memakai modul bezel-less dengan micro pixel pitch sehingga konten tampil menyatu penuh â€” ideal bagi brand yang menonjolkan kualitas visual di area publik seperti flagship store, gallery, dan aula perusahaan.",
+365:       specs: [
+366:         "Micro pixel pitch: P0.9 / P1.2 untuk jarak pandang sangat dekat",
+367:         "Kecerahan hingga 900 nits dengan kalibrasi warna presisi",
+368:         "Desain bezel-less, sambungan modul nyaris tidak terlihat",
+369:         "Kedalaman hitam & kontras tinggi untuk konten visual premium",
+370:         "Manajemen konten terpusat untuk banyak layar sekaligus",
+371:         "Garansi resmi Samsung + layanan purnajual terjadwal"
+372:       ],
+373:       image: "images/videotron-samsung.png",
+374:       link: "produk-samsung.html"
+375:     },
+376:     lg: {
+377:       brand: "LG",
+378:       title: "Videotron Indoor LG",
+379:       desc:
+380:         "Solusi efisien untuk instalasi cepat, ringan, dan rapi. Modul LED indoor LG dirancang tipis dengan bobot ringan sehingga cocok untuk kantor, kampus, maupun ruang event yang kebutuhan display-nya dinamis â€” termasuk pemasangan sementara untuk kegiatan tertentu.",
+381:       specs: [
+382:         "Pixel pitch indoor: P1.5 / P1.8 / P2.0 sesuai skema ruang",
+383:         "Bodi ultra slim & ringan, cocok untuk dinding ringan dan portable",
+384:         "Instalasi cepat dengan sistem mounting praktis",
+385:         "Konsumsi daya efisien untuk operasional harian berkepanjangan",
+386:         "Kompatibel dengan berbagai sumber konten (PC, player, media box)",
+387:         "Garansi resmi + opsi sewa untuk kebutuhan event"
+388:       ],
+389:       image: "images/videotron-LG.png",
+390:       link: "produk-lg.html"
+391:     }
+392:   };
+393: 
+394:   var productModal = document.getElementById("product-modal");
+395: 
+396:   if (productModal) {
+397:     var modalImg = document.getElementById("product-modal-img");
+398:     var modalBrand = document.getElementById("product-modal-brand");
+399:     var modalTitle = document.getElementById("product-modal-title");
+400:     var modalDesc = document.getElementById("product-modal-desc");
+401:     var modalSpecs = document.getElementById("product-modal-specs");
+402:     var modalLink = document.getElementById("product-modal-link");
+403:     var modalDialog = productModal.querySelector(".product-modal-dialog");
+404:     var modalLastFocus = null;
+405: 
+406:     function openProductModal(key) {
+407:       var data = PRODUCT_DETAILS[key];
+408:       if (!data) return;
+409: 
+410:       modalImg.src = data.image;
+411:       modalImg.alt = "Videotron indoor " + data.brand;
+412:       modalBrand.textContent = data.brand;
+413:       modalTitle.textContent = data.title;
+414:       modalDesc.textContent = data.desc;
+415:       modalLink.href = data.link;
+416: 
+417:       while (modalSpecs.firstChild) modalSpecs.removeChild(modalSpecs.firstChild);
+418:       Array.prototype.forEach.call(data.specs, function (spec) {
+419:         var li = document.createElement("li");
+420:         li.textContent = spec;
+421:         modalSpecs.appendChild(li);
+422:       });
+423: 
+424:       modalLastFocus = document.activeElement;
+425:       productModal.hidden = false;
+426:       document.body.classList.add("modal-open");
+427:       /* Dua frame agar transisi fade + scale sempat berjalan. */
+428:       window.requestAnimationFrame(function () {
+429:         window.requestAnimationFrame(function () {
+430:           productModal.classList.add("is-open");
+431:         });
+432:       });
+433:       if (modalDialog) modalDialog.focus && modalDialog.focus();
+434:     }
+435: 
+436:     function closeProductModal() {
+437:       if (productModal.hidden) return;
+438:       productModal.classList.remove("is-open");
+439:       document.body.classList.remove("modal-open");
+440:       window.setTimeout(function () {
+441:         productModal.hidden = true;
+442:         if (modalLastFocus && modalLastFocus.focus) modalLastFocus.focus();
+443:       }, 260);
+444:     }
+445: 
+446:     Array.prototype.forEach.call(
+447:       document.querySelectorAll("[data-product-detail]"),
+448:       function (trigger) {
+449:         trigger.addEventListener("click", function (event) {
+450:           event.preventDefault();
+451:           openProductModal(trigger.getAttribute("data-product-detail"));
+452:         });
+453:       }
+454:     );
+455: 
+456:     Array.prototype.forEach.call(
+457:       productModal.querySelectorAll("[data-modal-close]"),
+458:       function (closer) {
+459:         closer.addEventListener("click", closeProductModal);
+460:       }

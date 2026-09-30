@@ -1,0 +1,145 @@
+REF  katalog Hikvision: sections=page-hero page-hero-media|section section-line-top|section section-soft section-line-top|section section-line-top|section section-soft section-line-top|cta
+OK   produk-samsung.html: 11 gambar semuanya ada
+OK   produk-samsung.html: 5 anchor internal cocok dengan id section
+OK   produk-samsung.html: tidak ada sisa teks Hikvision
+OK   produk-samsung.html: 9 kartu produk, 3 grid, 1 series-nav
+OK   produk-samsung.html: line ending CRLF konsisten
+OK   produk-samsung.html: header, footer, breadcrumb, reveal, css & js terpasang
+OK   produk-samsung.html: susunan section identik dengan halaman Hikvision
+OK   produk-lg.html: 11 gambar semuanya ada
+OK   produk-lg.html: 5 anchor internal cocok dengan id section
+OK   produk-lg.html: tidak ada sisa teks Hikvision
+OK   produk-lg.html: 9 kartu produk, 3 grid, 1 series-nav
+OK   produk-lg.html: line ending CRLF konsisten
+OK   produk-lg.html: header, footer, breadcrumb, reveal, css & js terpasang
+OK   produk-lg.html: susunan section identik dengan halaman Hikvision
+REF  detail Hikvision: sections=section product-detail-section
+OK   samsung-the-wall-p0-63-iw006b.html: 5 tautan internal semuanya ada
+OK   samsung-the-wall-p0-63-iw006b.html: 3 gambar semuanya ada
+OK   samsung-the-wall-p0-63-iw006b.html: 1 anchor internal cocok dengan id section
+OK   samsung-the-wall-p0-63-iw006b.html: tidak ada sisa teks Hikvision
+OK   samsung-the-wall-p0-63-iw006b.html: header, footer, breadcrumb, reveal, css & js terpasang
+OK   samsung-the-wall-p0-84-iw008a.html: 5 tautan internal semuanya ada
+OK   samsung-the-wall-p0-84-iw008a.html: 3 gambar semuanya ada
+OK   samsung-the-wall-p0-84-iw008a.html: 1 anchor internal cocok dengan id section
+OK   samsung-the-wall-p0-84-iw008a.html: tidak ada sisa teks Hikvision
+OK   samsung-the-wall-p0-84-iw008a.html: header, footer, breadcrumb, reveal, css & js terpasang
+OK   samsung-the-wall-p0-945-iw009b.html: 5 tautan internal semuanya ada
+OK   samsung-the-wall-p0-945-iw009b.html: 3 gambar semuanya ada
+OK   samsung-the-wall-p0-945-iw009b.html: 1 anchor internal cocok dengan id section
+OK   samsung-the-wall-p0-945-iw009b.html: tidak ada sisa teks Hikvision
+OK   samsung-the-wall-p0-945-iw009b.html: header, footer, breadcrumb, reveal, css & js terpasang
+OK   samsung-iec-p0-93-lh009ieccac.html: 5 tautan internal semuanya ada
+OK   samsung-iec-p0-93-lh009ieccac.html: 3 gambar semuanya ada
+OK   samsung-iec-p0-93-lh009ieccac.html: 1 anchor internal cocok dengan id section
+OK   samsung-iec-p0-93-lh009ieccac.html: tidak ada sisa teks Hikvision
+OK   samsung-iec-p0-93-lh009ieccac.html: header, footer, breadcrumb, reveal, css & js terpasang
+OK   samsung-iec-p1-25-lh012ieccac.html: 5 tautan internal semuanya ada
+OK   samsung-iec-p1-25-lh012ieccac.html: 3 gambar semuanya ada
+OK   samsung-iec-p1-25-lh012ieccac.html: 1 anchor internal cocok dengan id section
+OK   samsung-iec-p1-25-lh012ieccac.html: tidak ada sisa teks Hikvision
+OK   samsung-iec-p1-25-lh012ieccac.html: header, footer, breadcrumb, reveal, css & js terpasang
+OK   samsung-iec-p1-5-lh015ieccac.html: 5 tautan internal semuanya ada
+OK   samsung-iec-p1-5-lh015ieccac.html: 3 gambar semuanya ada
+OK   samsung-iec-p1-5-lh015ieccac.html: 1 anchor internal cocok dengan id section
+OK   samsung-iec-p1-5-lh015ieccac.html: tidak ada sisa teks Hikvision
+OK   samsung-iec-p1-5-lh015ieccac.html: header, footer, breadcrumb, reveal, css & js terpasang
+OK   samsung-ifr-p1-5-lh015ifrcls.html: 5 tautan internal semuanya ada
+OK   samsung-ifr-p1-5-lh015ifrcls.html: 3 gambar semuanya ada
+OK   samsung-ifr-p1-5-lh015ifrcls.html: 1 anchor internal cocok dengan id section
+OK   samsung-ifr-p1-5-lh015ifrcls.html: tidak ada sisa teks Hikvision
+OK   samsung-ifr-p1-5-lh015ifrcls.html: header, footer, breadcrumb, reveal, css & js terpasang
+OK   samsung-ifr-p2-5-lh025ifrcls.html: 5 tautan internal semuanya ada
+OK   samsung-ifr-p2-5-lh025ifrcls.html: 3 gambar semuanya ada
+OK   samsung-ifr-p2-5-lh025ifrcls.html: 1 anchor internal cocok dengan id section
+OK   samsung-ifr-p2-5-lh025ifrcls.html: tidak ada sisa teks Hikvision
+OK   samsung-ifr-p2-5-lh025ifrcls.html: header, footer, breadcrumb, reveal, css & js terpasang
+OK   samsung-ifr-p4-0-lh040ifrcls.html: 5 tautan internal semuanya ada
+OK   samsung-ifr-p4-0-lh040ifrcls.html: 3 gambar semuanya ada
+OK   samsung-ifr-p4-0-lh040ifrcls.html: 1 anchor internal cocok dengan id section
+OK   samsung-ifr-p4-0-lh040ifrcls.html: tidak ada sisa teks Hikvision
+OK   samsung-ifr-p4-0-lh040ifrcls.html: header, footer, breadcrumb, reveal, css & js terpasang
+OK   lg-lmpb-p0-78-lmpb007.html: 5 tautan internal semuanya ada
+OK   lg-lmpb-p0-78-lmpb007.html: 3 gambar semuanya ada
+OK   lg-lmpb-p0-78-lmpb007.html: 1 anchor internal cocok dengan id section
+OK   lg-lmpb-p0-78-lmpb007.html: tidak ada sisa teks Hikvision
+OK   lg-lmpb-p0-78-lmpb007.html: header, footer, breadcrumb, reveal, css & js terpasang
+OK   lg-lmpb-p0-94-lmpb009.html: 5 tautan internal semuanya ada
+OK   lg-lmpb-p0-94-lmpb009.html: 3 gambar semuanya ada
+OK   lg-lmpb-p0-94-lmpb009.html: 1 anchor internal cocok dengan id section
+OK   lg-lmpb-p0-94-lmpb009.html: tidak ada sisa teks Hikvision
+OK   lg-lmpb-p0-94-lmpb009.html: header, footer, breadcrumb, reveal, css & js terpasang
+OK   lg-lmpb-p1-25-lmpb012.html: 5 tautan internal semuanya ada
+OK   lg-lmpb-p1-25-lmpb012.html: 3 gambar semuanya ada
+OK   lg-lmpb-p1-25-lmpb012.html: 1 anchor internal cocok dengan id section
+OK   lg-lmpb-p1-25-lmpb012.html: tidak ada sisa teks Hikvision
+OK   lg-lmpb-p1-25-lmpb012.html: header, footer, breadcrumb, reveal, css & js terpasang
+OK   lg-lmea-p0-94-lmea009.html: 5 tautan internal semuanya ada
+OK   lg-lmea-p0-94-lmea009.html: 3 gambar semuanya ada
+OK   lg-lmea-p0-94-lmea009.html: 1 anchor internal cocok dengan id section
+OK   lg-lmea-p0-94-lmea009.html: tidak ada sisa teks Hikvision
+OK   lg-lmea-p0-94-lmea009.html: header, footer, breadcrumb, reveal, css & js terpasang
+OK   lg-lmea-p1-25-lmea012.html: 5 tautan internal semuanya ada
+OK   lg-lmea-p1-25-lmea012.html: 3 gambar semuanya ada
+OK   lg-lmea-p1-25-lmea012.html: 1 anchor internal cocok dengan id section
+OK   lg-lmea-p1-25-lmea012.html: tidak ada sisa teks Hikvision
+OK   lg-lmea-p1-25-lmea012.html: header, footer, breadcrumb, reveal, css & js terpasang
+OK   lg-lmea-p1-56-lmea015.html: 5 tautan internal semuanya ada
+OK   lg-lmea-p1-56-lmea015.html: 3 gambar semuanya ada
+OK   lg-lmea-p1-56-lmea015.html: 1 anchor internal cocok dengan id section
+OK   lg-lmea-p1-56-lmea015.html: tidak ada sisa teks Hikvision
+OK   lg-lmea-p1-56-lmea015.html: header, footer, breadcrumb, reveal, css & js terpasang
+OK   lg-lsab-p0-9-lsab009.html: 5 tautan internal semuanya ada
+OK   lg-lsab-p0-9-lsab009.html: 3 gambar semuanya ada
+OK   lg-lsab-p0-9-lsab009.html: 1 anchor internal cocok dengan id section
+OK   lg-lsab-p0-9-lsab009.html: tidak ada sisa teks Hikvision
+OK   lg-lsab-p0-9-lsab009.html: header, footer, breadcrumb, reveal, css & js terpasang
+OK   lg-lsab-p1-2-lsab012.html: 5 tautan internal semuanya ada
+OK   lg-lsab-p1-2-lsab012.html: 3 gambar semuanya ada
+OK   lg-lsab-p1-2-lsab012.html: 1 anchor internal cocok dengan id section
+OK   lg-lsab-p1-2-lsab012.html: tidak ada sisa teks Hikvision
+OK   lg-lsab-p1-2-lsab012.html: header, footer, breadcrumb, reveal, css & js terpasang
+OK   lg-lsab-p0-7-lsab007.html: 5 tautan internal semuanya ada
+OK   lg-lsab-p0-7-lsab007.html: 3 gambar semuanya ada
+OK   lg-lsab-p0-7-lsab007.html: 1 anchor internal cocok dengan id section
+OK   lg-lsab-p0-7-lsab007.html: tidak ada sisa teks Hikvision
+OK   lg-lsab-p0-7-lsab007.html: header, footer, breadcrumb, reveal, css & js terpasang
+OK   Halaman detail diperiksa: 18
+
+--- MASALAH ---
+FAIL produk-samsung.html: tautan hilang -> portofolio.html, kontak.html, kebijakan-privasi.html, syarat-ketentuan.html
+FAIL produk-lg.html: tautan hilang -> portofolio.html, kontak.html, kebijakan-privasi.html, syarat-ketentuan.html
+FAIL samsung-the-wall-p0-63-iw006b.html: 179 baris memakai LF (halaman lain CRLF)
+FAIL samsung-the-wall-p0-63-iw006b.html: jumlah elemen 203 beda dari referensi 221
+FAIL samsung-the-wall-p0-84-iw008a.html: 179 baris memakai LF (halaman lain CRLF)
+FAIL samsung-the-wall-p0-84-iw008a.html: jumlah elemen 203 beda dari referensi 221
+FAIL samsung-the-wall-p0-945-iw009b.html: 179 baris memakai LF (halaman lain CRLF)
+FAIL samsung-the-wall-p0-945-iw009b.html: jumlah elemen 203 beda dari referensi 221
+FAIL samsung-iec-p0-93-lh009ieccac.html: 175 baris memakai LF (halaman lain CRLF)
+FAIL samsung-iec-p0-93-lh009ieccac.html: jumlah elemen 197 beda dari referensi 221
+FAIL samsung-iec-p1-25-lh012ieccac.html: 175 baris memakai LF (halaman lain CRLF)
+FAIL samsung-iec-p1-25-lh012ieccac.html: jumlah elemen 197 beda dari referensi 221
+FAIL samsung-iec-p1-5-lh015ieccac.html: 175 baris memakai LF (halaman lain CRLF)
+FAIL samsung-iec-p1-5-lh015ieccac.html: jumlah elemen 197 beda dari referensi 221
+FAIL samsung-ifr-p1-5-lh015ifrcls.html: 167 baris memakai LF (halaman lain CRLF)
+FAIL samsung-ifr-p1-5-lh015ifrcls.html: jumlah elemen 185 beda dari referensi 221
+FAIL samsung-ifr-p2-5-lh025ifrcls.html: 167 baris memakai LF (halaman lain CRLF)
+FAIL samsung-ifr-p2-5-lh025ifrcls.html: jumlah elemen 185 beda dari referensi 221
+FAIL samsung-ifr-p4-0-lh040ifrcls.html: 167 baris memakai LF (halaman lain CRLF)
+FAIL samsung-ifr-p4-0-lh040ifrcls.html: jumlah elemen 185 beda dari referensi 221
+FAIL lg-lmpb-p0-78-lmpb007.html: 187 baris memakai LF (halaman lain CRLF)
+FAIL lg-lmpb-p0-78-lmpb007.html: jumlah elemen 215 beda dari referensi 221
+FAIL lg-lmpb-p0-94-lmpb009.html: 187 baris memakai LF (halaman lain CRLF)
+FAIL lg-lmpb-p0-94-lmpb009.html: jumlah elemen 215 beda dari referensi 221
+FAIL lg-lmpb-p1-25-lmpb012.html: 191 baris memakai LF (halaman lain CRLF)
+FAIL lg-lmea-p0-94-lmea009.html: 183 baris memakai LF (halaman lain CRLF)
+FAIL lg-lmea-p0-94-lmea009.html: jumlah elemen 209 beda dari referensi 221
+FAIL lg-lmea-p1-25-lmea012.html: 183 baris memakai LF (halaman lain CRLF)
+FAIL lg-lmea-p1-25-lmea012.html: jumlah elemen 209 beda dari referensi 221
+FAIL lg-lmea-p1-56-lmea015.html: 183 baris memakai LF (halaman lain CRLF)
+FAIL lg-lmea-p1-56-lmea015.html: jumlah elemen 209 beda dari referensi 221
+FAIL lg-lsab-p0-9-lsab009.html: 191 baris memakai LF (halaman lain CRLF)
+FAIL lg-lsab-p1-2-lsab012.html: 171 baris memakai LF (halaman lain CRLF)
+FAIL lg-lsab-p1-2-lsab012.html: jumlah elemen 191 beda dari referensi 221
+FAIL lg-lsab-p0-7-lsab007.html: 163 baris memakai LF (halaman lain CRLF)
+FAIL lg-lsab-p0-7-lsab007.html: jumlah elemen 179 beda dari referensi 221

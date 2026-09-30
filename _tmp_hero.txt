@@ -1,0 +1,3 @@
+﻿_tmp_hero_desktop.png size=1440,900 bytes=24669
+_tmp_hero_tablet.png size=834,1000 bytes=22784
+_tmp_hero_mobile.png size=390,844 bytes=16291

@@ -1,0 +1,160 @@
+﻿1361:   :root { --header-h: 58px; --reveal-shift: 26px; }
+1362: 
+1363:   .section { padding: 88px 0; }
+1364: 
+1365:   .nav-toggle { display: inline-flex; }
+1366: 
+1367:   .nav {
+1368:     position: fixed;
+1369:     inset: calc(var(--header-h) + 1px) 0 auto 0;
+1370:     display: block;
+1371:     padding: 16px var(--gutter) 30px;
+1372:     background: #fff;
+1373:     border-bottom: 1px solid var(--line-soft);
+1374:     box-shadow: var(--shadow-md);
+1375:     max-height: calc(100vh - var(--header-h));
+1376:     overflow-y: auto;
+1377:     opacity: 0;
+1378:     visibility: hidden;
+1379:     transform: translateY(-12px);
+1380:     transition: opacity var(--dur) var(--ease), transform var(--dur) var(--ease), visibility var(--dur);
+1381:   }
+1382:   body.nav-open .nav { opacity: 1; visibility: visible; transform: none; }
+1383: 
+1384:   .nav-list { flex-direction: column; align-items: stretch; gap: 0; }
+1385:   .nav-link {
+1386:     justify-content: space-between;
+1387:     padding: 13px 14px;
+1388:     border-radius: var(--radius-xs);
+1389:     font-size: 0.94rem;
+1390:   }
+1391:   .dropdown {
+1392:     position: static;
+1393:     min-width: 0;
+1394:     margin: 4px 0 10px;
+1395:     padding: 6px;
+1396:     opacity: 1;
+1397:     visibility: visible;
+1398:     transform: none;
+1399:     box-shadow: none;
+1400:     border-color: var(--line-soft);
+1401:     background: var(--surface-soft);
+1402:     display: none;
+1403:   }
+1404:   .nav-item.has-dropdown.is-open .dropdown { display: block; }
+1405:   .site-header .btn-sm { display: flex; width: 100%; margin-top: 14px; }
+1406: 
+1407:   .hero { padding: 72px 0 84px; }
+1408:   /* Layar sedang & kecil: teks hero memakai hampir seluruh lebar, jadi overlay
+1409:      gelap dilebarkan (sisi kiri tetap paling pekat, kanan tetap lebih terang)
+1410:      agar teks tetap terbaca di atas foto. */
+1411:   .hero::after {
+1412:     background-image:
+1413:       linear-gradient(90deg, rgba(7, 17, 48, 0.9) 0%, rgba(7, 17, 48, 0.78) 55%, rgba(7, 17, 48, 0.52) 100%),
+1414:       linear-gradient(180deg, rgba(7, 17, 48, 0.3) 0%, rgba(7, 17, 48, 0.55) 100%);
+1415:   }
+1416:   /* Layar kecil: hanya ada teks, jarak tetap konsisten dengan grid satu kolom */
+1417:   .hero-grid,
+1418:   .split,
+1419:   .page-hero-grid { grid-template-columns: minmax(0, 1fr); }
+1420: 
+1421:   .product-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+1422:   .article-layout { grid-template-columns: minmax(0, 1fr); }
+1423:   .article-stack { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+1424:   .faq-layout { grid-template-columns: minmax(0, 1fr); gap: 40px; }
+1425:   .portfolio-grid,
+1426:   .info-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+1427:   .footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px; }
+1428:   /* Footer kini hanya punya dua kolom tautan: brand dibuat selebar grid agar
+1429:      kolom "Informasi Perusahaan" dan "Kontak" sejajar rapi di baris berikutnya. */
+1430:   .footer-grid > .footer-brand { grid-column: 1 / -1; }
+1431:   .split.reverse > *:first-child { order: 2; }
+1432: }
+1433: 
+1434: @media (max-width: 768px) {
+1435:   /* Layar kecil: gerak lebih pendek agar animasi tetap terasa ringan */
+1436:   :root { --gutter: 20px; }
+1437: 
+1438:   .section { padding: 72px 0; }
+1439:   .section-head { margin-bottom: 40px; }
+1440:   .brand-logo { height: 32px; }
+1441:   /* Logo footer juga 2,5x ukuran asli di layar kecil (32px -> 80px) */
+1442:   .footer-brand .brand-logo { height: 80px; }
+1443:   .nav-link { padding: 12px 12px; font-size: 0.9rem; }
+1444: 
+1445:   h1 { font-size: clamp(1.9rem, 7.4vw, 2.4rem); }
+1446:   h2 { font-size: clamp(1.5rem, 6vw, 1.95rem); }
+1447: 
+1448:   .hero { padding: 60px 0 68px; }
+1449:   .hero h1 { font-size: clamp(1.08rem, 4.14vw, 1.35rem); }
+1450: 
+1451:   .btn { padding: 14px 22px; font-size: 0.9rem; }
+1452:   .btn-group { gap: 10px; }
+1453:   .btn-group .btn { flex: 1 1 auto; }
+1454: 
+1455:   .product-grid { grid-template-columns: minmax(0, 1fr); }
+1456:   .solution-grid { grid-template-columns: minmax(0, 1fr); }
+1457:   .article-stack { grid-template-columns: minmax(0, 1fr); }
+1458:   .article-mini { grid-template-columns: 118px minmax(0, 1fr); }
+1459:   .portfolio-grid,
+1460:   .info-grid { grid-template-columns: minmax(0, 1fr); }
+1461:   .form-row { grid-template-columns: minmax(0, 1fr); }
+1462:   .form-panel { padding: 24px; }
+1463: 
+1464:   .cta { padding: 76px 0; }
+1465: 
+1466:   .site-footer { padding-top: 64px; }
+1467:   .footer-grid { grid-template-columns: minmax(0, 1fr); gap: 36px; padding-bottom: 44px; }
+1468:   .footer-bottom { flex-direction: column; align-items: flex-start; }
+1469: 
+1470:   .split-note { padding: 18px; }
+1471:   .point,
+1472:   .advantage-item { padding: 22px; gap: 16px; }
+1473:   .advantage-item:hover { transform: translateY(-4px); }
+1474: 
+1475:   .page-hero { padding: 52px 0 62px; }
+1476:   .prose h2 { margin-top: 36px; }
+1477:   .spec-table th,
+1478:   .spec-table td { padding: 13px 14px; font-size: 0.86rem; }
+1479:   .spec-table tbody th { width: 42%; }
+1480: }
+1481: 
+1482: @media (max-width: 480px) {
+1483:   .article-mini { grid-template-columns: minmax(0, 1fr); }
+1484:   .article-mini-media { aspect-ratio: 16 / 9; }
+1485:   .faq-question { padding: 18px 20px; font-size: 0.96rem; gap: 14px; }
+1486:   .faq-answer p { padding: 0 20px 22px; }
+1487:   .article-feature-body { padding: 24px; }
+1488: }
+1489: /* --------------------------------------------------------------------------
+1490:    18. Utilities
+1491:    -------------------------------------------------------------------------- */
+1492: .faq-item h3 { margin: 0; }
+1493: .section-foot { margin-top: 40px; }
+1494: .section-foot.center { text-align: center; }
+1495: /* --------------------------------------------------------------------------
+1496:    16. Modal detail produk ("Lihat Detail")
+1497:    Fitur tambahan â€” tidak mengubah card produk atau section lain sama sekali.
+1498:    -------------------------------------------------------------------------- */
+1499: .product-modal {
+1500:   position: fixed;
+1501:   inset: 0;
+1502:   z-index: 1000;
+1503:   display: grid;
+1504:   place-items: center;
+1505:   padding: 24px;
+1506: }
+1507: .product-modal[hidden] { display: none; }
+1508: 
+1509: /* Overlay gelap di belakang modal. */
+1510: .product-modal-overlay {
+1511:   position: absolute;
+1512:   inset: 0;
+1513:   background: rgba(10, 22, 51, 0.55);
+1514:   opacity: 0;
+1515:   transition: opacity var(--dur-slow) var(--ease-out);
+1516: }
+1517: .product-modal.is-open .product-modal-overlay { opacity: 1; }
+1518: 
+1519: /* Kotak modal: fade + scale ringan saat muncul/keluar. */
+1520: .product-modal-dialog {

@@ -1,0 +1,264 @@
+HITS=241
+592 KB	C:\Users\WINDOWS 11\OneDrive\Desktop\jual-videotron-indoor-jakarta\.kilo\worktrees\butter-bittersweet\qa-active.png
+1858 KB	C:\Users\WINDOWS 11\OneDrive\Desktop\jual-videotron-indoor-jakarta\images\artikel-cara-memilih-videotron.png
+1938 KB	C:\Users\WINDOWS 11\OneDrive\Desktop\jual-videotron-indoor-jakarta\images\artikel-harga-videotron.png
+1922 KB	C:\Users\WINDOWS 11\OneDrive\Desktop\jual-videotron-indoor-jakarta\images\artikel-penggunaan-videotron.png
+3 KB	C:\Users\WINDOWS 11\OneDrive\Desktop\jual-videotron-indoor-jakarta\images\artikel-penggunaan.svg
+1 KB	C:\Users\WINDOWS 11\OneDrive\Desktop\jual-videotron-indoor-jakarta\images\favicon.svg
+6 KB	C:\Users\WINDOWS 11\OneDrive\Desktop\jual-videotron-indoor-jakarta\images\hero-banner.svg
+1653 KB	C:\Users\WINDOWS 11\OneDrive\Desktop\jual-videotron-indoor-jakarta\images\hero-section.png
+6 KB	C:\Users\WINDOWS 11\OneDrive\Desktop\jual-videotron-indoor-jakarta\images\hero-videotron.svg
+2006 KB	C:\Users\WINDOWS 11\OneDrive\Desktop\jual-videotron-indoor-jakarta\images\keunggulan-display-profesional.png
+4 KB	C:\Users\WINDOWS 11\OneDrive\Desktop\jual-videotron-indoor-jakarta\images\keunggulan-display.svg
+1849 KB	C:\Users\WINDOWS 11\OneDrive\Desktop\jual-videotron-indoor-jakarta\images\keunggulan-fleksibel-desain.png
+8 KB	C:\Users\WINDOWS 11\OneDrive\Desktop\jual-videotron-indoor-jakarta\images\keunggulan-fleksibel.svg
+1880 KB	C:\Users\WINDOWS 11\OneDrive\Desktop\jual-videotron-indoor-jakarta\images\keunggulan-produk-pilihan.png
+6 KB	C:\Users\WINDOWS 11\OneDrive\Desktop\jual-videotron-indoor-jakarta\images\keunggulan-produk.svg
+1844 KB	C:\Users\WINDOWS 11\OneDrive\Desktop\jual-videotron-indoor-jakarta\images\keunggulan-tampilan-berkualitas.png
+5 KB	C:\Users\WINDOWS 11\OneDrive\Desktop\jual-videotron-indoor-jakarta\images\keunggulan-tampilan.svg
+156 KB	C:\Users\WINDOWS 11\OneDrive\Desktop\jual-videotron-indoor-jakarta\images\logo-footer.png
+107 KB	C:\Users\WINDOWS 11\OneDrive\Desktop\jual-videotron-indoor-jakarta\images\logo-header.png
+1 KB	C:\Users\WINDOWS 11\OneDrive\Desktop\jual-videotron-indoor-jakarta\images\logo.svg
+4 KB	C:\Users\WINDOWS 11\OneDrive\Desktop\jual-videotron-indoor-jakarta\images\portofolio-exhibition.svg
+3 KB	C:\Users\WINDOWS 11\OneDrive\Desktop\jual-videotron-indoor-jakarta\images\portofolio-lobby.svg
+2031 KB	C:\Users\WINDOWS 11\OneDrive\Desktop\jual-videotron-indoor-jakarta\images\solusi-bisnis-perkantoran.png
+3 KB	C:\Users\WINDOWS 11\OneDrive\Desktop\jual-videotron-indoor-jakarta\images\solusi-bisnis.svg
+2302 KB	C:\Users\WINDOWS 11\OneDrive\Desktop\jual-videotron-indoor-jakarta\images\solusi-hotel-event.png
+3 KB	C:\Users\WINDOWS 11\OneDrive\Desktop\jual-videotron-indoor-jakarta\images\solusi-hotel.svg
+2101 KB	C:\Users\WINDOWS 11\OneDrive\Desktop\jual-videotron-indoor-jakarta\images\solusi-mall-showroom.png
+4 KB	C:\Users\WINDOWS 11\OneDrive\Desktop\jual-videotron-indoor-jakarta\images\solusi-mall.svg
+2071 KB	C:\Users\WINDOWS 11\OneDrive\Desktop\jual-videotron-indoor-jakarta\images\solusi-sekolah-kampus.png
+4 KB	C:\Users\WINDOWS 11\OneDrive\Desktop\jual-videotron-indoor-jakarta\images\solusi-sekolah.svg
+1836 KB	C:\Users\WINDOWS 11\OneDrive\Desktop\jual-videotron-indoor-jakarta\images\videotron-hikvision.png
+4 KB	C:\Users\WINDOWS 11\OneDrive\Desktop\jual-videotron-indoor-jakarta\images\videotron-hikvision.svg
+1824 KB	C:\Users\WINDOWS 11\OneDrive\Desktop\jual-videotron-indoor-jakarta\images\videotron-LG.png
+4 KB	C:\Users\WINDOWS 11\OneDrive\Desktop\jual-videotron-indoor-jakarta\images\videotron-lg.svg
+2069 KB	C:\Users\WINDOWS 11\OneDrive\Desktop\jual-videotron-indoor-jakarta\images\videotron-samsung.png
+3 KB	C:\Users\WINDOWS 11\OneDrive\Desktop\jual-videotron-indoor-jakarta\images\videotron-samsung.svg
+592 KB	C:\Users\WINDOWS 11\OneDrive\Desktop\jual-videotron-indoor-jakarta\qa-active.png
+1938 KB	C:\Users\WINDOWS 11\Downloads\artikel-harga-videotron.png
+1922 KB	C:\Users\WINDOWS 11\Downloads\artikel-penggunaan-videotron.png
+1858 KB	C:\Users\WINDOWS 11\Downloads\cara-memilih-videotron.png
+1858 KB	C:\Users\WINDOWS 11\Downloads\Jual Videotron Indoor Jakarta _ Hikvision, Samsung & LG_files\artikel-cara-memilih-videotron.png
+1938 KB	C:\Users\WINDOWS 11\Downloads\Jual Videotron Indoor Jakarta _ Hikvision, Samsung & LG_files\artikel-harga-videotron.png
+1922 KB	C:\Users\WINDOWS 11\Downloads\Jual Videotron Indoor Jakarta _ Hikvision, Samsung & LG_files\artikel-penggunaan-videotron.png
+2006 KB	C:\Users\WINDOWS 11\Downloads\Jual Videotron Indoor Jakarta _ Hikvision, Samsung & LG_files\keunggulan-display-profesional.png
+1849 KB	C:\Users\WINDOWS 11\Downloads\Jual Videotron Indoor Jakarta _ Hikvision, Samsung & LG_files\keunggulan-fleksibel-desain.png
+1880 KB	C:\Users\WINDOWS 11\Downloads\Jual Videotron Indoor Jakarta _ Hikvision, Samsung & LG_files\keunggulan-produk-pilihan.png
+1844 KB	C:\Users\WINDOWS 11\Downloads\Jual Videotron Indoor Jakarta _ Hikvision, Samsung & LG_files\keunggulan-tampilan-berkualitas.png
+156 KB	C:\Users\WINDOWS 11\Downloads\Jual Videotron Indoor Jakarta _ Hikvision, Samsung & LG_files\logo-footer.png
+107 KB	C:\Users\WINDOWS 11\Downloads\Jual Videotron Indoor Jakarta _ Hikvision, Samsung & LG_files\logo-header.png
+2031 KB	C:\Users\WINDOWS 11\Downloads\Jual Videotron Indoor Jakarta _ Hikvision, Samsung & LG_files\solusi-bisnis-perkantoran.png
+2302 KB	C:\Users\WINDOWS 11\Downloads\Jual Videotron Indoor Jakarta _ Hikvision, Samsung & LG_files\solusi-hotel-event.png
+2101 KB	C:\Users\WINDOWS 11\Downloads\Jual Videotron Indoor Jakarta _ Hikvision, Samsung & LG_files\solusi-mall-showroom.png
+2071 KB	C:\Users\WINDOWS 11\Downloads\Jual Videotron Indoor Jakarta _ Hikvision, Samsung & LG_files\solusi-sekolah-kampus.png
+1836 KB	C:\Users\WINDOWS 11\Downloads\Jual Videotron Indoor Jakarta _ Hikvision, Samsung & LG_files\videotron-hikvision.png
+1824 KB	C:\Users\WINDOWS 11\Downloads\Jual Videotron Indoor Jakarta _ Hikvision, Samsung & LG_files\videotron-LG.png
+2069 KB	C:\Users\WINDOWS 11\Downloads\Jual Videotron Indoor Jakarta _ Hikvision, Samsung & LG_files\videotron-samsung.png
+3 KB	C:\Users\WINDOWS 11\Downloads\Jual-videotron-indoor-jakarta-clean\images\artikel-cara-memilih.svg
+3 KB	C:\Users\WINDOWS 11\Downloads\Jual-videotron-indoor-jakarta-clean\images\artikel-harga.svg
+3 KB	C:\Users\WINDOWS 11\Downloads\Jual-videotron-indoor-jakarta-clean\images\artikel-penggunaan.svg
+1 KB	C:\Users\WINDOWS 11\Downloads\Jual-videotron-indoor-jakarta-clean\images\favicon.svg
+6 KB	C:\Users\WINDOWS 11\Downloads\Jual-videotron-indoor-jakarta-clean\images\hero-banner.svg
+6 KB	C:\Users\WINDOWS 11\Downloads\Jual-videotron-indoor-jakarta-clean\images\hero-videotron.svg
+4 KB	C:\Users\WINDOWS 11\Downloads\Jual-videotron-indoor-jakarta-clean\images\keunggulan-display.svg
+1 KB	C:\Users\WINDOWS 11\Downloads\Jual-videotron-indoor-jakarta-clean\images\logo.svg
+4 KB	C:\Users\WINDOWS 11\Downloads\Jual-videotron-indoor-jakarta-clean\images\portofolio-exhibition.svg
+3 KB	C:\Users\WINDOWS 11\Downloads\Jual-videotron-indoor-jakarta-clean\images\portofolio-lobby.svg
+3 KB	C:\Users\WINDOWS 11\Downloads\Jual-videotron-indoor-jakarta-clean\images\solusi-bisnis.svg
+3 KB	C:\Users\WINDOWS 11\Downloads\Jual-videotron-indoor-jakarta-clean\images\solusi-hotel.svg
+4 KB	C:\Users\WINDOWS 11\Downloads\Jual-videotron-indoor-jakarta-clean\images\solusi-mall.svg
+4 KB	C:\Users\WINDOWS 11\Downloads\Jual-videotron-indoor-jakarta-clean\images\solusi-sekolah.svg
+4 KB	C:\Users\WINDOWS 11\Downloads\Jual-videotron-indoor-jakarta-clean\images\videotron-hikvision.svg
+4 KB	C:\Users\WINDOWS 11\Downloads\Jual-videotron-indoor-jakarta-clean\images\videotron-lg.svg
+3 KB	C:\Users\WINDOWS 11\Downloads\Jual-videotron-indoor-jakarta-clean\images\videotron-samsung.svg
+2006 KB	C:\Users\WINDOWS 11\Downloads\keunggulan-display-profesional.png
+7 KB	C:\Users\WINDOWS 11\Downloads\Led Light Bulb Vector Hd Images, Led Bulb Icon For Your Project, Project Icons, Bulb Icons, Led Icons PNG Image For Free Download.jpg
+545 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\1.jpg
+303 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\10.png
+209 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\100.jpeg
+272 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\101.jpeg
+374 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\102.jpeg
+448 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\103.jpeg
+264 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\104.jpeg
+458 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\105.jpeg
+457 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\106.jpeg
+461 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\107.jpeg
+463 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\108.jpeg
+454 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\109.jpeg
+238 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\11.png
+238 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\12.png
+313 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\13.png
+216 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\14.png
+153 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\15.png
+378 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\16.png
+264 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\17.png
+219 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\18.png
+418 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\19.png
+124 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\2.png
+191 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\20.png
+118 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\21.png
+140 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\22.png
+197 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\23.png
+335 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\24.png
+334 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\25.png
+121 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\26.png
+332 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\27.png
+128 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\28.jpeg
+285 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\29.png
+192 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\3.png
+129 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\30.png
+126 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\31.png
+91 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\32.jpg
+47 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\32.webp
+9 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\33.webp
+66 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\35.png
+55 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\36.webp
+21 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\37.jpeg
+25 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\38.jpeg
+24 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\39.jpg
+167 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\4.png
+20 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\40.jpg
+202 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\41.png
+316 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\42.png
+369 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\43.png
+129 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\44.png
+225 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\45.png
+378 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\46.png
+385 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\47.png
+274 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\48.png
+318 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\49.png
+306 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\5.png
+384 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\50.png
+276 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\51.png
+89 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\52.png
+232 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\53.png
+203 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\54.png
+151 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\55.png
+364 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\56.png
+321 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\57.png
+380 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\58.png
+304 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\59.png
+143 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\6.png
+334 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\60.png
+158 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\61.png
+179 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\62.png
+235 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\63.png
+265 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\64.png
+264 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\65.png
+166 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\66.png
+248 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\67.png
+341 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\68.png
+173 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\69.png
+294 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\7.png
+330 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\70.png
+156 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\71.png
+285 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\72.png
+52 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\73.webp
+133 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\74.png
+224 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\75.png
+48 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\76.png
+227 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\77.png
+62 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\78.jpg
+172 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\79.png
+317 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\8.png
+295 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\80.png
+304 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\81.png
+178 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\82.png
+228 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\83.png
+166 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\84.png
+365 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\85.png
+245 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\86.png
+193 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\87.png
+108 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\88.png
+177 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\89.png
+317 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\9.png
+97 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\90.jpeg
+158 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\91.jpeg
+111 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\92.jpeg
+622 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\93.jpeg
+393 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\94.jpeg
+356 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\95.jpeg
+91 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\96.jpeg
+410 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\97.jpeg
+249 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\98.jpeg
+320 KB	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON\99.jpeg
+1836 KB	C:\Users\WINDOWS 11\Downloads\videotron-hikvision.png
+1824 KB	C:\Users\WINDOWS 11\Downloads\videotron-LG.png
+2069 KB	C:\Users\WINDOWS 11\Downloads\videotron-samsung.png
+107 KB	C:\Users\WINDOWS 11\Downloads\VIDWALL VIDEOTRON JUNI\1.jpg
+112 KB	C:\Users\WINDOWS 11\Downloads\VIDWALL VIDEOTRON JUNI\10.jpg
+112 KB	C:\Users\WINDOWS 11\Downloads\VIDWALL VIDEOTRON JUNI\11.jpg
+94 KB	C:\Users\WINDOWS 11\Downloads\VIDWALL VIDEOTRON JUNI\12.jpg
+94 KB	C:\Users\WINDOWS 11\Downloads\VIDWALL VIDEOTRON JUNI\13.jpg
+109 KB	C:\Users\WINDOWS 11\Downloads\VIDWALL VIDEOTRON JUNI\14.jpg
+98 KB	C:\Users\WINDOWS 11\Downloads\VIDWALL VIDEOTRON JUNI\15.jpg
+98 KB	C:\Users\WINDOWS 11\Downloads\VIDWALL VIDEOTRON JUNI\16.jpg
+98 KB	C:\Users\WINDOWS 11\Downloads\VIDWALL VIDEOTRON JUNI\17.jpg
+98 KB	C:\Users\WINDOWS 11\Downloads\VIDWALL VIDEOTRON JUNI\18.jpg
+98 KB	C:\Users\WINDOWS 11\Downloads\VIDWALL VIDEOTRON JUNI\19.jpg
+94 KB	C:\Users\WINDOWS 11\Downloads\VIDWALL VIDEOTRON JUNI\2.jpg
+98 KB	C:\Users\WINDOWS 11\Downloads\VIDWALL VIDEOTRON JUNI\20.jpg
+97 KB	C:\Users\WINDOWS 11\Downloads\VIDWALL VIDEOTRON JUNI\21.jpg
+99 KB	C:\Users\WINDOWS 11\Downloads\VIDWALL VIDEOTRON JUNI\22.jpg
+99 KB	C:\Users\WINDOWS 11\Downloads\VIDWALL VIDEOTRON JUNI\23.jpg
+98 KB	C:\Users\WINDOWS 11\Downloads\VIDWALL VIDEOTRON JUNI\24.jpg
+97 KB	C:\Users\WINDOWS 11\Downloads\VIDWALL VIDEOTRON JUNI\25.jpg
+97 KB	C:\Users\WINDOWS 11\Downloads\VIDWALL VIDEOTRON JUNI\26.jpg
+97 KB	C:\Users\WINDOWS 11\Downloads\VIDWALL VIDEOTRON JUNI\27.jpg
+97 KB	C:\Users\WINDOWS 11\Downloads\VIDWALL VIDEOTRON JUNI\28.jpg
+97 KB	C:\Users\WINDOWS 11\Downloads\VIDWALL VIDEOTRON JUNI\29.jpg
+111 KB	C:\Users\WINDOWS 11\Downloads\VIDWALL VIDEOTRON JUNI\3.jpg
+97 KB	C:\Users\WINDOWS 11\Downloads\VIDWALL VIDEOTRON JUNI\30.jpg
+97 KB	C:\Users\WINDOWS 11\Downloads\VIDWALL VIDEOTRON JUNI\31.jpg
+90 KB	C:\Users\WINDOWS 11\Downloads\VIDWALL VIDEOTRON JUNI\32.jpg
+91 KB	C:\Users\WINDOWS 11\Downloads\VIDWALL VIDEOTRON JUNI\33.jpg
+92 KB	C:\Users\WINDOWS 11\Downloads\VIDWALL VIDEOTRON JUNI\34.jpg
+91 KB	C:\Users\WINDOWS 11\Downloads\VIDWALL VIDEOTRON JUNI\35.jpg
+95 KB	C:\Users\WINDOWS 11\Downloads\VIDWALL VIDEOTRON JUNI\36.jpg
+94 KB	C:\Users\WINDOWS 11\Downloads\VIDWALL VIDEOTRON JUNI\37.jpg
+95 KB	C:\Users\WINDOWS 11\Downloads\VIDWALL VIDEOTRON JUNI\38.jpg
+94 KB	C:\Users\WINDOWS 11\Downloads\VIDWALL VIDEOTRON JUNI\39.jpg
+112 KB	C:\Users\WINDOWS 11\Downloads\VIDWALL VIDEOTRON JUNI\4.jpg
+95 KB	C:\Users\WINDOWS 11\Downloads\VIDWALL VIDEOTRON JUNI\40.jpg
+94 KB	C:\Users\WINDOWS 11\Downloads\VIDWALL VIDEOTRON JUNI\41.jpg
+97 KB	C:\Users\WINDOWS 11\Downloads\VIDWALL VIDEOTRON JUNI\42.jpg
+97 KB	C:\Users\WINDOWS 11\Downloads\VIDWALL VIDEOTRON JUNI\43.jpg
+97 KB	C:\Users\WINDOWS 11\Downloads\VIDWALL VIDEOTRON JUNI\44.jpg
+97 KB	C:\Users\WINDOWS 11\Downloads\VIDWALL VIDEOTRON JUNI\45.jpg
+97 KB	C:\Users\WINDOWS 11\Downloads\VIDWALL VIDEOTRON JUNI\46.jpg
+100 KB	C:\Users\WINDOWS 11\Downloads\VIDWALL VIDEOTRON JUNI\47.jpg
+99 KB	C:\Users\WINDOWS 11\Downloads\VIDWALL VIDEOTRON JUNI\48.jpg
+97 KB	C:\Users\WINDOWS 11\Downloads\VIDWALL VIDEOTRON JUNI\49.jpg
+112 KB	C:\Users\WINDOWS 11\Downloads\VIDWALL VIDEOTRON JUNI\5.jpg
+95 KB	C:\Users\WINDOWS 11\Downloads\VIDWALL VIDEOTRON JUNI\50.jpg
+101 KB	C:\Users\WINDOWS 11\Downloads\VIDWALL VIDEOTRON JUNI\51.jpg
+104 KB	C:\Users\WINDOWS 11\Downloads\VIDWALL VIDEOTRON JUNI\52.jpg
+113 KB	C:\Users\WINDOWS 11\Downloads\VIDWALL VIDEOTRON JUNI\53.jpg
+123 KB	C:\Users\WINDOWS 11\Downloads\VIDWALL VIDEOTRON JUNI\54.jpg
+111 KB	C:\Users\WINDOWS 11\Downloads\VIDWALL VIDEOTRON JUNI\6.jpg
+112 KB	C:\Users\WINDOWS 11\Downloads\VIDWALL VIDEOTRON JUNI\7.jpg
+112 KB	C:\Users\WINDOWS 11\Downloads\VIDWALL VIDEOTRON JUNI\8.jpg
+111 KB	C:\Users\WINDOWS 11\Downloads\VIDWALL VIDEOTRON JUNI\9.jpg
+
+== DIRS ==
+337 files	C:\Users\WINDOWS 11\Downloads
+16 files	C:\Users\WINDOWS 11\Downloads\Jual Videotron Indoor Jakarta _ Hikvision, Samsung & LG_files
+17 files	C:\Users\WINDOWS 11\Downloads\Jual-videotron-indoor-jakarta-clean\images
+108 files	C:\Users\WINDOWS 11\Downloads\LS DESAIN SEYLA
+170 files	C:\Users\WINDOWS 11\Downloads\LS ININ
+108 files	C:\Users\WINDOWS 11\Downloads\LS ININ\LS DESAIN SEYLA
+109 files	C:\Users\WINDOWS 11\Downloads\MENTAHAN VIDEOTRON\MENTAHAN VIDEOTRON
+110 files	C:\Users\WINDOWS 11\Downloads\PT DESAIN SEYLA 2
+150 files	C:\Users\WINDOWS 11\Downloads\PT ININ 1
+324 files	C:\Users\WINDOWS 11\Downloads\PT desain seyla
+2 files	C:\Users\WINDOWS 11\Downloads\Telegram Desktop
+75 files	C:\Users\WINDOWS 11\Downloads\VIDEO WALL SMART BOARD
+54 files	C:\Users\WINDOWS 11\Downloads\VIDWALL VIDEOTRON JUNI
+121 files	C:\Users\WINDOWS 11\Downloads\Video wall DIGITAL SIGNAGE (1)
+2 files	C:\Users\WINDOWS 11\Downloads\WhatsApp Unknown 2026-08-24 at 14.24.39
+10 files	C:\Users\WINDOWS 11\Downloads\mentahan bangku sekolah\mentahan bangku sekolah
+2 files	C:\Users\WINDOWS 11\OneDrive\Desktop
+1 files	C:\Users\WINDOWS 11\OneDrive\Desktop\jual-videotron-indoor-jakarta
+1 files	C:\Users\WINDOWS 11\OneDrive\Desktop\jual-videotron-indoor-jakarta\.kilo\worktrees\butter-bittersweet
+35 files	C:\Users\WINDOWS 11\OneDrive\Desktop\jual-videotron-indoor-jakarta\images

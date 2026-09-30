@@ -357,161 +357,6 @@
       image: "images/videotron-hikvision.png",
       link: "produk-hikvision.html"
     },
-    /* --- Katalog videotron indoor Hikvision per seri (9 model, dari datasheet resmi) --- */
-    "hk-ultra-ds-d4009bw-2fc": {
-      brand: "Hikvision Ultra Series",
-      title: "Videotron Indoor Hikvision P0.9 (DS-D4009BW-2FC)",
-      desc:
-        "Model pixel pitch paling rapat pada lini LED indoor Hikvision. Modul flip-chip COB tanpa kabel permukaan membuat layar lebih rapat dan tahan terhadap sentuhan, sementara kontras 15.000:1 serta perlindungan depan IP65 menjaga ketajaman gambar di ruangan dengan pencahayaan campuran. Cocok untuk lobby, reception, dan studio dengan jarak pandang sekitar 1-2 meter.",
-      specs: [
-        "Pixel pitch 0,9375 mm (kategori P0.9) dengan modul flip-chip COB 300 × 168,75 mm resolusi 320 × 160 piksel",
-        "Kabinet die-cast aluminium 600 × 337,5 × 29,3 mm, resolusi 640 × 360 piksel (rasio 16:9), berat 3,4 kg",
-        "Kecerahan 600 nits, kontras 15.000:1, sudut pandang 160°/160°, refresh rate hingga 3.840 Hz (16-bit)",
-        "Konsumsi daya maksimal 360 W/m² dan rata-rata 120 W/m²",
-        "Perlindungan depan IP65 dengan perawatan seluruh komponen dari sisi depan (front maintenance)",
-        "Sistem kontrol Hikvision: atur parameter layar lewat remote, tablet, atau platform"
-      ],
-      image: "images/videotron-hikvision.png",
-      link: "index.html#konsultasi",
-      linkText: "Konsultasikan Model Ini"
-    },
-    "hk-ultra-ds-d4012bw-2fc": {
-      brand: "Hikvision Ultra Series",
-      title: "Videotron Indoor Hikvision P1.2 (DS-D4012BW-2FC)",
-      desc:
-        "Varian COB dengan pitch 1,25 mm, pilihan populer untuk showroom dan ruang meeting karena menyatukan ketajaman gambar dan efisiensi daya. Modul flip-chip COB memudahkan perawatan, sedangkan refresh rate hingga 3.840 Hz menjaga tampilan tetap mulus saat direkam kamera atau tampil di video conference.",
-      specs: [
-        "Pixel pitch 1,25 mm (kategori P1.2) dengan modul flip-chip COB 300 × 168,75 mm resolusi 240 × 135 piksel",
-        "Kabinet die-cast aluminium 600 × 337,5 × 29,3 mm, resolusi 480 × 270 piksel (rasio 16:9), berat 3,4 kg",
-        "Kecerahan 600 nits, kontras 15.000:1, sudut pandang 160°/160°, refresh rate hingga 3.840 Hz (16-bit)",
-        "Konsumsi daya maksimal 300 W/m² dan rata-rata 100 W/m²",
-        "Perlindungan depan IP65 dengan perawatan seluruh komponen dari sisi depan (front maintenance)",
-        "Sistem kontrol Hikvision: atur parameter layar lewat remote, tablet, atau platform"
-      ],
-      image: "images/videotron-hikvision.png",
-      link: "index.html#konsultasi",
-      linkText: "Konsultasikan Model Ini"
-    },
-    "hk-ultra-ds-d4015bw-2fc": {
-      brand: "Hikvision Ultra Series",
-      title: "Videotron Indoor Hikvision P1.5 (DS-D4015BW-2FC)",
-      desc:
-        "Model COB dengan pitch 1,5625 mm untuk layar berukuran besar, seperti auditorium dan ruang rapat utama. Kabinet die-cast aluminium 29,3 mm membuat rangkaian modul tetap rata, sementara konsumsi daya rata-rata 100 W/m² membantu menekan biaya operasional layar yang menyala panjang setiap hari.",
-      specs: [
-        "Pixel pitch 1,5625 mm (kategori P1.5) dengan modul flip-chip COB 300 × 168,75 mm resolusi 192 × 108 piksel",
-        "Kabinet die-cast aluminium 600 × 337,5 × 29,3 mm, resolusi 384 × 216 piksel (rasio 16:9), berat 3,4 kg",
-        "Kecerahan 600 nits, kontras 15.000:1, sudut pandang 160°/160°, refresh rate hingga 3.840 Hz (16-bit)",
-        "Konsumsi daya maksimal 300 W/m² dan rata-rata 100 W/m²",
-        "Perlindungan depan IP65 dengan perawatan seluruh komponen dari sisi depan (front maintenance)",
-        "Sistem kontrol Hikvision: atur parameter layar lewat remote, tablet, atau platform"
-      ],
-      image: "images/videotron-hikvision.png",
-      link: "index.html#konsultasi",
-      linkText: "Konsultasikan Model Ini"
-    },
-    "hk-solid-plus-ds-d4012cw-2fq": {
-      brand: "Hikvision Solid Plus Series",
-      title: "Videotron Indoor Hikvision P1.2 GOB (DS-D4012CW-2FQ)",
-      desc:
-        "Varian GOB dari keluarga SMD Hikvision: permukaan modul dilapisi resin sehingga lebih tahan lembap, debu, dan gesekan ringan. Kecerahan 600 nits, kontras 5.000:1, dan refresh rate hingga 3.840 Hz menjaga tampilan tetap tajam di ruang dengan pencahayaan campuran. Cocok untuk lobby, restoran, dan showroom dengan jarak pandang mulai 2 meter.",
-      specs: [
-        "Pixel pitch 1,25 mm (kategori P1.2) dengan modul SMD triad berlapis GOB 300 × 168,75 mm resolusi 240 × 135 piksel",
-        "Kabinet die-cast aluminium 600 × 337,5 × 29,5 mm, resolusi 480 × 270 piksel (rasio 16:9), berat 3,4 kg",
-        "Kecerahan 600 nits, kontras 5.000:1, sudut pandang 160°/160°, refresh rate hingga 3.840 Hz (16-bit)",
-        "Konsumsi daya maksimal 460 W/m² dan rata-rata < 160 W/m²",
-        "Enkapsulasi GOB (glue-on-board) melindungi modul dari kelembapan dan debu, dengan perawatan seluruh komponen dari sisi depan",
-        "Sistem kontrol Hikvision: atur parameter layar lewat remote, tablet, atau platform"
-      ],
-      image: "images/videotron-hikvision.png",
-      link: "index.html#konsultasi",
-      linkText: "Konsultasikan Model Ini"
-    },
-    "hk-solid-plus-ds-d4015cw-2fq": {
-      brand: "Hikvision Solid Plus Series",
-      title: "Videotron Indoor Hikvision P1.5 GOB (DS-D4015CW-2FQ)",
-      desc:
-        "Model GOB dengan pitch 1,5625 mm untuk layar sedang hingga besar, misalnya ruang meeting, aula kampus, dan area publik indoor. Lapisan glue-on-board membuat modul lebih aman dibersihkan, sedangkan dynamic brightness engine menyesuaikan kecerahan per zona agar konsumsi daya lebih hemat.",
-      specs: [
-        "Pixel pitch 1,5625 mm (kategori P1.5) dengan modul SMD triad berlapis GOB 300 × 168,75 mm resolusi 192 × 108 piksel",
-        "Kabinet die-cast aluminium 600 × 337,5 × 29,5 mm, resolusi 384 × 216 piksel (rasio 16:9), berat 3,4 kg",
-        "Kecerahan 600 nits, kontras 5.000:1, sudut pandang 160°/160°, refresh rate hingga 3.840 Hz (16-bit)",
-        "Konsumsi daya maksimal 390 W/m² dan rata-rata < 130 W/m²",
-        "Enkapsulasi GOB (glue-on-board) melindungi modul dari kelembapan dan debu, dengan perawatan seluruh komponen dari sisi depan",
-        "Sistem kontrol Hikvision: atur parameter layar lewat remote, tablet, atau platform"
-      ],
-      image: "images/videotron-hikvision.png",
-      link: "index.html#konsultasi",
-      linkText: "Konsultasikan Model Ini"
-    },
-    "hk-solid-plus-ds-d4018cw-2fq": {
-      brand: "Hikvision Solid Plus Series",
-      title: "Videotron Indoor Hikvision P1.8 GOB (DS-D4018CW-2FQ)",
-      desc:
-        "Pilihan GOB paling ekonomis untuk bentang layar lebar: pitch 1,875 mm tetap menampilkan teks dan video dengan jelas pada jarak pandang 4 meter ke atas. Konfigurasi 16:9 tanpa celah membuatnya pas untuk ballroom, aula, dan dinding pameran indoor.",
-      specs: [
-        "Pixel pitch 1,875 mm (kategori P1.8) dengan modul SMD triad berlapis GOB 300 × 168,75 mm resolusi 160 × 90 piksel",
-        "Kabinet die-cast aluminium 600 × 337,5 × 29,5 mm, resolusi 320 × 180 piksel (rasio 16:9), berat 3,4 kg",
-        "Kecerahan 600 nits, kontras 5.000:1, sudut pandang 160°/160°, refresh rate hingga 3.840 Hz (16-bit)",
-        "Konsumsi daya maksimal 400 W/m² dan rata-rata < 140 W/m²",
-        "Enkapsulasi GOB (glue-on-board) melindungi modul dari kelembapan dan debu, dengan perawatan seluruh komponen dari sisi depan",
-        "Sistem kontrol Hikvision: atur parameter layar lewat remote, tablet, atau platform"
-      ],
-      image: "images/videotron-hikvision.png",
-      link: "index.html#konsultasi",
-      linkText: "Konsultasikan Model Ini"
-    },
-    "hk-solid-ds-d4012cw-2f": {
-      brand: "Hikvision Solid Series",
-      title: "Videotron Indoor Hikvision P1.2 (DS-D4012CW-2F)",
-      desc:
-        "Titik masuk keluarga LED indoor Hikvision dengan ketajaman yang sudah sangat baik untuk kebutuhan dalam ruangan. Modul SMD triad dan receiving card Hikvision mudah diganti dari sisi depan, sedangkan dynamic brightness engine menurunkan konsumsi daya saat gambar tidak membutuhkan kecerahan penuh.",
-      specs: [
-        "Pixel pitch 1,25 mm (kategori P1.2) dengan modul SMD triad 300 × 168,75 mm resolusi 240 × 135 piksel",
-        "Kabinet die-cast aluminium 600 × 337,5 × 29,5 mm, resolusi 480 × 270 piksel (rasio 16:9), berat 3,4 kg",
-        "Kecerahan 600 nits, kontras 5.000:1, sudut pandang 160°/160°, refresh rate hingga 3.840 Hz (16-bit)",
-        "Konsumsi daya maksimal 460 W/m² dan rata-rata ≤ 160 W/m²",
-        "Perawatan seluruh komponen dari sisi depan (front maintenance) dengan modul SMD triad standar Hikvision",
-        "Sistem kontrol Hikvision: atur parameter layar lewat remote, tablet, atau platform"
-      ],
-      image: "images/videotron-hikvision.png",
-      link: "index.html#konsultasi",
-      linkText: "Konsultasikan Model Ini"
-    },
-    "hk-solid-ds-d4015cw-2f": {
-      brand: "Hikvision Solid Series",
-      title: "Videotron Indoor Hikvision P1.5 (DS-D4015CW-2F)",
-      desc:
-        "Varian pitch 1,5625 mm yang menyeimbangkan ketajaman dan kebutuhan jumlah modul per meter persegi, sehingga biaya pengadaan lebih terkendali. Cocok untuk kantor, kampus, dan hall dengan jarak pandang 3 meter ke atas.",
-      specs: [
-        "Pixel pitch 1,5625 mm (kategori P1.5) dengan modul SMD triad 300 × 168,75 mm resolusi 192 × 108 piksel",
-        "Kabinet die-cast aluminium 600 × 337,5 × 29,5 mm, resolusi 384 × 216 piksel (rasio 16:9), berat 3,4 kg",
-        "Kecerahan 600 nits, kontras 5.000:1, sudut pandang 160°/160°, refresh rate hingga 3.840 Hz (16-bit)",
-        "Konsumsi daya maksimal 390 W/m² dan rata-rata ≤ 130 W/m²",
-        "Perawatan seluruh komponen dari sisi depan (front maintenance) dengan modul SMD triad standar Hikvision",
-        "Sistem kontrol Hikvision: atur parameter layar lewat remote, tablet, atau platform"
-      ],
-      image: "images/videotron-hikvision.png",
-      link: "index.html#konsultasi",
-      linkText: "Konsultasikan Model Ini"
-    },
-    "hk-solid-ds-d4018cw-2f": {
-      brand: "Hikvision Solid Series",
-      title: "Videotron Indoor Hikvision P1.8 (DS-D4018CW-2F)",
-      desc:
-        "Model paling ekonomis pada katalog videotron indoor Hikvision. Dengan pitch 1,875 mm, jumlah modul per meter persegi lebih sedikit sehingga biaya proyek lebih ringan, sementara kualitas gambar tetap rapi pada jarak pandang 4 meter ke atas.",
-      specs: [
-        "Pixel pitch 1,875 mm (kategori P1.8) dengan modul SMD triad 300 × 168,75 mm resolusi 160 × 90 piksel",
-        "Kabinet die-cast aluminium 600 × 337,5 × 29,5 mm, resolusi 320 × 180 piksel (rasio 16:9), berat 3,4 kg",
-        "Kecerahan 600 nits, kontras 5.000:1, sudut pandang 160°/160°, refresh rate hingga 3.840 Hz (16-bit)",
-        "Konsumsi daya maksimal 420 W/m² dan rata-rata ≤ 140 W/m²",
-        "Perawatan seluruh komponen dari sisi depan (front maintenance) dengan modul SMD triad standar Hikvision",
-        "Sistem kontrol Hikvision: atur parameter layar lewat remote, tablet, atau platform"
-      ],
-      image: "images/videotron-hikvision.png",
-      link: "index.html#konsultasi",
-      linkText: "Konsultasikan Model Ini"
-    },
-
     samsung: {
       brand: "Samsung",
       title: "Videotron Indoor Samsung",
@@ -556,33 +401,18 @@
     var modalSpecs = document.getElementById("product-modal-specs");
     var modalLink = document.getElementById("product-modal-link");
     var modalDialog = productModal.querySelector(".product-modal-dialog");
-    var modalMedia = productModal.querySelector(".product-modal-media");
     var modalLastFocus = null;
 
     function openProductModal(key) {
       var data = PRODUCT_DETAILS[key];
       if (!data) return;
 
-      /* Popup tidak lagi menampilkan foto produk (area media disembunyikan CSS),
-         jadi src hanya diisi bila area media memang tampil lagi. */
-      if (modalImg && (!modalMedia || getComputedStyle(modalMedia).display !== "none")) {
-        modalImg.src = data.image;
-        modalImg.alt = "Videotron indoor " + data.brand;
-      }
+      modalImg.src = data.image;
+      modalImg.alt = "Videotron indoor " + data.brand;
       modalBrand.textContent = data.brand;
       modalTitle.textContent = data.title;
       modalDesc.textContent = data.desc;
       modalLink.href = data.link;
-
-      /* Label tautan modal: pakai data.linkText bila ada (mis. ajakan konsultasi),
-         jika tidak tetap "Halaman Produk Lengkap" seperti sebelumnya. */
-      var modalLinkLabel = data.linkText || "Halaman Produk Lengkap";
-      while (modalLink.firstChild) modalLink.removeChild(modalLink.firstChild);
-      modalLink.appendChild(document.createTextNode(modalLinkLabel + " "));
-      var modalLinkArrow = document.createElement("span");
-      modalLinkArrow.setAttribute("aria-hidden", "true");
-      modalLinkArrow.textContent = "\u2192";
-      modalLink.appendChild(modalLinkArrow);
 
       while (modalSpecs.firstChild) modalSpecs.removeChild(modalSpecs.firstChild);
       Array.prototype.forEach.call(data.specs, function (spec) {

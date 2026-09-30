@@ -1,0 +1,79 @@
+﻿62:                 <li><a href="produk-lg.html">Videotron Indoor LG</a></li>
+63:               </ul>
+64:             </li>
+65:             <li class="nav-item"><a class="nav-link" href="index.html#solusi">Portofolio</a></li>
+66:             <li class="nav-item"><a class="nav-link" href="artikel.html">Artikel</a></li>
+67:             <li class="nav-item"><a class="nav-link" href="index.html#konsultasi">Kontak Kami</a></li>
+68:           </ul>
+69:           <a class="btn btn-primary btn-sm" href="index.html#konsultasi">Konsultasikan Sekarang</a>
+70:         </nav>
+71: 
+72:         <div class="header-actions">
+73:           <button class="nav-toggle" type="button" aria-label="Buka menu" aria-controls="nav-utama" aria-expanded="false">
+74:             <span class="nav-toggle-bars" aria-hidden="true"><i></i><i></i><i></i></span>
+75:           </button>
+76:         </div>
+77:       </div>
+78:     </div>
+79:   </header>
+80: 
+81:   <main id="konten">
+82:     <!-- 2. HERO -->
+83:     <section class="hero" id="beranda">
+84:       <div class="container">
+85:         <div class="hero-grid">
+86:           <div class="hero-copy" data-reveal>
+87:             <h1>Jual Videotron Indoor Jakarta untuk Kebutuhan</h1>
+88:             <p class="hero-lead">
+89:               Kami menyediakan videotron indoor berkualitas dari Hikvision, Samsung, dan LG untuk lobi kantor,
+90:               mall, showroom, sekolah, hotel, hingga ruang event di Jakarta dan Jabodetabek. Mulai dari konsultasi
+91:               spesifikasi, pengukuran ruang, instalasi, sampai layanan purna jual &mdash; semuanya dalam satu pintu.
+92:             </p>
+93:             <div class="btn-group">
+94:               <a class="btn btn-primary btn-lg" href="kontak.html">
+95:                 Konsultasikan Sekarang
+96:                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+97:               </a>
+98:               <a class="btn btn-outline btn-lg" href="#produk">Lihat Pilihan Produk</a>
+99:             </div>
+100:           </div>
+101: 
+102:           <!-- Gambar hero sekarang menjadi background penuh section ini
+103:                (full width + full height, background-size: cover).
+104:                Sumber gambar diatur di css/style.css pada aturan .hero. -->
+105:         </div>
+106:       </div>
+107:     </section>
+108: 
+109:     <!-- 3. TANTANGAN PRODUK -->
+110:     <section class="section section-soft section-line-top" id="tantangan">
+111:       <div class="container">
+112:         <div class="split">
+113:           <div data-reveal>
+114:             <div class="section-head">
+115:               <span class="eyebrow">Tantangan Produk</span>
+116:               <h2>Setiap Ruang Memiliki Tantangan Tampilan yang Berbeda</h2>
+117:               <p>
+118:                 Memilih videotron indoor tidak bisa disamakan untuk semua ruangan. Jarak pandang penonton,
+119:                 luas dinding, tingkat pencahayaan, dan jenis konten yang ditayangkan menentukan spesifikasi
+120:                 yang paling tepat &mdash; agar investasi Anda benar-benar terasa hasilnya.
+121:               </p>
+122:             </div>
+123:           </div>
+124: 
+125:           <ul class="point-list" data-reveal data-delay="1">
+126:             <li>
+127:               <article class="point">
+128:                 <span class="point-num" aria-hidden="true">01</span>
+129:                 <div>
+130:                   <h3>Kebutuhan Ruang Berbeda</h3>
+131:                   <p>Lobi kantor, mall, ruang kelas, hingga ballroom memiliki dimensi dan sudut pandang yang berbeda. Ukuran modul, rasio layar, dan posisi pemasangan perlu disesuaikan agar seluruh area tetap terlihat jelas dari berbagai titik.</p>
+132:                 </div>
+133:               </article>
+134:             </li>
+135:             <li>
+136:               <article class="point">
+137:                 <span class="point-num" aria-hidden="true">02</span>
+138:                 <div>
+139:                   <h3>Kualitas Tampilan</h3>
+140:                   <p>Warna yang konsisten, kecerahan yang stabil, dan refresh rate tinggi menentukan seberapa nyaman layar dilihat mata maupun kamera. Ini penting untuk konten bergerak, siaran acara, hingga kebutuhan video conference.</p>

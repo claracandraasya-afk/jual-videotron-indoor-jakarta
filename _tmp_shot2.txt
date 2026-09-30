@@ -1,0 +1,10 @@
+﻿chrome.exe : [14812:13104:0929/094759.012:ERROR:components\headless\command_handler\headless_command_ha
+ndler.cc:266] Failed to write file _tmp_samsung_desktop.png: Access is denied. (0x5)
+At line:1 char:1
++ & 'C:\Program Files\Google\Chrome\Application\chrome.exe' --headless= ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: ([14812:13104:09...s denied. (0x5):String) [], RemoteExcep 
+   tion
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+SHOT_MISSING

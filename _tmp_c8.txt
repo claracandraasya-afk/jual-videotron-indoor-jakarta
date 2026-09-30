@@ -1,0 +1,69 @@
+﻿652: /* --------------------------------------------------------------------------
+653:    9. Solusi (4 card grid)
+654:    -------------------------------------------------------------------------- */
+655: .solution-grid {
+656:   display: grid;
+657:   grid-template-columns: repeat(4, minmax(0, 1fr));
+658:   gap: 24px;
+659: }
+660: 
+661: .solution-card {
+662:   display: flex;
+663:   flex-direction: column;
+664:   border: 1px solid var(--line);
+665:   border-radius: var(--radius-lg);
+666:   background: #fff;
+667:   overflow: hidden;
+668:   box-shadow: var(--shadow-xs);
+669:   transition: transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease), border-color var(--dur) var(--ease);
+670: }
+671: .solution-card:hover { transform: translateY(-6px); border-color: var(--blue-200); box-shadow: var(--shadow-md); }
+672: 
+673: .solution-visual {
+674:   position: relative;
+675:   aspect-ratio: 16 / 11;
+676:   overflow: hidden;
+677:   background: linear-gradient(160deg, #eef4ff, #ffffff);
+678:   border-bottom: 1px solid var(--line-soft);
+679: }
+680: .solution-visual img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s var(--ease); }
+681: .solution-card:hover .solution-visual img { transform: scale(1.05); }
+682: 
+683: .solution-body { display: flex; flex-direction: column; flex: 1; padding: 24px 24px 26px; }
+684: .solution-label {
+685:   margin-bottom: 10px;
+686:   color: var(--blue-600);
+687:   font-family: var(--font-body);
+688:   font-size: 0.72rem;
+689:   font-weight: 600;
+690:   letter-spacing: 0.14em;
+691:   text-transform: uppercase;
+692:   line-height: 1.4;
+693: }
+694: .solution-body h3 { margin-bottom: 10px; font-size: 1.1rem; }
+695: .solution-body p { color: var(--muted); font-size: 0.88rem; margin: 0 0 18px; }
+696: .solution-body .link-arrow { margin-top: auto; font-size: 0.86rem; }
+697: .solution-body .link-arrow {
+698:   display: none;
+699: }
+700: 
+701: /* --------------------------------------------------------------------------
+702:    10. Keunggulan
+703:    -------------------------------------------------------------------------- */
+704: .advantage-media {
+705:   position: relative;
+706:   border-radius: var(--radius-lg);
+707:   border: 1px solid var(--line);
+708:   background: linear-gradient(160deg, #f4f8ff, #ffffff 72%);
+709:   overflow: hidden;
+710:   box-shadow: var(--shadow-sm);
+711: }
+712: .advantage-media img { width: 100%; }
+713: 
+714: /* Gambar pada keunggulan berganti mengikuti kartu yang aktif saat scroll.
+715:    Semua gambar ditumpuk pada kotak yang sama dan hanya opacity yang berubah,
+716:    sehingga tinggi kolom tidak bergeser. Gambar pertama tetap berada pada
+717:    aliran normal agar kolom tetap punya tinggi meski JS mati. */
+718: .advantage-media-img {
+719:   position: absolute;
+720:   inset: 0;

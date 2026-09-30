@@ -1,0 +1,45 @@
+{
+  "tagBalanceOff": [],
+  "brokenRefs": [
+    "produk-samsung.html",
+    "produk-lg.html",
+    "portofolio.html",
+    "kontak.html",
+    "kebijakan-privasi.html",
+    "syarat-ketentuan.html"
+  ],
+  "localRefs": 19,
+  "classesNotInCss": [
+    "no-js"
+  ],
+  "leftoverSpecs": [
+    "spesifikasi"
+  ],
+  "structure": [
+    "- [page-hero]",
+    "produk [section section-soft section-line-top]",
+    "konsultasi [cta]"
+  ],
+  "productCardCount": 6,
+  "productNames": [
+    "Videotron Indoor Hikvision P1.2",
+    "Videotron Indoor Hikvision P1.25",
+    "Videotron Indoor Hikvision P1.56",
+    "Videotron Indoor Hikvision P1.86",
+    "Videotron Indoor Hikvision P2.5",
+    "Videotron Indoor Hikvision P2.9"
+  ],
+  "detailButtons": 6,
+  "navDropdown": [
+    "href=\"produk-hikvision.html\"",
+    "href=\"produk-samsung.html\"",
+    "href=\"produk-lg.html\""
+  ],
+  "gridCss": {
+    "base": true,
+    "tablet1024": true,
+    "mobile768": true
+  },
+  "headerSameAsIndex": true,
+  "footerSameAsIndex": true
+}

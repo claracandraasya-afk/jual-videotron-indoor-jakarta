@@ -1,0 +1,111 @@
+﻿230:     }, {
+231:       threshold: 0.08,
+232:       rootMargin: "0px 0px -6% 0px"
+233:     });
+234: 
+235:     Array.prototype.forEach.call(revealTargets, function (target) {
+236:       observer.observe(target);
+237:     });
+238: 
+239:     /* Elemen yang sudah terlihat saat halaman dibuka (mis. hero) langsung
+240:        dijadwalkan, jadi tidak pernah tertinggal dalam keadaan transparan. */
+241:     window.requestAnimationFrame(function () {
+242:       window.requestAnimationFrame(function () {
+243:         Array.prototype.forEach.call(revealTargets, function (target) {
+244:           var rect = target.getBoundingClientRect();
+245:           var visible =
+246:             rect.top < (window.innerHeight || 0) * 0.94 && rect.bottom > 0;
+247:           if (visible) prepareReveal(target);
+248:         });
+249:         playHeroEntrance();
+250:       });
+251:     });
+252:   }
+253: 
+254:   /* ------------------------------------------------------------------
+255:      Keunggulan produk: pergantian gambar kolom kiri via hover.
+256:      Card 1 -> Gambar 1, Card 2 -> Gambar 2, dst. Saat kursor keluar,
+257:      kembali ke gambar default (gambar pertama). Warna kartu, ikon,
+258:      judul, dan deskripsi tidak diubah oleh JavaScript sama sekali.
+259:      ------------------------------------------------------------------ */
+260:   var advantageMedia = document.querySelector("[data-advantage-media]");
+261:   var advantageList = document.querySelector("[data-advantage-list]");
+262:   var advantageImages = advantageMedia
+263:     ? advantageMedia.querySelectorAll(".advantage-media-img")
+264:     : [];
+265:   var advantageCards = advantageList
+266:     ? advantageList.querySelectorAll(":scope > li")
+267:     : [];
+268: 
+269:   var advantageActive = -1;
+270: 
+271:   function setActiveAdvantage(index) {
+272:     if (index === advantageActive) return;
+273:     advantageActive = index;
+274: 
+275:     /* Hanya gambar yang tampil yang diumkan pembaca layar. */
+276:     Array.prototype.forEach.call(advantageImages, function (image, i) {
+277:       var isActive = i === index;
+278:       image.classList.toggle("is-active", isActive);
+279:       image.setAttribute("aria-hidden", isActive ? "false" : "true");
+280:     });
+281:   }
+282: 
+283:   /* Warna kartu tidak diubah di sini. JavaScript hanya mengganti gambar kolom
+284:      kiri mengikuti kartu yang di-hover: Card 1 -> Gambar 1, dst. Saat kursor
+285:      keluar, kembali ke gambar default (gambar pertama). */
+286:   Array.prototype.forEach.call(advantageCards, function (card, i) {
+287:     card.addEventListener("mouseenter", function () {
+288:       setActiveAdvantage(Math.min(i, advantageImages.length - 1));
+289:     });
+290:     card.addEventListener("mouseleave", function () {
+291:       setActiveAdvantage(0);
+292:     });
+293:   });
+294: 
+295: /* ------------------------------------------------------------------
+296:      Form konsultasi (validasi ringan, dilanjutkan ke WhatsApp)
+297:      ------------------------------------------------------------------ */
+298:   var consultForm = document.querySelector("[data-consult-form]");
+299: 
+300:   if (consultForm) {
+301:     consultForm.addEventListener("submit", function (event) {
+302:       event.preventDefault();
+303: 
+304:       var status = consultForm.querySelector(".form-status");
+305:       var nama = consultForm.querySelector("#nama");
+306:       var telepon = consultForm.querySelector("#telepon");
+307:       var pesan = consultForm.querySelector("#pesan");
+308: 
+309:       if (!nama || !nama.value.trim() || !telepon || !telepon.value.trim()) {
+310:         if (status) {
+311:           status.style.color = "#b42318";
+312:           status.textContent = "Mohon lengkapi nama dan nomor WhatsApp Anda terlebih dahulu.";
+313:         }
+314:         return;
+315:       }
+316: 
+317:       var pesanSingkat = [
+318:         "Halo, saya " + nama.value.trim() + ".",
+319:         "Saya ingin konsultasi videotron indoor.",
+320:         "Kebutuhan: " + (pesan && pesan.value.trim() ? pesan.value.trim() : "belum diisi detailnya."),
+321:         "Nomor saya: " + telepon.value.trim()
+322:       ].join(" ");
+323: 
+324:       var waNumber = consultForm.getAttribute("data-wa") || "6281200000000";
+325:       var waUrl = "https://wa.me/" + waNumber + "?text=" + encodeURIComponent(pesanSingkat);
+326: 
+327:       if (status) {
+328:         status.style.color = "";
+329:         status.textContent = "Terima kasih! Kami arahkan Anda ke WhatsApp untuk melanjutkan konsultasi.";
+330:       }
+331: 
+332:       window.open(waUrl, "_blank", "noopener");
+333:       consultForm.reset();
+334:     });
+335:   }
+336: 
+337:   /* ------------------------------------------------------------------
+338:      Modal detail produk ("Lihat Detail" pada card)
+339:      - Satu elemen modal diisi sesuai tombol yang diklik (data per produk).
+340:      - Tutup: tombol X, klik area di luar modal, atau tombol Escape.

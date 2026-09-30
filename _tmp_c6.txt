@@ -1,0 +1,172 @@
+﻿214: .btn {
+215:   display: inline-flex;
+216:   align-items: center;
+217:   justify-content: center;
+218:   gap: 10px;
+219:   padding: 15px 28px;
+220:   border: 1px solid transparent;
+221:   border-radius: var(--radius-pill);
+222:   font-family: var(--font-body);
+223:   font-size: 0.94rem;
+224:   font-weight: 600;
+225:   line-height: 1;
+226:   text-align: center;
+227:   white-space: nowrap;
+228:   transition: transform var(--dur) var(--ease), background var(--dur) var(--ease),
+229:     color var(--dur) var(--ease), border-color var(--dur) var(--ease), box-shadow var(--dur) var(--ease);
+230: }
+231: .btn svg { width: 16px; height: 16px; flex: none; transition: transform var(--dur) var(--ease); }
+232: .btn:hover svg { transform: translateX(3px); }
+233: .btn:active { transform: translateY(0) scale(0.985); }
+234: 
+235: .btn-primary {
+236:   background: var(--blue-600);
+237:   color: #fff;
+238:   box-shadow: var(--shadow-blue);
+239: }
+240: .btn-primary:hover {
+241:   background: var(--blue-700);
+242:   color: #fff;
+243:   transform: translateY(-2px);
+244:   box-shadow: 0 20px 40px rgba(17, 87, 238, 0.3);
+245: }
+246: 
+247: .btn-outline {
+248:   background: #fff;
+249:   color: var(--ink);
+250:   border-color: var(--line);
+251:   box-shadow: var(--shadow-xs);
+252: }
+253: .btn-outline:hover {
+254:   color: var(--blue-700);
+255:   border-color: var(--blue-200);
+256:   background: var(--blue-50);
+257:   transform: translateY(-2px);
+258: }
+259: 
+260: .btn-dark { background: var(--ink); color: #fff; }
+261: .btn-dark:hover { background: var(--blue-700); color: #fff; transform: translateY(-2px); }
+262: 
+263: .btn-white { background: #fff; color: var(--blue-700); box-shadow: 0 18px 40px rgba(4, 16, 45, 0.28); }
+264: .btn-white:hover { color: var(--blue-900); transform: translateY(-2px); }
+265: 
+266: .btn-ghost-light {
+267:   background: rgba(255, 255, 255, 0.08);
+268:   border-color: rgba(255, 255, 255, 0.34);
+269:   color: #fff;
+270: }
+271: .btn-ghost-light:hover { background: rgba(255, 255, 255, 0.18); color: #fff; }
+272: 
+273: .btn-sm { padding: 12px 22px; font-size: 0.875rem; }
+274: .btn-lg { padding: 18px 34px; font-size: 1rem; }
+275: .btn-block { width: 100%; }
+276: 
+277: .btn-group { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; }
+278: 
+279: .link-arrow {
+280:   display: inline-flex;
+281:   align-items: center;
+282:   gap: 8px;
+283:   color: var(--blue-600);
+284:   font-family: var(--font-body);
+285:   font-size: 0.92rem;
+286:   font-weight: 600;
+287: }
+288: 
+289: .link-arrow span { transition: transform var(--dur) var(--ease); }
+290: .link-arrow:hover { color: var(--blue-700); }
+291: .link-arrow:hover span { transform: translateX(5px); }
+292: 
+293: /* --------------------------------------------------------------------------
+294:    5. Header & navigation
+295:    -------------------------------------------------------------------------- */
+296: .site-header {
+297:   position: sticky;
+298:   top: 0;
+299:   z-index: 90;
+300:   background: rgba(255, 255, 255, 0.92);
+301:   backdrop-filter: saturate(180%) blur(14px);
+302:   border-bottom: 1px solid var(--line-soft);
+303:   transition: box-shadow var(--dur) var(--ease), background var(--dur) var(--ease),
+304:     border-color var(--dur) var(--ease);
+305: }
+306: .site-header.is-stuck { box-shadow: 0 10px 30px rgba(10, 22, 51, 0.07); }
+307: 
+308: .header-main {
+309:   display: flex;
+310:   align-items: center;
+311:   gap: 24px;
+312:   min-height: var(--header-h);
+313:   padding-block: 10px;
+314: }
+315: 
+316: .brand { display: inline-flex; align-items: center; color: var(--ink); }
+317: .brand:hover { color: var(--ink); }
+318: .brand-logo {
+319:   height: 38px;
+320:   width: auto;
+321:   max-width: 100%;
+322:   object-fit: contain;
+323:   display: block;
+324:   transition: opacity var(--dur) var(--ease);
+325: }
+326: .brand:hover .brand-logo { opacity: 0.86; }
+327: 
+328: .nav {
+329:   display: flex;
+330:   align-items: center;
+331:   gap: 18px;
+332:   flex: 1;
+333: }
+334: .nav-list {
+335:   display: flex;
+336:   align-items: center;
+337:   gap: 2px;
+338:   margin: 0;
+339:   padding: 0;
+340:   list-style: none;
+341: }
+342: .nav-list > li { position: relative; margin: 0; }
+343: .nav-list {
+344:   display: flex;
+345:   align-items: center;
+346:   gap: 2px;
+347:   margin: 0 auto;
+348:   padding: 0;
+349:   list-style: none;
+350: }
+351: 
+352: .nav-link {
+353:   display: inline-flex;
+354:   align-items: center;
+355:   gap: 6px;
+356:   padding: 8px 12px;
+357:   border-radius: var(--radius-xs);
+358:   background: transparent;
+359:   color: var(--ink);
+360:   font-family: var(--font-body);
+361:   font-size: 0.875rem;
+362:   font-weight: 500;
+363:   transition: color var(--dur) var(--ease), transform var(--dur) var(--ease);
+364: }
+365: .nav-link:hover { color: var(--blue-600); background: transparent; transform: translateY(-1px); }
+366: .nav-link .caret { width: 9px; height: 9px; transition: transform var(--dur) var(--ease); }
+367: .nav-item.has-dropdown:hover .caret,
+368: .nav-item.has-dropdown.is-open .caret { transform: rotate(180deg); }
+369: 
+370: .dropdown {
+371:   position: absolute;
+372:   top: calc(100% + 12px);
+373:   left: 50%;
+374:   min-width: 258px;
+375:   padding: 10px;
+376:   background: #fff;
+377:   border: 1px solid var(--line-soft);
+378:   border-radius: var(--radius);
+379:   box-shadow: var(--shadow-md);
+380:   list-style: none;
+381:   opacity: 0;
+382:   visibility: hidden;
+383:   transform: translate(-50%, 8px);
+384:   transition: opacity var(--dur) var(--ease), transform var(--dur) var(--ease), visibility var(--dur);
+385:   z-index: 20;

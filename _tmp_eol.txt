@@ -1,0 +1,34 @@
+[
+  {
+    "file": "produk-hikvision.html",
+    "crlf": 459,
+    "loneLf": 0,
+    "specRow": 9,
+    "specPill": 27,
+    "hasBom": false
+  },
+  {
+    "file": "css/style.css",
+    "crlf": 0,
+    "loneLf": 1574,
+    "specRow": 0,
+    "specPill": 0,
+    "hasBom": false
+  },
+  {
+    "file": "index.html",
+    "crlf": 649,
+    "loneLf": 0,
+    "specRow": 0,
+    "specPill": 0,
+    "hasBom": false
+  },
+  {
+    "file": "artikel.html",
+    "crlf": 232,
+    "loneLf": 0,
+    "specRow": 0,
+    "specPill": 0,
+    "hasBom": false
+  }
+]

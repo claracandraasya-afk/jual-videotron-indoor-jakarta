@@ -1,0 +1,175 @@
+﻿1186:   font-family: var(--font-head);
+1187:   font-size: 0.86rem;
+1188:   font-weight: 700;
+1189:   border-bottom: 1px solid var(--line);
+1190: }
+1191: .spec-table tbody th { color: var(--ink); font-weight: 600; width: 34%; }
+1192: .spec-table tbody tr:hover { background: var(--blue-50); }
+1193: 
+1194: .info-grid {
+1195:   display: grid;
+1196:   grid-template-columns: repeat(3, minmax(0, 1fr));
+1197:   gap: 22px;
+1198: }
+1199: .info-card {
+1200:   padding: 28px;
+1201:   border: 1px solid var(--line-soft);
+1202:   border-radius: var(--radius);
+1203:   background: #fff;
+1204:   box-shadow: var(--shadow-xs);
+1205:   transition: transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease), border-color var(--dur) var(--ease);
+1206: }
+1207: .info-card:hover { transform: translateY(-5px); border-color: var(--blue-200); box-shadow: var(--shadow-md); }
+1208: .info-card h3 { font-size: 1.04rem; margin-bottom: 8px; }
+1209: .info-card p { color: var(--muted); font-size: 0.9rem; margin: 0; }
+1210: .info-icon {
+1211:   display: grid;
+1212:   place-items: center;
+1213:   width: 46px;
+1214:   height: 46px;
+1215:   margin-bottom: 16px;
+1216:   border-radius: 14px;
+1217:   background: var(--blue-50);
+1218:   color: var(--blue-600);
+1219: }
+1220: .info-icon svg { width: 22px; height: 22px; }
+1221: 
+1222: .portfolio-grid {
+1223:   display: grid;
+1224:   grid-template-columns: repeat(3, minmax(0, 1fr));
+1225:   gap: 24px;
+1226: }
+1227: .portfolio-card {
+1228:   border: 1px solid var(--line);
+1229:   border-radius: var(--radius-lg);
+1230:   background: #fff;
+1231:   overflow: hidden;
+1232:   box-shadow: var(--shadow-xs);
+1233:   transition: transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease), border-color var(--dur) var(--ease);
+1234: }
+1235: .portfolio-card:hover { transform: translateY(-6px); border-color: var(--blue-200); box-shadow: var(--shadow-md); }
+1236: .portfolio-media { aspect-ratio: 4 / 3; overflow: hidden; border-bottom: 1px solid var(--line-soft); background: var(--surface-soft); }
+1237: .portfolio-media img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s var(--ease); }
+1238: .portfolio-card:hover .portfolio-media img { transform: scale(1.05); }
+1239: .portfolio-body { padding: 24px 26px 26px; }
+1240: .portfolio-body h3 { font-size: 1.08rem; margin-bottom: 8px; }
+1241: .portfolio-body p { color: var(--muted); font-size: 0.88rem; margin: 0 0 14px; }
+1242: 
+1243: .form-panel {
+1244:   padding: 34px;
+1245:   border: 1px solid var(--line);
+1246:   border-radius: var(--radius-lg);
+1247:   background: #fff;
+1248:   box-shadow: var(--shadow-sm);
+1249: }
+1250: .form-row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+1251: .field { display: flex; flex-direction: column; gap: 8px; margin-bottom: 18px; }
+1252: .field label { color: var(--ink); font-size: 0.86rem; font-weight: 600; }
+1253: .field input,
+1254: .field select,
+1255: .field textarea {
+1256:   width: 100%;
+1257:   padding: 14px 16px;
+1258:   border: 1px solid var(--line);
+1259:   border-radius: var(--radius-sm);
+1260:   background: #fff;
+1261:   font-size: 0.92rem;
+1262:   transition: border-color var(--dur) var(--ease), box-shadow var(--dur) var(--ease);
+1263: }
+1264: .field input:focus,
+1265: .field select:focus,
+1266: .field textarea:focus {
+1267:   outline: none;
+1268:   border-color: var(--blue-500);
+1269:   box-shadow: 0 0 0 4px rgba(47, 124, 255, 0.14);
+1270: }
+1271: .field textarea { min-height: 132px; resize: vertical; }
+1272: .field .hint { color: var(--muted); font-size: 0.78rem; }
+1273: .form-status { margin-top: 16px; font-size: 0.88rem; color: var(--blue-700); }
+1274: 
+1275: /* --------------------------------------------------------------------------
+1276:    16. Motion & reveal
+1277:    -------------------------------------------------------------------------- */
+1278: /* GPU-friendly: hanya opacity + transform, tanpa memaksa layout/reflow.
+1279:    Fade-up saat elemen masuk viewport: opacity 0 â†’ 1, translateY(30px) â†’ 0. */
+1280: [data-reveal] {
+1281:   opacity: 0;
+1282:   transform: translate3d(0, var(--reveal-shift), 0);
+1283:   will-change: opacity, transform;
+1284: }
+1285: 
+1286: /* Transisi dipasang hanya saat proses reveal berjalan agar tidak ada
+1287:    perbedaan tampilan sebelum/sesudah JS aktif (aman jika JS mati). */
+1288: [data-reveal].reveal-ready {
+1289:   transition: opacity var(--reveal-dur) var(--ease-out) var(--reveal-delay),
+1290:               transform var(--reveal-dur) var(--ease-out) var(--reveal-delay);
+1291: }
+1292: 
+1293: [data-reveal].show {
+1294:   opacity: 1;
+1295:   transform: translate3d(0, 0, 0);
+1296:   will-change: auto;
+1297: }
+1298: 
+1299: /* Stagger 0.1â€“0.15s antar elemen dalam satu section */
+1300: [data-reveal-delay="1"] { --reveal-delay: 0.1s; }
+1301: [data-reveal-delay="2"] { --reveal-delay: 0.115s; }
+1302: [data-reveal-delay="3"] { --reveal-delay: 0.13s; }
+1303: [data-reveal-delay="4"] { --reveal-delay: 0.15s; }
+1304: 
+1305: /* --------------------------------------------------------------------------
+1306:    Hero: entrance animation satu kali (bukan loop) â€” hanya transform/opacity
+1307:    -------------------------------------------------------------------------- */
+1308: .hero .hero-grid > * {
+1309:   opacity: 0;
+1310:   transform: translate3d(0, var(--reveal-shift), 0);
+1311: }
+1312: 
+1313: .hero.is-entered .hero-grid > * {
+1314:   animation: fxHeroIn var(--reveal-dur) var(--ease-out) both;
+1315:   animation-delay: var(--hero-delay, 0s);
+1316: }
+1317: .hero.is-entered .hero-grid > *:nth-child(2) { --hero-delay: 0.16s; }
+1318: 
+1319: @keyframes fxHeroIn {
+1320:   from { opacity: 0; transform: translate3d(0, var(--reveal-shift), 0); }
+1321:   to { opacity: 1; transform: translate3d(0, 0, 0); }
+1322: }
+1323: 
+1324: @media (hover: hover) and (pointer: fine) {
+1325:   .btn, .btn svg, .nav-link, .nav-link .caret, .nav-toggle,
+1326:   .nav-toggle-bars i, .product-card, .solution-card, .portfolio-card,
+1327:   .info-card, .article-mini, .point, .footer-social a {
+1328:     backface-visibility: hidden;
+1329:   }
+1330: }
+1331: 
+1332: @media (max-width: 768px) {
+1333:   /* Kurangi beban compositor di HP tanpa mengubah tampilan/layout. */
+1334:   :root { --reveal-shift: 22px; }
+1335:   [data-reveal-delay="2"] { --reveal-delay: 0.1s; }
+1336:   [data-reveal-delay="3"] { --reveal-delay: 0.11s; }
+1337:   [data-reveal-delay="4"] { --reveal-delay: 0.12s; }
+1338: }
+1339: 
+1340: @media (prefers-reduced-motion: reduce) {
+1341:   /* Tanpa animasi sama sekali â€” elemen langsung tampil normal. */
+1342:   [data-reveal],
+1343:   [data-reveal].show,
+1344:   .hero .hero-grid > *,
+1345:   .hero.is-entered .hero-grid > * {
+1346:     transition: none !important;
+1347:     animation: none !important;
+1348:     opacity: 1 !important;
+1349:     transform: none !important;
+1350:   }
+1351: }
+1352: 
+1353: @media (max-width: 1180px) {
+1354:   .solution-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+1355:   .hero-grid { gap: 44px; }
+1356:   .split { gap: 48px; }
+1357: }
+1358: 
+1359: @media (max-width: 1024px) {
+1360:   /* Gerak reveal sedikit lebih kecil agar tetap nyaman di layar sedang */

@@ -1,0 +1,172 @@
+
+  <main id="konten">
+    <!-- 1. PAGE HERO -->
+    <section class="page-hero">
+      <div class="container">
+        <div class="page-hero-grid">
+          <div>
+            <ul class="breadcrumb">
+              <li><a href="index.html">Beranda</a></li>
+              <li><a href="index.html#produk">Produk</a></li>
+              <li><span aria-current="page">Videotron Indoor Hikvision</span></li>
+            </ul>
+            <h1>Videotron Indoor Hikvision</h1>
+            <p class="hero-lead">
+              Modul LED indoor Hikvision menghadirkan tampilan tajam dengan pixel pitch rapat, sistem kontrol yang
+              mudah dioperasikan, serta perawatan sederhana &mdash; pilihan populer untuk lobi, showroom, dan ruang
+              meeting di Jakarta &amp; Jabodetabek.
+            </p>
+            <div class="btn-group">
+              <a class="btn btn-primary btn-lg" href="index.html#konsultasi">
+                Konsultasikan Sekarang
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+              </a>
+              <a class="btn btn-outline btn-lg" href="#produk">Lihat Pilihan Produk</a>
+            </div>
+          </div>
+
+          <div class="page-media">
+            <img src="images/videotron-hikvision.png" alt="Videotron indoor Hikvision dengan modul LED indoor pixel pitch rapat" width="800" height="600" decoding="async">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. KATALOG PRODUK HIKVISION -->
+    <section class="section section-soft section-line-top" id="produk">
+      <div class="container">
+        <div class="section-head center" data-reveal>
+          <span class="eyebrow">Katalog Produk</span>
+          <h2>Produk Hikvision</h2>
+          <p>Beragam pilihan videotron indoor Hikvision untuk kebutuhan display digital di Jakarta &amp; Jabodetabek &mdash; mulai dari varian pixel pitch rapat untuk jarak pandang dekat hingga varian untuk area luas. Klik &ldquo;Lihat Detail&rdquo; pada produk untuk informasi lebih lanjut.</p>
+        </div>
+
+        <div class="product-grid">
+          <article class="product-card" data-reveal>
+            <div class="product-media">
+              <img src="images/videotron-hikvision.png" alt="Videotron indoor Hikvision konfigurasi pixel pitch P1.2" width="800" height="600" loading="lazy" decoding="async">
+            </div>
+            <div class="product-body">
+              <span class="product-brand">Hikvision</span>
+              <h3>Videotron Indoor Hikvision P1.2</h3>
+              <p><strong>DS-D4212CI-ZWDB</strong> &ndash; varian COB dengan pixel pitch paling rapat untuk kebutuhan tampilan detail dari jarak pandang dekat.</p>
+              <div class="product-foot">
+                <a class="btn btn-outline btn-sm btn-block" href="#produk" data-product-detail="hikvision">
+                  Lihat Detail
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-reveal data-delay="1">
+            <div class="product-media">
+              <img src="images/videotron-hikvision.png" alt="Videotron indoor Hikvision konfigurasi pixel pitch P1.25" width="800" height="600" loading="lazy" decoding="async">
+            </div>
+            <div class="product-body">
+              <span class="product-brand">Hikvision</span>
+              <h3>Videotron Indoor Hikvision P1.25</h3>
+              <p><strong>DS-D4212FI-CWF</strong> &ndash; unit fine pixel pitch untuk lobi, showroom, dan ruang meeting yang mengutamakan ketajaman gambar.</p>
+              <div class="product-foot">
+                <a class="btn btn-outline btn-sm btn-block" href="#produk" data-product-detail="hikvision">
+                  Lihat Detail
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-reveal data-delay="2">
+            <div class="product-media">
+              <img src="images/videotron-hikvision.png" alt="Videotron indoor Hikvision konfigurasi pixel pitch P1.56" width="800" height="600" loading="lazy" decoding="async">
+            </div>
+            <div class="product-body">
+              <span class="product-brand">Hikvision</span>
+              <h3>Videotron Indoor Hikvision P1.56</h3>
+              <p><strong>DS-D4215FI-CWF</strong> &ndash; menyeimbangkan ketajaman tampilan dan luas area untuk kebutuhan display harian.</p>
+              <div class="product-foot">
+                <a class="btn btn-outline btn-sm btn-block" href="#produk" data-product-detail="hikvision">
+                  Lihat Detail
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-reveal>
+            <div class="product-media">
+              <img src="images/videotron-hikvision.png" alt="Videotron indoor Hikvision konfigurasi pixel pitch P1.86" width="800" height="600" loading="lazy" decoding="async">
+            </div>
+            <div class="product-body">
+              <span class="product-brand">Hikvision</span>
+              <h3>Videotron Indoor Hikvision P1.86</h3>
+              <p><strong>DS-D4418FI-CKF</strong> &ndash; untuk area display indoor yang lebih luas dengan kebutuhan tampilan tetap tajam.</p>
+              <div class="product-foot">
+                <a class="btn btn-outline btn-sm btn-block" href="#produk" data-product-detail="hikvision">
+                  Lihat Detail
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-reveal data-delay="1">
+            <div class="product-media">
+              <img src="images/videotron-hikvision.png" alt="Videotron indoor Hikvision konfigurasi pixel pitch P2.5" width="800" height="600" loading="lazy" decoding="async">
+            </div>
+            <div class="product-body">
+              <span class="product-brand">Hikvision</span>
+              <h3>Videotron Indoor Hikvision P2.5</h3>
+              <p><strong>DS-D4425FI-CKF</strong> &ndash; cocok untuk aula dan lobi besar dengan jarak pandang penonton yang lebih jauh.</p>
+              <div class="product-foot">
+                <a class="btn btn-outline btn-sm btn-block" href="#produk" data-product-detail="hikvision">
+                  Lihat Detail
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-reveal data-delay="2">
+            <div class="product-media">
+              <img src="images/videotron-hikvision.png" alt="Videotron indoor Hikvision konfigurasi pixel pitch P2.9" width="800" height="600" loading="lazy" decoding="async">
+            </div>
+            <div class="product-body">
+              <span class="product-brand">Hikvision</span>
+              <h3>Videotron Indoor Hikvision P2.9</h3>
+              <p><strong>DS-D4429FI-CBF</strong> &ndash; varian untuk area luas seperti ballroom, ruang pameran, dan area event.</p>
+              <div class="product-foot">
+                <a class="btn btn-outline btn-sm btn-block" href="#produk" data-product-detail="hikvision">
+                  Lihat Detail
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 3. CTA KONSULTASI -->
+    <section class="cta" id="konsultasi">
+      <div class="container">
+        <div class="cta-inner" data-reveal>
+          <span class="eyebrow on-dark">Konsultasi Gratis</span>
+          <h2>Konsultasikan Kebutuhan Videotron Indoor Hikvision Anda</h2>
+          <p>Ceritakan ukuran ruang, jarak pandang penonton, dan jenis konten yang akan ditayangkan. Tim kami akan membantu memilih konfigurasi pixel pitch Hikvision yang paling sesuai serta menyusun penawaran mengikuti anggaran Anda &mdash; tanpa biaya konsultasi.</p>
+          <div class="btn-group">
+            <a class="btn btn-white btn-lg" href="index.html#konsultasi">
+              Konsultasikan Sekarang
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand" data-reveal>

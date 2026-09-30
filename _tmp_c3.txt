@@ -1,0 +1,172 @@
+﻿1014: /* --------------------------------------------------------------------------
+1015:    14. Footer
+1016:    -------------------------------------------------------------------------- */
+1017: .site-footer {
+1018:   background: #fff;
+1019:   border-top: 1px solid var(--line-soft);
+1020:   padding: 84px 0 0;
+1021: }
+1022: .footer-grid {
+1023:   display: grid;
+1024:   grid-template-columns: minmax(0, 1.45fr) repeat(2, minmax(0, 1fr));
+1025:   gap: 48px;
+1026:   padding-bottom: 60px;
+1027: }
+1028: .footer-brand .brand { margin-bottom: 26px; }
+1029: /* Logo footer = 2,5x ukuran asli footer (38px -> 95px), jadi masih dalam rentang
+1030:    2-2,5x dan lebih kecil dari 228px (3x) sebelumnya. Hanya tinggi yang diatur dan
+1031:    lebarnya `auto` (dari .brand-logo), sehingga rasio asli 1:1 logo tetap utuh
+1032:    (tidak gepeng); file sumber 500x500 px dirender di 95px jadi tetap tajam.
+1033:    Aturan ini lebih spesifik dari .brand-logo sehingga logo di navbar tetap 38px. */
+1034: .footer-brand .brand-logo { height: 95px; }
+1035: .footer-about { color: var(--muted); font-size: 0.9rem; max-width: 360px; margin-bottom: 24px; }
+1036: /* Blok ikon sosial di footer sudah dihapus: bila .footer-about kini menjadi elemen
+1037:    terakhir di kolomnya, margin bawahnya dihilangkan agar tidak menyisakan ruang kosong. */
+1038: .footer-brand > .footer-about:last-child { margin-bottom: 0; }
+1039: 
+1040: .footer-social { display: flex; gap: 10px; }
+1041: .footer-social a {
+1042:   display: grid;
+1043:   place-items: center;
+1044:   width: 40px;
+1045:   height: 40px;
+1046:   border-radius: 12px;
+1047:   border: 1px solid var(--line);
+1048:   background: #fff;
+1049:   color: var(--ink-soft);
+1050:   transition: transform var(--dur) var(--ease), border-color var(--dur) var(--ease), color var(--dur) var(--ease), background var(--dur) var(--ease);
+1051: }
+1052: .footer-social a:hover {
+1053:   transform: translateY(-3px);
+1054:   border-color: var(--blue-200);
+1055:   background: var(--blue-50);
+1056:   color: var(--blue-700);
+1057: }
+1058: .footer-social svg { width: 18px; height: 18px; }
+1059: 
+1060: .footer-col h3 {
+1061:   margin-bottom: 18px;
+1062:   font-family: var(--font-head);
+1063:   font-size: 0.95rem;
+1064:   font-weight: 800;
+1065:   letter-spacing: -0.01em;
+1066: }
+1067: .footer-links { list-style: none; margin: 0; padding: 0; display: grid; gap: 11px; }
+1068: .footer-links li { margin: 0; }
+1069: .footer-links a {
+1070:   color: var(--muted);
+1071:   font-size: 0.89rem;
+1072:   transition: color var(--dur) var(--ease), padding-left var(--dur) var(--ease);
+1073: }
+1074: .footer-links a:hover { color: var(--blue-700); padding-left: 5px; }
+1075: 
+1076: .footer-contact { list-style: none; margin: 0; padding: 0; display: grid; gap: 16px; }
+1077: .footer-contact li { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 12px; margin: 0; }
+1078: .footer-contact svg { width: 17px; height: 17px; margin-top: 4px; color: var(--blue-600); flex: none; }
+1079: .footer-contact strong { display: block; font-size: 0.74rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+1080: .footer-contact a,
+1081: .footer-contact span.value { color: var(--ink-soft); font-size: 0.89rem; }
+1082: 
+1083: .footer-bottom {
+1084:   display: flex;
+1085:   align-items: center;
+1086:   justify-content: space-between;
+1087:   gap: 18px;
+1088:   flex-wrap: wrap;
+1089:   padding: 26px 0;
+1090:   border-top: 1px solid var(--line-soft);
+1091: }
+1092: .footer-bottom p {
+1093:   margin: 0 auto;
+1094:   color: var(--muted);
+1095:   font-size: 0.83rem;
+1096:   text-align: center;
+1097: }
+1098: .footer-bottom-links {
+1099:   display: none;
+1100: }
+1101: 
+1102: /* --------------------------------------------------------------------------
+1103:    15. Sub-pages (produk, portofolio, artikel, kontak)
+1104:    -------------------------------------------------------------------------- */
+1105: .page-hero {
+1106:   position: relative;
+1107:   padding: 72px 0 80px;
+1108:   background:
+1109:     radial-gradient(760px 380px at 90% -10%, rgba(47, 124, 255, 0.13), transparent 62%),
+1110:     linear-gradient(180deg, #ffffff, var(--surface-blue));
+1111:   border-bottom: 1px solid var(--line-soft);
+1112:   overflow: hidden;
+1113: }
+1114: .page-hero-grid {
+1115:   display: grid;
+1116:   grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+1117:   gap: 56px;
+1118:   align-items: center;
+1119: }
+1120: .page-hero h1 { font-size: clamp(1.95rem, 3.5vw, 2.9rem); }
+1121: .page-hero .hero-lead { margin-bottom: 30px; }
+1122: 
+1123: .breadcrumb {
+1124:   display: flex;
+1125:   align-items: center;
+1126:   flex-wrap: wrap;
+1127:   gap: 9px;
+1128:   margin: 0 0 22px;
+1129:   padding: 0;
+1130:   list-style: none;
+1131:   color: var(--muted);
+1132:   font-size: 0.8rem;
+1133: }
+1134: .breadcrumb li { margin: 0; display: inline-flex; align-items: center; gap: 9px; }
+1135: .breadcrumb li + li::before { content: "/"; color: var(--blue-200); }
+1136: .breadcrumb a { color: var(--muted); }
+1137: .breadcrumb a:hover { color: var(--blue-700); }
+1138: .breadcrumb [aria-current] { color: var(--ink); font-weight: 500; }
+1139: 
+1140: .page-media {
+1141:   border-radius: var(--radius-lg);
+1142:   border: 1px solid var(--line);
+1143:   background: #fff;
+1144:   overflow: hidden;
+1145:   box-shadow: var(--shadow-md);
+1146: }
+1147: 
+1148: .prose { max-width: 780px; color: var(--ink-soft); }
+1149: .prose h2 { margin-top: 46px; font-size: clamp(1.4rem, 2.2vw, 1.95rem); }
+1150: .prose h3 { margin-top: 34px; font-size: 1.2rem; }
+1151: .prose p, .prose li { font-size: 0.98rem; line-height: 1.85; color: var(--ink-soft); }
+1152: .prose ul, .prose ol { padding-left: 1.2rem; }
+1153: .prose li { margin-bottom: 8px; }
+1154: .prose .lead { font-size: 1.08rem; color: var(--ink-soft); }
+1155: .prose img { border-radius: var(--radius); border: 1px solid var(--line-soft); margin: 28px 0; }
+1156: .prose blockquote {
+1157:   margin: 30px 0;
+1158:   padding: 22px 26px;
+1159:   border-left: 3px solid var(--blue-600);
+1160:   border-radius: 0 var(--radius) var(--radius) 0;
+1161:   background: var(--surface-blue);
+1162:   color: var(--ink);
+1163:   font-family: var(--font-head);
+1164:   font-weight: 600;
+1165:   line-height: 1.6;
+1166: }
+1167: 
+1168: .note-card {
+1169:   margin: 32px 0;
+1170:   padding: 26px 28px;
+1171:   border: 1px solid var(--line);
+1172:   border-radius: var(--radius);
+1173:   background: #fff;
+1174:   box-shadow: var(--shadow-xs);
+1175: }
+1176: .note-card h4 { margin-bottom: 10px; }
+1177: .note-card p, .note-card li { font-size: 0.92rem; color: var(--muted); }
+1178: 
+1179: .spec-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 0.92rem; }
+1180: .spec-table caption { text-align: left; color: var(--muted); font-size: 0.82rem; padding-bottom: 12px; }
+1181: .spec-table th,
+1182: .spec-table td { padding: 15px 18px; border-bottom: 1px solid var(--line-soft); text-align: left; vertical-align: top; }
+1183: .spec-table thead th {
+1184:   background: var(--surface-soft);
+1185:   color: var(--ink);

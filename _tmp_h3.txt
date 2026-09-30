@@ -1,0 +1,88 @@
+﻿198:             </div>
+199:             <div class="product-body">
+200:               <span class="product-brand">LG</span>
+201:               <h3>Videotron Indoor LG</h3>
+202:               <p>Solusi efisien untuk instalasi cepat, ringan, dan rapi &mdash; cocok untuk kantor, kampus, maupun ruang event dengan kebutuhan dinamis.</p>
+203:               <div class="product-foot">
+204:                 <a class="link-arrow" href="produk-lg.html" data-product-detail="lg">Lihat Detail <span aria-hidden="true">&rarr;</span></a>
+205:               </div>
+206:             </div>
+207:           </article>
+208:         </div>
+209:       </div>
+210:     </section>
+211:     <!-- 5. SOLUSI VIDEOTRON BERDASARKAN KEBUTUHAN -->
+212:     <section class="section section-tint section-line-top" id="solusi">
+213:       <div class="container">
+214:         <div class="section-head center" data-reveal>
+215:           <span class="eyebrow">Solusi</span>
+216:           <h2>Solusi Videotron Berdasarkan Kebutuhan</h2>
+217:           <p>Setiap kebutuhan memiliki pendekatan berbeda. Berikut penerapan videotron indoor yang paling sering kami kerjakan di Jakarta dan sekitarnya.</p>
+218:         </div>
+219: 
+220:         <div class="solution-grid">
+221:           <article class="solution-card" data-reveal>
+222:             <div class="solution-visual">
+223:               <img src="images/solusi-bisnis-perkantoran.png" alt="Videotron indoor pada lobi kantor untuk informasi dan branding perusahaan" width="800" height="550" loading="lazy" decoding="async">
+224:             </div>
+225:             <div class="solution-body">
+226:               <span class="solution-label">Display Profesional Untuk Bisnis</span>
+227:               <h3>Bisnis &amp; Perkantoran</h3>
+228:               <p>Layar informasi perusahaan, video conference, hingga pengumuman internal untuk lobi dan ruang rapat.</p>
+229:               <a class="link-arrow" href="kontak.html">Konsultasikan <span aria-hidden="true">&rarr;</span></a>
+230:             </div>
+231:           </article>
+232: 
+233:           <article class="solution-card" data-reveal data-delay="1">
+234:             <div class="solution-visual">
+235:               <img src="images/solusi-mall-showroom.png" alt="Videotron indoor di mall dan showroom untuk promosi produk" width="800" height="550" loading="lazy" decoding="async">
+236:             </div>
+237:             <div class="solution-body">
+238:               <span class="solution-label">Promosi Lebih Menarik</span>
+239:               <h3>Mall &amp; Showroom</h3>
+240:               <p>Konten promo, katalog produk, dan display brand yang menahan perhatian pengunjung lebih lama.</p>
+241:               <a class="link-arrow" href="kontak.html">Konsultasikan <span aria-hidden="true">&rarr;</span></a>
+242:             </div>
+243:           </article>
+244: 
+245:           <article class="solution-card" data-reveal data-delay="2">
+246:             <div class="solution-visual">
+247:               <img src="images/solusi-sekolah-kampus.png" alt="Videotron indoor di ruang kelas sekolah dan kampus untuk presentasi" width="800" height="550" loading="lazy" decoding="async">
+248:             </div>
+249:             <div class="solution-body">
+250:               <span class="solution-label">Presentasi Lebih Interaktif</span>
+251:               <h3>Sekolah &amp; Kampus</h3>
+252:               <p>Media pembelajaran, informasi akademik, dan presentasi digital yang lebih jelas bagi seluruh peserta.</p>
+253:               <a class="link-arrow" href="kontak.html">Konsultasikan <span aria-hidden="true">&rarr;</span></a>
+254:             </div>
+255:           </article>
+256: 
+257:           <article class="solution-card" data-reveal data-delay="3">
+258:             <div class="solution-visual">
+259:               <img src="images/solusi-hotel-event.png" alt="Videotron indoor di ballroom hotel untuk backdrop acara dan event" width="800" height="550" loading="lazy" decoding="async">
+260:             </div>
+261:             <div class="solution-body">
+262:               <span class="solution-label">Visual Untuk Setiap Acara</span>
+263:               <h3>Hotel &amp; Event</h3>
+264:               <p>Backdrop panggung, rundown acara, hingga branding sponsor dengan tampilan yang rapi dan konsisten.</p>
+265:               <a class="link-arrow" href="kontak.html">Konsultasikan <span aria-hidden="true">&rarr;</span></a>
+266:             </div>
+267:           </article>
+268:         </div>
+269:       </div>
+270:     </section>
+271:     <!-- 6. KEUNGGULAN PRODUK -->
+272:     <section class="section" id="keunggulan">
+273:       <div class="container">
+274:         <div class="split reverse">
+275:           <div class="advantage-media-col" data-reveal>
+276:             <div class="advantage-media" data-advantage-media>
+277:               <img class="advantage-media-img is-active" src="images/keunggulan-tampilan-berkualitas.png" alt="Tampilan videotron indoor dengan warna konsisten dan kontras tajam" width="720" height="700" loading="lazy" decoding="async">
+278:               <img class="advantage-media-img" src="images/keunggulan-fleksibel-desain.png" alt="Modul videotron indoor disusun mengikuti bentuk melengkung ruangan" width="720" height="700" loading="lazy" decoding="async">
+279:               <img class="advantage-media-img" src="images/keunggulan-produk-pilihan.png" alt="Pilihan modul videotron indoor Hikvision, Samsung, dan LG dengan pixel pitch berbeda" width="720" height="700" loading="lazy" decoding="async">
+280:               <img class="advantage-media-img" src="images/keunggulan-display-profesional.png" alt="Instalasi dan pengukuran modul videotron indoor oleh teknisi profesional" width="720" height="700" loading="lazy" decoding="async">
+281:             </div>
+282:           </div>
+283: 
+284:           <div data-reveal data-delay="1">
+285:             <div class="section-head">

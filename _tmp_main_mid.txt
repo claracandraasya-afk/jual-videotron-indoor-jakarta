@@ -1,0 +1,190 @@
+
+      window.open(waUrl, "_blank", "noopener");
+      consultForm.reset();
+    });
+  }
+
+  /* ------------------------------------------------------------------
+     Modal detail produk ("Lihat Detail" pada card)
+     - Satu elemen modal diisi sesuai tombol yang diklik (data per produk).
+     - Tutup: tombol X, klik area di luar modal, atau tombol Escape.
+     - Animasi fade + scale murni lewat class .is-open (CSS).
+     ------------------------------------------------------------------ */
+  var PRODUCT_DETAILS = {
+    hikvision: {
+      brand: "Hikvision",
+      title: "Videotron Indoor Hikvision",
+      desc:
+        "Pilihan populer untuk lobi, showroom, dan ruang meeting. Modul LED indoor Hikvision menghadirkan tampilan tajam dengan pixel pitch rapat, sistem kontrol yang mudah dioperasikan, serta perawatan sederhana sehingga layar tetap prima untuk pemakaian harian jangka panjang.",
+      specs: [
+        "Pixel pitch indoor: P1.25 / P1.56 / P1.86 (disesuaikan jarak pandang)",
+        "Kecerahan 600–800 nits, nyaman untuk ruangan dengan pencahayaan campuran",
+        "Refresh rate tinggi, tampilan mulus tanpa flicker di depan kamera",
+        "Sistem kontrol user-friendly, bisa dijalankan tim non-IT",
+        "Garansi resmi + dukungan sparepart modul dan receiving card",
+        "Instalasi rapi di Jakarta & sekitarnya oleh teknisi berpengalaman"
+      ],
+      image: "images/videotron-hikvision.png",
+      link: "produk-hikvision.html"
+    },
+    samsung: {
+      brand: "Samsung",
+      title: "Videotron Indoor Samsung",
+      desc:
+        "Untuk kebutuhan tampilan premium tanpa sambungan terlihat. Videotron indoor Samsung memakai modul bezel-less dengan micro pixel pitch sehingga konten tampil menyatu penuh — ideal bagi brand yang menonjolkan kualitas visual di area publik seperti flagship store, gallery, dan aula perusahaan.",
+      specs: [
+        "Micro pixel pitch: P0.9 / P1.2 untuk jarak pandang sangat dekat",
+        "Kecerahan hingga 900 nits dengan kalibrasi warna presisi",
+        "Desain bezel-less, sambungan modul nyaris tidak terlihat",
+        "Kedalaman hitam & kontras tinggi untuk konten visual premium",
+        "Manajemen konten terpusat untuk banyak layar sekaligus",
+        "Garansi resmi Samsung + layanan purnajual terjadwal"
+      ],
+      image: "images/videotron-samsung.png",
+      link: "produk-samsung.html"
+    },
+    lg: {
+      brand: "LG",
+      title: "Videotron Indoor LG",
+      desc:
+        "Solusi efisien untuk instalasi cepat, ringan, dan rapi. Modul LED indoor LG dirancang tipis dengan bobot ringan sehingga cocok untuk kantor, kampus, maupun ruang event yang kebutuhan display-nya dinamis — termasuk pemasangan sementara untuk kegiatan tertentu.",
+      specs: [
+        "Pixel pitch indoor: P1.5 / P1.8 / P2.0 sesuai skema ruang",
+        "Bodi ultra slim & ringan, cocok untuk dinding ringan dan portable",
+        "Instalasi cepat dengan sistem mounting praktis",
+        "Konsumsi daya efisien untuk operasional harian berkepanjangan",
+        "Kompatibel dengan berbagai sumber konten (PC, player, media box)",
+        "Garansi resmi + opsi sewa untuk kebutuhan event"
+      ],
+      image: "images/videotron-LG.png",
+      link: "produk-lg.html"
+    }
+  };
+
+  var productModal = document.getElementById("product-modal");
+
+  if (productModal) {
+    var modalImg = document.getElementById("product-modal-img");
+    var modalBrand = document.getElementById("product-modal-brand");
+    var modalTitle = document.getElementById("product-modal-title");
+    var modalDesc = document.getElementById("product-modal-desc");
+    var modalSpecs = document.getElementById("product-modal-specs");
+    var modalLink = document.getElementById("product-modal-link");
+    var modalDialog = productModal.querySelector(".product-modal-dialog");
+    var modalLastFocus = null;
+
+    function openProductModal(key) {
+      var data = PRODUCT_DETAILS[key];
+      if (!data) return;
+
+      modalImg.src = data.image;
+      modalImg.alt = "Videotron indoor " + data.brand;
+      modalBrand.textContent = data.brand;
+      modalTitle.textContent = data.title;
+      modalDesc.textContent = data.desc;
+      modalLink.href = data.link;
+
+      while (modalSpecs.firstChild) modalSpecs.removeChild(modalSpecs.firstChild);
+      Array.prototype.forEach.call(data.specs, function (spec) {
+        var li = document.createElement("li");
+        li.textContent = spec;
+        modalSpecs.appendChild(li);
+      });
+
+      modalLastFocus = document.activeElement;
+      productModal.hidden = false;
+      document.body.classList.add("modal-open");
+      /* Dua frame agar transisi fade + scale sempat berjalan. */
+      window.requestAnimationFrame(function () {
+        window.requestAnimationFrame(function () {
+          productModal.classList.add("is-open");
+        });
+      });
+      if (modalDialog) modalDialog.focus && modalDialog.focus();
+    }
+
+    function closeProductModal() {
+      if (productModal.hidden) return;
+      productModal.classList.remove("is-open");
+      document.body.classList.remove("modal-open");
+      window.setTimeout(function () {
+        productModal.hidden = true;
+        if (modalLastFocus && modalLastFocus.focus) modalLastFocus.focus();
+      }, 260);
+    }
+
+    Array.prototype.forEach.call(
+      document.querySelectorAll("[data-product-detail]"),
+      function (trigger) {
+        trigger.addEventListener("click", function (event) {
+          event.preventDefault();
+          openProductModal(trigger.getAttribute("data-product-detail"));
+        });
+      }
+    );
+
+    Array.prototype.forEach.call(
+      productModal.querySelectorAll("[data-modal-close]"),
+      function (closer) {
+        closer.addEventListener("click", closeProductModal);
+      }
+    );
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape" && !productModal.hidden) closeProductModal();
+    });
+  }
+
+  /* ------------------------------------------------------------------
+     Detail artikel di halaman yang sama ("Baca Selengkapnya")
+     - Klik: daftar artikel disembunyikan, panel detail muncul dengan
+       animasi fade + slide (murni CSS via class .is-open).
+     - "Kembali ke Artikel": panel ditutup, daftar tampil lagi,
+       posisi scroll dikembalikan seperti sebelumnya.
+     - Isi panel per artikel diambil dari ARTICLES (data di bawah).
+     ------------------------------------------------------------------ */
+  var ARTICLES = {
+    memilih: {
+      tag: "Panduan",
+      date: "12 Januari 2026",
+      title: "Cara Memilih Videotron Indoor yang Tepat untuk Kebutuhan Bisnis Anda",
+      desc:
+        "Pixel pitch, ukuran layar, kecerahan, sampai sistem kontrol — delapan hal yang perlu dipertimbangkan sebelum memesan videotron indoor. Panduan ini membantu Anda mencocokkan spesifikasi dengan jarak pandang penonton, ukuran ruangan, dan jenis konten yang akan ditayangkan, sehingga anggaran yang keluar benar-benar sepadan dengan kualitas tampilan yang didapat.",
+      image: "images/artikel-cara-memilih-videotron.png",
+      alt: "Ilustrasi panduan memilih videotron indoor dengan perbandingan spesifikasi"
+    },
+    harga: {
+      tag: "Harga",
+      date: "05 Januari 2026",
+      title: "Harga Videotron Indoor Jakarta dan Faktor yang Mempengaruhinya",
+      desc:
+        "Ulasan lengkap komponen biaya videotron indoor: mulai dari modul LED, receiving card, sistem kontrol, hingga pekerjaan instalasi dan rangka pendukung. Dilengkapi tips menyusun anggaran secara realistis — termasuk bagian mana yang bisa dihemat dan bagian mana yang sebaiknya tidak dikorbankan agar layar tetap awet untuk pemakaian jangka panjang.",
+      image: "images/artikel-harga-videotron.png",
+      alt: "Ilustrasi komponen biaya dan kisaran harga videotron indoor Jakarta"
+    },
+    penggunaan: {
+      tag: "Penggunaan",
+      date: "28 Desember 2025",
+      title: "Penggunaan Videotron Indoor: dari Lobi Kantor hingga Ruang Event",
+      desc:
+        "Contoh pemanfaatan videotron indoor yang terbukti efektif di lapangan: penyambutan tamu di lobi kantor, promosi tenant di mall, media pembelajaran di sekolah dan kampus, sampai layar utama di ruang event dan hotel. Setiap skenario dibahas bersama rekomendasi ukuran dan spesifikasi agar hasilnya maksimal sesuai karakter ruangannya.",
+      image: "images/artikel-penggunaan-videotron.png",
+      alt: "Ilustrasi penggunaan videotron indoor di berbagai ruangan"
+    }
+  };
+
+  var articleDetail = document.getElementById("article-detail");
+
+  if (articleDetail) {
+    var articleList = articleDetail.parentElement.querySelector(".article-layout");
+    var adImg = document.getElementById("article-detail-img");
+    var adTag = document.getElementById("article-detail-tag");
+    var adDate = document.getElementById("article-detail-date");
+    var adTitle = document.getElementById("article-detail-title");
+    var adText = document.getElementById("article-detail-text");
+    var adBack = document.getElementById("article-detail-back");
+    var articleScrollY = 0;
+
+    function openArticleDetail(key) {
+      var data = ARTICLES[key];
+      if (!data || articleDetail.hidden === false) return;

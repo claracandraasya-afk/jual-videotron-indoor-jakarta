@@ -616,6 +616,18 @@ body.nav-open .nav-toggle-bars i:nth-child(3) { transform: translateY(-5px) rota
 .product-body h3 { margin-bottom: 10px; font-size: 1.2rem; }
 .product-body > p { color: var(--muted); font-size: 0.9rem; margin-bottom: 18px; }
 
+.spec-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; }
+.spec-pill {
+  padding: 7px 13px;
+  border-radius: var(--radius-pill);
+  background: var(--surface-soft);
+  border: 1px solid var(--line-soft);
+  color: var(--ink-soft);
+  font-size: 0.78rem;
+  line-height: 1;
+}
+.spec-pill b { color: var(--ink); font-weight: 600; }
+
 .feature-list { display: grid; gap: 9px; margin: 0 0 24px; padding: 0; list-style: none; }
 .feature-list li {
   position: relative;
@@ -636,120 +648,6 @@ body.nav-open .nav-toggle-bars i:nth-child(3) { transform: translateY(-5px) rota
   background: var(--blue-50) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231157ee' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E") center/9px no-repeat;
 }
 .product-foot { margin-top: auto; padding-top: 20px; border-top: 1px solid var(--line-soft); }
-
-/* --------------------------------------------------------------------------
-   8b. Katalog per seri (halaman produk Hikvision)
-   Navigasi ringkas antar seri pada halaman katalog. Kini berupa tiga pill
-   kecil yang lebarnya mengikuti isi teks (bukan card selebar grid), tetap
-   sejajar dalam satu baris dan rata tengah. Memakai selector baru, tidak
-   mengubah gaya yang sudah ada, jadi halaman lain tidak terpengaruh.
-   -------------------------------------------------------------------------- */
-.series-nav {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 12px;
-}
-
-.series-nav a {
-  display: inline-flex;
-  flex: 0 0 auto;
-  align-items: center;
-  justify-content: center;
-  width: auto;
-  max-width: 100%;
-  padding: 10px 24px;
-  border: 1px solid var(--line);
-  border-radius: var(--radius-lg);
-  background: #fff;
-  box-shadow: var(--shadow-xs);
-  white-space: nowrap;
-  /* Transisi hover memakai --dur-fast (0.3s): cukup halus, masih di rentang
-     durasi animasi yang dipakai situs ini. */
-  transition: transform var(--dur-fast) var(--ease), background var(--dur-fast) var(--ease),
-    color var(--dur-fast) var(--ease), border-color var(--dur-fast) var(--ease),
-    box-shadow var(--dur-fast) var(--ease);
-}
-/* Kursor diarahkan ke pill: background, border, dan teks menjadi biru/putih.
-   Saat kursor keluar, pill otomatis kembali ke putih dengan teks biru gelap. */
-.series-nav a:hover,
-.series-nav a:focus-visible {
-  transform: translateY(-4px);
-  border-color: var(--blue-600);
-  border-radius: var(--radius-lg);
-  background: var(--blue-600);
-  color: #fff;
-  box-shadow: var(--shadow-blue);
-}
-.series-nav a:hover strong,
-.series-nav a:focus-visible strong { color: #fff; }
-.series-nav strong {
-  color: var(--ink);
-  font-family: var(--font-head);
-  font-size: 1.02rem;
-  line-height: 1.2;
-}
-.series-nav span { color: var(--muted); font-size: 0.82rem; line-height: 1.5; }
-
-/* --------------------------------------------------------------------------
-   8c. Penyegaran tampilan halaman katalog produk
-   Halaman produk (Hikvision, Samsung, LG) dibuat lebih lega dan rapi:
-   judul & deskripsi section terpusat, card dengan radius, border, dan shadow
-   yang lebih halus, serta jarak antar card yang konsisten. Seluruh aturan
-   dibatasi dengan .page-katalog sehingga halaman lain tidak ikut berubah.
-   -------------------------------------------------------------------------- */
-.page-katalog .section { padding: 96px 0; }
-
-/* Judul + deskripsi section: terpusat, rapi, dan lega seperti blok utama
-   katalog pada referensi portofolio. */
-.page-katalog .section-head {
-  max-width: 800px;
-  margin-inline: auto;
-  margin-bottom: 48px;
-  text-align: center;
-}
-.page-katalog .section-head .eyebrow { margin-bottom: 20px; }
-.page-katalog .section-head h2 { margin-bottom: 16px; }
-.page-katalog .section-head p { font-size: 1rem; line-height: 1.85; }
-
-/* Grid card: tiga kolom sejajar dengan jarak yang konsisten. */
-.page-katalog .product-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 30px 28px;
-}
-
-/* Card produk: radius, border, dan shadow yang lebih halus. */
-.page-katalog .product-card {
-  border-color: var(--line-soft);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-sm);
-}
-.page-katalog .product-card:hover {
-  border-color: var(--blue-200);
-  box-shadow: var(--shadow-md);
-}
-.page-katalog .product-media { border-bottom-color: var(--line-soft); }
-.page-katalog .product-body { padding: 28px 28px 30px; }
-.page-katalog .product-brand { margin-bottom: 10px; font-size: 0.72rem; letter-spacing: 0.15em; }
-.page-katalog .product-body h3 { margin-bottom: 12px; font-size: 1.2rem; line-height: 1.32; }
-.page-katalog .product-body > p { font-size: 0.91rem; line-height: 1.8; margin-bottom: 22px; }
-.page-katalog .product-foot { padding-top: 22px; }
-
-/* Tablet & mobile: dua kolom lalu satu kolom, jarak tetap konsisten. */
-@media (max-width: 1024px) {
-  .page-katalog .section { padding: 88px 0; }
-  .page-katalog .product-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 26px; }
-}
-@media (max-width: 768px) {
-  .page-katalog .section { padding: 68px 0; }
-  .page-katalog .section-head { margin-bottom: 36px; }
-  .page-katalog .product-grid { grid-template-columns: minmax(0, 1fr); gap: 22px; }
-  .page-katalog .product-body { padding: 24px 24px 26px; }
-}
-@media (max-width: 480px) {
-  .page-katalog .product-body { padding: 22px 20px 24px; }
-}
 
 /* --------------------------------------------------------------------------
    9. Solusi (4 card grid)
@@ -1204,8 +1102,6 @@ body.nav-open .nav-toggle-bars i:nth-child(3) { transform: translateY(-5px) rota
 /* --------------------------------------------------------------------------
    15. Sub-pages (produk, portofolio, artikel, kontak)
    -------------------------------------------------------------------------- */
-/* Halaman kontak tanpa hero: section pertama langsung di bawah header */
-.page-section-first { padding-top: 56px; }
 .page-hero {
   position: relative;
   padding: 72px 0 80px;
@@ -1223,28 +1119,6 @@ body.nav-open .nav-toggle-bars i:nth-child(3) { transform: translateY(-5px) rota
 }
 .page-hero h1 { font-size: clamp(1.95rem, 3.5vw, 2.9rem); }
 .page-hero .hero-lead { margin-bottom: 30px; }
-
-/* Hero teks rata tengah tanpa foto & tanpa CTA (halaman portofolio & artikel) */
-.page-hero-center {
-  padding: 68px 0 72px;
-  text-align: center;
-}
-.page-hero-center .page-hero-content {
-  max-width: 840px;
-  margin-inline: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-.page-hero-center .breadcrumb {
-  justify-content: center;
-}
-.page-hero-center .hero-lead {
-  max-width: 720px;
-  margin-inline: auto;
-  margin-bottom: 0;
-}
 
 .breadcrumb {
   display: flex;
@@ -1563,11 +1437,6 @@ body.nav-open .nav-toggle-bars i:nth-child(3) { transform: translateY(-5px) rota
 
   .section { padding: 72px 0; }
   .section-head { margin-bottom: 40px; }
-  /* Pill seri tetap satu baris dan rata tengah: ukuran dipadatkan agar tiga
-     pill muat tanpa memenuhi lebar layar kecil. */
-  .series-nav { gap: 8px; }
-  .series-nav a { padding: 9px 14px; }
-  .series-nav strong { font-size: 0.85rem; }
   .brand-logo { height: 32px; }
   /* Logo footer juga 2,5x ukuran asli di layar kecil (32px -> 80px) */
   .footer-brand .brand-logo { height: 80px; }
@@ -1608,27 +1477,14 @@ body.nav-open .nav-toggle-bars i:nth-child(3) { transform: translateY(-5px) rota
   .spec-table th,
   .spec-table td { padding: 13px 14px; font-size: 0.86rem; }
   .spec-table tbody th { width: 42%; }
-
-  .product-modal-body { padding: 32px 30px 34px; }
 }
 
 @media (max-width: 480px) {
-  /* Popup detail: jarak dirapatkan dan tombol ajakan dibuat selebar layar. */
-  .product-modal { padding: 14px; }
-  .product-modal-body { padding: 26px 22px 28px; }
-  .product-modal-body h3 { padding-right: 42px; }
-
   .article-mini { grid-template-columns: minmax(0, 1fr); }
   .article-mini-media { aspect-ratio: 16 / 9; }
   .faq-question { padding: 18px 20px; font-size: 0.96rem; gap: 14px; }
   .faq-answer p { padding: 0 20px 22px; }
   .article-feature-body { padding: 24px; }
-  /* Layar sangat kecil: agar tiga pill seri tetap sebaris dan rata tengah,
-     label boleh turun baris di dalam pill dan ketiganya dibuat sama tinggi. */
-  .series-nav { align-items: stretch; }
-  .series-nav a { flex: 1 1 auto; padding: 8px 10px; white-space: normal; text-align: center; }
-  .series-nav strong { font-size: 0.78rem; }
-  #product-modal-link { display: flex; width: 100%; justify-content: center; }
 }
 /* --------------------------------------------------------------------------
    18. Utilities
@@ -1664,8 +1520,8 @@ body.nav-open .nav-toggle-bars i:nth-child(3) { transform: translateY(-5px) rota
 .product-modal-dialog {
   position: relative;
   z-index: 1;
-  width: min(920px, 100%);
-  max-height: min(88vh, 780px);
+  width: min(760px, 100%);
+  max-height: min(86vh, 720px);
   overflow: auto;
   display: grid;
   grid-template-columns: minmax(0, 1fr);
@@ -1682,19 +1538,12 @@ body.nav-open .nav-toggle-bars i:nth-child(3) { transform: translateY(-5px) rota
   transform: scale(1) translateY(0);
 }
 
-/* Popup detail produk tanpa foto: area gambar disembunyikan sehingga deskripsi
-   dan spesifikasi memakai seluruh lebar popup. Markup media dibiarkan utuh agar
-   mudah dikembalikan bila foto produk ingin ditampilkan lagi. */
-.product-modal-media { display: none; }
+.product-modal-media { background: var(--blue-50); }
+.product-modal-media img { width: 100%; height: auto; display: block; }
 
-.product-modal-body { padding: 34px 40px 38px; }
-.product-modal-body h3 {
-  font-size: clamp(1.32rem, 2.4vw, 1.6rem);
-  margin: 8px 0 14px;
-  /* Sisakan ruang untuk tombol tutup di pojok kanan atas. */
-  padding-right: 46px;
-}
-.product-modal-body p { color: var(--muted); font-size: 0.98rem; line-height: 1.8; margin: 0 0 26px; }
+.product-modal-body { padding: 26px 30px 30px; }
+.product-modal-body h3 { font-size: 1.35rem; margin: 6px 0 10px; }
+.product-modal-body p { color: var(--muted); line-height: 1.75; margin: 0 0 18px; }
 .product-modal-body h4 {
   font-size: 0.95rem;
   text-transform: uppercase;
@@ -1702,40 +1551,7 @@ body.nav-open .nav-toggle-bars i:nth-child(3) { transform: translateY(-5px) rota
   color: var(--blue-700);
   margin: 0 0 10px;
 }
-/* Daftar spesifikasi: lebar penuh dengan bullet point yang rapi. */
-.product-modal-body ul {
-  margin: 0 0 26px;
-  padding: 0 0 24px 22px;
-  border-bottom: 1px solid var(--line-soft);
-  color: var(--muted);
-  line-height: 1.75;
-  font-size: 0.94rem;
-}
-.product-modal-body ul li { margin-bottom: 9px; padding-left: 4px; }
-.product-modal-body ul li:last-child { margin-bottom: 0; }
-
-/* Tombol ajakan di bagian bawah popup (teks diisi js/main.js). */
-#product-modal-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 14px 26px;
-  border-radius: var(--radius-pill);
-  background: var(--blue-600);
-  color: #fff;
-  font-size: 0.94rem;
-  font-weight: 600;
-  box-shadow: 0 12px 26px rgba(17, 87, 238, 0.26);
-  transition: background var(--dur) var(--ease), box-shadow var(--dur) var(--ease),
-    transform var(--dur) var(--ease);
-}
-#product-modal-link:hover {
-  background: var(--blue-700);
-  box-shadow: 0 16px 32px rgba(17, 87, 238, 0.32);
-  color: #fff;
-  transform: translateY(-2px);
-}
-#product-modal-link:hover span { transform: translateX(5px); }
+.product-modal-body ul { margin: 0 0 20px; padding-left: 20px; color: var(--muted); line-height: 1.8; font-size: 0.92rem; }
 
 .product-modal-close {
   position: absolute;
@@ -1760,8 +1576,8 @@ body.nav-open .nav-toggle-bars i:nth-child(3) { transform: translateY(-5px) rota
 body.modal-open { overflow: hidden; }
 
 @media (min-width: 640px) {
-  /* Popup tanpa foto: tetap satu kolom penuh, hanya jarak yang dilonggarkan. */
-  .product-modal-body { padding: 38px 46px 42px; }
+  .product-modal-dialog { grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); }
+  .product-modal-media img { height: 100%; object-fit: cover; }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -1817,79 +1633,4 @@ body.modal-open { overflow: hidden; }
 
 @media (prefers-reduced-motion: reduce) {
   .article-detail { transition: none; transform: none; }
-}
-
-/* ==========================================================================
-   Halaman Detail Produk (Hikvision)
-   Layout 2 kolom: foto di kiri, info + spesifikasi di kanan.
-   ========================================================================== */
-.product-detail-section { padding-top: 46px; }
-
-.breadcrumb-detail { margin-bottom: 26px; }
-
-.product-detail-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
-  gap: 48px;
-  align-items: start;
-}
-
-.product-detail-media {
-  position: sticky;
-  top: 108px;
-  background: #fff;
-  border: 1px solid var(--line-soft);
-  border-radius: 18px;
-  overflow: hidden;
-  box-shadow: 0 18px 44px rgba(17, 87, 238, 0.10);
-}
-.product-detail-media img { display: block; width: 100%; height: auto; }
-
-.product-detail-info { display: flex; flex-direction: column; }
-.product-detail-info h1 {
-  font-size: clamp(1.55rem, 3vw, 2.1rem);
-  line-height: 1.25;
-  margin: 0 0 10px;
-}
-.product-detail-code { color: var(--muted); font-size: 0.95rem; margin: 0 0 26px; }
-.product-detail-code strong { color: var(--ink); }
-
-.product-detail-spec-title {
-  font-size: 1.02rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  margin: 0 0 16px;
-  padding-bottom: 12px;
-  border-bottom: 2px solid var(--blue-600);
-  display: inline-block;
-}
-
-.spec-list {
-  list-style: none;
-  margin: 0 0 30px;
-  padding: 0;
-  border-top: 1px solid var(--line-soft);
-}
-.spec-row {
-  display: grid;
-  grid-template-columns: minmax(140px, 34%) minmax(0, 1fr);
-  gap: 18px;
-  padding: 12px 2px;
-  border-bottom: 1px solid var(--line-soft);
-  font-size: 0.95rem;
-}
-.spec-row:nth-child(odd) { background: rgba(17, 87, 238, 0.028); }
-.spec-name { font-weight: 600; color: var(--ink); }
-.spec-value { color: var(--muted); }
-
-.product-detail-cta { margin-top: 6px; }
-
-@media (max-width: 991px) {
-  .product-detail-grid { grid-template-columns: minmax(0, 1fr); gap: 30px; }
-  .product-detail-media { position: static; }
-}
-
-@media (max-width: 575px) {
-  .spec-row { grid-template-columns: minmax(0, 1fr); gap: 4px; padding: 12px 10px; }
-  .spec-name { font-size: 0.88rem; }
 }

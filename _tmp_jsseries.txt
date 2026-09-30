@@ -1,0 +1,29 @@
+﻿
+LineNumber Line                                       
+---------- ----                                       
+       362       brand: "Hikvision Ultra Series",     
+       379       brand: "Hikvision Ultra Series",     
+       396       brand: "Hikvision Ultra Series",     
+       413       brand: "Hikvision Solid Plus Series",
+       430       brand: "Hikvision Solid Plus Series",
+       447       brand: "Hikvision Solid Plus Series",
+       464       brand: "Hikvision Solid Series",     
+       481       brand: "Hikvision Solid Series",     
+       498       brand: "Hikvision Solid Series",     
+
+
+
+LineNumber Line                                                                 
+---------- ----                                                                 
+       269   var advantageActive = -1;                                          
+       271   function setActiveAdvantage(index) {                               
+       272     if (index === advantageActive) return;                           
+       273     advantageActive = index;                                         
+       277       var isActive = i === index;                                    
+       278       image.classList.toggle("is-active", isActive);                 
+       279       image.setAttribute("aria-hidden", isActive ? "false" : "true");
+       288       setActiveAdvantage(Math.min(i, advantageImages.length - 1));   
+       291       setActiveAdvantage(0);                                         
+       594       modalLastFocus = document.activeElement;                       
+
+

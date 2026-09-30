@@ -1,0 +1,201 @@
+﻿140:                   <p>Warna yang konsisten, kecerahan yang stabil, dan refresh rate tinggi menentukan seberapa nyaman layar dilihat mata maupun kamera. Ini penting untuk konten bergerak, siaran acara, hingga kebutuhan video conference.</p>
+141:                 </div>
+142:               </article>
+143:             </li>
+144:             <li>
+145:               <article class="point">
+146:                 <span class="point-num" aria-hidden="true">03</span>
+147:                 <div>
+148:                   <h3>Pilihan Spesifikasi</h3>
+149:                   <p>Pixel pitch, jenis modul, sistem kontrol, dan metode perawatan berpengaruh pada hasil akhir serta biaya jangka panjang. Kami bantu memilih kombinasi tepat antara kualitas tampilan dan anggaran yang tersedia.</p>
+150:                 </div>
+151:               </article>
+152:             </li>
+153:           </ul>
+154:         </div>
+155:       </div>
+156:     </section>
+157:     <!-- 4. PILIHAN PRODUK VIDEOTRON INDOOR -->
+158:     <section class="section" id="produk">
+159:       <div class="container">
+160:         <div class="section-head center" data-reveal>
+161:           <span class="eyebrow">Pilihan Produk</span>
+162:           <h2>Pilihan Produk Videotron Indoor</h2>
+163:           <p>Kami menghadirkan videotron indoor dari tiga brand global yang terbukti andal untuk kebutuhan display digital profesional di Jakarta &mdash; lengkap dengan rekomendasi spesifikasi sesuai ruang Anda.</p>
+164:         </div>
+165: 
+166:         <div class="product-grid">
+167:           <article class="product-card" data-reveal>
+168:             <div class="product-media">
+169:               <img src="images/videotron-hikvision.png" alt="Videotron indoor Hikvision dengan modul LED indoor pixel pitch rapat" width="800" height="600" loading="lazy" decoding="async">
+170:             </div>
+171:             <div class="product-body">
+172:               <span class="product-brand">Hikvision</span>
+173:               <h3>Videotron Indoor Hikvision</h3>
+174:               <p>Pilihan populer untuk lobi, showroom, dan ruang meeting dengan tampilan tajam serta sistem kontrol yang mudah dioperasikan.</p>
+175:               <div class="product-foot">
+176:                 <a class="link-arrow" href="produk-hikvision.html" data-product-detail="hikvision">Lihat Detail <span aria-hidden="true">&rarr;</span></a>
+177:               </div>
+178:             </div>
+179:           </article>
+180: 
+181:           <article class="product-card" data-reveal data-delay="1">
+182:             <div class="product-media">
+183:               <img src="images/videotron-samsung.png" alt="Videotron indoor Samsung bezel-less dengan micro pixel pitch" width="800" height="600" loading="lazy" decoding="async">
+184:             </div>
+185:             <div class="product-body">
+186:               <span class="product-brand">Samsung</span>
+187:               <h3>Videotron Indoor Samsung</h3>
+188:               <p>Untuk kebutuhan tampilan premium tanpa sambungan terlihat, ideal bagi brand yang menonjolkan kualitas visual di area publik.</p>
+189:               <div class="product-foot">
+190:                 <a class="link-arrow" href="produk-samsung.html" data-product-detail="samsung">Lihat Detail <span aria-hidden="true">&rarr;</span></a>
+191:               </div>
+192:             </div>
+193:           </article>
+194: 
+195:           <article class="product-card" data-reveal data-delay="2">
+196:             <div class="product-media">
+197:               <img src="images/videotron-LG.png" alt="Videotron indoor LG dengan modul LED indoor ultra slim" width="800" height="600" loading="lazy" decoding="async">
+198:             </div>
+199:             <div class="product-body">
+200:               <span class="product-brand">LG</span>
+201:               <h3>Videotron Indoor LG</h3>
+202:               <p>Solusi efisien untuk instalasi cepat, ringan, dan rapi &mdash; cocok untuk kantor, kampus, maupun ruang event dengan kebutuhan dinamis.</p>
+203:               <div class="product-foot">
+204:                 <a class="link-arrow" href="produk-lg.html" data-product-detail="lg">Lihat Detail <span aria-hidden="true">&rarr;</span></a>
+205:               </div>
+206:             </div>
+207:           </article>
+208:         </div>
+209:       </div>
+210:     </section>
+211:     <!-- 5. SOLUSI VIDEOTRON BERDASARKAN KEBUTUHAN -->
+212:     <section class="section section-tint section-line-top" id="solusi">
+213:       <div class="container">
+214:         <div class="section-head center" data-reveal>
+215:           <span class="eyebrow">Solusi</span>
+216:           <h2>Solusi Videotron Berdasarkan Kebutuhan</h2>
+217:           <p>Setiap kebutuhan memiliki pendekatan berbeda. Berikut penerapan videotron indoor yang paling sering kami kerjakan di Jakarta dan sekitarnya.</p>
+218:         </div>
+219: 
+220:         <div class="solution-grid">
+221:           <article class="solution-card" data-reveal>
+222:             <div class="solution-visual">
+223:               <img src="images/solusi-bisnis-perkantoran.png" alt="Videotron indoor pada lobi kantor untuk informasi dan branding perusahaan" width="800" height="550" loading="lazy" decoding="async">
+224:             </div>
+225:             <div class="solution-body">
+226:               <span class="solution-label">Display Profesional Untuk Bisnis</span>
+227:               <h3>Bisnis &amp; Perkantoran</h3>
+228:               <p>Layar informasi perusahaan, video conference, hingga pengumuman internal untuk lobi dan ruang rapat.</p>
+229:               <a class="link-arrow" href="kontak.html">Konsultasikan <span aria-hidden="true">&rarr;</span></a>
+230:             </div>
+231:           </article>
+232: 
+233:           <article class="solution-card" data-reveal data-delay="1">
+234:             <div class="solution-visual">
+235:               <img src="images/solusi-mall-showroom.png" alt="Videotron indoor di mall dan showroom untuk promosi produk" width="800" height="550" loading="lazy" decoding="async">
+236:             </div>
+237:             <div class="solution-body">
+238:               <span class="solution-label">Promosi Lebih Menarik</span>
+239:               <h3>Mall &amp; Showroom</h3>
+240:               <p>Konten promo, katalog produk, dan display brand yang menahan perhatian pengunjung lebih lama.</p>
+241:               <a class="link-arrow" href="kontak.html">Konsultasikan <span aria-hidden="true">&rarr;</span></a>
+242:             </div>
+243:           </article>
+244: 
+245:           <article class="solution-card" data-reveal data-delay="2">
+246:             <div class="solution-visual">
+247:               <img src="images/solusi-sekolah-kampus.png" alt="Videotron indoor di ruang kelas sekolah dan kampus untuk presentasi" width="800" height="550" loading="lazy" decoding="async">
+248:             </div>
+249:             <div class="solution-body">
+250:               <span class="solution-label">Presentasi Lebih Interaktif</span>
+251:               <h3>Sekolah &amp; Kampus</h3>
+252:               <p>Media pembelajaran, informasi akademik, dan presentasi digital yang lebih jelas bagi seluruh peserta.</p>
+253:               <a class="link-arrow" href="kontak.html">Konsultasikan <span aria-hidden="true">&rarr;</span></a>
+254:             </div>
+255:           </article>
+256: 
+257:           <article class="solution-card" data-reveal data-delay="3">
+258:             <div class="solution-visual">
+259:               <img src="images/solusi-hotel-event.png" alt="Videotron indoor di ballroom hotel untuk backdrop acara dan event" width="800" height="550" loading="lazy" decoding="async">
+260:             </div>
+261:             <div class="solution-body">
+262:               <span class="solution-label">Visual Untuk Setiap Acara</span>
+263:               <h3>Hotel &amp; Event</h3>
+264:               <p>Backdrop panggung, rundown acara, hingga branding sponsor dengan tampilan yang rapi dan konsisten.</p>
+265:               <a class="link-arrow" href="kontak.html">Konsultasikan <span aria-hidden="true">&rarr;</span></a>
+266:             </div>
+267:           </article>
+268:         </div>
+269:       </div>
+270:     </section>
+271:     <!-- 6. KEUNGGULAN PRODUK -->
+272:     <section class="section" id="keunggulan">
+273:       <div class="container">
+274:         <div class="split reverse">
+275:           <div class="advantage-media-col" data-reveal>
+276:             <div class="advantage-media" data-advantage-media>
+277:               <img class="advantage-media-img is-active" src="images/keunggulan-tampilan-berkualitas.png" alt="Tampilan videotron indoor dengan warna konsisten dan kontras tajam" width="720" height="700" loading="lazy" decoding="async">
+278:               <img class="advantage-media-img" src="images/keunggulan-fleksibel-desain.png" alt="Modul videotron indoor disusun mengikuti bentuk melengkung ruangan" width="720" height="700" loading="lazy" decoding="async">
+279:               <img class="advantage-media-img" src="images/keunggulan-produk-pilihan.png" alt="Pilihan modul videotron indoor Hikvision, Samsung, dan LG dengan pixel pitch berbeda" width="720" height="700" loading="lazy" decoding="async">
+280:               <img class="advantage-media-img" src="images/keunggulan-display-profesional.png" alt="Instalasi dan pengukuran modul videotron indoor oleh teknisi profesional" width="720" height="700" loading="lazy" decoding="async">
+281:             </div>
+282:           </div>
+283: 
+284:           <div data-reveal data-delay="1">
+285:             <div class="section-head">
+286:               <span class="eyebrow">Keunggulan Produk</span>
+287:               <h2>Keunggulan Produk Videotron Indoor Kami</h2>
+288:               <p>Kami memilih produk dan merancang instalasi agar hasilnya tetap optimal untuk jangka panjang, bukan hanya bagus saat pertama dipasang.</p>
+289:             </div>
+290: 
+291:             <ul class="advantage-list" data-advantage-list>
+292:               <li>
+293:                 <article class="advantage-item">
+294:                   <span class="advantage-icon" aria-hidden="true">
+295:                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5h18v11H3z"/><path d="M8 20h8M12 16v4"/></svg>
+296:                   </span>
+297:                   <div>
+298:                     <h3>Tampilan Berkualitas</h3>
+299:                     <p>Warna konsisten, kontras tajam, dan refresh rate tinggi sehingga konten tetap halus, nyaman dilihat, dan aman direkam kamera.</p>
+300:                   </div>
+301:                 </article>
+302:               </li>
+303:               <li>
+304:                 <article class="advantage-item">
+305:                   <span class="advantage-icon" aria-hidden="true">
+306:                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>
+307:                   </span>
+308:                   <div>
+309:                     <h3>Desain Fleksibel</h3>
+310:                     <p>Modul dapat disusun mengikuti bentuk dinding, kolom, maupun sudut ruangan &mdash; termasuk tampilan melengkung sesuai kebutuhan desain interior.</p>
+311:                   </div>
+312:                 </article>
+313:               </li>
+314:               <li>
+315:                 <article class="advantage-item">
+316:                   <span class="advantage-icon" aria-hidden="true">
+317:                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16v13H4z"/><path d="M9 7V4h6v3"/><path d="M8 12h8M8 16h5"/></svg>
+318:                   </span>
+319:                   <div>
+320:                     <h3>Beragam Pilihan Produk</h3>
+321:                     <p>Hikvision, Samsung, dan LG tersedia dalam beberapa pilihan pixel pitch serta konfigurasi ukuran, sehingga bisa disesuaikan dengan anggaran.</p>
+322:                   </div>
+323:                 </article>
+324:               </li>
+325:               <li>
+326:                 <article class="advantage-item">
+327:                   <span class="advantage-icon" aria-hidden="true">
+328:                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v6c0 4.2-3.2 7.4-8 8-4.8-.6-8-3.8-8-8V7l8-4Z"/><path d="M9 12l2 2 4-4"/></svg>
+329:                   </span>
+330:                   <div>
+331:                     <h3>Solusi Display Profesional</h3>
+332:                     <p>Mulai dari survei lokasi, pengadaan, instalasi, pelatihan operator, hingga dukungan teknis berkala di Jakarta dan Jabodetabek.</p>
+333:                   </div>
+334:                 </article>
+335:               </li>
+336:             </ul>
+337:           </div>
+338:         </div>
+339:       </div>
+340:     </section>

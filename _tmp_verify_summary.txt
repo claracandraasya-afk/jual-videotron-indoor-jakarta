@@ -1,0 +1,23 @@
+﻿REF  katalog Hikvision: sections=page-hero page-hero-media|section section-line-top|section section-soft section-line-top|section section-line-top|section section-soft section-line-top|cta
+OK   produk-samsung.html: line ending sama dengan halaman referensi
+OK   produk-lg.html: line ending sama dengan halaman referensi
+REF  detail Hikvision: sections=section product-detail-section
+OK   samsung-the-wall-p0-63-iw006b.html: line ending sama dengan halaman referensi
+OK   samsung-the-wall-p0-84-iw008a.html: line ending sama dengan halaman referensi
+OK   samsung-the-wall-p0-945-iw009b.html: line ending sama dengan halaman referensi
+OK   samsung-iec-p0-93-lh009ieccac.html: line ending sama dengan halaman referensi
+OK   samsung-iec-p1-25-lh012ieccac.html: line ending sama dengan halaman referensi
+OK   samsung-iec-p1-5-lh015ieccac.html: line ending sama dengan halaman referensi
+OK   samsung-ifr-p1-5-lh015ifrcls.html: line ending sama dengan halaman referensi
+OK   samsung-ifr-p2-5-lh025ifrcls.html: line ending sama dengan halaman referensi
+OK   samsung-ifr-p4-0-lh040ifrcls.html: line ending sama dengan halaman referensi
+OK   lg-lmpb-p0-78-lmpb007.html: line ending sama dengan halaman referensi
+OK   lg-lmpb-p0-94-lmpb009.html: line ending sama dengan halaman referensi
+OK   lg-lmpb-p1-25-lmpb012.html: line ending sama dengan halaman referensi
+OK   lg-lmea-p0-94-lmea009.html: line ending sama dengan halaman referensi
+OK   lg-lmea-p1-25-lmea012.html: line ending sama dengan halaman referensi
+OK   lg-lmea-p1-56-lmea015.html: line ending sama dengan halaman referensi
+OK   lg-lsab-p0-9-lsab009.html: line ending sama dengan halaman referensi
+OK   lg-lsab-p1-2-lsab012.html: line ending sama dengan halaman referensi
+OK   lg-lsab-p0-7-lsab007.html: line ending sama dengan halaman referensi
+Semua pemeriksaan lulus.

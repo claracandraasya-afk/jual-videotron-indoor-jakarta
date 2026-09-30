@@ -1,0 +1,122 @@
+﻿{
+  "crlf": 414,
+  "loneLf": 0,
+  "specRowInHtml": 0,
+  "specPillInHtml": 0,
+  "specRowInCss": 0,
+  "specPillInCss": 0,
+  "hashSpecRow": 0,
+  "cardCount": 9,
+  "cards": [
+    {
+      "title": "Videotron Indoor Hikvision P0.9",
+      "brand": "Hikvision Ultra Series",
+      "img": "images/videotron-hikvision.png",
+      "model": "DS-D4009BW-2FC",
+      "hasDescription": true,
+      "detailBtn": "hk-ultra-ds-d4009bw-2fc",
+      "hasFoot": true,
+      "orderOk": true,
+      "leftoverEmptyDivAfterP": false
+    },
+    {
+      "title": "Videotron Indoor Hikvision P1.2",
+      "brand": "Hikvision Ultra Series",
+      "img": "images/videotron-hikvision.png",
+      "model": "DS-D4012BW-2FC",
+      "hasDescription": true,
+      "detailBtn": "hk-ultra-ds-d4012bw-2fc",
+      "hasFoot": true,
+      "orderOk": true,
+      "leftoverEmptyDivAfterP": false
+    },
+    {
+      "title": "Videotron Indoor Hikvision P1.5",
+      "brand": "Hikvision Ultra Series",
+      "img": "images/videotron-hikvision.png",
+      "model": "DS-D4015BW-2FC",
+      "hasDescription": true,
+      "detailBtn": "hk-ultra-ds-d4015bw-2fc",
+      "hasFoot": true,
+      "orderOk": true,
+      "leftoverEmptyDivAfterP": false
+    },
+    {
+      "title": "Videotron Indoor Hikvision P1.2 GOB",
+      "brand": "Hikvision Solid Plus Series",
+      "img": "images/videotron-hikvision.png",
+      "model": "DS-D4012CW-2FQ",
+      "hasDescription": true,
+      "detailBtn": "hk-solid-plus-ds-d4012cw-2fq",
+      "hasFoot": true,
+      "orderOk": true,
+      "leftoverEmptyDivAfterP": false
+    },
+    {
+      "title": "Videotron Indoor Hikvision P1.5 GOB",
+      "brand": "Hikvision Solid Plus Series",
+      "img": "images/videotron-hikvision.png",
+      "model": "DS-D4015CW-2FQ",
+      "hasDescription": true,
+      "detailBtn": "hk-solid-plus-ds-d4015cw-2fq",
+      "hasFoot": true,
+      "orderOk": true,
+      "leftoverEmptyDivAfterP": false
+    },
+    {
+      "title": "Videotron Indoor Hikvision P1.8 GOB",
+      "brand": "Hikvision Solid Plus Series",
+      "img": "images/videotron-hikvision.png",
+      "model": "DS-D4018CW-2FQ",
+      "hasDescription": true,
+      "detailBtn": "hk-solid-plus-ds-d4018cw-2fq",
+      "hasFoot": true,
+      "orderOk": true,
+      "leftoverEmptyDivAfterP": false
+    },
+    {
+      "title": "Videotron Indoor Hikvision P1.2",
+      "brand": "Hikvision Solid Series",
+      "img": "images/videotron-hikvision.png",
+      "model": "DS-D4012CW-2F",
+      "hasDescription": true,
+      "detailBtn": "hk-solid-ds-d4012cw-2f",
+      "hasFoot": true,
+      "orderOk": true,
+      "leftoverEmptyDivAfterP": false
+    },
+    {
+      "title": "Videotron Indoor Hikvision P1.5",
+      "brand": "Hikvision Solid Series",
+      "img": "images/videotron-hikvision.png",
+      "model": "DS-D4015CW-2F",
+      "hasDescription": true,
+      "detailBtn": "hk-solid-ds-d4015cw-2f",
+      "hasFoot": true,
+      "orderOk": true,
+      "leftoverEmptyDivAfterP": false
+    },
+    {
+      "title": "Videotron Indoor Hikvision P1.8",
+      "brand": "Hikvision Solid Series",
+      "img": "images/videotron-hikvision.png",
+      "model": "DS-D4018CW-2F",
+      "hasDescription": true,
+      "detailBtn": "hk-solid-ds-d4018cw-2f",
+      "hasFoot": true,
+      "orderOk": true,
+      "leftoverEmptyDivAfterP": false
+    }
+  ],
+  "expectedTitles": [
+    "Videotron Indoor Hikvision P0.9",
+    "Videotron Indoor Hikvision P1.2",
+    "Videotron Indoor Hikvision P1.5",
+    "Videotron Indoor Hikvision P1.2 GOB",
+    "Videotron Indoor Hikvision P1.5 GOB",
+    "Videotron Indoor Hikvision P1.8 GOB",
+    "Videotron Indoor Hikvision P1.2",
+    "Videotron Indoor Hikvision P1.5",
+    "Videotron Indoor Hikvision P1.8"
+  ]
+}

@@ -1,0 +1,240 @@
+﻿341:     <!-- 7. ARTIKEL -->
+342:     <section class="section section-soft section-line-top" id="artikel">
+343:       <div class="container">
+344:         <div class="section-head" data-reveal>
+345:           <span class="eyebrow">Artikel &amp; Insight</span>
+346:           <h2>Artikel Terbaru Seputar Videotron Indoor</h2>
+347:           <p>Panduan praktis dari tim kami untuk membantu Anda mengambil keputusan sebelum membeli videotron indoor di Jakarta.</p>
+348:         </div>
+349: 
+350:         <div class="article-layout">
+351:           <article class="article-feature" data-reveal>
+352:             <div class="article-feature-media">
+353:               <img src="images/artikel-cara-memilih-videotron.png" alt="Ilustrasi panduan memilih videotron indoor dengan perbandingan spesifikasi" width="800" height="450" loading="lazy" decoding="async">
+354:             </div>
+355:             <div class="article-feature-body">
+356:               <div class="article-meta">
+357:                 <span class="tag">Panduan</span>
+358:                 <span class="dot" aria-hidden="true"></span>
+359:                 <span>12 Januari 2026</span>
+360:                 <span class="dot" aria-hidden="true"></span>
+361:                 <span>7 menit baca</span>
+362:               </div>
+363:               <h3><a href="artikel-cara-memilih-videotron-indoor.html">Cara Memilih Videotron Indoor yang Tepat untuk Kebutuhan Bisnis Anda</a></h3>
+364:               <p>Pixel pitch, ukuran layar, kecerahan, sampai sistem kontrol &mdash; ketahui delapan hal yang perlu dipertimbangkan sebelum memesan videotron indoor agar tidak salah spesifikasi.</p>
+365:               <a class="link-arrow" href="artikel-cara-memilih-videotron-indoor.html" data-article-detail="memilih">Baca Selengkapnya <span aria-hidden="true">&rarr;</span></a>
+366:             </div>
+367:           </article>
+368: 
+369:           <div class="article-stack">
+370:             <article class="article-mini" data-reveal data-delay="1">
+371:               <div class="article-mini-media">
+372:                 <img src="images/artikel-harga-videotron.png" alt="Ilustrasi komponen biaya dan kisaran harga videotron indoor Jakarta" width="800" height="450" loading="lazy" decoding="async">
+373:               </div>
+374:               <div class="article-mini-body">
+375:                 <div class="article-meta">
+376:                   <span class="tag">Harga</span>
+377:                   <span class="dot" aria-hidden="true"></span>
+378:                   <span>05 Januari 2026</span>
+379:                 </div>
+380:                 <h3><a href="artikel-harga-videotron-indoor-jakarta.html">Harga Videotron Indoor Jakarta dan Faktor yang Mempengaruhinya</a></h3>
+381:                 <p>Ulasan komponen biaya mulai dari modul LED hingga instalasi, lengkap dengan tips menyusun anggaran secara realistis.</p>
+382:                 <a class="link-arrow" href="artikel-harga-videotron-indoor-jakarta.html" data-article-detail="harga">Baca Selengkapnya <span aria-hidden="true">&rarr;</span></a>
+383:               </div>
+384:             </article>
+385: 
+386:             <article class="article-mini" data-reveal data-delay="2">
+387:               <div class="article-mini-media">
+388:                 <img src="images/artikel-penggunaan-videotron.png" alt="Ilustrasi penggunaan videotron indoor di berbagai ruangan" width="800" height="450" loading="lazy" decoding="async">
+389:               </div>
+390:               <div class="article-mini-body">
+391:                 <div class="article-meta">
+392:                   <span class="tag">Penggunaan</span>
+393:                   <span class="dot" aria-hidden="true"></span>
+394:                   <span>28 Desember 2025</span>
+395:                 </div>
+396:                 <h3><a href="artikel-penggunaan-videotron-indoor.html">Penggunaan Videotron Indoor: dari Lobi Kantor hingga Ruang Event</a></h3>
+397:                 <p>Contoh pemanfaatan videotron indoor yang terbukti efektif untuk bisnis, institusi pendidikan, hingga industri hospitality.</p>
+398:                 <a class="link-arrow" href="artikel-penggunaan-videotron-indoor.html" data-article-detail="penggunaan">Baca Selengkapnya <span aria-hidden="true">&rarr;</span></a>
+399:               </div>
+400:             </article>
+401:           </div>
+402:         </div>
+403: 
+404:         <!-- Panel detail artikel: tampil di halaman ini (bukan pop-up) saat
+405:              "Baca Selengkapnya" diklik. Isinya diisi oleh js/main.js sesuai
+406:              artikel yang dipilih, lalu ditutup dengan tombol "Kembali". -->
+407:         <div class="article-detail" id="article-detail" hidden>
+408:           <div class="article-detail-grid">
+409:             <div class="article-detail-media">
+410:               <img id="article-detail-img" src="" alt="" width="800" height="450" decoding="async">
+411:             </div>
+412:             <div class="article-detail-body">
+413:               <div class="article-meta">
+414:                 <span class="tag" id="article-detail-tag"></span>
+415:                 <span class="dot" aria-hidden="true"></span>
+416:                 <span id="article-detail-date"></span>
+417:               </div>
+418:               <h3 id="article-detail-title"></h3>
+419:               <p id="article-detail-text"></p>
+420:               <button class="btn btn-outline btn-sm" type="button" id="article-detail-back">&larr; Kembali ke Artikel</button>
+421:             </div>
+422:           </div>
+423:         </div>
+424: 
+425:         <div class="btn-group" style="margin-top: 40px">
+426:           <a class="btn btn-outline" href="artikel.html">Semua Artikel</a>
+427:         </div>
+428:       </div>
+429:     </section>
+430:     <!-- 8. FAQ -->
+431:     <section class="section" id="faq">
+432:       <div class="container">
+433:         <div class="faq-layout">
+434:           <div class="faq-aside" data-reveal>
+435:             <div class="section-head">
+436:               <span class="eyebrow">FAQ</span>
+437:               <h2>Pertanyaan yang Sering Diajukan</h2>
+438:               <p>Belum menemukan jawaban yang Anda cari? Tim kami siap menjelaskan detail teknis maupun estimasi biaya.</p>
+439:             </div>
+440:           </div>
+441: 
+442:           <div class="faq-list" data-reveal data-delay="1">
+443:             <div class="faq-item">
+444:               <h3>
+445:                 <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-1">
+446:                   Apa itu videotron indoor dan bagaimana cara kerjanya?
+447:                   <span class="faq-icon" aria-hidden="true"></span>
+448:                 </button>
+449:               </h3>
+450:               <div class="faq-answer" id="faq-1">
+451:                 <div class="faq-answer-inner">
+452:                   <p>Videotron indoor adalah dinding layar digital yang tersusun dari banyak modul LED dan dirancang khusus untuk pemakaian di dalam ruangan. Setiap modul berisi ribuan titik LED yang dikendalikan oleh <b>sistem kontrol pengirim dan penerima</b>, sehingga gambar dari komputer atau media player tampil utuh di seluruh permukaan layar.</p>
+453:                 </div>
+454:               </div>
+455:             </div>
+456: 
+457:             <div class="faq-item">
+458:               <h3>
+459:                 <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-2">
+460:                   Berapa ukuran videotron indoor yang ideal untuk ruangan saya?
+461:                   <span class="faq-icon" aria-hidden="true"></span>
+462:                 </button>
+463:               </h3>
+464:               <div class="faq-answer" id="faq-2">
+465:                 <div class="faq-answer-inner">
+466:                   <p>Ukuran ideal ditentukan oleh <b>jarak pandang terjauh</b> dan luas area pemasangan. Sebagai gambaran, layar dengan lebar 3&ndash;4 meter cocok untuk lobi dan ruang meeting, sedangkan 6&ndash;12 meter lebih sesuai untuk mall, ballroom, atau aula. Kami akan menghitung ulang berdasarkan ukuran ruangan Anda agar rasio dan keterbacaan tetap optimal.</p>
+467:                 </div>
+468:               </div>
+469:             </div>
+470: 
+471:             <div class="faq-item">
+472:               <h3>
+473:                 <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-3">
+474:                   Pixel pitch mana yang tepat: P1.25, P1.86, atau P2.5?
+475:                   <span class="faq-icon" aria-hidden="true"></span>
+476:                 </button>
+477:               </h3>
+478:               <div class="faq-answer" id="faq-3">
+479:                 <div class="faq-answer-inner">
+480:                   <p>Semakin kecil pixel pitch, semakin halus tampilan dari jarak dekat. <b>P1.2&ndash;P1.25</b> cocok untuk ruang meeting dan showroom dengan jarak pandang 2&ndash;3 meter, <b>P1.86</b> ideal untuk lobi dan retail pada jarak 3&ndash;5 meter, sedangkan <b>P2.5</b> efisien untuk layar besar di aula, ballroom, atau mall dengan jarak pandang di atas 5 meter.</p>
+481:                 </div>
+482:               </div>
+483:             </div>
+484: 
+485:             <div class="faq-item">
+486:               <h3>
+487:                 <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-4">
+488:                   Berapa kisaran harga videotron indoor di Jakarta?
+489:                   <span class="faq-icon" aria-hidden="true"></span>
+490:                 </button>
+491:               </h3>
+492:               <div class="faq-answer" id="faq-4">
+493:                 <div class="faq-answer-inner">
+494:                   <p>Harga dipengaruhi oleh pixel pitch, luas layar, brand modul, sistem kontrol, serta bentuk rangka dan instalasi. Karena setiap proyek berbeda, kami menyusun <b>penawaran berdasarkan kebutuhan</b> &mdash; bukan sekadar harga per meter persegi. Kirimkan ukuran area dan kebutuhan konten Anda untuk mendapatkan estimasi terperinci.</p>
+495:                 </div>
+496:               </div>
+497:             </div>
+498:             <div class="faq-item">
+499:               <h3>
+500:                 <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-5">
+501:                   Apakah videotron indoor bisa disewa, atau hanya dijual?
+502:                   <span class="faq-icon" aria-hidden="true"></span>
+503:                 </button>
+504:               </h3>
+505:               <div class="faq-answer" id="faq-5">
+506:                 <div class="faq-answer-inner">
+507:                   <p>Kami fokus pada <b>penjualan videotron indoor</b>, termasuk pengadaan unit untuk kebutuhan jangka panjang. Untuk acara singkat, tim kami dapat membantu mencarikan solusi yang paling masuk akal secara biaya, termasuk opsi konfigurasi modular yang mudah dipindahkan.</p>
+508:                 </div>
+509:               </div>
+510:             </div>
+511: 
+512:             <div class="faq-item">
+513:               <h3>
+514:                 <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-6">
+515:                   Berapa lama proses pengiriman dan instalasi di Jakarta?
+516:                   <span class="faq-icon" aria-hidden="true"></span>
+517:                 </button>
+518:               </h3>
+519:               <div class="faq-answer" id="faq-6">
+520:                 <div class="faq-answer-inner">
+521:                   <p>Untuk area Jakarta dan Jabodetabek, pengiriman umumnya berlangsung <b>2&ndash;5 hari kerja</b> setelah unit siap. Proses instalasi dan kalibrasi di lokasi biasanya memerlukan 1&ndash;3 hari tergantung luas layar serta kondisi akses gedung. Jadwal pasti akan kami sampaikan setelah survei lokasi.</p>
+522:                 </div>
+523:               </div>
+524:             </div>
+525: 
+526:             <div class="faq-item">
+527:               <h3>
+528:                 <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-7">
+529:                   Apakah ada garansi dan layanan purna jual?
+530:                   <span class="faq-icon" aria-hidden="true"></span>
+531:                 </button>
+532:               </h3>
+533:               <div class="faq-answer" id="faq-7">
+534:                 <div class="faq-answer-inner">
+535:                   <p>Ya. Setiap unit dilengkapi <b>garansi sesuai ketentuan brand</b> serta dukungan teknis lokal di Jakarta. Kami juga menyediakan penggantian modul, kalibrasi warna, penyediaan suku cadang, dan pendampingan operator setelah instalasi selesai.</p>
+536:                 </div>
+537:               </div>
+538:             </div>
+539: 
+540:             <div class="faq-item">
+541:               <h3>
+542:                 <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-8">
+543:                   Bagaimana cara merawat videotron indoor agar awet?
+544:                   <span class="faq-icon" aria-hidden="true"></span>
+545:                 </button>
+546:               </h3>
+547:               <div class="faq-answer" id="faq-8">
+548:                 <div class="faq-answer-inner">
+549:                   <p>Perawatannya sederhana: bersihkan permukaan modul dengan kain kering yang lembut, pastikan <b>sirkulasi udara</b> di belakang layar berjalan baik, atur kecerahan sesuai kondisi ruangan, dan gunakan pengatur tegangan agar aliran listrik stabil. Pemeriksaan berkala setiap 6&ndash;12 bulan sangat disarankan.</p>
+550:                 </div>
+551:               </div>
+552:             </div>
+553:           </div>
+554:         </div>
+555:       </div>
+556:     </section>
+557:     <!-- 9. CTA -->
+558:     <section class="cta" id="konsultasi">
+559:       <div class="container">
+560:         <div class="cta-inner" data-reveal>
+561:           <span class="eyebrow on-dark">Konsultasi Gratis</span>
+562:           <h2>Siap Menghadirkan Tampilan Visual yang Lebih Menarik dan Profesional dengan Videotron Indoor?</h2>
+563:           <p>Ceritakan kebutuhan ruang dan konten Anda. Tim kami akan membantu menghitung ukuran layar, merekomendasikan pixel pitch, serta menyusun penawaran yang sesuai anggaran &mdash; tanpa biaya konsultasi.</p>
+564:           <div class="btn-group">
+565:             <a class="btn btn-white btn-lg" href="kontak.html">
+566:               Konsultasikan Sekarang
+567:               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+568:             </a>
+569:           </div>
+570:         </div>
+571:       </div>
+572:     </section>
+573:   </main>
+574:   <!-- 10. FOOTER -->
+575:   <footer class="site-footer">
+576:     <div class="container">
+577:       <div class="footer-grid">
+578:         <div class="footer-brand" data-reveal>
+579:           <a class="brand" href="index.html" aria-label="Jual Videotron Indoor Jakarta">
+580:             <img class="brand-logo" src="images/logo-footer.png" alt="Jual Videotron Indoor Jakarta" width="250" height="64" decoding="async">

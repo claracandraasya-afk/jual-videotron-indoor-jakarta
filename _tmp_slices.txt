@@ -1,0 +1,3099 @@
+﻿===== .\css\style.css (total 1636) =====
+1: @charset "UTF-8";
+2: /* ==========================================================================
+3:    Jual Videotron Indoor Jakarta â€” Design System
+4:    Reference feel: premium, clean, spacious, product-focused (cosmos.id)
+5:    Headings: Manrope Â· Body/UI: Poppins Â· Palette: white + blue + neutral
+6:    --------------------------------------------------------------------------
+7:    1. Tokens
+8:    -------------------------------------------------------------------------- */
+9: :root {
+10:   --blue-50: #f2f7ff;
+11:   --blue-100: #e5eeff;
+12:   --blue-200: #c8dcff;
+13:   --blue-300: #9dc0ff;
+14:   --blue-500: #2f7cff;
+15:   --blue-600: #1157ee;
+16:   --blue-700: #0b45c4;
+17:   --blue-900: #082a7a;
+18: 
+19:   --ink: #0a1633;
+20:   --ink-soft: #33415c;
+21:   --muted: #6b7891;
+22:   --muted-2: #8b95a9;
+23: 
+24:   --line: #e4e9f2;
+25:   --line-soft: #eff3f9;
+26:   --surface: #ffffff;
+27:   --surface-soft: #f7f9fc;
+28:   --surface-blue: #f4f8ff;
+29:   --dark: #071130;
+30: 
+31:   --radius-xs: 8px;
+32:   --radius-sm: 12px;
+33:   --radius: 16px;
+34:   --radius-lg: 22px;
+35:   --radius-xl: 30px;
+36:   --radius-pill: 999px;
+37: 
+38:   --shadow-xs: 0 1px 2px rgba(10, 22, 51, 0.05);
+39:   --shadow-sm: 0 6px 18px rgba(10, 22, 51, 0.06);
+40:   --shadow-md: 0 18px 44px rgba(10, 22, 51, 0.09);
+41:   --shadow-lg: 0 34px 80px rgba(10, 22, 51, 0.14);
+42:   --shadow-blue: 0 14px 34px rgba(17, 87, 238, 0.24);
+43: 
+44:   /* Easing & durasi animasi â€” semua transisi berada di rentang 0.3â€“0.6s */
+45:   --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+46:   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+47:   --ease-in-out: cubic-bezier(0.45, 0.05, 0.55, 0.95);
+48:   --dur-fast: 0.3s;
+49:   --dur: 0.32s;
+50:   --dur-slow: 0.6s;
+51:   /* Durasi hover untuk perangkat dengan pointer presisi (tetap di rentang 0.3â€“0.6s) */
+52:   --dur-hover: 0.4s;
+53:   /* Durasi & jeda kemunculan section saat masuk viewport */
+54:   --reveal-dur: 0.6s;
+55:   /* Besaran gerak animasi â€” hanya transform/opacity, jadi layout tidak berubah */
+56:   --reveal-shift: 30px;
+57: 
+58:   --container: 1200px;
+59:   --gutter: 24px;
+60:   --header-h: 64px;
+61: 
+62:   --font-head: "Manrope", "Segoe UI", system-ui, -apple-system, sans-serif;
+63:   --font-body: "Poppins", "Segoe UI", system-ui, -apple-system, sans-serif;
+64: }
+65: 
+66: /* --------------------------------------------------------------------------
+67:    2. Reset & base
+68:    -------------------------------------------------------------------------- */
+69: *,
+70: *::before,
+71: *::after { box-sizing: border-box; }
+72: 
+73: html {
+74:   -webkit-text-size-adjust: 100%;
+75:   scroll-behavior: smooth;
+76:   scroll-padding-top: calc(var(--header-h) + 24px);
+77: }
+78: 
+79: body {
+80:   margin: 0;
+81:   background: var(--surface);
+82:   color: var(--ink-soft);
+83:   font-family: var(--font-body);
+84:   font-size: 1rem;
+85:   font-weight: 400;
+86:   line-height: 1.75;
+87:   -webkit-font-smoothing: antialiased;
+88:   text-rendering: optimizeLegibility;
+89:   overflow-x: hidden;
+90: }
+91: 
+92: body.nav-open { overflow: hidden; }
+93: 
+94: h1, h2, h3, h4, h5, h6 {
+95:   margin: 0 0 0.6em;
+96:   color: var(--ink);
+97:   font-family: var(--font-head);
+98:   font-weight: 800;
+99:   line-height: 1.16;
+100:   letter-spacing: -0.022em;
+101: }
+102: 
+103: h1 { font-size: clamp(2.1rem, 4.3vw, 3.5rem); }
+104: h2 { font-size: clamp(1.65rem, 2.9vw, 2.5rem); }
+105: h3 { font-size: clamp(1.18rem, 1.6vw, 1.5rem); }
+106: h4 { font-size: 1.075rem; }
+107: h5 { font-size: 1rem; }
+108: h6 { font-size: 0.94rem; }
+109: 
+110: p { margin: 0 0 1rem; }
+111: p:last-child { margin-bottom: 0; }
+112: 
+113: a {
+114:   color: var(--blue-600);
+115:   text-decoration: none;
+116:   transition: color var(--dur) var(--ease), opacity var(--dur) var(--ease);
+117: }
+118: a:hover { color: var(--blue-700); }
+119: 
+120: img,
+121: svg { max-width: 100%; height: auto; display: block; }
+122: 
+123: ul, ol { margin: 0 0 1rem; padding-left: 1.15rem; }
+124: li { margin-bottom: 0.35rem; }
+125: 
+126: strong { color: var(--ink); font-weight: 600; }
+127: 
+128: button,
+129: input,
+130: select,
+131: textarea { font: inherit; color: inherit; }
+132: 
+133: button { cursor: pointer; }
+134: 
+135: ::selection { background: var(--blue-600); color: #fff; }
+136: 
+137: :focus-visible {
+138:   outline: 3px solid var(--blue-300);
+139:   outline-offset: 3px;
+140:   border-radius: 6px;
+141: }
+142: 
+143: .skip-link {
+144:   position: absolute;
+145:   left: -9999px;
+146:   top: 0;
+147:   z-index: 999;
+148:   background: var(--blue-600);
+149:   color: #fff;
+150:   padding: 12px 20px;
+151:   border-radius: 0 0 var(--radius-sm) 0;
+152: }
+153: .skip-link:focus { left: 0; color: #fff; }
+154: 
+155: /* --------------------------------------------------------------------------
+156:    3. Layout helpers
+157:    -------------------------------------------------------------------------- */
+158: .container {
+159:   width: 100%;
+160:   max-width: var(--container);
+161:   margin-inline: auto;
+162:   padding-inline: var(--gutter);
+163: }
+164: .container-narrow { max-width: 900px; }
+165: 
+166: .section { position: relative; padding: 112px 0; }
+167: .section-soft { background: var(--surface-soft); }
+168: .section-tint { background: linear-gradient(180deg, #ffffff 0%, var(--surface-blue) 100%); }
+169: .section-line-top { border-top: 1px solid var(--line-soft); }
+170: 
+171: .section-head { max-width: 720px; margin-bottom: 56px; }
+172: .section-head.center { margin-inline: auto; text-align: center; }
+173: .section-head h2 { margin-bottom: 14px; }
+174: .section-head p { color: var(--muted); font-size: 1.03rem; margin: 0; }
+175: 
+176: .eyebrow {
+177:   display: inline-flex;
+178:   align-items: center;
+179:   gap: 10px;
+180:   margin-bottom: 18px;
+181:   padding: 7px 16px;
+182:   border: 1px solid var(--blue-100);
+183:   border-radius: var(--radius-pill);
+184:   background: var(--blue-50);
+185:   color: var(--blue-700);
+186:   font-family: var(--font-body);
+187:   font-size: 0.72rem;
+188:   font-weight: 600;
+189:   letter-spacing: 0.14em;
+190:   text-transform: uppercase;
+191:   line-height: 1;
+192: }
+193: .eyebrow::before {
+194:   content: "";
+195:   width: 6px;
+196:   height: 6px;
+197:   border-radius: 50%;
+198:   background: var(--blue-600);
+199: }
+200: 
+201: .eyebrow.on-dark {
+202:   border-color: rgba(255, 255, 255, 0.24);
+203:   background: rgba(255, 255, 255, 0.1);
+204:   color: #dce8ff;
+205: }
+206: .eyebrow.on-dark::before { background: #8fc0ff; }
+207: 
+208: .text-muted { color: var(--muted); }
+209: .text-center { text-align: center; }
+210: 
+211: /* --------------------------------------------------------------------------
+212:    4. Buttons & links
+213:    -------------------------------------------------------------------------- */
+214: .btn {
+215:   display: inline-flex;
+216:   align-items: center;
+217:   justify-content: center;
+218:   gap: 10px;
+219:   padding: 15px 28px;
+220:   border: 1px solid transparent;
+221:   border-radius: var(--radius-pill);
+222:   font-family: var(--font-body);
+223:   font-size: 0.94rem;
+224:   font-weight: 600;
+225:   line-height: 1;
+226:   text-align: center;
+227:   white-space: nowrap;
+228:   transition: transform var(--dur) var(--ease), background var(--dur) var(--ease),
+229:     color var(--dur) var(--ease), border-color var(--dur) var(--ease), box-shadow var(--dur) var(--ease);
+230: }
+231: .btn svg { width: 16px; height: 16px; flex: none; transition: transform var(--dur) var(--ease); }
+232: .btn:hover svg { transform: translateX(3px); }
+233: .btn:active { transform: translateY(0) scale(0.985); }
+234: 
+235: .btn-primary {
+236:   background: var(--blue-600);
+237:   color: #fff;
+238:   box-shadow: var(--shadow-blue);
+239: }
+240: .btn-primary:hover {
+241:   background: var(--blue-700);
+242:   color: #fff;
+243:   transform: translateY(-2px);
+244:   box-shadow: 0 20px 40px rgba(17, 87, 238, 0.3);
+245: }
+246: 
+247: .btn-outline {
+248:   background: #fff;
+249:   color: var(--ink);
+250:   border-color: var(--line);
+251:   box-shadow: var(--shadow-xs);
+252: }
+253: .btn-outline:hover {
+254:   color: var(--blue-700);
+255:   border-color: var(--blue-200);
+256:   background: var(--blue-50);
+257:   transform: translateY(-2px);
+258: }
+259: 
+260: .btn-dark { background: var(--ink); color: #fff; }
+261: .btn-dark:hover { background: var(--blue-700); color: #fff; transform: translateY(-2px); }
+262: 
+263: .btn-white { background: #fff; color: var(--blue-700); box-shadow: 0 18px 40px rgba(4, 16, 45, 0.28); }
+264: .btn-white:hover { color: var(--blue-900); transform: translateY(-2px); }
+265: 
+266: .btn-ghost-light {
+267:   background: rgba(255, 255, 255, 0.08);
+268:   border-color: rgba(255, 255, 255, 0.34);
+269:   color: #fff;
+270: }
+271: .btn-ghost-light:hover { background: rgba(255, 255, 255, 0.18); color: #fff; }
+272: 
+273: .btn-sm { padding: 12px 22px; font-size: 0.875rem; }
+274: .btn-lg { padding: 18px 34px; font-size: 1rem; }
+275: .btn-block { width: 100%; }
+276: 
+277: .btn-group { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; }
+278: 
+279: .link-arrow {
+280:   display: inline-flex;
+281:   align-items: center;
+282:   gap: 8px;
+283:   color: var(--blue-600);
+284:   font-family: var(--font-body);
+285:   font-size: 0.92rem;
+286:   font-weight: 600;
+287: }
+288: 
+289: .link-arrow span { transition: transform var(--dur) var(--ease); }
+290: .link-arrow:hover { color: var(--blue-700); }
+291: .link-arrow:hover span { transform: translateX(5px); }
+292: 
+293: /* --------------------------------------------------------------------------
+294:    5. Header & navigation
+295:    -------------------------------------------------------------------------- */
+296: .site-header {
+297:   position: sticky;
+298:   top: 0;
+299:   z-index: 90;
+300:   background: rgba(255, 255, 255, 0.92);
+301:   backdrop-filter: saturate(180%) blur(14px);
+302:   border-bottom: 1px solid var(--line-soft);
+303:   transition: box-shadow var(--dur) var(--ease), background var(--dur) var(--ease),
+304:     border-color var(--dur) var(--ease);
+305: }
+306: .site-header.is-stuck { box-shadow: 0 10px 30px rgba(10, 22, 51, 0.07); }
+307: 
+308: .header-main {
+309:   display: flex;
+310:   align-items: center;
+311:   gap: 24px;
+312:   min-height: var(--header-h);
+313:   padding-block: 10px;
+314: }
+315: 
+316: .brand { display: inline-flex; align-items: center; color: var(--ink); }
+317: .brand:hover { color: var(--ink); }
+318: .brand-logo {
+319:   height: 38px;
+320:   width: auto;
+321:   max-width: 100%;
+322:   object-fit: contain;
+323:   display: block;
+324:   transition: opacity var(--dur) var(--ease);
+325: }
+326: .brand:hover .brand-logo { opacity: 0.86; }
+327: 
+328: .nav {
+329:   display: flex;
+330:   align-items: center;
+331:   gap: 18px;
+332:   flex: 1;
+333: }
+334: .nav-list {
+335:   display: flex;
+336:   align-items: center;
+337:   gap: 2px;
+338:   margin: 0;
+339:   padding: 0;
+340:   list-style: none;
+341: }
+342: .nav-list > li { position: relative; margin: 0; }
+343: .nav-list {
+344:   display: flex;
+345:   align-items: center;
+346:   gap: 2px;
+347:   margin: 0 auto;
+348:   padding: 0;
+349:   list-style: none;
+350: }
+351: 
+352: .nav-link {
+353:   display: inline-flex;
+354:   align-items: center;
+355:   gap: 6px;
+356:   padding: 8px 12px;
+357:   border-radius: var(--radius-xs);
+358:   background: transparent;
+359:   color: var(--ink);
+360:   font-family: var(--font-body);
+361:   font-size: 0.875rem;
+362:   font-weight: 500;
+363:   transition: color var(--dur) var(--ease), transform var(--dur) var(--ease);
+364: }
+365: .nav-link:hover { color: var(--blue-600); background: transparent; transform: translateY(-1px); }
+366: .nav-link .caret { width: 9px; height: 9px; transition: transform var(--dur) var(--ease); }
+367: .nav-item.has-dropdown:hover .caret,
+368: .nav-item.has-dropdown.is-open .caret { transform: rotate(180deg); }
+369: 
+370: .dropdown {
+371:   position: absolute;
+372:   top: calc(100% + 12px);
+373:   left: 50%;
+374:   min-width: 258px;
+375:   padding: 10px;
+376:   background: #fff;
+377:   border: 1px solid var(--line-soft);
+378:   border-radius: var(--radius);
+379:   box-shadow: var(--shadow-md);
+380:   list-style: none;
+381:   opacity: 0;
+382:   visibility: hidden;
+383:   transform: translate(-50%, 8px);
+384:   transition: opacity var(--dur) var(--ease), transform var(--dur) var(--ease), visibility var(--dur);
+385:   z-index: 20;
+386: }
+387: .nav-item.has-dropdown:hover .dropdown,
+388: .nav-item.has-dropdown:focus-within .dropdown,
+389: .nav-item.has-dropdown.is-open .dropdown {
+390:   opacity: 1;
+391:   visibility: visible;
+392:   transform: translate(-50%, 0);
+393: }
+394: .dropdown li { margin: 0; }
+395: .dropdown a {
+396:   display: flex;
+397:   flex-direction: column;
+398:   gap: 2px;
+399:   padding: 11px 14px;
+400:   border-radius: var(--radius-sm);
+401:   color: var(--ink);
+402:   font-size: 0.92rem;
+403:   font-weight: 500;
+404:   transition: background var(--dur) var(--ease), color var(--dur) var(--ease);
+405: }
+406: .dropdown a span { color: var(--muted); font-size: 0.76rem; font-weight: 400; }
+407: .dropdown a:hover { background: var(--surface-soft); color: var(--blue-600); }
+408: 
+409: .header-actions {
+410:   display: flex;
+411:   align-items: center;
+412:   gap: 12px;
+413: }
+414: 
+415: .nav-toggle {
+416:   display: none;
+417:   width: 42px;
+418:   height: 42px;
+419:   align-items: center;
+420:   justify-content: center;
+421:   background: #fff;
+422:   border: 1px solid var(--line);
+423:   border-radius: var(--radius-xs);
+424:   transition: background var(--dur) var(--ease), border-color var(--dur) var(--ease),
+425:     color var(--dur) var(--ease), transform var(--dur) var(--ease);
+426: }
+427: .nav-toggle-bars { position: relative; width: 20px; height: 12px; }
+428: .nav-toggle-bars i {
+429:   position: absolute;
+430:   left: 0;
+431:   width: 100%;
+432:   height: 2px;
+433:   border-radius: 2px;
+434:   background: var(--ink);
+435:   transition: transform var(--dur) var(--ease), opacity var(--dur) var(--ease);
+436: }
+437: .nav-toggle-bars i:nth-child(1) { top: 0; }
+438: .nav-toggle-bars i:nth-child(2) { top: 5px; width: 70%; }
+439: .nav-toggle-bars i:nth-child(3) { top: 10px; }
+440: body.nav-open .nav-toggle-bars i:nth-child(1) { transform: translateY(5px) rotate(45deg); }
+441: body.nav-open .nav-toggle-bars i:nth-child(2) { opacity: 0; }
+442: body.nav-open .nav-toggle-bars i:nth-child(3) { transform: translateY(-5px) rotate(-45deg); }
+443: 
+444: /* --------------------------------------------------------------------------
+445:    6. Hero
+446:    -------------------------------------------------------------------------- */
+447: .hero {
+448:   position: relative;
+449:   padding: 94px 0 104px;
+450:   /* Foto hero dipakai sebagai background penuh: menutupi seluruh area hero
+451:      (full width + full height) dan tetap proporsional di layar desktop,
+452:      tablet, maupun mobile. Ganti gambar cukup menimpa images/hero-section.png.
+453:      Warna gelap jadi fallback bila gambar belum/tidak termuat. */
+454:   background-color: var(--dark);
+455:   background-image: url("../images/hero-section.png");
+456:   background-repeat: no-repeat;
+457:   background-size: cover;
+458:   background-position: center;
+459:   overflow: hidden;
+460: }
+461: /* Overlay gradient gelap di sisi kiri lalu memudar transparan ke kanan,
+462:    supaya teks hero tetap terbaca sekaligus foto di sisi kanan tetap terlihat. */
+463: .hero::after {
+464:   content: "";
+465:   position: absolute;
+466:   inset: 0;
+467:   background-image: linear-gradient(
+468:     90deg,
+469:     rgba(7, 17, 48, 0.94) 0%,
+470:     rgba(7, 17, 48, 0.82) 26%,
+471:     rgba(7, 17, 48, 0.54) 46%,
+472:     rgba(7, 17, 48, 0.2) 66%,
+473:     rgba(7, 17, 48, 0) 82%
+474:   );
+475:   pointer-events: none;
+476: }
+477: 
+478: /* Catatan: aturan .hero-media (gambar di kolom kanan) sudah tidak dipakai
+479:    karena foto hero kini menjadi background penuh section ini. */
+480: 
+481: .hero-grid {
+482:   position: relative;
+483:   z-index: 2;
+484:   display: grid;
+485:   grid-template-columns: minmax(0, 1.02fr) minmax(0, 0.98fr);
+486:   gap: 64px;
+487:   align-items: center;
+488: }
+489: 
+490: /* Heading hero diperkecil bertahap, tetap responsif via clamp().
+491:    Jarak atas h1 sebesar bekas .eyebrow (18px) tetap dipertahankan agar
+492:    posisi headline dan reflow layout tidak bergeser setelah badge dihapus.
+493:    Warnanya dibuat terang karena kini berada di atas overlay gelap foto hero. */
+494: .hero h1 { margin-top: 18px; margin-bottom: 22px; font-size: clamp(1.2rem, 2.41vw, 1.97rem); color: #fff; }
+495: /* "Display Digital Profesional" dibuat turun ke baris bawah
+496:    (biru terang agar tetap kontras di atas overlay gelap) */
+497: .hero h1 .accent { display: block; color: var(--blue-300); }
+498: .hero-lead { max-width: 560px; color: var(--muted); font-size: 1.05rem; margin-bottom: 34px; }
+499: /* Teks paragraf hero juga berada di atas overlay gelap â€” hanya warna dan
+500:    ukuran fontnya yang disesuaikan: warna diterangkan agar tetap terbaca.
+501:    Ukuran diperkecil bertahap: 1.05rem â†’ 0.88rem â†’ 0.78rem (â‰ˆ12.5px),
+502:    yaitu Â±11% lebih kecil dari ukuran sebelumnya dan tetap mudah dibaca.
+503:    Posisi, line-height (1.75 dari body), lebar maksimum, dan layout tetap. */
+504: .hero .hero-lead { color: rgba(233, 240, 255, 0.88); font-size: 0.78rem; }
+505: .hero .btn-group { margin-bottom: 0; }
+506: 
+507: /* --------------------------------------------------------------------------
+508:    7. Split blocks (Tantangan / Keunggulan)
+509:    -------------------------------------------------------------------------- */
+510: .split {
+511:   display: grid;
+512:   grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+513:   gap: 72px;
+514:   align-items: start;
+515: }
+516: .split .section-head { margin-bottom: 26px; }
+517: /* Info box pada kolom .split sudah dihapus: bila .section-head kini menjadi elemen
+518:    terakhir di kolomnya, margin bawahnya dihilangkan agar tidak menyisakan ruang kosong.
+519:    Kolom lain (mis. Keunggulan) tetap memakai margin 26px karena masih ada konten di bawahnya. */
+520: .split > * > .section-head:last-child { margin-bottom: 0; }
+521: 
+522: .split-note {
+523:   display: flex;
+524:   gap: 14px;
+525:   align-items: flex-start;
+526:   padding: 20px 22px;
+527:   background: var(--surface-soft);
+528:   border: 1px solid var(--line-soft);
+529:   border-radius: var(--radius);
+530:   color: var(--ink-soft);
+531:   font-size: 0.9rem;
+532:   line-height: 1.7;
+533: }
+534: .split-note svg { width: 20px; height: 20px; flex: none; color: var(--blue-600); margin-top: 3px; }
+535: 
+536: .point-list { display: grid; gap: 14px; margin: 0; padding: 0; list-style: none; }
+537: .point-list li { margin: 0; }
+538: 
+539: .point {
+540:   display: grid;
+541:   grid-template-columns: auto minmax(0, 1fr);
+542:   gap: 20px;
+543:   padding: 26px 28px;
+544:   background: #fff;
+545:   border: 1px solid var(--line-soft);
+546:   border-radius: var(--radius);
+547:   box-shadow: var(--shadow-xs);
+548:   transition: transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease), border-color var(--dur) var(--ease);
+549: }
+550: .point:hover { transform: translateY(-4px); border-color: var(--blue-200); box-shadow: var(--shadow-md); }
+551: .point-num {
+552:   display: grid;
+553:   place-items: center;
+554:   width: 46px;
+555:   height: 46px;
+556:   border-radius: 14px;
+557:   background: var(--blue-50);
+558:   color: var(--blue-700);
+559:   font-family: var(--font-head);
+560:   font-weight: 800;
+561:   font-size: 0.95rem;
+562: }
+563: .point h3 { margin: 2px 0 6px; font-size: 1.08rem; }
+564: .point p { margin: 0; color: var(--muted); font-size: 0.92rem; line-height: 1.7; }
+565: 
+566: /* --------------------------------------------------------------------------
+567:    8. Produk (product cards)
+568:    -------------------------------------------------------------------------- */
+569: .product-grid {
+570:   display: grid;
+571:   grid-template-columns: repeat(3, minmax(0, 1fr));
+572:   gap: 26px;
+573: }
+574: 
+575: .product-card {
+576:   display: flex;
+577:   flex-direction: column;
+578:   background: #fff;
+579:   border: 1px solid var(--line);
+580:   border-radius: var(--radius-lg);
+581:   overflow: hidden;
+582:   box-shadow: var(--shadow-xs);
+583:   transition: transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease), border-color var(--dur) var(--ease);
+584: }
+585: .product-card:hover {
+586:   transform: translateY(-6px);
+587:   border-color: var(--blue-200);
+588:   box-shadow: var(--shadow-md);
+589: }
+590: 
+591: .product-media {
+592:   position: relative;
+593:   aspect-ratio: 4 / 3;
+594:   background: linear-gradient(160deg, #f4f8ff, #ffffff 70%);
+595:   border-bottom: 1px solid var(--line-soft);
+596:   overflow: hidden;
+597: }
+598: .product-media img {
+599:   width: 100%;
+600:   height: 100%;
+601:   object-fit: cover;
+602:   transition: transform 0.6s var(--ease);
+603: }
+604: .product-card:hover .product-media img { transform: scale(1.045); }
+605: 
+606: .product-body { display: flex; flex-direction: column; flex: 1; padding: 26px 26px 28px; }
+607: .product-brand {
+608:   margin-bottom: 8px;
+609:   color: var(--blue-600);
+610:   font-family: var(--font-body);
+611:   font-size: 0.74rem;
+612:   font-weight: 600;
+613:   letter-spacing: 0.16em;
+614:   text-transform: uppercase;
+615: }
+616: .product-body h3 { margin-bottom: 10px; font-size: 1.2rem; }
+617: .product-body > p { color: var(--muted); font-size: 0.9rem; margin-bottom: 18px; }
+618: 
+619: .spec-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; }
+620: .spec-pill {
+621:   padding: 7px 13px;
+622:   border-radius: var(--radius-pill);
+623:   background: var(--surface-soft);
+624:   border: 1px solid var(--line-soft);
+625:   color: var(--ink-soft);
+626:   font-size: 0.78rem;
+627:   line-height: 1;
+628: }
+629: .spec-pill b { color: var(--ink); font-weight: 600; }
+630: 
+631: .feature-list { display: grid; gap: 9px; margin: 0 0 24px; padding: 0; list-style: none; }
+632: .feature-list li {
+633:   position: relative;
+634:   margin: 0;
+635:   padding-left: 26px;
+636:   color: var(--ink-soft);
+637:   font-size: 0.87rem;
+638:   line-height: 1.6;
+639: }
+640: .feature-list li::before {
+641:   content: "";
+642:   position: absolute;
+643:   left: 0;
+644:   top: 0.42em;
+645:   width: 14px;
+646:   height: 14px;
+647:   border-radius: 50%;
+648:   background: var(--blue-50) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231157ee' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E") center/9px no-repeat;
+649: }
+650: .product-foot { margin-top: auto; padding-top: 20px; border-top: 1px solid var(--line-soft); }
+651: 
+652: /* --------------------------------------------------------------------------
+653:    9. Solusi (4 card grid)
+654:    -------------------------------------------------------------------------- */
+655: .solution-grid {
+656:   display: grid;
+657:   grid-template-columns: repeat(4, minmax(0, 1fr));
+658:   gap: 24px;
+659: }
+660: 
+661: .solution-card {
+662:   display: flex;
+663:   flex-direction: column;
+664:   border: 1px solid var(--line);
+665:   border-radius: var(--radius-lg);
+666:   background: #fff;
+667:   overflow: hidden;
+668:   box-shadow: var(--shadow-xs);
+669:   transition: transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease), border-color var(--dur) var(--ease);
+670: }
+671: .solution-card:hover { transform: translateY(-6px); border-color: var(--blue-200); box-shadow: var(--shadow-md); }
+672: 
+673: .solution-visual {
+674:   position: relative;
+675:   aspect-ratio: 16 / 11;
+676:   overflow: hidden;
+677:   background: linear-gradient(160deg, #eef4ff, #ffffff);
+678:   border-bottom: 1px solid var(--line-soft);
+679: }
+680: .solution-visual img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s var(--ease); }
+681: .solution-card:hover .solution-visual img { transform: scale(1.05); }
+682: 
+683: .solution-body { display: flex; flex-direction: column; flex: 1; padding: 24px 24px 26px; }
+684: .solution-label {
+685:   margin-bottom: 10px;
+686:   color: var(--blue-600);
+687:   font-family: var(--font-body);
+688:   font-size: 0.72rem;
+689:   font-weight: 600;
+690:   letter-spacing: 0.14em;
+691:   text-transform: uppercase;
+692:   line-height: 1.4;
+693: }
+694: .solution-body h3 { margin-bottom: 10px; font-size: 1.1rem; }
+695: .solution-body p { color: var(--muted); font-size: 0.88rem; margin: 0 0 18px; }
+696: .solution-body .link-arrow { margin-top: auto; font-size: 0.86rem; }
+697: .solution-body .link-arrow {
+698:   display: none;
+699: }
+700: 
+701: /* --------------------------------------------------------------------------
+702:    10. Keunggulan
+703:    -------------------------------------------------------------------------- */
+704: .advantage-media {
+705:   position: relative;
+706:   border-radius: var(--radius-lg);
+707:   border: 1px solid var(--line);
+708:   background: linear-gradient(160deg, #f4f8ff, #ffffff 72%);
+709:   overflow: hidden;
+710:   box-shadow: var(--shadow-sm);
+711: }
+712: .advantage-media img { width: 100%; }
+713: 
+714: /* Gambar pada keunggulan berganti mengikuti kartu yang aktif saat scroll.
+715:    Semua gambar ditumpuk pada kotak yang sama dan hanya opacity yang berubah,
+716:    sehingga tinggi kolom tidak bergeser. Gambar pertama tetap berada pada
+717:    aliran normal agar kolom tetap punya tinggi meski JS mati. */
+718: .advantage-media-img {
+719:   position: absolute;
+720:   inset: 0;
+721:   width: 100%;
+722:   height: 100%;
+723:   object-fit: cover;
+724:   opacity: 0;
+725:   transition: opacity var(--dur-slow) var(--ease-out);
+726: }
+727: .advantage-media-img:first-child {
+728:   position: relative;
+729:   inset: auto;
+730:   height: auto;
+731: }
+732: .advantage-media-img.is-active { opacity: 1; }
+733: 
+734: .advantage-list { display: grid; gap: 16px; margin: 0; padding: 0; list-style: none; }
+735: .advantage-list li { margin: 0; }
+736: 
+737: .advantage-item {
+738:   display: grid;
+739:   grid-template-columns: auto minmax(0, 1fr);
+740:   gap: 18px;
+741:   padding: 24px 26px;
+742:   background: #fff;
+743:   border: 1px solid var(--line-soft);
+744:   border-radius: var(--radius);
+745:   box-shadow: var(--shadow-xs);
+746:   transition: transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease), border-color var(--dur) var(--ease),
+747:     background var(--dur) var(--ease), color var(--dur) var(--ease);
+748: }
+749: .advantage-item:hover { transform: translateX(6px); border-color: var(--blue-200); box-shadow: var(--shadow-md); }
+750: .advantage-icon {
+751:   display: grid;
+752:   place-items: center;
+753:   width: 50px;
+754:   height: 50px;
+755:   border-radius: 16px;
+756:   background: linear-gradient(150deg, var(--blue-600), var(--blue-900));
+757:   color: #fff;
+758:   box-shadow: var(--shadow-blue);
+759: }
+760: .advantage-icon svg { width: 23px; height: 23px; }
+761: .advantage-item h3 { margin: 2px 0 6px; font-size: 1.05rem; }
+762: .advantage-item p { margin: 0; color: var(--muted); font-size: 0.9rem; line-height: 1.7; }
+763: 
+764: /* Kartu saat hover (atau aktif lewat JS): warna elemen dibalik.
+765:    - Card besar: background biru.
+766:    - Kotak ikon: background putih, ikon di dalamnya biru.
+767:    - Judul & deskripsi: putih.
+768:    Hanya warna/latar/bayangan yang berubah â€” layout, ukuran, dan spacing
+769:    tetap sama. Saat kursor keluar, kartu kembali ke desain awal (putih). */
+770: .advantage-item:hover {
+771:   background: linear-gradient(150deg, var(--blue-600), var(--blue-900));
+772:   border-color: transparent;
+773:   box-shadow: var(--shadow-blue);
+774: }
+775: .advantage-item:hover h3,
+776: .advantage-item:hover p {
+777:   color: #fff;
+778: }
+779: .advantage-item:hover .advantage-icon {
+780:   background: #fff;
+781:   box-shadow: 0 6px 16px rgba(8, 42, 122, 0.35);
+782:   color: var(--blue-900);
+783: }
+784: .advantage-item:hover .advantage-icon svg {
+785:   fill: none;
+786:   stroke: var(--blue-900);
+787:   color: var(--blue-900);
+788: }
+789: 
+790: /* Kolom gambar mengikuti scroll di layar lebar agar pergantian gambar tetap
+791:    terlihat selagi kartu di kolom kanan bergulir. Hanya berlaku di layout dua
+792:    kolom; pada layout satu kolom posisinya tetap seperti semula. */
+793: @media (min-width: 1025px) {
+794:   #keunggulan .split > .advantage-media-col {
+795:     position: sticky;
+796:     top: calc(var(--header-h) + 28px);
+797:     align-self: start;
+798:   }
+799: }
+800: 
+801: @media (max-width: 768px) {
+802:   .advantage-item:hover { transform: translateY(-4px); }
+803: }
+804: 
+805: @media (prefers-reduced-motion: reduce) {
+806:   /* Tanpa animasi: gambar langsung bertukar. */
+807:   .advantage-media-img { transition: none; }
+808: }
+809: 
+810: /* --------------------------------------------------------------------------
+811:    11. Artikel
+812:    -------------------------------------------------------------------------- */
+813: .article-layout {
+814:   display: grid;
+815:   grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+816:   gap: 26px;
+817: }
+818: 
+819: .article-feature {
+820:   display: flex;
+821:   flex-direction: column;
+822:   background: #fff;
+823:   border: 1px solid var(--line);
+824:   border-radius: var(--radius-lg);
+825:   overflow: hidden;
+826:   box-shadow: var(--shadow-xs);
+827:   transition: transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease), border-color var(--dur) var(--ease);
+828: }
+829: .article-feature:hover { transform: translateY(-6px); border-color: var(--blue-200); box-shadow: var(--shadow-md); }
+830: .article-feature-media {
+831:   aspect-ratio: 16 / 9;
+832:   overflow: hidden;
+833:   background: linear-gradient(160deg, #eef4ff, #ffffff);
+834:   border-bottom: 1px solid var(--line-soft);
+835: }
+836: .article-feature-media img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s var(--ease); }
+837: .article-feature:hover .article-feature-media img { transform: scale(1.04); }
+838: .article-feature-body { padding: 30px 32px 34px; }
+839: .article-feature-body h3 { font-size: clamp(1.3rem, 2vw, 1.66rem); margin-bottom: 12px; }
+840: .article-feature-body h3 a { color: var(--ink); }
+841: .article-feature-body h3 a:hover { color: var(--blue-600); }
+842: .article-feature-body p { color: var(--muted); font-size: 0.94rem; margin-bottom: 20px; }
+843: 
+844: .article-stack { display: grid; gap: 26px; }
+845: 
+846: .article-mini {
+847:   display: grid;
+848:   grid-template-columns: 148px minmax(0, 1fr);
+849:   background: #fff;
+850:   border: 1px solid var(--line);
+851:   border-radius: var(--radius-lg);
+852:   overflow: hidden;
+853:   box-shadow: var(--shadow-xs);
+854:   transition: transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease), border-color var(--dur) var(--ease);
+855: }
+856: .article-mini:hover { transform: translateY(-5px); border-color: var(--blue-200); box-shadow: var(--shadow-md); }
+857: .article-mini-media { position: relative; overflow: hidden; background: linear-gradient(160deg, #eef4ff, #ffffff); }
+858: .article-mini-media img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s var(--ease); }
+859: .article-mini:hover .article-mini-media img { transform: scale(1.05); }
+860: .article-mini-body { display: flex; flex-direction: column; padding: 24px 26px; }
+861: .article-mini-body h3 { font-size: 1.05rem; margin-bottom: 8px; }
+862: .article-mini-body h3 a { color: var(--ink); }
+863: .article-mini-body h3 a:hover { color: var(--blue-600); }
+864: .article-mini-body p { color: var(--muted); font-size: 0.87rem; margin-bottom: 14px; }
+865: .article-mini-body .link-arrow { margin-top: auto; font-size: 0.85rem; }
+866: 
+867: .article-meta {
+868:   display: flex;
+869:   align-items: center;
+870:   gap: 10px;
+871:   margin-bottom: 14px;
+872:   color: var(--muted);
+873:   font-size: 0.78rem;
+874: }
+875: .article-meta .tag {
+876:   padding: 5px 12px;
+877:   border-radius: var(--radius-pill);
+878:   background: var(--blue-50);
+879:   color: var(--blue-700);
+880:   font-size: 0.7rem;
+881:   font-weight: 600;
+882:   letter-spacing: 0.1em;
+883:   text-transform: uppercase;
+884:   line-height: 1;
+885: }
+886: .article-meta .dot { width: 4px; height: 4px; border-radius: 50%; background: var(--blue-200); }
+887: 
+888: /* --------------------------------------------------------------------------
+889:    12. FAQ (accordion)
+890:    -------------------------------------------------------------------------- */
+891: .faq-layout {
+892:   display: grid;
+893:   grid-template-columns: minmax(0, 0.72fr) minmax(0, 1.28fr);
+894:   gap: 64px;
+895:   align-items: start;
+896: }
+897: .faq-aside .section-head { margin-bottom: 24px; }
+898: 
+899: .faq-list { display: grid; gap: 12px; }
+900: .faq-item {
+901:   background: #fff;
+902:   border: 1px solid var(--line);
+903:   border-radius: var(--radius);
+904:   overflow: hidden;
+905:   transition: border-color var(--dur) var(--ease), box-shadow var(--dur) var(--ease);
+906: }
+907: .faq-item:hover,
+908: .faq-item.is-open { border-color: var(--blue-200); box-shadow: var(--shadow-sm); }
+909: 
+910: .faq-question {
+911:   display: flex;
+912:   align-items: center;
+913:   justify-content: space-between;
+914:   gap: 22px;
+915:   width: 100%;
+916:   padding: 22px 26px;
+917:   background: none;
+918:   border: 0;
+919:   text-align: left;
+920:   color: var(--ink);
+921:   font-family: var(--font-head);
+922:   font-size: 1.02rem;
+923:   font-weight: 700;
+924:   line-height: 1.5;
+925:   letter-spacing: -0.012em;
+926:   transition: color var(--dur) var(--ease);
+927: }
+928: .faq-question:hover { color: var(--blue-700); }
+929: 
+930: .faq-icon {
+931:   position: relative;
+932:   flex: none;
+933:   width: 34px;
+934:   height: 34px;
+935:   border-radius: 50%;
+936:   background: var(--blue-50);
+937:   transition: background var(--dur) var(--ease), transform var(--dur) var(--ease);
+938: }
+939: .faq-icon::before,
+940: .faq-icon::after {
+941:   content: "";
+942:   position: absolute;
+943:   top: 50%;
+944:   left: 50%;
+945:   border-radius: 2px;
+946:   background: var(--blue-600);
+947:   transition: transform var(--dur) var(--ease), background var(--dur) var(--ease);
+948: }
+949: .faq-icon::before { width: 12px; height: 2px; transform: translate(-50%, -50%); }
+950: .faq-icon::after { width: 2px; height: 12px; transform: translate(-50%, -50%); }
+951: .faq-item.is-open .faq-icon { background: var(--blue-600); transform: rotate(180deg); }
+952: .faq-item.is-open .faq-icon::before,
+953: .faq-item.is-open .faq-icon::after { background: #fff; }
+954: .faq-item.is-open .faq-icon::after { transform: translate(-50%, -50%) scaleY(0); }
+955: 
+956: .faq-answer {
+957:   display: grid;
+958:   grid-template-rows: 0fr;
+959:   transition: grid-template-rows 0.42s var(--ease);
+960: }
+961: .faq-item.is-open .faq-answer { grid-template-rows: 1fr; }
+962: .faq-answer-inner { overflow: hidden; }
+963: .faq-answer p {
+964:   padding: 0 26px 26px;
+965:   margin: 0;
+966:   color: var(--muted);
+967:   font-size: 0.92rem;
+968:   line-height: 1.8;
+969: }
+970: .faq-answer p b { color: var(--ink); font-weight: 600; }
+971: 
+972: /* --------------------------------------------------------------------------
+973:    13. CTA (full-width, biru)
+974:    -------------------------------------------------------------------------- */
+975: .cta {
+976:   position: relative;
+977:   padding: 104px 0;
+978:   background: linear-gradient(120deg, var(--blue-700) 0%, var(--blue-600) 52%, var(--blue-900) 100%);
+979:   overflow: hidden;
+980: }
+981: .cta::before,
+982: .cta::after {
+983:   content: "";
+984:   position: absolute;
+985:   border-radius: 50%;
+986:   pointer-events: none;
+987: }
+988: .cta::before {
+989:   width: 620px;
+990:   height: 620px;
+991:   top: -300px;
+992:   right: -160px;
+993:   background: radial-gradient(circle, rgba(255, 255, 255, 0.16), transparent 66%);
+994: }
+995: .cta::after {
+996:   width: 460px;
+997:   height: 460px;
+998:   bottom: -260px;
+999:   left: -120px;
+1000:   background: radial-gradient(circle, rgba(255, 255, 255, 0.1), transparent 68%);
+1001: }
+1002: .cta-inner { position: relative; z-index: 1; max-width: 900px; margin-inline: auto; text-align: center; }
+1003: .cta h2 {
+1004:   color: #fff;
+1005:   font-size: clamp(1.72rem, 3vw, 2.55rem);
+1006:   line-height: 1.22;
+1007:   margin-bottom: 20px;
+1008: }
+1009: .cta p { color: rgba(233, 240, 255, 0.88); font-size: 1.02rem; margin-bottom: 34px; }
+1010: .cta .btn-group { justify-content: center; }
+1011: /* Baris kontak (nomor, email, lokasi, ikon, garis atas) di dalam CTA sudah
+1012:    dihapus dari HTML, sehingga aturan .cta-contact tidak lagi dipakai. */
+1013: 
+1014: /* --------------------------------------------------------------------------
+1015:    14. Footer
+1016:    -------------------------------------------------------------------------- */
+1017: .site-footer {
+1018:   background: #fff;
+1019:   border-top: 1px solid var(--line-soft);
+1020:   padding: 84px 0 0;
+1021: }
+1022: .footer-grid {
+1023:   display: grid;
+1024:   grid-template-columns: minmax(0, 1.45fr) repeat(2, minmax(0, 1fr));
+1025:   gap: 48px;
+1026:   padding-bottom: 60px;
+1027: }
+1028: .footer-brand .brand { margin-bottom: 26px; }
+1029: /* Logo footer = 2,5x ukuran asli footer (38px -> 95px), jadi masih dalam rentang
+1030:    2-2,5x dan lebih kecil dari 228px (3x) sebelumnya. Hanya tinggi yang diatur dan
+1031:    lebarnya `auto` (dari .brand-logo), sehingga rasio asli 1:1 logo tetap utuh
+1032:    (tidak gepeng); file sumber 500x500 px dirender di 95px jadi tetap tajam.
+1033:    Aturan ini lebih spesifik dari .brand-logo sehingga logo di navbar tetap 38px. */
+1034: .footer-brand .brand-logo { height: 95px; }
+1035: .footer-about { color: var(--muted); font-size: 0.9rem; max-width: 360px; margin-bottom: 24px; }
+1036: /* Blok ikon sosial di footer sudah dihapus: bila .footer-about kini menjadi elemen
+1037:    terakhir di kolomnya, margin bawahnya dihilangkan agar tidak menyisakan ruang kosong. */
+1038: .footer-brand > .footer-about:last-child { margin-bottom: 0; }
+1039: 
+1040: .footer-social { display: flex; gap: 10px; }
+1041: .footer-social a {
+1042:   display: grid;
+1043:   place-items: center;
+1044:   width: 40px;
+1045:   height: 40px;
+1046:   border-radius: 12px;
+1047:   border: 1px solid var(--line);
+1048:   background: #fff;
+1049:   color: var(--ink-soft);
+1050:   transition: transform var(--dur) var(--ease), border-color var(--dur) var(--ease), color var(--dur) var(--ease), background var(--dur) var(--ease);
+1051: }
+1052: .footer-social a:hover {
+1053:   transform: translateY(-3px);
+1054:   border-color: var(--blue-200);
+1055:   background: var(--blue-50);
+1056:   color: var(--blue-700);
+1057: }
+1058: .footer-social svg { width: 18px; height: 18px; }
+1059: 
+1060: .footer-col h3 {
+1061:   margin-bottom: 18px;
+1062:   font-family: var(--font-head);
+1063:   font-size: 0.95rem;
+1064:   font-weight: 800;
+1065:   letter-spacing: -0.01em;
+1066: }
+1067: .footer-links { list-style: none; margin: 0; padding: 0; display: grid; gap: 11px; }
+1068: .footer-links li { margin: 0; }
+1069: .footer-links a {
+1070:   color: var(--muted);
+1071:   font-size: 0.89rem;
+1072:   transition: color var(--dur) var(--ease), padding-left var(--dur) var(--ease);
+1073: }
+1074: .footer-links a:hover { color: var(--blue-700); padding-left: 5px; }
+1075: 
+1076: .footer-contact { list-style: none; margin: 0; padding: 0; display: grid; gap: 16px; }
+1077: .footer-contact li { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 12px; margin: 0; }
+1078: .footer-contact svg { width: 17px; height: 17px; margin-top: 4px; color: var(--blue-600); flex: none; }
+1079: .footer-contact strong { display: block; font-size: 0.74rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+1080: .footer-contact a,
+1081: .footer-contact span.value { color: var(--ink-soft); font-size: 0.89rem; }
+1082: 
+1083: .footer-bottom {
+1084:   display: flex;
+1085:   align-items: center;
+1086:   justify-content: space-between;
+1087:   gap: 18px;
+1088:   flex-wrap: wrap;
+1089:   padding: 26px 0;
+1090:   border-top: 1px solid var(--line-soft);
+1091: }
+1092: .footer-bottom p {
+1093:   margin: 0 auto;
+1094:   color: var(--muted);
+1095:   font-size: 0.83rem;
+1096:   text-align: center;
+1097: }
+1098: .footer-bottom-links {
+1099:   display: none;
+1100: }
+1101: 
+1102: /* --------------------------------------------------------------------------
+1103:    15. Sub-pages (produk, portofolio, artikel, kontak)
+1104:    -------------------------------------------------------------------------- */
+1105: .page-hero {
+1106:   position: relative;
+1107:   padding: 72px 0 80px;
+1108:   background:
+1109:     radial-gradient(760px 380px at 90% -10%, rgba(47, 124, 255, 0.13), transparent 62%),
+1110:     linear-gradient(180deg, #ffffff, var(--surface-blue));
+1111:   border-bottom: 1px solid var(--line-soft);
+1112:   overflow: hidden;
+1113: }
+1114: .page-hero-grid {
+1115:   display: grid;
+1116:   grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+1117:   gap: 56px;
+1118:   align-items: center;
+1119: }
+1120: .page-hero h1 { font-size: clamp(1.95rem, 3.5vw, 2.9rem); }
+1121: .page-hero .hero-lead { margin-bottom: 30px; }
+1122: 
+1123: .breadcrumb {
+1124:   display: flex;
+1125:   align-items: center;
+1126:   flex-wrap: wrap;
+1127:   gap: 9px;
+1128:   margin: 0 0 22px;
+1129:   padding: 0;
+1130:   list-style: none;
+1131:   color: var(--muted);
+1132:   font-size: 0.8rem;
+1133: }
+1134: .breadcrumb li { margin: 0; display: inline-flex; align-items: center; gap: 9px; }
+1135: .breadcrumb li + li::before { content: "/"; color: var(--blue-200); }
+1136: .breadcrumb a { color: var(--muted); }
+1137: .breadcrumb a:hover { color: var(--blue-700); }
+1138: .breadcrumb [aria-current] { color: var(--ink); font-weight: 500; }
+1139: 
+1140: .page-media {
+1141:   border-radius: var(--radius-lg);
+1142:   border: 1px solid var(--line);
+1143:   background: #fff;
+1144:   overflow: hidden;
+1145:   box-shadow: var(--shadow-md);
+1146: }
+1147: 
+1148: .prose { max-width: 780px; color: var(--ink-soft); }
+1149: .prose h2 { margin-top: 46px; font-size: clamp(1.4rem, 2.2vw, 1.95rem); }
+1150: .prose h3 { margin-top: 34px; font-size: 1.2rem; }
+1151: .prose p, .prose li { font-size: 0.98rem; line-height: 1.85; color: var(--ink-soft); }
+1152: .prose ul, .prose ol { padding-left: 1.2rem; }
+1153: .prose li { margin-bottom: 8px; }
+1154: .prose .lead { font-size: 1.08rem; color: var(--ink-soft); }
+1155: .prose img { border-radius: var(--radius); border: 1px solid var(--line-soft); margin: 28px 0; }
+1156: .prose blockquote {
+1157:   margin: 30px 0;
+1158:   padding: 22px 26px;
+1159:   border-left: 3px solid var(--blue-600);
+1160:   border-radius: 0 var(--radius) var(--radius) 0;
+1161:   background: var(--surface-blue);
+1162:   color: var(--ink);
+1163:   font-family: var(--font-head);
+1164:   font-weight: 600;
+1165:   line-height: 1.6;
+1166: }
+1167: 
+1168: .note-card {
+1169:   margin: 32px 0;
+1170:   padding: 26px 28px;
+1171:   border: 1px solid var(--line);
+1172:   border-radius: var(--radius);
+1173:   background: #fff;
+1174:   box-shadow: var(--shadow-xs);
+1175: }
+1176: .note-card h4 { margin-bottom: 10px; }
+1177: .note-card p, .note-card li { font-size: 0.92rem; color: var(--muted); }
+1178: 
+1179: .spec-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 0.92rem; }
+1180: .spec-table caption { text-align: left; color: var(--muted); font-size: 0.82rem; padding-bottom: 12px; }
+1181: .spec-table th,
+1182: .spec-table td { padding: 15px 18px; border-bottom: 1px solid var(--line-soft); text-align: left; vertical-align: top; }
+1183: .spec-table thead th {
+1184:   background: var(--surface-soft);
+1185:   color: var(--ink);
+1186:   font-family: var(--font-head);
+1187:   font-size: 0.86rem;
+1188:   font-weight: 700;
+1189:   border-bottom: 1px solid var(--line);
+1190: }
+1191: .spec-table tbody th { color: var(--ink); font-weight: 600; width: 34%; }
+1192: .spec-table tbody tr:hover { background: var(--blue-50); }
+1193: 
+1194: .info-grid {
+1195:   display: grid;
+1196:   grid-template-columns: repeat(3, minmax(0, 1fr));
+1197:   gap: 22px;
+1198: }
+1199: .info-card {
+1200:   padding: 28px;
+1201:   border: 1px solid var(--line-soft);
+1202:   border-radius: var(--radius);
+1203:   background: #fff;
+1204:   box-shadow: var(--shadow-xs);
+1205:   transition: transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease), border-color var(--dur) var(--ease);
+1206: }
+1207: .info-card:hover { transform: translateY(-5px); border-color: var(--blue-200); box-shadow: var(--shadow-md); }
+1208: .info-card h3 { font-size: 1.04rem; margin-bottom: 8px; }
+1209: .info-card p { color: var(--muted); font-size: 0.9rem; margin: 0; }
+1210: .info-icon {
+1211:   display: grid;
+1212:   place-items: center;
+1213:   width: 46px;
+1214:   height: 46px;
+1215:   margin-bottom: 16px;
+1216:   border-radius: 14px;
+1217:   background: var(--blue-50);
+1218:   color: var(--blue-600);
+1219: }
+1220: .info-icon svg { width: 22px; height: 22px; }
+1221: 
+1222: .portfolio-grid {
+1223:   display: grid;
+1224:   grid-template-columns: repeat(3, minmax(0, 1fr));
+1225:   gap: 24px;
+1226: }
+1227: .portfolio-card {
+1228:   border: 1px solid var(--line);
+1229:   border-radius: var(--radius-lg);
+1230:   background: #fff;
+1231:   overflow: hidden;
+1232:   box-shadow: var(--shadow-xs);
+1233:   transition: transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease), border-color var(--dur) var(--ease);
+1234: }
+1235: .portfolio-card:hover { transform: translateY(-6px); border-color: var(--blue-200); box-shadow: var(--shadow-md); }
+1236: .portfolio-media { aspect-ratio: 4 / 3; overflow: hidden; border-bottom: 1px solid var(--line-soft); background: var(--surface-soft); }
+1237: .portfolio-media img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s var(--ease); }
+1238: .portfolio-card:hover .portfolio-media img { transform: scale(1.05); }
+1239: .portfolio-body { padding: 24px 26px 26px; }
+1240: .portfolio-body h3 { font-size: 1.08rem; margin-bottom: 8px; }
+1241: .portfolio-body p { color: var(--muted); font-size: 0.88rem; margin: 0 0 14px; }
+1242: 
+1243: .form-panel {
+1244:   padding: 34px;
+1245:   border: 1px solid var(--line);
+1246:   border-radius: var(--radius-lg);
+1247:   background: #fff;
+1248:   box-shadow: var(--shadow-sm);
+1249: }
+1250: .form-row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+1251: .field { display: flex; flex-direction: column; gap: 8px; margin-bottom: 18px; }
+1252: .field label { color: var(--ink); font-size: 0.86rem; font-weight: 600; }
+1253: .field input,
+1254: .field select,
+1255: .field textarea {
+1256:   width: 100%;
+1257:   padding: 14px 16px;
+1258:   border: 1px solid var(--line);
+1259:   border-radius: var(--radius-sm);
+1260:   background: #fff;
+1261:   font-size: 0.92rem;
+1262:   transition: border-color var(--dur) var(--ease), box-shadow var(--dur) var(--ease);
+1263: }
+1264: .field input:focus,
+1265: .field select:focus,
+1266: .field textarea:focus {
+1267:   outline: none;
+1268:   border-color: var(--blue-500);
+1269:   box-shadow: 0 0 0 4px rgba(47, 124, 255, 0.14);
+1270: }
+1271: .field textarea { min-height: 132px; resize: vertical; }
+1272: .field .hint { color: var(--muted); font-size: 0.78rem; }
+1273: .form-status { margin-top: 16px; font-size: 0.88rem; color: var(--blue-700); }
+1274: 
+1275: /* --------------------------------------------------------------------------
+1276:    16. Motion & reveal
+1277:    -------------------------------------------------------------------------- */
+1278: /* GPU-friendly: hanya opacity + transform, tanpa memaksa layout/reflow.
+1279:    Fade-up saat elemen masuk viewport: opacity 0 â†’ 1, translateY(30px) â†’ 0. */
+1280: [data-reveal] {
+1281:   opacity: 0;
+1282:   transform: translate3d(0, var(--reveal-shift), 0);
+1283:   will-change: opacity, transform;
+1284: }
+1285: 
+1286: /* Transisi dipasang hanya saat proses reveal berjalan agar tidak ada
+1287:    perbedaan tampilan sebelum/sesudah JS aktif (aman jika JS mati). */
+1288: [data-reveal].reveal-ready {
+1289:   transition: opacity var(--reveal-dur) var(--ease-out) var(--reveal-delay),
+1290:               transform var(--reveal-dur) var(--ease-out) var(--reveal-delay);
+1291: }
+1292: 
+1293: [data-reveal].show {
+1294:   opacity: 1;
+1295:   transform: translate3d(0, 0, 0);
+1296:   will-change: auto;
+1297: }
+1298: 
+1299: /* Stagger 0.1â€“0.15s antar elemen dalam satu section */
+1300: [data-reveal-delay="1"] { --reveal-delay: 0.1s; }
+1301: [data-reveal-delay="2"] { --reveal-delay: 0.115s; }
+1302: [data-reveal-delay="3"] { --reveal-delay: 0.13s; }
+1303: [data-reveal-delay="4"] { --reveal-delay: 0.15s; }
+1304: 
+1305: /* --------------------------------------------------------------------------
+1306:    Hero: entrance animation satu kali (bukan loop) â€” hanya transform/opacity
+1307:    -------------------------------------------------------------------------- */
+1308: .hero .hero-grid > * {
+1309:   opacity: 0;
+1310:   transform: translate3d(0, var(--reveal-shift), 0);
+1311: }
+1312: 
+1313: .hero.is-entered .hero-grid > * {
+1314:   animation: fxHeroIn var(--reveal-dur) var(--ease-out) both;
+1315:   animation-delay: var(--hero-delay, 0s);
+1316: }
+1317: .hero.is-entered .hero-grid > *:nth-child(2) { --hero-delay: 0.16s; }
+1318: 
+1319: @keyframes fxHeroIn {
+1320:   from { opacity: 0; transform: translate3d(0, var(--reveal-shift), 0); }
+1321:   to { opacity: 1; transform: translate3d(0, 0, 0); }
+1322: }
+1323: 
+1324: @media (hover: hover) and (pointer: fine) {
+1325:   .btn, .btn svg, .nav-link, .nav-link .caret, .nav-toggle,
+1326:   .nav-toggle-bars i, .product-card, .solution-card, .portfolio-card,
+1327:   .info-card, .article-mini, .point, .footer-social a {
+1328:     backface-visibility: hidden;
+1329:   }
+1330: }
+1331: 
+1332: @media (max-width: 768px) {
+1333:   /* Kurangi beban compositor di HP tanpa mengubah tampilan/layout. */
+1334:   :root { --reveal-shift: 22px; }
+1335:   [data-reveal-delay="2"] { --reveal-delay: 0.1s; }
+1336:   [data-reveal-delay="3"] { --reveal-delay: 0.11s; }
+1337:   [data-reveal-delay="4"] { --reveal-delay: 0.12s; }
+1338: }
+1339: 
+1340: @media (prefers-reduced-motion: reduce) {
+1341:   /* Tanpa animasi sama sekali â€” elemen langsung tampil normal. */
+1342:   [data-reveal],
+1343:   [data-reveal].show,
+1344:   .hero .hero-grid > *,
+1345:   .hero.is-entered .hero-grid > * {
+1346:     transition: none !important;
+1347:     animation: none !important;
+1348:     opacity: 1 !important;
+1349:     transform: none !important;
+1350:   }
+1351: }
+1352: 
+1353: @media (max-width: 1180px) {
+1354:   .solution-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+1355:   .hero-grid { gap: 44px; }
+1356:   .split { gap: 48px; }
+1357: }
+1358: 
+1359: @media (max-width: 1024px) {
+1360:   /* Gerak reveal sedikit lebih kecil agar tetap nyaman di layar sedang */
+1361:   :root { --header-h: 58px; --reveal-shift: 26px; }
+1362: 
+1363:   .section { padding: 88px 0; }
+1364: 
+1365:   .nav-toggle { display: inline-flex; }
+1366: 
+1367:   .nav {
+1368:     position: fixed;
+1369:     inset: calc(var(--header-h) + 1px) 0 auto 0;
+1370:     display: block;
+1371:     padding: 16px var(--gutter) 30px;
+1372:     background: #fff;
+1373:     border-bottom: 1px solid var(--line-soft);
+1374:     box-shadow: var(--shadow-md);
+1375:     max-height: calc(100vh - var(--header-h));
+1376:     overflow-y: auto;
+1377:     opacity: 0;
+1378:     visibility: hidden;
+1379:     transform: translateY(-12px);
+1380:     transition: opacity var(--dur) var(--ease), transform var(--dur) var(--ease), visibility var(--dur);
+1381:   }
+1382:   body.nav-open .nav { opacity: 1; visibility: visible; transform: none; }
+1383: 
+1384:   .nav-list { flex-direction: column; align-items: stretch; gap: 0; }
+1385:   .nav-link {
+1386:     justify-content: space-between;
+1387:     padding: 13px 14px;
+1388:     border-radius: var(--radius-xs);
+1389:     font-size: 0.94rem;
+1390:   }
+1391:   .dropdown {
+1392:     position: static;
+1393:     min-width: 0;
+1394:     margin: 4px 0 10px;
+1395:     padding: 6px;
+1396:     opacity: 1;
+1397:     visibility: visible;
+1398:     transform: none;
+1399:     box-shadow: none;
+1400:     border-color: var(--line-soft);
+1401:     background: var(--surface-soft);
+1402:     display: none;
+1403:   }
+1404:   .nav-item.has-dropdown.is-open .dropdown { display: block; }
+1405:   .site-header .btn-sm { display: flex; width: 100%; margin-top: 14px; }
+1406: 
+1407:   .hero { padding: 72px 0 84px; }
+1408:   /* Layar sedang & kecil: teks hero memakai hampir seluruh lebar, jadi overlay
+1409:      gelap dilebarkan (sisi kiri tetap paling pekat, kanan tetap lebih terang)
+1410:      agar teks tetap terbaca di atas foto. */
+1411:   .hero::after {
+1412:     background-image:
+1413:       linear-gradient(90deg, rgba(7, 17, 48, 0.9) 0%, rgba(7, 17, 48, 0.78) 55%, rgba(7, 17, 48, 0.52) 100%),
+1414:       linear-gradient(180deg, rgba(7, 17, 48, 0.3) 0%, rgba(7, 17, 48, 0.55) 100%);
+1415:   }
+1416:   /* Layar kecil: hanya ada teks, jarak tetap konsisten dengan grid satu kolom */
+1417:   .hero-grid,
+1418:   .split,
+1419:   .page-hero-grid { grid-template-columns: minmax(0, 1fr); }
+1420: 
+1421:   .product-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+1422:   .article-layout { grid-template-columns: minmax(0, 1fr); }
+1423:   .article-stack { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+1424:   .faq-layout { grid-template-columns: minmax(0, 1fr); gap: 40px; }
+1425:   .portfolio-grid,
+1426:   .info-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+1427:   .footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px; }
+1428:   /* Footer kini hanya punya dua kolom tautan: brand dibuat selebar grid agar
+1429:      kolom "Informasi Perusahaan" dan "Kontak" sejajar rapi di baris berikutnya. */
+1430:   .footer-grid > .footer-brand { grid-column: 1 / -1; }
+1431:   .split.reverse > *:first-child { order: 2; }
+1432: }
+1433: 
+1434: @media (max-width: 768px) {
+1435:   /* Layar kecil: gerak lebih pendek agar animasi tetap terasa ringan */
+1436:   :root { --gutter: 20px; }
+1437: 
+1438:   .section { padding: 72px 0; }
+1439:   .section-head { margin-bottom: 40px; }
+1440:   .brand-logo { height: 32px; }
+1441:   /* Logo footer juga 2,5x ukuran asli di layar kecil (32px -> 80px) */
+1442:   .footer-brand .brand-logo { height: 80px; }
+1443:   .nav-link { padding: 12px 12px; font-size: 0.9rem; }
+1444: 
+1445:   h1 { font-size: clamp(1.9rem, 7.4vw, 2.4rem); }
+1446:   h2 { font-size: clamp(1.5rem, 6vw, 1.95rem); }
+1447: 
+1448:   .hero { padding: 60px 0 68px; }
+1449:   .hero h1 { font-size: clamp(1.08rem, 4.14vw, 1.35rem); }
+1450: 
+1451:   .btn { padding: 14px 22px; font-size: 0.9rem; }
+1452:   .btn-group { gap: 10px; }
+1453:   .btn-group .btn { flex: 1 1 auto; }
+1454: 
+1455:   .product-grid { grid-template-columns: minmax(0, 1fr); }
+1456:   .solution-grid { grid-template-columns: minmax(0, 1fr); }
+1457:   .article-stack { grid-template-columns: minmax(0, 1fr); }
+1458:   .article-mini { grid-template-columns: 118px minmax(0, 1fr); }
+1459:   .portfolio-grid,
+1460:   .info-grid { grid-template-columns: minmax(0, 1fr); }
+1461:   .form-row { grid-template-columns: minmax(0, 1fr); }
+1462:   .form-panel { padding: 24px; }
+1463: 
+1464:   .cta { padding: 76px 0; }
+1465: 
+1466:   .site-footer { padding-top: 64px; }
+1467:   .footer-grid { grid-template-columns: minmax(0, 1fr); gap: 36px; padding-bottom: 44px; }
+1468:   .footer-bottom { flex-direction: column; align-items: flex-start; }
+1469: 
+1470:   .split-note { padding: 18px; }
+1471:   .point,
+1472:   .advantage-item { padding: 22px; gap: 16px; }
+1473:   .advantage-item:hover { transform: translateY(-4px); }
+1474: 
+1475:   .page-hero { padding: 52px 0 62px; }
+1476:   .prose h2 { margin-top: 36px; }
+1477:   .spec-table th,
+1478:   .spec-table td { padding: 13px 14px; font-size: 0.86rem; }
+1479:   .spec-table tbody th { width: 42%; }
+1480: }
+1481: 
+1482: @media (max-width: 480px) {
+1483:   .article-mini { grid-template-columns: minmax(0, 1fr); }
+1484:   .article-mini-media { aspect-ratio: 16 / 9; }
+1485:   .faq-question { padding: 18px 20px; font-size: 0.96rem; gap: 14px; }
+1486:   .faq-answer p { padding: 0 20px 22px; }
+1487:   .article-feature-body { padding: 24px; }
+1488: }
+1489: /* --------------------------------------------------------------------------
+1490:    18. Utilities
+1491:    -------------------------------------------------------------------------- */
+1492: .faq-item h3 { margin: 0; }
+1493: .section-foot { margin-top: 40px; }
+1494: .section-foot.center { text-align: center; }
+1495: /* --------------------------------------------------------------------------
+1496:    16. Modal detail produk ("Lihat Detail")
+1497:    Fitur tambahan â€” tidak mengubah card produk atau section lain sama sekali.
+1498:    -------------------------------------------------------------------------- */
+1499: .product-modal {
+1500:   position: fixed;
+1501:   inset: 0;
+1502:   z-index: 1000;
+1503:   display: grid;
+1504:   place-items: center;
+1505:   padding: 24px;
+1506: }
+1507: .product-modal[hidden] { display: none; }
+1508: 
+1509: /* Overlay gelap di belakang modal. */
+1510: .product-modal-overlay {
+1511:   position: absolute;
+1512:   inset: 0;
+1513:   background: rgba(10, 22, 51, 0.55);
+1514:   opacity: 0;
+1515:   transition: opacity var(--dur-slow) var(--ease-out);
+1516: }
+1517: .product-modal.is-open .product-modal-overlay { opacity: 1; }
+1518: 
+1519: /* Kotak modal: fade + scale ringan saat muncul/keluar. */
+1520: .product-modal-dialog {
+1521:   position: relative;
+1522:   z-index: 1;
+1523:   width: min(760px, 100%);
+1524:   max-height: min(86vh, 720px);
+1525:   overflow: auto;
+1526:   display: grid;
+1527:   grid-template-columns: minmax(0, 1fr);
+1528:   gap: 0;
+1529:   background: #fff;
+1530:   border-radius: var(--radius-lg);
+1531:   box-shadow: 0 24px 64px rgba(8, 42, 122, 0.35);
+1532:   opacity: 0;
+1533:   transform: scale(0.94) translateY(12px);
+1534:   transition: opacity var(--dur-slow) var(--ease-out), transform var(--dur-slow) var(--ease-out);
+1535: }
+1536: .product-modal.is-open .product-modal-dialog {
+1537:   opacity: 1;
+1538:   transform: scale(1) translateY(0);
+1539: }
+1540: 
+1541: .product-modal-media { background: var(--blue-50); }
+1542: .product-modal-media img { width: 100%; height: auto; display: block; }
+1543: 
+1544: .product-modal-body { padding: 26px 30px 30px; }
+1545: .product-modal-body h3 { font-size: 1.35rem; margin: 6px 0 10px; }
+1546: .product-modal-body p { color: var(--muted); line-height: 1.75; margin: 0 0 18px; }
+1547: .product-modal-body h4 {
+1548:   font-size: 0.95rem;
+1549:   text-transform: uppercase;
+1550:   letter-spacing: 0.06em;
+1551:   color: var(--blue-700);
+1552:   margin: 0 0 10px;
+1553: }
+1554: .product-modal-body ul { margin: 0 0 20px; padding-left: 20px; color: var(--muted); line-height: 1.8; font-size: 0.92rem; }
+1555: 
+1556: .product-modal-close {
+1557:   position: absolute;
+1558:   top: 12px;
+1559:   right: 14px;
+1560:   z-index: 2;
+1561:   width: 38px;
+1562:   height: 38px;
+1563:   display: grid;
+1564:   place-items: center;
+1565:   border: 1px solid var(--line-soft);
+1566:   border-radius: 50%;
+1567:   background: rgba(255, 255, 255, 0.92);
+1568:   color: var(--ink);
+1569:   font-size: 1.3rem;
+1570:   line-height: 1;
+1571:   cursor: pointer;
+1572:   transition: background var(--dur) var(--ease), color var(--dur) var(--ease);
+1573: }
+1574: .product-modal-close:hover { background: var(--blue-600); color: #fff; }
+1575: 
+1576: body.modal-open { overflow: hidden; }
+1577: 
+1578: @media (min-width: 640px) {
+1579:   .product-modal-dialog { grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); }
+1580:   .product-modal-media img { height: 100%; object-fit: cover; }
+1581: }
+1582: 
+1583: @media (prefers-reduced-motion: reduce) {
+1584:   .product-modal-overlay,
+1585:   .product-modal-dialog { transition: none; }
+1586: }
+1587: 
+1588: /* --------------------------------------------------------------------------
+1589:    17. Detail artikel di halaman yang sama ("Baca Selengkapnya")
+1590:    Fitur tambahan â€” tidak mengubah daftar/section Artikel sebelum diklik.
+1591:    Layout: kiri foto besar, kanan kategori + tanggal + judul + deskripsi.
+1592:    -------------------------------------------------------------------------- */
+1593: .article-detail {
+1594:   scroll-margin-top: calc(var(--header-h) + 20px);
+1595:   opacity: 0;
+1596:   transform: translateY(26px);
+1597:   transition: opacity var(--dur-slow) var(--ease-out), transform var(--dur-slow) var(--ease-out);
+1598: }
+1599: .article-detail.is-open { opacity: 1; transform: translateY(0); }
+1600: 
+1601: .article-detail-grid {
+1602:   display: grid;
+1603:   grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+1604:   gap: 0;
+1605:   align-items: stretch;
+1606:   background: #fff;
+1607:   border: 1px solid var(--line);
+1608:   border-radius: var(--radius-lg);
+1609:   box-shadow: var(--shadow-xs);
+1610:   overflow: hidden;
+1611: }
+1612: 
+1613: .article-detail-media {
+1614:   background: linear-gradient(160deg, #eef4ff, #ffffff);
+1615:   overflow: hidden;
+1616: }
+1617: .article-detail-media img {
+1618:   width: 100%;
+1619:   height: 100%;
+1620:   object-fit: cover;
+1621:   display: block;
+1622: }
+1623: 
+1624: .article-detail-body { padding: 34px 36px; display: flex; flex-direction: column; align-items: flex-start; }
+1625: .article-detail-body h3 { font-size: clamp(1.25rem, 2vw, 1.55rem); margin-bottom: 12px; }
+1626: .article-detail-body p { color: var(--muted); font-size: 0.94rem; line-height: 1.85; margin: 0 24px; }
+1627: 
+1628: @media (max-width: 900px) {
+1629:   .article-detail-grid { grid-template-columns: minmax(0, 1fr); }
+1630:   .article-detail-media img { height: auto; aspect-ratio: 16 / 9; }
+1631:   .article-detail-body { padding: 26px 28px 30px; }
+1632: }
+1633: 
+1634: @media (prefers-reduced-motion: reduce) {
+1635:   .article-detail { transition: none; transform: none; }
+1636: }
+===== .\js\main.js (total 577) =====
+1: /* ==========================================================================
+2:    Jual Videotron Indoor Jakarta â€” Interaksi halaman
+3:    ========================================================================== */
+4: (function () {
+5:   "use strict";
+6: 
+7:   document.documentElement.classList.remove("no-js");
+8: 
+9:   /* ------------------------------------------------------------------
+10:      Header: shadow saat halaman digulir
+11:      ------------------------------------------------------------------ */
+12:   var header = document.querySelector(".site-header");
+13: 
+14:   var scrollTicking = false;
+15:   function updateHeader() {
+16:     scrollTicking = false;
+17:     if (!header) return;
+18:     header.classList.toggle("is-stuck", window.scrollY > 8);
+19:   }
+20: 
+21:   function onScroll() {
+22:     if (scrollTicking) return;
+23:     scrollTicking = true;
+24:     window.requestAnimationFrame(updateHeader);
+25:   }
+26: 
+27:   window.addEventListener("scroll", onScroll, { passive: true });
+28:   updateHeader();
+29: 
+30:   /* ------------------------------------------------------------------
+31:      Navigasi mobile
+32:      ------------------------------------------------------------------ */
+33:   var navToggle = document.querySelector(".nav-toggle");
+34:   var navLinks = document.querySelectorAll(".nav-list a");
+35: 
+36:   function closeNav() {
+37:     document.body.classList.remove("nav-open");
+38:     if (navToggle) navToggle.setAttribute("aria-expanded", "false");
+39:   }
+40: 
+41:   if (navToggle) {
+42:     navToggle.addEventListener("click", function () {
+43:       var isOpen = document.body.classList.toggle("nav-open");
+44:       navToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+45:     });
+46:   }
+47: 
+48:   Array.prototype.forEach.call(navLinks, function (link) {
+49:     link.addEventListener("click", closeNav);
+50:   });
+51: 
+52:   document.addEventListener("keydown", function (event) {
+53:     if (event.key === "Escape") closeNav();
+54:   });
+55: 
+56:   /* ------------------------------------------------------------------
+57:      Dropdown Produk (dukungan klik untuk layar kecil)
+58:      ------------------------------------------------------------------ */
+59:   var dropdownItems = document.querySelectorAll(".nav-item.has-dropdown");
+60: 
+61:   Array.prototype.forEach.call(dropdownItems, function (item) {
+62:     var trigger = item.querySelector(".nav-link");
+63:     if (!trigger) return;
+64: 
+65:     trigger.addEventListener("click", function (event) {
+66:       var isMobile = window.matchMedia("(max-width: 1024px)").matches;
+67:       if (!isMobile) return;
+68:       if (!item.classList.contains("is-open")) {
+69:         event.preventDefault();
+70:         Array.prototype.forEach.call(dropdownItems, function (other) {
+71:           if (other !== item) other.classList.remove("is-open");
+72:         });
+73:       }
+74:       item.classList.toggle("is-open");
+75:     });
+76:   });
+77: 
+78:   /* ------------------------------------------------------------------
+79:      FAQ accordion
+80:      ------------------------------------------------------------------ */
+81:   var faqItems = document.querySelectorAll(".faq-item");
+82: 
+83:   Array.prototype.forEach.call(faqItems, function (item) {
+84:     var button = item.querySelector(".faq-question");
+85:     var answer = item.querySelector(".faq-answer");
+86:     if (!button) return;
+87: 
+88:     button.addEventListener("click", function () {
+89:       var willOpen = !item.classList.contains("is-open");
+90: 
+91:       Array.prototype.forEach.call(faqItems, function (other) {
+92:         if (other === item) return;
+93:         other.classList.remove("is-open");
+94:         var otherButton = other.querySelector(".faq-question");
+95:         var otherAnswer = other.querySelector(".faq-answer");
+96:         if (otherButton) otherButton.setAttribute("aria-expanded", "false");
+97:         if (otherAnswer) otherAnswer.hidden = true;
+98:       });
+99: 
+100:       item.classList.toggle("is-open", willOpen);
+101:       button.setAttribute("aria-expanded", willOpen ? "true" : "false");
+102:       if (answer) answer.hidden = !willOpen;
+103:     });
+104: 
+105:     if (answer && !item.classList.contains("is-open")) answer.hidden = true;
+106:   });
+107: 
+108:   /* ------------------------------------------------------------------
+109:      Smooth reveal saat scroll
+110:      - Fade-up (opacity 0â†’1, translateY 30pxâ†’0) 0.6s ease-out
+111:      - Stagger 0.1â€“0.15s untuk elemen di dalam satu section
+112:      - Hanya opacity/transform (GPU) sehingga tidak ada layout shift
+113:      - prefers-reduced-motion: semua langsung tampil tanpa animasi
+114:      ------------------------------------------------------------------ */
+115:   var revealSelector = [
+116:     ".hero-copy",
+117:     ".hero-media",
+118:     ".page-hero .breadcrumb",
+119:     ".page-hero h1",
+120:     ".page-hero .hero-lead",
+121:     ".page-hero .btn-group",
+122:     ".page-media",
+123:     ".section-head",
+124:     ".split-note",
+125:     ".advantage-media",
+126:     ".product-card",
+127:     ".solution-card",
+128:     ".article-feature",
+129:     ".article-mini",
+130:     ".info-card",
+131:     ".portfolio-card",
+132:     ".note-card",
+133:     ".spec-table",
+134:     ".form-panel",
+135:     ".cta-inner",
+136:     ".footer-brand",
+137:     ".footer-col",
+138:     ".footer-bottom",
+139:     ".prose > h2",
+140:     ".prose > h3",
+141:     ".prose > p",
+142:     ".prose > ul",
+143:     ".prose > ol",
+144:     ".prose > blockquote",
+145:     ".prose > img"
+146:   ].join(",");
+147: 
+148:   var revealTargets = [];
+149: 
+150:   function addRevealTarget(el, index) {
+151:     if (!el || el.hasAttribute("data-reveal")) return;
+152:     el.setAttribute("data-reveal", "");
+153:     el.setAttribute("data-reveal-delay", String(Math.min(index || 0, 4)));
+154:     revealTargets.push(el);
+155:   }
+156: 
+157:   /* Tandai elemen utama yang memang perlu muncul bertahap.
+158:      Tidak menyentuh struktur, ukuran, atau posisi elemen. */
+159:   Array.prototype.forEach.call(document.querySelectorAll(revealSelector), function (el) {
+160:     if (el.closest("[data-reveal]")) return;
+161:     var parent = el.parentElement;
+162:     var index = 0;
+163: 
+164:     if (parent) {
+165:       var siblings = parent.querySelectorAll(":scope > " + el.tagName.toLowerCase());
+166:       for (var i = 0; i < siblings.length; i++) {
+167:         if (siblings[i] === el) break;
+168:         index++;
+169:       }
+170:     }
+171: 
+172:     addRevealTarget(el, index);
+173:   });
+174: 
+175:   /* Section yang belum memiliki target tetap diberi reveal, sehingga tidak ada
+176:      bagian halaman yang terasa muncul mendadak. */
+177:   Array.prototype.forEach.call(
+178:     document.querySelectorAll("main > section, main > .section, footer.site-footer"),
+179:     function (section) {
+180:       if (!section.hasAttribute("data-reveal") && !section.querySelector("[data-reveal]")) {
+181:         addRevealTarget(section, 0);
+182:       }
+183:     }
+184:   );
+185: 
+186:   /* Semua elemen yang sudah diberi data-reveal oleh HTML ikut dipantau. */
+187:   Array.prototype.forEach.call(document.querySelectorAll("[data-reveal]"), function (el) {
+188:     if (revealTargets.indexOf(el) === -1) revealTargets.push(el);
+189:   });
+190: 
+191:   var reduceMotion =
+192:     "matchMedia" in window &&
+193:     window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+194: 
+195:   function revealAll() {
+196:     Array.prototype.forEach.call(revealTargets, function (target) {
+197:       target.classList.add("show");
+198:     });
+199:   }
+200: 
+201:   var heroSection = document.querySelector(".hero");
+202: 
+203:   /* Entrance animation hero: dijalankan sekali lewat class .is-entered,
+204:      dipicu setelah frame pertama agar transisi sempat terpasang. */
+205:   function playHeroEntrance() {
+206:     if (!heroSection) return;
+207:     heroSection.classList.add("is-entered");
+208:   }
+209: 
+210:   if (reduceMotion || !("IntersectionObserver" in window) || !revealTargets.length) {
+211:     revealAll();
+212:     playHeroEntrance();
+213:   } else {
+214:     /* Transisi baru dipasang saat reveal dimulai, sehingga tidak ada perbedaan
+215:        tampilan sebelum/sesudah JS aktif dan tidak ada flicker. */
+216:     function prepareReveal(target) {
+217:       if (target.classList.contains("reveal-ready")) return;
+218:       target.classList.add("reveal-ready");
+219:       void target.offsetHeight;
+220:     }
+221: 
+222:     var observer = new IntersectionObserver(function (entries) {
+223:       for (var i = 0; i < entries.length; i++) {
+224:         var entry = entries[i];
+225:         if (!entry.isIntersecting) continue;
+226:         prepareReveal(entry.target);
+227:         entry.target.classList.add("show");
+228:         observer.unobserve(entry.target);
+229:       }
+230:     }, {
+231:       threshold: 0.08,
+232:       rootMargin: "0px 0px -6% 0px"
+233:     });
+234: 
+235:     Array.prototype.forEach.call(revealTargets, function (target) {
+236:       observer.observe(target);
+237:     });
+238: 
+239:     /* Elemen yang sudah terlihat saat halaman dibuka (mis. hero) langsung
+240:        dijadwalkan, jadi tidak pernah tertinggal dalam keadaan transparan. */
+241:     window.requestAnimationFrame(function () {
+242:       window.requestAnimationFrame(function () {
+243:         Array.prototype.forEach.call(revealTargets, function (target) {
+244:           var rect = target.getBoundingClientRect();
+245:           var visible =
+246:             rect.top < (window.innerHeight || 0) * 0.94 && rect.bottom > 0;
+247:           if (visible) prepareReveal(target);
+248:         });
+249:         playHeroEntrance();
+250:       });
+251:     });
+252:   }
+253: 
+254:   /* ------------------------------------------------------------------
+255:      Keunggulan produk: pergantian gambar kolom kiri via hover.
+256:      Card 1 -> Gambar 1, Card 2 -> Gambar 2, dst. Saat kursor keluar,
+257:      kembali ke gambar default (gambar pertama). Warna kartu, ikon,
+258:      judul, dan deskripsi tidak diubah oleh JavaScript sama sekali.
+259:      ------------------------------------------------------------------ */
+260:   var advantageMedia = document.querySelector("[data-advantage-media]");
+261:   var advantageList = document.querySelector("[data-advantage-list]");
+262:   var advantageImages = advantageMedia
+263:     ? advantageMedia.querySelectorAll(".advantage-media-img")
+264:     : [];
+265:   var advantageCards = advantageList
+266:     ? advantageList.querySelectorAll(":scope > li")
+267:     : [];
+268: 
+269:   var advantageActive = -1;
+270: 
+271:   function setActiveAdvantage(index) {
+272:     if (index === advantageActive) return;
+273:     advantageActive = index;
+274: 
+275:     /* Hanya gambar yang tampil yang diumkan pembaca layar. */
+276:     Array.prototype.forEach.call(advantageImages, function (image, i) {
+277:       var isActive = i === index;
+278:       image.classList.toggle("is-active", isActive);
+279:       image.setAttribute("aria-hidden", isActive ? "false" : "true");
+280:     });
+281:   }
+282: 
+283:   /* Warna kartu tidak diubah di sini. JavaScript hanya mengganti gambar kolom
+284:      kiri mengikuti kartu yang di-hover: Card 1 -> Gambar 1, dst. Saat kursor
+285:      keluar, kembali ke gambar default (gambar pertama). */
+286:   Array.prototype.forEach.call(advantageCards, function (card, i) {
+287:     card.addEventListener("mouseenter", function () {
+288:       setActiveAdvantage(Math.min(i, advantageImages.length - 1));
+289:     });
+290:     card.addEventListener("mouseleave", function () {
+291:       setActiveAdvantage(0);
+292:     });
+293:   });
+294: 
+295: /* ------------------------------------------------------------------
+296:      Form konsultasi (validasi ringan, dilanjutkan ke WhatsApp)
+297:      ------------------------------------------------------------------ */
+298:   var consultForm = document.querySelector("[data-consult-form]");
+299: 
+300:   if (consultForm) {
+301:     consultForm.addEventListener("submit", function (event) {
+302:       event.preventDefault();
+303: 
+304:       var status = consultForm.querySelector(".form-status");
+305:       var nama = consultForm.querySelector("#nama");
+306:       var telepon = consultForm.querySelector("#telepon");
+307:       var pesan = consultForm.querySelector("#pesan");
+308: 
+309:       if (!nama || !nama.value.trim() || !telepon || !telepon.value.trim()) {
+310:         if (status) {
+311:           status.style.color = "#b42318";
+312:           status.textContent = "Mohon lengkapi nama dan nomor WhatsApp Anda terlebih dahulu.";
+313:         }
+314:         return;
+315:       }
+316: 
+317:       var pesanSingkat = [
+318:         "Halo, saya " + nama.value.trim() + ".",
+319:         "Saya ingin konsultasi videotron indoor.",
+320:         "Kebutuhan: " + (pesan && pesan.value.trim() ? pesan.value.trim() : "belum diisi detailnya."),
+321:         "Nomor saya: " + telepon.value.trim()
+322:       ].join(" ");
+323: 
+324:       var waNumber = consultForm.getAttribute("data-wa") || "6281200000000";
+325:       var waUrl = "https://wa.me/" + waNumber + "?text=" + encodeURIComponent(pesanSingkat);
+326: 
+327:       if (status) {
+328:         status.style.color = "";
+329:         status.textContent = "Terima kasih! Kami arahkan Anda ke WhatsApp untuk melanjutkan konsultasi.";
+330:       }
+331: 
+332:       window.open(waUrl, "_blank", "noopener");
+333:       consultForm.reset();
+334:     });
+335:   }
+336: 
+337:   /* ------------------------------------------------------------------
+338:      Modal detail produk ("Lihat Detail" pada card)
+339:      - Satu elemen modal diisi sesuai tombol yang diklik (data per produk).
+340:      - Tutup: tombol X, klik area di luar modal, atau tombol Escape.
+341:      - Animasi fade + scale murni lewat class .is-open (CSS).
+342:      ------------------------------------------------------------------ */
+343:   var PRODUCT_DETAILS = {
+344:     hikvision: {
+345:       brand: "Hikvision",
+346:       title: "Videotron Indoor Hikvision",
+347:       desc:
+348:         "Pilihan populer untuk lobi, showroom, dan ruang meeting. Modul LED indoor Hikvision menghadirkan tampilan tajam dengan pixel pitch rapat, sistem kontrol yang mudah dioperasikan, serta perawatan sederhana sehingga layar tetap prima untuk pemakaian harian jangka panjang.",
+349:       specs: [
+350:         "Pixel pitch indoor: P1.25 / P1.56 / P1.86 (disesuaikan jarak pandang)",
+351:         "Kecerahan 600â€“800 nits, nyaman untuk ruangan dengan pencahayaan campuran",
+352:         "Refresh rate tinggi, tampilan mulus tanpa flicker di depan kamera",
+353:         "Sistem kontrol user-friendly, bisa dijalankan tim non-IT",
+354:         "Garansi resmi + dukungan sparepart modul dan receiving card",
+355:         "Instalasi rapi di Jakarta & sekitarnya oleh teknisi berpengalaman"
+356:       ],
+357:       image: "images/videotron-hikvision.png",
+358:       link: "produk-hikvision.html"
+359:     },
+360:     samsung: {
+361:       brand: "Samsung",
+362:       title: "Videotron Indoor Samsung",
+363:       desc:
+364:         "Untuk kebutuhan tampilan premium tanpa sambungan terlihat. Videotron indoor Samsung memakai modul bezel-less dengan micro pixel pitch sehingga konten tampil menyatu penuh â€” ideal bagi brand yang menonjolkan kualitas visual di area publik seperti flagship store, gallery, dan aula perusahaan.",
+365:       specs: [
+366:         "Micro pixel pitch: P0.9 / P1.2 untuk jarak pandang sangat dekat",
+367:         "Kecerahan hingga 900 nits dengan kalibrasi warna presisi",
+368:         "Desain bezel-less, sambungan modul nyaris tidak terlihat",
+369:         "Kedalaman hitam & kontras tinggi untuk konten visual premium",
+370:         "Manajemen konten terpusat untuk banyak layar sekaligus",
+371:         "Garansi resmi Samsung + layanan purnajual terjadwal"
+372:       ],
+373:       image: "images/videotron-samsung.png",
+374:       link: "produk-samsung.html"
+375:     },
+376:     lg: {
+377:       brand: "LG",
+378:       title: "Videotron Indoor LG",
+379:       desc:
+380:         "Solusi efisien untuk instalasi cepat, ringan, dan rapi. Modul LED indoor LG dirancang tipis dengan bobot ringan sehingga cocok untuk kantor, kampus, maupun ruang event yang kebutuhan display-nya dinamis â€” termasuk pemasangan sementara untuk kegiatan tertentu.",
+381:       specs: [
+382:         "Pixel pitch indoor: P1.5 / P1.8 / P2.0 sesuai skema ruang",
+383:         "Bodi ultra slim & ringan, cocok untuk dinding ringan dan portable",
+384:         "Instalasi cepat dengan sistem mounting praktis",
+385:         "Konsumsi daya efisien untuk operasional harian berkepanjangan",
+386:         "Kompatibel dengan berbagai sumber konten (PC, player, media box)",
+387:         "Garansi resmi + opsi sewa untuk kebutuhan event"
+388:       ],
+389:       image: "images/videotron-LG.png",
+390:       link: "produk-lg.html"
+391:     }
+392:   };
+393: 
+394:   var productModal = document.getElementById("product-modal");
+395: 
+396:   if (productModal) {
+397:     var modalImg = document.getElementById("product-modal-img");
+398:     var modalBrand = document.getElementById("product-modal-brand");
+399:     var modalTitle = document.getElementById("product-modal-title");
+400:     var modalDesc = document.getElementById("product-modal-desc");
+401:     var modalSpecs = document.getElementById("product-modal-specs");
+402:     var modalLink = document.getElementById("product-modal-link");
+403:     var modalDialog = productModal.querySelector(".product-modal-dialog");
+404:     var modalLastFocus = null;
+405: 
+406:     function openProductModal(key) {
+407:       var data = PRODUCT_DETAILS[key];
+408:       if (!data) return;
+409: 
+410:       modalImg.src = data.image;
+411:       modalImg.alt = "Videotron indoor " + data.brand;
+412:       modalBrand.textContent = data.brand;
+413:       modalTitle.textContent = data.title;
+414:       modalDesc.textContent = data.desc;
+415:       modalLink.href = data.link;
+416: 
+417:       while (modalSpecs.firstChild) modalSpecs.removeChild(modalSpecs.firstChild);
+418:       Array.prototype.forEach.call(data.specs, function (spec) {
+419:         var li = document.createElement("li");
+420:         li.textContent = spec;
+421:         modalSpecs.appendChild(li);
+422:       });
+423: 
+424:       modalLastFocus = document.activeElement;
+425:       productModal.hidden = false;
+426:       document.body.classList.add("modal-open");
+427:       /* Dua frame agar transisi fade + scale sempat berjalan. */
+428:       window.requestAnimationFrame(function () {
+429:         window.requestAnimationFrame(function () {
+430:           productModal.classList.add("is-open");
+431:         });
+432:       });
+433:       if (modalDialog) modalDialog.focus && modalDialog.focus();
+434:     }
+435: 
+436:     function closeProductModal() {
+437:       if (productModal.hidden) return;
+438:       productModal.classList.remove("is-open");
+439:       document.body.classList.remove("modal-open");
+440:       window.setTimeout(function () {
+441:         productModal.hidden = true;
+442:         if (modalLastFocus && modalLastFocus.focus) modalLastFocus.focus();
+443:       }, 260);
+444:     }
+445: 
+446:     Array.prototype.forEach.call(
+447:       document.querySelectorAll("[data-product-detail]"),
+448:       function (trigger) {
+449:         trigger.addEventListener("click", function (event) {
+450:           event.preventDefault();
+451:           openProductModal(trigger.getAttribute("data-product-detail"));
+452:         });
+453:       }
+454:     );
+455: 
+456:     Array.prototype.forEach.call(
+457:       productModal.querySelectorAll("[data-modal-close]"),
+458:       function (closer) {
+459:         closer.addEventListener("click", closeProductModal);
+460:       }
+461:     );
+462: 
+463:     document.addEventListener("keydown", function (event) {
+464:       if (event.key === "Escape" && !productModal.hidden) closeProductModal();
+465:     });
+466:   }
+467: 
+468:   /* ------------------------------------------------------------------
+469:      Detail artikel di halaman yang sama ("Baca Selengkapnya")
+470:      - Klik: daftar artikel disembunyikan, panel detail muncul dengan
+471:        animasi fade + slide (murni CSS via class .is-open).
+472:      - "Kembali ke Artikel": panel ditutup, daftar tampil lagi,
+473:        posisi scroll dikembalikan seperti sebelumnya.
+474:      - Isi panel per artikel diambil dari ARTICLES (data di bawah).
+475:      ------------------------------------------------------------------ */
+476:   var ARTICLES = {
+477:     memilih: {
+478:       tag: "Panduan",
+479:       date: "12 Januari 2026",
+480:       title: "Cara Memilih Videotron Indoor yang Tepat untuk Kebutuhan Bisnis Anda",
+481:       desc:
+482:         "Pixel pitch, ukuran layar, kecerahan, sampai sistem kontrol â€” delapan hal yang perlu dipertimbangkan sebelum memesan videotron indoor. Panduan ini membantu Anda mencocokkan spesifikasi dengan jarak pandang penonton, ukuran ruangan, dan jenis konten yang akan ditayangkan, sehingga anggaran yang keluar benar-benar sepadan dengan kualitas tampilan yang didapat.",
+483:       image: "images/artikel-cara-memilih-videotron.png",
+484:       alt: "Ilustrasi panduan memilih videotron indoor dengan perbandingan spesifikasi"
+485:     },
+486:     harga: {
+487:       tag: "Harga",
+488:       date: "05 Januari 2026",
+489:       title: "Harga Videotron Indoor Jakarta dan Faktor yang Mempengaruhinya",
+490:       desc:
+491:         "Ulasan lengkap komponen biaya videotron indoor: mulai dari modul LED, receiving card, sistem kontrol, hingga pekerjaan instalasi dan rangka pendukung. Dilengkapi tips menyusun anggaran secara realistis â€” termasuk bagian mana yang bisa dihemat dan bagian mana yang sebaiknya tidak dikorbankan agar layar tetap awet untuk pemakaian jangka panjang.",
+492:       image: "images/artikel-harga-videotron.png",
+493:       alt: "Ilustrasi komponen biaya dan kisaran harga videotron indoor Jakarta"
+494:     },
+495:     penggunaan: {
+496:       tag: "Penggunaan",
+497:       date: "28 Desember 2025",
+498:       title: "Penggunaan Videotron Indoor: dari Lobi Kantor hingga Ruang Event",
+499:       desc:
+500:         "Contoh pemanfaatan videotron indoor yang terbukti efektif di lapangan: penyambutan tamu di lobi kantor, promosi tenant di mall, media pembelajaran di sekolah dan kampus, sampai layar utama di ruang event dan hotel. Setiap skenario dibahas bersama rekomendasi ukuran dan spesifikasi agar hasilnya maksimal sesuai karakter ruangannya.",
+501:       image: "images/artikel-penggunaan-videotron.png",
+502:       alt: "Ilustrasi penggunaan videotron indoor di berbagai ruangan"
+503:     }
+504:   };
+505: 
+506:   var articleDetail = document.getElementById("article-detail");
+507: 
+508:   if (articleDetail) {
+509:     var articleList = articleDetail.parentElement.querySelector(".article-layout");
+510:     var adImg = document.getElementById("article-detail-img");
+511:     var adTag = document.getElementById("article-detail-tag");
+512:     var adDate = document.getElementById("article-detail-date");
+513:     var adTitle = document.getElementById("article-detail-title");
+514:     var adText = document.getElementById("article-detail-text");
+515:     var adBack = document.getElementById("article-detail-back");
+516:     var articleScrollY = 0;
+517: 
+518:     function openArticleDetail(key) {
+519:       var data = ARTICLES[key];
+520:       if (!data || articleDetail.hidden === false) return;
+521: 
+522:       adImg.src = data.image;
+523:       adImg.alt = data.alt;
+524:       adTag.textContent = data.tag;
+525:       adDate.textContent = data.date;
+526:       adTitle.textContent = data.title;
+527:       adText.textContent = data.desc;
+528: 
+529:       articleScrollY = window.scrollY || window.pageYOffset;
+530:       if (articleList) articleList.hidden = true;
+531:       articleDetail.hidden = false;
+532: 
+533:       /* Dua frame agar transisi fade + slide sempat berjalan. */
+534:       window.requestAnimationFrame(function () {
+535:         window.requestAnimationFrame(function () {
+536:           articleDetail.classList.add("is-open");
+537:         });
+538:       });
+539: 
+540:       articleDetail.setAttribute("tabindex", "-1");
+541:       articleDetail.focus({ preventScroll: true });
+542:       articleDetail.scrollIntoView({ behavior: "smooth", block: "start" });
+543:     }
+544: 
+545:     function closeArticleDetail() {
+546:       if (articleDetail.hidden) return;
+547:       articleDetail.classList.remove("is-open");
+548:       window.setTimeout(function () {
+549:         articleDetail.hidden = true;
+550:         if (articleList) articleList.hidden = false;
+551:         window.scrollTo(0, articleScrollY);
+552:       }, 320);
+553:     }
+554: 
+555:     Array.prototype.forEach.call(
+556:       document.querySelectorAll("[data-article-detail]"),
+557:       function (trigger) {
+558:         trigger.addEventListener("click", function (event) {
+559:           event.preventDefault();
+560:           openArticleDetail(trigger.getAttribute("data-article-detail"));
+561:         });
+562:       }
+563:     );
+564: 
+565:     if (adBack) adBack.addEventListener("click", closeArticleDetail);
+566:   }
+567: 
+568:   /* ------------------------------------------------------------------
+569:      Tahun berjalan di footer
+570:      ------------------------------------------------------------------ */
+571:   var yearSlots = document.querySelectorAll("[data-year]");
+572:   var thisYear = String(new Date().getFullYear());
+573: 
+574:   Array.prototype.forEach.call(yearSlots, function (slot) {
+575:     slot.textContent = thisYear;
+576:   });
+577: })();
+===== .\index.html (total 650) =====
+1: <!DOCTYPE html>
+2: <html lang="id" class="no-js">
+3: <head>
+4:   <meta charset="UTF-8">
+5:   <meta name="viewport" content="width=device-width, initial-scale=1">
+6:   <title>Jual Videotron Indoor Jakarta | Hikvision, Samsung &amp; LG</title>
+7:   <meta name="description" content="Jual videotron indoor di Jakarta untuk display digital profesional. Tersedia Hikvision, Samsung, dan LG dengan konsultasi, instalasi, dan after-sales terpercaya.">
+8:   <meta name="theme-color" content="#1157ee">
+9:   <meta name="robots" content="index, follow">
+10: 
+11:   <meta property="og:type" content="website">
+12:   <meta property="og:title" content="Jual Videotron Indoor Jakarta untuk Display Digital Profesional">
+13:   <meta property="og:description" content="Videotron indoor Hikvision, Samsung, dan LG untuk lobi kantor, mall, showroom, sekolah, hotel, hingga ruang event di Jakarta dan Jabodetabek.">
+14:   <meta property="og:locale" content="id_ID">
+15: 
+16:   <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+17:   <link rel="preconnect" href="https://fonts.googleapis.com">
+18:   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+19:   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+20:   <link rel="stylesheet" href="css/style.css">
+21: 
+22:   <script type="application/ld+json">
+23:   {
+24:     "@context": "https://schema.org",
+25:     "@type": "LocalBusiness",
+26:     "name": "Jual Videotron Indoor Jakarta",
+27:     "description": "Penjualan, instalasi, dan layanan videotron indoor di Jakarta dan sekitarnya.",
+28:     "areaServed": "Jakarta, Bogor, Depok, Tangerang, Bekasi",
+29:     "telephone": "+6281210002020",
+30:     "priceRange": "Rp",
+31:     "address": {
+32:       "@type": "PostalAddress",
+33:       "streetAddress": "Jl. Mangga Dua Raya No. 88",
+34:       "addressLocality": "Jakarta Utara",
+35:       "postalCode": "14430",
+36:       "addressCountry": "ID"
+37:     }
+38:   }
+39:   </script>
+40: </head>
+41: <body>
+42:   <a class="skip-link" href="#konten">Lewati ke konten utama</a>
+43: 
+44:   <header class="site-header">
+45:     <div class="container">
+46:       <div class="header-main">
+47:         <a class="brand" href="index.html" aria-label="Jual Videotron Indoor Jakarta">
+48:           <img class="brand-logo" src="images/logo-header.png" alt="Jual Videotron Indoor Jakarta" width="250" height="64" decoding="async">
+49:         </a>
+50: 
+51:         <nav class="nav" id="nav-utama" aria-label="Navigasi utama">
+52:           <ul class="nav-list">
+53:             <li class="nav-item"><a class="nav-link" href="index.html#beranda">Beranda</a></li>
+54:             <li class="nav-item has-dropdown">
+55:               <a class="nav-link" href="index.html#produk" aria-haspopup="true" aria-expanded="false">
+56:                 Produk
+57:                 <svg class="caret" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5"/></svg>
+58:               </a>
+59:               <ul class="dropdown">
+60:                 <li><a href="produk-hikvision.html">Videotron Indoor Hikvision</a></li>
+61:                 <li><a href="produk-samsung.html">Videotron Indoor Samsung</a></li>
+62:                 <li><a href="produk-lg.html">Videotron Indoor LG</a></li>
+63:               </ul>
+64:             </li>
+65:             <li class="nav-item"><a class="nav-link" href="index.html#solusi">Portofolio</a></li>
+66:             <li class="nav-item"><a class="nav-link" href="artikel.html">Artikel</a></li>
+67:             <li class="nav-item"><a class="nav-link" href="index.html#konsultasi">Kontak Kami</a></li>
+68:           </ul>
+69:           <a class="btn btn-primary btn-sm" href="index.html#konsultasi">Konsultasikan Sekarang</a>
+70:         </nav>
+71: 
+72:         <div class="header-actions">
+73:           <button class="nav-toggle" type="button" aria-label="Buka menu" aria-controls="nav-utama" aria-expanded="false">
+74:             <span class="nav-toggle-bars" aria-hidden="true"><i></i><i></i><i></i></span>
+75:           </button>
+76:         </div>
+77:       </div>
+78:     </div>
+79:   </header>
+80: 
+81:   <main id="konten">
+82:     <!-- 2. HERO -->
+83:     <section class="hero" id="beranda">
+84:       <div class="container">
+85:         <div class="hero-grid">
+86:           <div class="hero-copy" data-reveal>
+87:             <h1>Jual Videotron Indoor Jakarta untuk Kebutuhan</h1>
+88:             <p class="hero-lead">
+89:               Kami menyediakan videotron indoor berkualitas dari Hikvision, Samsung, dan LG untuk lobi kantor,
+90:               mall, showroom, sekolah, hotel, hingga ruang event di Jakarta dan Jabodetabek. Mulai dari konsultasi
+91:               spesifikasi, pengukuran ruang, instalasi, sampai layanan purna jual &mdash; semuanya dalam satu pintu.
+92:             </p>
+93:             <div class="btn-group">
+94:               <a class="btn btn-primary btn-lg" href="kontak.html">
+95:                 Konsultasikan Sekarang
+96:                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+97:               </a>
+98:               <a class="btn btn-outline btn-lg" href="#produk">Lihat Pilihan Produk</a>
+99:             </div>
+100:           </div>
+101: 
+102:           <!-- Gambar hero sekarang menjadi background penuh section ini
+103:                (full width + full height, background-size: cover).
+104:                Sumber gambar diatur di css/style.css pada aturan .hero. -->
+105:         </div>
+106:       </div>
+107:     </section>
+108: 
+109:     <!-- 3. TANTANGAN PRODUK -->
+110:     <section class="section section-soft section-line-top" id="tantangan">
+111:       <div class="container">
+112:         <div class="split">
+113:           <div data-reveal>
+114:             <div class="section-head">
+115:               <span class="eyebrow">Tantangan Produk</span>
+116:               <h2>Setiap Ruang Memiliki Tantangan Tampilan yang Berbeda</h2>
+117:               <p>
+118:                 Memilih videotron indoor tidak bisa disamakan untuk semua ruangan. Jarak pandang penonton,
+119:                 luas dinding, tingkat pencahayaan, dan jenis konten yang ditayangkan menentukan spesifikasi
+120:                 yang paling tepat &mdash; agar investasi Anda benar-benar terasa hasilnya.
+121:               </p>
+122:             </div>
+123:           </div>
+124: 
+125:           <ul class="point-list" data-reveal data-delay="1">
+126:             <li>
+127:               <article class="point">
+128:                 <span class="point-num" aria-hidden="true">01</span>
+129:                 <div>
+130:                   <h3>Kebutuhan Ruang Berbeda</h3>
+131:                   <p>Lobi kantor, mall, ruang kelas, hingga ballroom memiliki dimensi dan sudut pandang yang berbeda. Ukuran modul, rasio layar, dan posisi pemasangan perlu disesuaikan agar seluruh area tetap terlihat jelas dari berbagai titik.</p>
+132:                 </div>
+133:               </article>
+134:             </li>
+135:             <li>
+136:               <article class="point">
+137:                 <span class="point-num" aria-hidden="true">02</span>
+138:                 <div>
+139:                   <h3>Kualitas Tampilan</h3>
+140:                   <p>Warna yang konsisten, kecerahan yang stabil, dan refresh rate tinggi menentukan seberapa nyaman layar dilihat mata maupun kamera. Ini penting untuk konten bergerak, siaran acara, hingga kebutuhan video conference.</p>
+141:                 </div>
+142:               </article>
+143:             </li>
+144:             <li>
+145:               <article class="point">
+146:                 <span class="point-num" aria-hidden="true">03</span>
+147:                 <div>
+148:                   <h3>Pilihan Spesifikasi</h3>
+149:                   <p>Pixel pitch, jenis modul, sistem kontrol, dan metode perawatan berpengaruh pada hasil akhir serta biaya jangka panjang. Kami bantu memilih kombinasi tepat antara kualitas tampilan dan anggaran yang tersedia.</p>
+150:                 </div>
+151:               </article>
+152:             </li>
+153:           </ul>
+154:         </div>
+155:       </div>
+156:     </section>
+157:     <!-- 4. PILIHAN PRODUK VIDEOTRON INDOOR -->
+158:     <section class="section" id="produk">
+159:       <div class="container">
+160:         <div class="section-head center" data-reveal>
+161:           <span class="eyebrow">Pilihan Produk</span>
+162:           <h2>Pilihan Produk Videotron Indoor</h2>
+163:           <p>Kami menghadirkan videotron indoor dari tiga brand global yang terbukti andal untuk kebutuhan display digital profesional di Jakarta &mdash; lengkap dengan rekomendasi spesifikasi sesuai ruang Anda.</p>
+164:         </div>
+165: 
+166:         <div class="product-grid">
+167:           <article class="product-card" data-reveal>
+168:             <div class="product-media">
+169:               <img src="images/videotron-hikvision.png" alt="Videotron indoor Hikvision dengan modul LED indoor pixel pitch rapat" width="800" height="600" loading="lazy" decoding="async">
+170:             </div>
+171:             <div class="product-body">
+172:               <span class="product-brand">Hikvision</span>
+173:               <h3>Videotron Indoor Hikvision</h3>
+174:               <p>Pilihan populer untuk lobi, showroom, dan ruang meeting dengan tampilan tajam serta sistem kontrol yang mudah dioperasikan.</p>
+175:               <div class="product-foot">
+176:                 <a class="link-arrow" href="produk-hikvision.html" data-product-detail="hikvision">Lihat Detail <span aria-hidden="true">&rarr;</span></a>
+177:               </div>
+178:             </div>
+179:           </article>
+180: 
+181:           <article class="product-card" data-reveal data-delay="1">
+182:             <div class="product-media">
+183:               <img src="images/videotron-samsung.png" alt="Videotron indoor Samsung bezel-less dengan micro pixel pitch" width="800" height="600" loading="lazy" decoding="async">
+184:             </div>
+185:             <div class="product-body">
+186:               <span class="product-brand">Samsung</span>
+187:               <h3>Videotron Indoor Samsung</h3>
+188:               <p>Untuk kebutuhan tampilan premium tanpa sambungan terlihat, ideal bagi brand yang menonjolkan kualitas visual di area publik.</p>
+189:               <div class="product-foot">
+190:                 <a class="link-arrow" href="produk-samsung.html" data-product-detail="samsung">Lihat Detail <span aria-hidden="true">&rarr;</span></a>
+191:               </div>
+192:             </div>
+193:           </article>
+194: 
+195:           <article class="product-card" data-reveal data-delay="2">
+196:             <div class="product-media">
+197:               <img src="images/videotron-LG.png" alt="Videotron indoor LG dengan modul LED indoor ultra slim" width="800" height="600" loading="lazy" decoding="async">
+198:             </div>
+199:             <div class="product-body">
+200:               <span class="product-brand">LG</span>
+201:               <h3>Videotron Indoor LG</h3>
+202:               <p>Solusi efisien untuk instalasi cepat, ringan, dan rapi &mdash; cocok untuk kantor, kampus, maupun ruang event dengan kebutuhan dinamis.</p>
+203:               <div class="product-foot">
+204:                 <a class="link-arrow" href="produk-lg.html" data-product-detail="lg">Lihat Detail <span aria-hidden="true">&rarr;</span></a>
+205:               </div>
+206:             </div>
+207:           </article>
+208:         </div>
+209:       </div>
+210:     </section>
+211:     <!-- 5. SOLUSI VIDEOTRON BERDASARKAN KEBUTUHAN -->
+212:     <section class="section section-tint section-line-top" id="solusi">
+213:       <div class="container">
+214:         <div class="section-head center" data-reveal>
+215:           <span class="eyebrow">Solusi</span>
+216:           <h2>Solusi Videotron Berdasarkan Kebutuhan</h2>
+217:           <p>Setiap kebutuhan memiliki pendekatan berbeda. Berikut penerapan videotron indoor yang paling sering kami kerjakan di Jakarta dan sekitarnya.</p>
+218:         </div>
+219: 
+220:         <div class="solution-grid">
+221:           <article class="solution-card" data-reveal>
+222:             <div class="solution-visual">
+223:               <img src="images/solusi-bisnis-perkantoran.png" alt="Videotron indoor pada lobi kantor untuk informasi dan branding perusahaan" width="800" height="550" loading="lazy" decoding="async">
+224:             </div>
+225:             <div class="solution-body">
+226:               <span class="solution-label">Display Profesional Untuk Bisnis</span>
+227:               <h3>Bisnis &amp; Perkantoran</h3>
+228:               <p>Layar informasi perusahaan, video conference, hingga pengumuman internal untuk lobi dan ruang rapat.</p>
+229:               <a class="link-arrow" href="kontak.html">Konsultasikan <span aria-hidden="true">&rarr;</span></a>
+230:             </div>
+231:           </article>
+232: 
+233:           <article class="solution-card" data-reveal data-delay="1">
+234:             <div class="solution-visual">
+235:               <img src="images/solusi-mall-showroom.png" alt="Videotron indoor di mall dan showroom untuk promosi produk" width="800" height="550" loading="lazy" decoding="async">
+236:             </div>
+237:             <div class="solution-body">
+238:               <span class="solution-label">Promosi Lebih Menarik</span>
+239:               <h3>Mall &amp; Showroom</h3>
+240:               <p>Konten promo, katalog produk, dan display brand yang menahan perhatian pengunjung lebih lama.</p>
+241:               <a class="link-arrow" href="kontak.html">Konsultasikan <span aria-hidden="true">&rarr;</span></a>
+242:             </div>
+243:           </article>
+244: 
+245:           <article class="solution-card" data-reveal data-delay="2">
+246:             <div class="solution-visual">
+247:               <img src="images/solusi-sekolah-kampus.png" alt="Videotron indoor di ruang kelas sekolah dan kampus untuk presentasi" width="800" height="550" loading="lazy" decoding="async">
+248:             </div>
+249:             <div class="solution-body">
+250:               <span class="solution-label">Presentasi Lebih Interaktif</span>
+251:               <h3>Sekolah &amp; Kampus</h3>
+252:               <p>Media pembelajaran, informasi akademik, dan presentasi digital yang lebih jelas bagi seluruh peserta.</p>
+253:               <a class="link-arrow" href="kontak.html">Konsultasikan <span aria-hidden="true">&rarr;</span></a>
+254:             </div>
+255:           </article>
+256: 
+257:           <article class="solution-card" data-reveal data-delay="3">
+258:             <div class="solution-visual">
+259:               <img src="images/solusi-hotel-event.png" alt="Videotron indoor di ballroom hotel untuk backdrop acara dan event" width="800" height="550" loading="lazy" decoding="async">
+260:             </div>
+261:             <div class="solution-body">
+262:               <span class="solution-label">Visual Untuk Setiap Acara</span>
+263:               <h3>Hotel &amp; Event</h3>
+264:               <p>Backdrop panggung, rundown acara, hingga branding sponsor dengan tampilan yang rapi dan konsisten.</p>
+265:               <a class="link-arrow" href="kontak.html">Konsultasikan <span aria-hidden="true">&rarr;</span></a>
+266:             </div>
+267:           </article>
+268:         </div>
+269:       </div>
+270:     </section>
+271:     <!-- 6. KEUNGGULAN PRODUK -->
+272:     <section class="section" id="keunggulan">
+273:       <div class="container">
+274:         <div class="split reverse">
+275:           <div class="advantage-media-col" data-reveal>
+276:             <div class="advantage-media" data-advantage-media>
+277:               <img class="advantage-media-img is-active" src="images/keunggulan-tampilan-berkualitas.png" alt="Tampilan videotron indoor dengan warna konsisten dan kontras tajam" width="720" height="700" loading="lazy" decoding="async">
+278:               <img class="advantage-media-img" src="images/keunggulan-fleksibel-desain.png" alt="Modul videotron indoor disusun mengikuti bentuk melengkung ruangan" width="720" height="700" loading="lazy" decoding="async">
+279:               <img class="advantage-media-img" src="images/keunggulan-produk-pilihan.png" alt="Pilihan modul videotron indoor Hikvision, Samsung, dan LG dengan pixel pitch berbeda" width="720" height="700" loading="lazy" decoding="async">
+280:               <img class="advantage-media-img" src="images/keunggulan-display-profesional.png" alt="Instalasi dan pengukuran modul videotron indoor oleh teknisi profesional" width="720" height="700" loading="lazy" decoding="async">
+281:             </div>
+282:           </div>
+283: 
+284:           <div data-reveal data-delay="1">
+285:             <div class="section-head">
+286:               <span class="eyebrow">Keunggulan Produk</span>
+287:               <h2>Keunggulan Produk Videotron Indoor Kami</h2>
+288:               <p>Kami memilih produk dan merancang instalasi agar hasilnya tetap optimal untuk jangka panjang, bukan hanya bagus saat pertama dipasang.</p>
+289:             </div>
+290: 
+291:             <ul class="advantage-list" data-advantage-list>
+292:               <li>
+293:                 <article class="advantage-item">
+294:                   <span class="advantage-icon" aria-hidden="true">
+295:                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5h18v11H3z"/><path d="M8 20h8M12 16v4"/></svg>
+296:                   </span>
+297:                   <div>
+298:                     <h3>Tampilan Berkualitas</h3>
+299:                     <p>Warna konsisten, kontras tajam, dan refresh rate tinggi sehingga konten tetap halus, nyaman dilihat, dan aman direkam kamera.</p>
+300:                   </div>
+301:                 </article>
+302:               </li>
+303:               <li>
+304:                 <article class="advantage-item">
+305:                   <span class="advantage-icon" aria-hidden="true">
+306:                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>
+307:                   </span>
+308:                   <div>
+309:                     <h3>Desain Fleksibel</h3>
+310:                     <p>Modul dapat disusun mengikuti bentuk dinding, kolom, maupun sudut ruangan &mdash; termasuk tampilan melengkung sesuai kebutuhan desain interior.</p>
+311:                   </div>
+312:                 </article>
+313:               </li>
+314:               <li>
+315:                 <article class="advantage-item">
+316:                   <span class="advantage-icon" aria-hidden="true">
+317:                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16v13H4z"/><path d="M9 7V4h6v3"/><path d="M8 12h8M8 16h5"/></svg>
+318:                   </span>
+319:                   <div>
+320:                     <h3>Beragam Pilihan Produk</h3>
+321:                     <p>Hikvision, Samsung, dan LG tersedia dalam beberapa pilihan pixel pitch serta konfigurasi ukuran, sehingga bisa disesuaikan dengan anggaran.</p>
+322:                   </div>
+323:                 </article>
+324:               </li>
+325:               <li>
+326:                 <article class="advantage-item">
+327:                   <span class="advantage-icon" aria-hidden="true">
+328:                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v6c0 4.2-3.2 7.4-8 8-4.8-.6-8-3.8-8-8V7l8-4Z"/><path d="M9 12l2 2 4-4"/></svg>
+329:                   </span>
+330:                   <div>
+331:                     <h3>Solusi Display Profesional</h3>
+332:                     <p>Mulai dari survei lokasi, pengadaan, instalasi, pelatihan operator, hingga dukungan teknis berkala di Jakarta dan Jabodetabek.</p>
+333:                   </div>
+334:                 </article>
+335:               </li>
+336:             </ul>
+337:           </div>
+338:         </div>
+339:       </div>
+340:     </section>
+341:     <!-- 7. ARTIKEL -->
+342:     <section class="section section-soft section-line-top" id="artikel">
+343:       <div class="container">
+344:         <div class="section-head" data-reveal>
+345:           <span class="eyebrow">Artikel &amp; Insight</span>
+346:           <h2>Artikel Terbaru Seputar Videotron Indoor</h2>
+347:           <p>Panduan praktis dari tim kami untuk membantu Anda mengambil keputusan sebelum membeli videotron indoor di Jakarta.</p>
+348:         </div>
+349: 
+350:         <div class="article-layout">
+351:           <article class="article-feature" data-reveal>
+352:             <div class="article-feature-media">
+353:               <img src="images/artikel-cara-memilih-videotron.png" alt="Ilustrasi panduan memilih videotron indoor dengan perbandingan spesifikasi" width="800" height="450" loading="lazy" decoding="async">
+354:             </div>
+355:             <div class="article-feature-body">
+356:               <div class="article-meta">
+357:                 <span class="tag">Panduan</span>
+358:                 <span class="dot" aria-hidden="true"></span>
+359:                 <span>12 Januari 2026</span>
+360:                 <span class="dot" aria-hidden="true"></span>
+361:                 <span>7 menit baca</span>
+362:               </div>
+363:               <h3><a href="artikel-cara-memilih-videotron-indoor.html">Cara Memilih Videotron Indoor yang Tepat untuk Kebutuhan Bisnis Anda</a></h3>
+364:               <p>Pixel pitch, ukuran layar, kecerahan, sampai sistem kontrol &mdash; ketahui delapan hal yang perlu dipertimbangkan sebelum memesan videotron indoor agar tidak salah spesifikasi.</p>
+365:               <a class="link-arrow" href="artikel-cara-memilih-videotron-indoor.html" data-article-detail="memilih">Baca Selengkapnya <span aria-hidden="true">&rarr;</span></a>
+366:             </div>
+367:           </article>
+368: 
+369:           <div class="article-stack">
+370:             <article class="article-mini" data-reveal data-delay="1">
+371:               <div class="article-mini-media">
+372:                 <img src="images/artikel-harga-videotron.png" alt="Ilustrasi komponen biaya dan kisaran harga videotron indoor Jakarta" width="800" height="450" loading="lazy" decoding="async">
+373:               </div>
+374:               <div class="article-mini-body">
+375:                 <div class="article-meta">
+376:                   <span class="tag">Harga</span>
+377:                   <span class="dot" aria-hidden="true"></span>
+378:                   <span>05 Januari 2026</span>
+379:                 </div>
+380:                 <h3><a href="artikel-harga-videotron-indoor-jakarta.html">Harga Videotron Indoor Jakarta dan Faktor yang Mempengaruhinya</a></h3>
+381:                 <p>Ulasan komponen biaya mulai dari modul LED hingga instalasi, lengkap dengan tips menyusun anggaran secara realistis.</p>
+382:                 <a class="link-arrow" href="artikel-harga-videotron-indoor-jakarta.html" data-article-detail="harga">Baca Selengkapnya <span aria-hidden="true">&rarr;</span></a>
+383:               </div>
+384:             </article>
+385: 
+386:             <article class="article-mini" data-reveal data-delay="2">
+387:               <div class="article-mini-media">
+388:                 <img src="images/artikel-penggunaan-videotron.png" alt="Ilustrasi penggunaan videotron indoor di berbagai ruangan" width="800" height="450" loading="lazy" decoding="async">
+389:               </div>
+390:               <div class="article-mini-body">
+391:                 <div class="article-meta">
+392:                   <span class="tag">Penggunaan</span>
+393:                   <span class="dot" aria-hidden="true"></span>
+394:                   <span>28 Desember 2025</span>
+395:                 </div>
+396:                 <h3><a href="artikel-penggunaan-videotron-indoor.html">Penggunaan Videotron Indoor: dari Lobi Kantor hingga Ruang Event</a></h3>
+397:                 <p>Contoh pemanfaatan videotron indoor yang terbukti efektif untuk bisnis, institusi pendidikan, hingga industri hospitality.</p>
+398:                 <a class="link-arrow" href="artikel-penggunaan-videotron-indoor.html" data-article-detail="penggunaan">Baca Selengkapnya <span aria-hidden="true">&rarr;</span></a>
+399:               </div>
+400:             </article>
+401:           </div>
+402:         </div>
+403: 
+404:         <!-- Panel detail artikel: tampil di halaman ini (bukan pop-up) saat
+405:              "Baca Selengkapnya" diklik. Isinya diisi oleh js/main.js sesuai
+406:              artikel yang dipilih, lalu ditutup dengan tombol "Kembali". -->
+407:         <div class="article-detail" id="article-detail" hidden>
+408:           <div class="article-detail-grid">
+409:             <div class="article-detail-media">
+410:               <img id="article-detail-img" src="" alt="" width="800" height="450" decoding="async">
+411:             </div>
+412:             <div class="article-detail-body">
+413:               <div class="article-meta">
+414:                 <span class="tag" id="article-detail-tag"></span>
+415:                 <span class="dot" aria-hidden="true"></span>
+416:                 <span id="article-detail-date"></span>
+417:               </div>
+418:               <h3 id="article-detail-title"></h3>
+419:               <p id="article-detail-text"></p>
+420:               <button class="btn btn-outline btn-sm" type="button" id="article-detail-back">&larr; Kembali ke Artikel</button>
+421:             </div>
+422:           </div>
+423:         </div>
+424: 
+425:         <div class="btn-group" style="margin-top: 40px">
+426:           <a class="btn btn-outline" href="artikel.html">Semua Artikel</a>
+427:         </div>
+428:       </div>
+429:     </section>
+430:     <!-- 8. FAQ -->
+431:     <section class="section" id="faq">
+432:       <div class="container">
+433:         <div class="faq-layout">
+434:           <div class="faq-aside" data-reveal>
+435:             <div class="section-head">
+436:               <span class="eyebrow">FAQ</span>
+437:               <h2>Pertanyaan yang Sering Diajukan</h2>
+438:               <p>Belum menemukan jawaban yang Anda cari? Tim kami siap menjelaskan detail teknis maupun estimasi biaya.</p>
+439:             </div>
+440:           </div>
+441: 
+442:           <div class="faq-list" data-reveal data-delay="1">
+443:             <div class="faq-item">
+444:               <h3>
+445:                 <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-1">
+446:                   Apa itu videotron indoor dan bagaimana cara kerjanya?
+447:                   <span class="faq-icon" aria-hidden="true"></span>
+448:                 </button>
+449:               </h3>
+450:               <div class="faq-answer" id="faq-1">
+451:                 <div class="faq-answer-inner">
+452:                   <p>Videotron indoor adalah dinding layar digital yang tersusun dari banyak modul LED dan dirancang khusus untuk pemakaian di dalam ruangan. Setiap modul berisi ribuan titik LED yang dikendalikan oleh <b>sistem kontrol pengirim dan penerima</b>, sehingga gambar dari komputer atau media player tampil utuh di seluruh permukaan layar.</p>
+453:                 </div>
+454:               </div>
+455:             </div>
+456: 
+457:             <div class="faq-item">
+458:               <h3>
+459:                 <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-2">
+460:                   Berapa ukuran videotron indoor yang ideal untuk ruangan saya?
+461:                   <span class="faq-icon" aria-hidden="true"></span>
+462:                 </button>
+463:               </h3>
+464:               <div class="faq-answer" id="faq-2">
+465:                 <div class="faq-answer-inner">
+466:                   <p>Ukuran ideal ditentukan oleh <b>jarak pandang terjauh</b> dan luas area pemasangan. Sebagai gambaran, layar dengan lebar 3&ndash;4 meter cocok untuk lobi dan ruang meeting, sedangkan 6&ndash;12 meter lebih sesuai untuk mall, ballroom, atau aula. Kami akan menghitung ulang berdasarkan ukuran ruangan Anda agar rasio dan keterbacaan tetap optimal.</p>
+467:                 </div>
+468:               </div>
+469:             </div>
+470: 
+471:             <div class="faq-item">
+472:               <h3>
+473:                 <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-3">
+474:                   Pixel pitch mana yang tepat: P1.25, P1.86, atau P2.5?
+475:                   <span class="faq-icon" aria-hidden="true"></span>
+476:                 </button>
+477:               </h3>
+478:               <div class="faq-answer" id="faq-3">
+479:                 <div class="faq-answer-inner">
+480:                   <p>Semakin kecil pixel pitch, semakin halus tampilan dari jarak dekat. <b>P1.2&ndash;P1.25</b> cocok untuk ruang meeting dan showroom dengan jarak pandang 2&ndash;3 meter, <b>P1.86</b> ideal untuk lobi dan retail pada jarak 3&ndash;5 meter, sedangkan <b>P2.5</b> efisien untuk layar besar di aula, ballroom, atau mall dengan jarak pandang di atas 5 meter.</p>
+481:                 </div>
+482:               </div>
+483:             </div>
+484: 
+485:             <div class="faq-item">
+486:               <h3>
+487:                 <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-4">
+488:                   Berapa kisaran harga videotron indoor di Jakarta?
+489:                   <span class="faq-icon" aria-hidden="true"></span>
+490:                 </button>
+491:               </h3>
+492:               <div class="faq-answer" id="faq-4">
+493:                 <div class="faq-answer-inner">
+494:                   <p>Harga dipengaruhi oleh pixel pitch, luas layar, brand modul, sistem kontrol, serta bentuk rangka dan instalasi. Karena setiap proyek berbeda, kami menyusun <b>penawaran berdasarkan kebutuhan</b> &mdash; bukan sekadar harga per meter persegi. Kirimkan ukuran area dan kebutuhan konten Anda untuk mendapatkan estimasi terperinci.</p>
+495:                 </div>
+496:               </div>
+497:             </div>
+498:             <div class="faq-item">
+499:               <h3>
+500:                 <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-5">
+501:                   Apakah videotron indoor bisa disewa, atau hanya dijual?
+502:                   <span class="faq-icon" aria-hidden="true"></span>
+503:                 </button>
+504:               </h3>
+505:               <div class="faq-answer" id="faq-5">
+506:                 <div class="faq-answer-inner">
+507:                   <p>Kami fokus pada <b>penjualan videotron indoor</b>, termasuk pengadaan unit untuk kebutuhan jangka panjang. Untuk acara singkat, tim kami dapat membantu mencarikan solusi yang paling masuk akal secara biaya, termasuk opsi konfigurasi modular yang mudah dipindahkan.</p>
+508:                 </div>
+509:               </div>
+510:             </div>
+511: 
+512:             <div class="faq-item">
+513:               <h3>
+514:                 <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-6">
+515:                   Berapa lama proses pengiriman dan instalasi di Jakarta?
+516:                   <span class="faq-icon" aria-hidden="true"></span>
+517:                 </button>
+518:               </h3>
+519:               <div class="faq-answer" id="faq-6">
+520:                 <div class="faq-answer-inner">
+521:                   <p>Untuk area Jakarta dan Jabodetabek, pengiriman umumnya berlangsung <b>2&ndash;5 hari kerja</b> setelah unit siap. Proses instalasi dan kalibrasi di lokasi biasanya memerlukan 1&ndash;3 hari tergantung luas layar serta kondisi akses gedung. Jadwal pasti akan kami sampaikan setelah survei lokasi.</p>
+522:                 </div>
+523:               </div>
+524:             </div>
+525: 
+526:             <div class="faq-item">
+527:               <h3>
+528:                 <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-7">
+529:                   Apakah ada garansi dan layanan purna jual?
+530:                   <span class="faq-icon" aria-hidden="true"></span>
+531:                 </button>
+532:               </h3>
+533:               <div class="faq-answer" id="faq-7">
+534:                 <div class="faq-answer-inner">
+535:                   <p>Ya. Setiap unit dilengkapi <b>garansi sesuai ketentuan brand</b> serta dukungan teknis lokal di Jakarta. Kami juga menyediakan penggantian modul, kalibrasi warna, penyediaan suku cadang, dan pendampingan operator setelah instalasi selesai.</p>
+536:                 </div>
+537:               </div>
+538:             </div>
+539: 
+540:             <div class="faq-item">
+541:               <h3>
+542:                 <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-8">
+543:                   Bagaimana cara merawat videotron indoor agar awet?
+544:                   <span class="faq-icon" aria-hidden="true"></span>
+545:                 </button>
+546:               </h3>
+547:               <div class="faq-answer" id="faq-8">
+548:                 <div class="faq-answer-inner">
+549:                   <p>Perawatannya sederhana: bersihkan permukaan modul dengan kain kering yang lembut, pastikan <b>sirkulasi udara</b> di belakang layar berjalan baik, atur kecerahan sesuai kondisi ruangan, dan gunakan pengatur tegangan agar aliran listrik stabil. Pemeriksaan berkala setiap 6&ndash;12 bulan sangat disarankan.</p>
+550:                 </div>
+551:               </div>
+552:             </div>
+553:           </div>
+554:         </div>
+555:       </div>
+556:     </section>
+557:     <!-- 9. CTA -->
+558:     <section class="cta" id="konsultasi">
+559:       <div class="container">
+560:         <div class="cta-inner" data-reveal>
+561:           <span class="eyebrow on-dark">Konsultasi Gratis</span>
+562:           <h2>Siap Menghadirkan Tampilan Visual yang Lebih Menarik dan Profesional dengan Videotron Indoor?</h2>
+563:           <p>Ceritakan kebutuhan ruang dan konten Anda. Tim kami akan membantu menghitung ukuran layar, merekomendasikan pixel pitch, serta menyusun penawaran yang sesuai anggaran &mdash; tanpa biaya konsultasi.</p>
+564:           <div class="btn-group">
+565:             <a class="btn btn-white btn-lg" href="kontak.html">
+566:               Konsultasikan Sekarang
+567:               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+568:             </a>
+569:           </div>
+570:         </div>
+571:       </div>
+572:     </section>
+573:   </main>
+574:   <!-- 10. FOOTER -->
+575:   <footer class="site-footer">
+576:     <div class="container">
+577:       <div class="footer-grid">
+578:         <div class="footer-brand" data-reveal>
+579:           <a class="brand" href="index.html" aria-label="Jual Videotron Indoor Jakarta">
+580:             <img class="brand-logo" src="images/logo-footer.png" alt="Jual Videotron Indoor Jakarta" width="250" height="64" decoding="async">
+581:           </a>
+582:           <p class="footer-about">Penyedia videotron indoor untuk kebutuhan bisnis, institusi, dan ruang publik di Jakarta &amp; Jabodetabek &mdash; mulai dari konsultasi spesifikasi, instalasi, hingga layanan purna jual.</p>
+583:         </div>
+584: 
+585:         <div class="footer-col" data-reveal data-delay="1">
+586:           <h3>Informasi Perusahaan</h3>
+587:           <ul class="footer-links">
+588:             <li><a href="index.html">Beranda</a></li>
+589:             <li><a href="index.html#produk">Produk</a></li>
+590:             <li><a href="portofolio.html">Portofolio</a></li>
+591:             <li><a href="artikel.html">Artikel</a></li>
+592:             <li><a href="kontak.html">Kontak Kami</a></li>
+593:           </ul>
+594:         </div>
+595: 
+596:         <div class="footer-col" data-reveal data-delay="2">
+597:           <h3>Kontak</h3>
+598:           <ul class="footer-contact">
+599:             <li>
+600:               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3h3l2 5-2 1a12 12 0 0 0 6 6l1-2 5 2v3a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2Z"/></svg>
+601:               <span>
+602:                 <strong>Telepon / WhatsApp</strong>
+603:                 <a href="tel:+6281210002020">+62 812-1000-2020</a>
+604:               </span>
+605:             </li>
+606:             <li>
+607:               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.1 7-11a7 7 0 1 0-14 0c0 4.9 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+608:               <span>
+609:                 <strong>Alamat</strong>
+610:                 <span class="value">Jl. Mangga Dua Raya No. 88, Jakarta Utara 14430</span>
+611:               </span>
+612:             </li>
+613:           </ul>
+614:         </div>
+615:       </div>
+616: 
+617:       <div class="footer-bottom" data-reveal data-delay="1">
+618:         <p>&copy; <span data-year>2026</span> Jual Videotron Indoor Jakarta. Seluruh hak cipta dilindungi.</p>
+619:         <div class="footer-bottom-links">
+620:           <a href="kebijakan-privasi.html">Kebijakan Privasi</a>
+621:           <a href="syarat-ketentuan.html">Syarat &amp; Ketentuan</a>
+622:           <a href="kontak.html">Hubungi Kami</a>
+623:         </div>
+624:       </div>
+625:     </div>
+626:   </footer>
+627: 
+628:   <!-- Modal detail produk: satu elemen, isinya diisi oleh js/main.js
+629:        sesuai tombol "Lihat Detail" yang diklik. -->
+630:   <div class="product-modal" id="product-modal" hidden>
+631:     <div class="product-modal-overlay" data-modal-close></div>
+632:     <div class="product-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="product-modal-title">
+633:       <button class="product-modal-close" type="button" data-modal-close aria-label="Tutup modal detail produk">&times;</button>
+634:       <div class="product-modal-media">
+635:         <img id="product-modal-img" src="" alt="" width="800" height="600" decoding="async">
+636:       </div>
+637:       <div class="product-modal-body">
+638:         <span class="product-brand" id="product-modal-brand"></span>
+639:         <h3 id="product-modal-title"></h3>
+640:         <p id="product-modal-desc"></p>
+641:         <h4>Spesifikasi Utama</h4>
+642:         <ul id="product-modal-specs"></ul>
+643:         <a class="link-arrow" id="product-modal-link" href="#">Halaman Produk Lengkap <span aria-hidden="true">&rarr;</span></a>
+644:       </div>
+645:     </div>
+646:   </div>
+647: 
+648:   <script src="js/main.js"></script>
+649: </body>
+650: </html>
+===== .\artikel.html (total 232) =====
+1: <!DOCTYPE html>
+2: <html lang="id" class="no-js">
+3: <head>
+4:   <meta charset="UTF-8">
+5:   <meta name="viewport" content="width=device-width, initial-scale=1">
+6:   <title>Artikel &amp; Insight Videotron Indoor | Jual Videotron Indoor Jakarta</title>
+7:   <meta name="description" content="Kumpulan artikel dan panduan praktis seputar videotron indoor: cara memilih spesifikasi, komponen harga, hingga penggunaan di lobi kantor, mall, sekolah, dan ruang event di Jakarta.">
+8:   <meta name="theme-color" content="#1157ee">
+9:   <meta name="robots" content="index, follow">
+10: 
+11:   <meta property="og:type" content="website">
+12:   <meta property="og:title" content="Artikel &amp; Insight Videotron Indoor Jakarta">
+13:   <meta property="og:description" content="Panduan praktis memilih, menghitung anggaran, dan menggunakan videotron indoor untuk kebutuhan bisnis, institusi, dan ruang publik di Jakarta &amp; Jabodetabek.">
+14:   <meta property="og:locale" content="id_ID">
+15: 
+16:   <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+17:   <link rel="preconnect" href="https://fonts.googleapis.com">
+18:   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+19:   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+20:   <link rel="stylesheet" href="css/style.css">
+21: </head>
+22: <body>
+23:   <a class="skip-link" href="#konten">Lewati ke konten utama</a>
+24: 
+25:   <header class="site-header">
+26:     <div class="container">
+27:       <div class="header-main">
+28:         <a class="brand" href="index.html" aria-label="Jual Videotron Indoor Jakarta">
+29:           <img class="brand-logo" src="images/logo-header.png" alt="Jual Videotron Indoor Jakarta" width="250" height="64" decoding="async">
+30:         </a>
+31: 
+32:         <nav class="nav" id="nav-utama" aria-label="Navigasi utama">
+33:           <ul class="nav-list">
+34:             <li class="nav-item"><a class="nav-link" href="index.html#beranda">Beranda</a></li>
+35:             <li class="nav-item has-dropdown">
+36:               <a class="nav-link" href="index.html#produk" aria-haspopup="true" aria-expanded="false">
+37:                 Produk
+38:                 <svg class="caret" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5"/></svg>
+39:               </a>
+40:               <ul class="dropdown">
+41:                 <li><a href="produk-hikvision.html">Videotron Indoor Hikvision</a></li>
+42:                 <li><a href="produk-samsung.html">Videotron Indoor Samsung</a></li>
+43:                 <li><a href="produk-lg.html">Videotron Indoor LG</a></li>
+44:               </ul>
+45:             </li>
+46:             <li class="nav-item"><a class="nav-link" href="index.html#solusi">Portofolio</a></li>
+47:             <li class="nav-item"><a class="nav-link" href="artikel.html">Artikel</a></li>
+48:             <li class="nav-item"><a class="nav-link" href="index.html#konsultasi">Kontak Kami</a></li>
+49:           </ul>
+50:           <a class="btn btn-primary btn-sm" href="index.html#konsultasi">Konsultasikan Sekarang</a>
+51:         </nav>
+52: 
+53:         <div class="header-actions">
+54:           <button class="nav-toggle" type="button" aria-label="Buka menu" aria-controls="nav-utama" aria-expanded="false">
+55:             <span class="nav-toggle-bars" aria-hidden="true"><i></i><i></i><i></i></span>
+56:           </button>
+57:         </div>
+58:       </div>
+59:     </div>
+60:   </header>
+61: 
+62:   <main id="konten">
+63:     <!-- 1. PAGE HERO -->
+64:     <section class="page-hero">
+65:       <div class="container">
+66:         <div class="page-hero-grid">
+67:           <div>
+68:             <ul class="breadcrumb">
+69:               <li><a href="index.html">Beranda</a></li>
+70:               <li><span aria-current="page">Artikel</span></li>
+71:             </ul>
+72:             <h1>Artikel &amp; Insight Videotron Indoor</h1>
+73:             <p class="hero-lead">
+74:               Panduan praktis dari tim kami untuk membantu Anda mengambil keputusan sebelum membeli videotron
+75:               indoor di Jakarta &mdash; mulai dari pemilihan pixel pitch, penyusunan anggaran, hingga contoh
+76:               penerapannya di berbagai ruangan.
+77:             </p>
+78:             <div class="btn-group">
+79:               <a class="btn btn-primary btn-lg" href="index.html#konsultasi">
+80:                 Konsultasikan Sekarang
+81:                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+82:               </a>
+83:               <a class="btn btn-outline btn-lg" href="index.html#produk">Lihat Pilihan Produk</a>
+84:             </div>
+85:           </div>
+86: 
+87:           <div class="page-media">
+88:             <img src="images/artikel-cara-memilih-videotron.png" alt="Ilustrasi panduan memilih videotron indoor dengan perbandingan spesifikasi" width="800" height="450" decoding="async">
+89:           </div>
+90:         </div>
+91:       </div>
+92:     </section>
+93: 
+94:     <!-- 2. DAFTAR ARTIKEL -->
+95:     <section class="section">
+96:       <div class="container">
+97:         <div class="section-head" data-reveal>
+98:           <span class="eyebrow">Artikel &amp; Insight</span>
+99:           <h2>Semua Artikel Videotron Indoor</h2>
+100:           <p>Panduan dan ulasan dari tim kami seputar pemilihan produk, estimasi biaya, sampai penerapan videotron indoor untuk kebutuhan bisnis dan institusi.</p>
+101:         </div>
+102: 
+103:         <div class="article-layout">
+104:           <article class="article-feature" data-reveal>
+105:             <div class="article-feature-media">
+106:               <img src="images/artikel-cara-memilih-videotron.png" alt="Ilustrasi panduan memilih videotron indoor dengan perbandingan spesifikasi" width="800" height="450" loading="lazy" decoding="async">
+107:             </div>
+108:             <div class="article-feature-body">
+109:               <div class="article-meta">
+110:                 <span class="tag">Panduan</span>
+111:                 <span class="dot" aria-hidden="true"></span>
+112:                 <span>12 Januari 2026</span>
+113:                 <span class="dot" aria-hidden="true"></span>
+114:                 <span>7 menit baca</span>
+115:               </div>
+116:               <h3><a href="artikel-cara-memilih-videotron-indoor.html">Cara Memilih Videotron Indoor yang Tepat untuk Kebutuhan Bisnis Anda</a></h3>
+117:               <p>Pixel pitch, ukuran layar, kecerahan, sampai sistem kontrol &mdash; ketahui delapan hal yang perlu dipertimbangkan sebelum memesan videotron indoor agar tidak salah spesifikasi.</p>
+118:               <a class="link-arrow" href="artikel-cara-memilih-videotron-indoor.html">Baca Selengkapnya <span aria-hidden="true">&rarr;</span></a>
+119:             </div>
+120:           </article>
+121: 
+122:           <div class="article-stack">
+123:             <article class="article-mini" data-reveal data-delay="1">
+124:               <div class="article-mini-media">
+125:                 <img src="images/artikel-harga-videotron.png" alt="Ilustrasi komponen biaya dan kisaran harga videotron indoor Jakarta" width="800" height="450" loading="lazy" decoding="async">
+126:               </div>
+127:               <div class="article-mini-body">
+128:                 <div class="article-meta">
+129:                   <span class="tag">Harga</span>
+130:                   <span class="dot" aria-hidden="true"></span>
+131:                   <span>05 Januari 2026</span>
+132:                 </div>
+133:                 <h3><a href="artikel-harga-videotron-indoor-jakarta.html">Harga Videotron Indoor Jakarta dan Faktor yang Mempengaruhinya</a></h3>
+134:                 <p>Ulasan komponen biaya mulai dari modul LED hingga instalasi, lengkap dengan tips menyusun anggaran secara realistis.</p>
+135:                 <a class="link-arrow" href="artikel-harga-videotron-indoor-jakarta.html">Baca Selengkapnya <span aria-hidden="true">&rarr;</span></a>
+136:               </div>
+137:             </article>
+138: 
+139:             <article class="article-mini" data-reveal data-delay="2">
+140:               <div class="article-mini-media">
+141:                 <img src="images/artikel-penggunaan-videotron.png" alt="Ilustrasi penggunaan videotron indoor di berbagai ruangan" width="800" height="450" loading="lazy" decoding="async">
+142:               </div>
+143:               <div class="article-mini-body">
+144:                 <div class="article-meta">
+145:                   <span class="tag">Penggunaan</span>
+146:                   <span class="dot" aria-hidden="true"></span>
+147:                   <span>28 Desember 2025</span>
+148:                 </div>
+149:                 <h3><a href="artikel-penggunaan-videotron-indoor.html">Penggunaan Videotron Indoor: dari Lobi Kantor hingga Ruang Event</a></h3>
+150:                 <p>Contoh pemanfaatan videotron indoor yang terbukti efektif untuk bisnis, institusi pendidikan, hingga industri hospitality.</p>
+151:                 <a class="link-arrow" href="artikel-penggunaan-videotron-indoor.html">Baca Selengkapnya <span aria-hidden="true">&rarr;</span></a>
+152:               </div>
+153:             </article>
+154:           </div>
+155:         </div>
+156:       </div>
+157:     </section>
+158: 
+159:     <!-- 3. CTA -->
+160:     <section class="cta">
+161:       <div class="container">
+162:         <div class="cta-inner" data-reveal>
+163:           <span class="eyebrow on-dark">Konsultasi Gratis</span>
+164:           <h2>Siap Menghadirkan Tampilan Visual yang Lebih Menarik dan Profesional dengan Videotron Indoor?</h2>
+165:           <p>Ceritakan kebutuhan ruang dan konten Anda. Tim kami akan membantu menghitung ukuran layar, merekomendasikan pixel pitch, serta menyusun penawaran yang sesuai anggaran &mdash; tanpa biaya konsultasi.</p>
+166:           <div class="btn-group">
+167:             <a class="btn btn-white btn-lg" href="index.html#konsultasi">
+168:               Konsultasikan Sekarang
+169:               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+170:             </a>
+171:           </div>
+172:         </div>
+173:       </div>
+174:     </section>
+175:   </main>
+176: 
+177:   <footer class="site-footer">
+178:     <div class="container">
+179:       <div class="footer-grid">
+180:         <div class="footer-brand" data-reveal>
+181:           <a class="brand" href="index.html" aria-label="Jual Videotron Indoor Jakarta">
+182:             <img class="brand-logo" src="images/logo-footer.png" alt="Jual Videotron Indoor Jakarta" width="250" height="64" decoding="async">
+183:           </a>
+184:           <p class="footer-about">Penyedia videotron indoor untuk kebutuhan bisnis, institusi, dan ruang publik di Jakarta &amp; Jabodetabek &mdash; mulai dari konsultasi spesifikasi, instalasi, hingga layanan purna jual.</p>
+185:         </div>
+186: 
+187:         <div class="footer-col" data-reveal data-delay="1">
+188:           <h3>Informasi Perusahaan</h3>
+189:           <ul class="footer-links">
+190:             <li><a href="index.html#beranda">Beranda</a></li>
+191:             <li><a href="index.html#produk">Produk</a></li>
+192:             <li><a href="index.html#solusi">Portofolio</a></li>
+193:             <li><a href="artikel.html">Artikel</a></li>
+194:             <li><a href="index.html#konsultasi">Kontak Kami</a></li>
+195:           </ul>
+196:         </div>
+197: 
+198:         <div class="footer-col" data-reveal data-delay="2">
+199:           <h3>Kontak</h3>
+200:           <ul class="footer-contact">
+201:             <li>
+202:               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3h3l2 5-2 1a12 12 0 0 0 6 6l1-2 5 2v3a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2Z"/></svg>
+203:               <span>
+204:                 <strong>Telepon / WhatsApp</strong>
+205:                 <a href="tel:+6281210002020">+62 812-1000-2020</a>
+206:               </span>
+207:             </li>
+208:             <li>
+209:               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.1 7-11a7 7 0 1 0-14 0c0 4.9 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+210:               <span>
+211:                 <strong>Alamat</strong>
+212:                 <span class="value">Jl. Mangga Dua Raya No. 88, Jakarta Utara 14430</span>
+213:               </span>
+214:             </li>
+215:           </ul>
+216:         </div>
+217:       </div>
+218: 
+219:       <div class="footer-bottom" data-reveal data-delay="1">
+220:         <p>&copy; <span data-year>2026</span> Jual Videotron Indoor Jakarta. Seluruh hak cipta dilindungi.</p>
+221:         <div class="footer-bottom-links">
+222:           <a href="kebijakan-privasi.html">Kebijakan Privasi</a>
+223:           <a href="syarat-ketentuan.html">Syarat &amp; Ketentuan</a>
+224:           <a href="index.html#konsultasi">Hubungi Kami</a>
+225:         </div>
+226:       </div>
+227:     </div>
+228:   </footer>
+229: 
+230:   <script src="js/main.js"></script>
+231: </body>
+232: </html>

@@ -1,0 +1,419 @@
+﻿<!DOCTYPE html>
+<html lang="id" class=""><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Videotron Indoor Hikvision Jakarta | Jual Videotron Indoor Jakarta</title>
+  <meta name="description" content="Jual videotron indoor Hikvision di Jakarta: 9 model LED indoor dari tiga seri — Ultra (COB), Solid Plus (GOB), dan Solid (SMD) dengan pitch P0.9 sampai P1.8, kecerahan 600 nits, serta refresh rate 3.840 Hz, lengkap dengan konsultasi, instalasi, dan layanan purna jual.">
+  <meta name="theme-color" content="#1157ee">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Videotron Indoor Hikvision Jakarta">
+  <meta property="og:description" content="9 model videotron indoor Hikvision — Ultra (COB), Solid Plus (GOB), dan Solid (SMD) — untuk lobby, showroom, hingga area event di Jakarta &amp; Jabodetabek.">
+  <meta property="og:locale" content="id_ID">
+
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Poppins:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#konten">Lewati ke konten utama</a>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="header-main">
+        <a class="brand" href="index.html" aria-label="Jual Videotron Indoor Jakarta">
+          <img class="brand-logo" src="images/logo-header.png" alt="Jual Videotron Indoor Jakarta" width="250" height="64" decoding="async">
+        </a>
+
+        <nav class="nav" id="nav-utama" aria-label="Navigasi utama">
+          <ul class="nav-list">
+            <li class="nav-item"><a class="nav-link" href="index.html#beranda">Beranda</a></li>
+            <li class="nav-item has-dropdown">
+              <a class="nav-link" href="index.html#produk" aria-haspopup="true" aria-expanded="false">
+                Produk
+                <svg class="caret" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5"></path></svg>
+              </a>
+              <ul class="dropdown">
+                <li><a href="produk-hikvision.html">Videotron Indoor Hikvision</a></li>
+                <li><a href="produk-samsung.html">Videotron Indoor Samsung</a></li>
+                <li><a href="produk-lg.html">Videotron Indoor LG</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="index.html#solusi">Portofolio</a></li>
+            <li class="nav-item"><a class="nav-link" href="artikel.html">Artikel</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#konsultasi">Kontak Kami</a></li>
+          </ul>
+          <a class="btn btn-primary btn-sm" href="index.html#konsultasi">Konsultasikan Sekarang</a>
+        </nav>
+
+        <div class="header-actions">
+          <button class="nav-toggle" type="button" aria-label="Buka menu" aria-controls="nav-utama" aria-expanded="false">
+            <span class="nav-toggle-bars" aria-hidden="true"><i></i><i></i><i></i></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="konten">
+    <!-- 1. PAGE HERO
+         Foto hero kini dipakai sebagai background penuh section ini (full width
+         + full height, background-size: cover) mengikuti pola hero halaman
+         utama. Sumber gambar diatur di css/style.css pada aturan
+         .page-hero-media, sehingga halaman sub lain tidak terpengaruh. -->
+    <section class="page-hero page-hero-media">
+      <div class="container">
+        <div class="page-hero-grid">
+          <div class="page-hero-copy">
+            <ul class="breadcrumb show" data-reveal="" data-reveal-delay="0">
+              <li><a href="index.html">Beranda</a></li>
+              <li><a href="index.html#produk">Produk</a></li>
+              <li><span aria-current="page">Videotron Indoor Hikvision</span></li>
+            </ul>
+            <h1 data-reveal="" data-reveal-delay="0" class="show">Videotron Indoor Hikvision</h1>
+            <p class="hero-lead show" data-reveal="" data-reveal-delay="0">
+              Lini videotron indoor Hikvision dibagi ke dalam tiga seri — Ultra (COB), Solid Plus (GOB), dan
+              Solid (SMD) dengan pilihan pitch P0.9 hingga P1.8. Semua model memakai kabinet die-cast
+              600 × 337,5 mm, ideal untuk lobby, showroom, dan ruang meeting di Jakarta &amp; Jabodetabek.
+            </p>
+            <div class="btn-group show" data-reveal="" data-reveal-delay="0">
+              <a class="btn btn-primary btn-lg" href="index.html#konsultasi">
+                Konsultasikan Sekarang
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"></path></svg>
+              </a>
+              <a class="btn btn-outline btn-lg" href="#produk">Lihat Pilihan Produk</a>
+            </div>
+          </div>
+
+          <!-- Tidak ada lagi kolom gambar di hero: foto hero menjadi background
+               penuh section ini. Sumber gambar diatur di css/style.css pada
+               aturan .page-hero-media. -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. RINGKASAN KATALOG + NAVIGASI SERI -->
+    <section class="section section-line-top" id="produk">
+      <div class="container">
+        <div class="section-head center show" data-reveal="">
+          <span class="eyebrow">Katalog Produk</span>
+          <h2>9 Model Videotron Indoor Hikvision</h2>
+          <p>
+            Lini videotron indoor Hikvision terbagi menjadi tiga seri — Ultra, Solid Plus, dan Solid. Seluruh
+            model memakai kabinet die-cast aluminium 600 × 337,5 mm dengan rasio 16:9, kecerahan 600 nits, dan
+            refresh rate hingga 3.840 Hz, sehingga mudah dikombinasikan mengikuti jarak pandang serta anggaran proyek.
+            Klik “Lihat Detail” pada setiap produk untuk melihat spesifikasi lengkapnya.
+          </p>
+        </div>
+
+        <div class="series-nav show" data-reveal="">
+          <a href="#ultra-series">
+            <strong>Ultra Series</strong>
+            <span>COB flip-chip · P0.9 – P1.5 · kontras 15.000:1</span>
+          </a>
+          <a href="#solid-plus-series">
+            <strong>Solid Plus Series</strong>
+            <span>Enkapsulasi GOB · P1.2 – P1.8 · tahan lembap</span>
+          </a>
+          <a href="#solid-series">
+            <strong>Solid Series</strong>
+            <span>SMD hemat biaya · P1.2 – P1.8 · perawatan depan</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. ULTRA SERIES -->
+    <section class="section section-soft section-line-top" id="ultra-series">
+      <div class="container">
+        <div class="section-head show" data-reveal="">
+          <span class="eyebrow">Seri 1 dari 3 · Ultra Series</span>
+          <h2>Hikvision Ultra Series</h2>
+          <p>Seri dengan ketajaman tertinggi: modul flip-chip COB tanpa kabel permukaan, perlindungan depan IP65, kontras 15.000:1, dan kabinet ultra-tipis 29,3 mm. Konsumsi daya rata-rata hanya 100–120 W/m² pada kecerahan 600 nits sehingga panas kerja layar lebih rendah — pas untuk lobby, reception, dan studio dengan jarak pandang dekat.</p>
+        </div>
+
+        <div class="product-grid">
+          <article class="product-card show" data-reveal="">
+            <div class="product-media">
+              <img src="images/hikvision/DS-D4009BW-2FC.svg" alt="Videotron indoor Hikvision Ultra Series P0.9 model DS-D4009BW-2FC" width="800" height="600" loading="lazy" decoding="async">
+            </div>
+            <div class="product-body">
+              <span class="product-brand">Hikvision Ultra Series</span>
+              <h3>Videotron Indoor Hikvision P0.9</h3>
+              <p><strong>DS-D4009BW-2FC</strong> – pitch 0,9375 mm dengan modul flip-chip COB dan perlindungan depan IP65, pilihan paling detail untuk jarak pandang sekitar 1–2 meter.</p>
+              <div class="product-foot">
+                <a class="btn btn-outline btn-sm btn-block" href="hikvision-ultra-p0-9-ds-d4009bw-2fc.html">
+                  Lihat Detail
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"></path></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card show" data-reveal="" data-reveal-delay="1">
+            <div class="product-media">
+              <img src="images/hikvision/DS-D4012BW-2FC.svg" alt="Videotron indoor Hikvision Ultra Series P1.2 model DS-D4012BW-2FC" width="800" height="600" loading="lazy" decoding="async">
+            </div>
+            <div class="product-body">
+              <span class="product-brand">Hikvision Ultra Series</span>
+              <h3>Videotron Indoor Hikvision P1.2</h3>
+              <p><strong>DS-D4012BW-2FC</strong> – pitch 1,25 mm dengan modul flip-chip COB, titik seimbang antara ketajaman dan efisiensi biaya untuk showroom serta ruang meeting dengan jarak pandang mulai 2 meter.</p>
+              <div class="product-foot">
+                <a class="btn btn-outline btn-sm btn-block" href="hikvision-ultra-p1-2-ds-d4012bw-2fc.html">
+                  Lihat Detail
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"></path></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card show" data-reveal="" data-reveal-delay="2">
+            <div class="product-media">
+              <img src="images/hikvision/DS-D4015BW-2FC.svg" alt="Videotron indoor Hikvision Ultra Series P1.5 model DS-D4015BW-2FC" width="800" height="600" loading="lazy" decoding="async">
+            </div>
+            <div class="product-body">
+              <span class="product-brand">Hikvision Ultra Series</span>
+              <h3>Videotron Indoor Hikvision P1.5</h3>
+              <p><strong>DS-D4015BW-2FC</strong> – pitch 1,5625 mm dengan konsumsi daya rata-rata 100 W/m², andalan untuk auditorium, ruang rapat besar, dan lobby dengan jarak pandang mulai 3 meter.</p>
+              <div class="product-foot">
+                <a class="btn btn-outline btn-sm btn-block" href="hikvision-ultra-p1-5-ds-d4015bw-2fc.html">
+                  Lihat Detail
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"></path></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. SOLID PLUS SERIES -->
+    <section class="section section-line-top" id="solid-plus-series">
+      <div class="container">
+        <div class="section-head show" data-reveal="">
+          <span class="eyebrow">Seri 2 dari 3 · Solid Plus Series</span>
+          <h2>Hikvision Solid Plus Series</h2>
+          <p>Seri SMD dengan enkapsulasi GOB (glue-on-board) yang melapisi permukaan modul, sehingga lebih tahan kelembapan, debu, dan gesekan ringan — pilihan aman untuk ruang ber-AC dengan kelembapan berubah, restoran, dan area publik. Kecerahan 600 nits, kontras 5.000:1, refresh rate hingga 3.840 Hz, dan kabinet die-cast 29,5 mm.</p>
+        </div>
+
+        <div class="product-grid">
+          <article class="product-card show" data-reveal="">
+            <div class="product-media">
+              <img src="images/hikvision/DS-D4012CW-2FQ.svg" alt="Videotron indoor Hikvision Solid Plus Series P1.2 GOB model DS-D4012CW-2FQ" width="800" height="600" loading="lazy" decoding="async">
+            </div>
+            <div class="product-body">
+              <span class="product-brand">Hikvision Solid Plus Series</span>
+              <h3>Videotron Indoor Hikvision P1.2 GOB</h3>
+              <p><strong>DS-D4012CW-2FQ</strong> – pitch 1,25 mm dengan enkapsulasi GOB yang melindungi modul dari kelembapan dan debu, cocok untuk restoran, lobby, dan area publik dengan jarak pandang mulai 2 meter.</p>
+              <div class="product-foot">
+                <a class="btn btn-outline btn-sm btn-block" href="hikvision-solid-plus-p1-25-ds-d4012cw-2fq.html">
+                  Lihat Detail
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"></path></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card show" data-reveal="" data-reveal-delay="1">
+            <div class="product-media">
+              <img src="images/hikvision/DS-D4015CW-2FQ.svg" alt="Videotron indoor Hikvision Solid Plus Series P1.5 GOB model DS-D4015CW-2FQ" width="800" height="600" loading="lazy" decoding="async">
+            </div>
+            <div class="product-body">
+              <span class="product-brand">Hikvision Solid Plus Series</span>
+              <h3>Videotron Indoor Hikvision P1.5 GOB</h3>
+              <p><strong>DS-D4015CW-2FQ</strong> – pitch 1,5625 mm dengan perlindungan GOB, pas untuk ruang meeting dan ruang publik berjarak pandang mulai 3 meter yang perlu perawatan mudah.</p>
+              <div class="product-foot">
+                <a class="btn btn-outline btn-sm btn-block" href="hikvision-solid-plus-p1-56-ds-d4015cw-2fq.html">
+                  Lihat Detail
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"></path></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card show" data-reveal="" data-reveal-delay="2">
+            <div class="product-media">
+              <img src="images/hikvision/DS-D4018CW-2FQ.svg" alt="Videotron indoor Hikvision Solid Plus Series P1.8 GOB model DS-D4018CW-2FQ" width="800" height="600" loading="lazy" decoding="async">
+            </div>
+            <div class="product-body">
+              <span class="product-brand">Hikvision Solid Plus Series</span>
+              <h3>Videotron Indoor Hikvision P1.8 GOB</h3>
+              <p><strong>DS-D4018CW-2FQ</strong> – pitch 1,875 mm dengan perlindungan GOB untuk layar berukuran luas seperti aula dan ballroom, jarak pandang nyaman mulai 4 meter.</p>
+              <div class="product-foot">
+                <a class="btn btn-outline btn-sm btn-block" href="hikvision-solid-plus-p1-875-ds-d4018cw-2fq.html">
+                  Lihat Detail
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"></path></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. SOLID SERIES -->
+    <section class="section section-soft section-line-top" id="solid-series">
+      <div class="container">
+        <div class="section-head show" data-reveal="">
+          <span class="eyebrow">Seri 3 dari 3 · Solid Series</span>
+          <h2>Hikvision Solid Series</h2>
+          <p>Seri paling ekonomis dari keluarga LED indoor Hikvision. Modul SMD triad dengan kabinet die-cast 29,5 mm, perawatan penuh dari sisi depan, serta dynamic brightness engine yang menyesuaikan kecerahan tiap zona agar konsumsi daya lebih efisien. Pas untuk kantor, ruang meeting, kampus, dan showroom dengan jarak pandang 2–5 meter.</p>
+        </div>
+
+        <div class="product-grid">
+          <article class="product-card show" data-reveal="">
+            <div class="product-media">
+              <img src="images/hikvision/DS-D4012CW-2F.svg" alt="Videotron indoor Hikvision Solid Series P1.2 model DS-D4012CW-2F" width="800" height="600" loading="lazy" decoding="async">
+            </div>
+            <div class="product-body">
+              <span class="product-brand">Hikvision Solid Series</span>
+              <h3>Videotron Indoor Hikvision P1.2</h3>
+              <p><strong>DS-D4012CW-2F</strong> – pitch 1,25 mm varian SMD paling ekonomis, pilihan hemat untuk ruang meeting dan showroom dengan jarak pandang mulai 2 meter.</p>
+              <div class="product-foot">
+                <a class="btn btn-outline btn-sm btn-block" href="hikvision-solid-p1-25-ds-d4012cw-2f.html">
+                  Lihat Detail
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"></path></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card show" data-reveal="" data-reveal-delay="1">
+            <div class="product-media">
+              <img src="images/hikvision/DS-D4015CW-2F.svg" alt="Videotron indoor Hikvision Solid Series P1.5 model DS-D4015CW-2F" width="800" height="600" loading="lazy" decoding="async">
+            </div>
+            <div class="product-body">
+              <span class="product-brand">Hikvision Solid Series</span>
+              <h3>Videotron Indoor Hikvision P1.5</h3>
+              <p><strong>DS-D4015CW-2F</strong> – pitch 1,5625 mm varian SMD ekonomis untuk ruang meeting, kampus, dan hall dengan jarak pandang mulai 3 meter.</p>
+              <div class="product-foot">
+                <a class="btn btn-outline btn-sm btn-block" href="hikvision-solid-p1-56-ds-d4015cw-2f.html">
+                  Lihat Detail
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"></path></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card show" data-reveal="" data-reveal-delay="2">
+            <div class="product-media">
+              <img src="images/hikvision/DS-D4018CW-2F.svg" alt="Videotron indoor Hikvision Solid Series P1.8 model DS-D4018CW-2F" width="800" height="600" loading="lazy" decoding="async">
+            </div>
+            <div class="product-body">
+              <span class="product-brand">Hikvision Solid Series</span>
+              <h3>Videotron Indoor Hikvision P1.8</h3>
+              <p><strong>DS-D4018CW-2F</strong> – pitch 1,875 mm varian SMD paling terjangkau untuk bentang layar luas seperti ballroom dan aula, jarak pandang mulai 4 meter.</p>
+              <div class="product-foot">
+                <a class="btn btn-outline btn-sm btn-block" href="hikvision-solid-p1-875-ds-d4018cw-2f.html">
+                  Lihat Detail
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"></path></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. CTA KONSULTASI -->
+    <section class="cta" id="konsultasi">
+      <div class="container">
+        <div class="cta-inner show" data-reveal="">
+          <span class="eyebrow on-dark">Konsultasi Gratis</span>
+          <h2>Konsultasikan Kebutuhan Videotron Indoor Hikvision Anda</h2>
+          <p>Ceritakan ukuran ruang, jarak pandang penonton, dan jenis konten yang akan ditayangkan. Tim kami akan membantu memilih konfigurasi pixel pitch Hikvision yang paling sesuai serta menyusun penawaran mengikuti anggaran Anda — tanpa biaya konsultasi.</p>
+          <div class="btn-group">
+            <a class="btn btn-white btn-lg" href="index.html#konsultasi">
+              Konsultasikan Sekarang
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"></path></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand show" data-reveal="">
+          <a class="brand" href="index.html" aria-label="Jual Videotron Indoor Jakarta">
+            <img class="brand-logo" src="images/logo-footer.png" alt="Jual Videotron Indoor Jakarta" width="250" height="64" decoding="async">
+          </a>
+          <p class="footer-about">Penyedia videotron indoor untuk kebutuhan bisnis, institusi, dan ruang publik di Jakarta &amp; Jabodetabek — mulai dari konsultasi spesifikasi, instalasi, hingga layanan purna jual.</p>
+        </div>
+
+        <div class="footer-col show" data-reveal="" data-delay="1">
+          <h3>Informasi Perusahaan</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="index.html#produk">Produk</a></li>
+            <li><a href="portofolio.html">Portofolio</a></li>
+            <li><a href="artikel.html">Artikel</a></li>
+            <li><a href="kontak.html">Kontak Kami</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col show" data-reveal="" data-delay="2">
+          <h3>Kontak</h3>
+          <ul class="footer-contact">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3h3l2 5-2 1a12 12 0 0 0 6 6l1-2 5 2v3a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2Z"></path></svg>
+              <span>
+                <strong>Telepon / WhatsApp</strong>
+                <a href="tel:+6281210002020">+62 812-1000-2020</a>
+              </span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.1 7-11a7 7 0 1 0-14 0c0 4.9 7 11 7 11Z"></path><circle cx="12" cy="10" r="2.5"></circle></svg>
+              <span>
+                <strong>Alamat</strong>
+                <span class="value">Jl. Mangga Dua Raya No. 88, Jakarta Utara 14430</span>
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom show" data-reveal="" data-delay="1">
+        <p>© <span data-year="">2026</span> Jual Videotron Indoor Jakarta. Seluruh hak cipta dilindungi.</p>
+        <div class="footer-bottom-links">
+          <a href="kebijakan-privasi.html">Kebijakan Privasi</a>
+          <a href="syarat-ketentuan.html">Syarat &amp; Ketentuan</a>
+          <a href="kontak.html">Hubungi Kami</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal detail produk: satu elemen, isinya diisi oleh js/main.js
+       sesuai tombol "Lihat Detail" yang diklik. -->
+  <div class="product-modal" id="product-modal" hidden="">
+    <div class="product-modal-overlay" data-modal-close=""></div>
+    <div class="product-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="product-modal-title">
+      <button class="product-modal-close" type="button" data-modal-close="" aria-label="Tutup modal detail produk">×</button>
+      <div class="product-modal-media">
+        <img id="product-modal-img" src="" alt="" width="800" height="600" decoding="async">
+      </div>
+      <div class="product-modal-body">
+        <span class="product-brand" id="product-modal-brand"></span>
+        <h3 id="product-modal-title"></h3>
+        <p id="product-modal-desc"></p>
+        <h4>Spesifikasi Utama</h4>
+        <ul id="product-modal-specs"></ul>
+        <a class="link-arrow" id="product-modal-link" href="#">Halaman Produk Lengkap <span aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+
+
+
+
+
+</body></html>
+

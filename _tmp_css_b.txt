@@ -1,0 +1,816 @@
+﻿821:   flex-direction: column;
+822:   background: #fff;
+823:   border: 1px solid var(--line);
+824:   border-radius: var(--radius-lg);
+825:   overflow: hidden;
+826:   box-shadow: var(--shadow-xs);
+827:   transition: transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease), border-color var(--dur) var(--ease);
+828: }
+829: .article-feature:hover { transform: translateY(-6px); border-color: var(--blue-200); box-shadow: var(--shadow-md); }
+830: .article-feature-media {
+831:   aspect-ratio: 16 / 9;
+832:   overflow: hidden;
+833:   background: linear-gradient(160deg, #eef4ff, #ffffff);
+834:   border-bottom: 1px solid var(--line-soft);
+835: }
+836: .article-feature-media img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s var(--ease); }
+837: .article-feature:hover .article-feature-media img { transform: scale(1.04); }
+838: .article-feature-body { padding: 30px 32px 34px; }
+839: .article-feature-body h3 { font-size: clamp(1.3rem, 2vw, 1.66rem); margin-bottom: 12px; }
+840: .article-feature-body h3 a { color: var(--ink); }
+841: .article-feature-body h3 a:hover { color: var(--blue-600); }
+842: .article-feature-body p { color: var(--muted); font-size: 0.94rem; margin-bottom: 20px; }
+843: 
+844: .article-stack { display: grid; gap: 26px; }
+845: 
+846: .article-mini {
+847:   display: grid;
+848:   grid-template-columns: 148px minmax(0, 1fr);
+849:   background: #fff;
+850:   border: 1px solid var(--line);
+851:   border-radius: var(--radius-lg);
+852:   overflow: hidden;
+853:   box-shadow: var(--shadow-xs);
+854:   transition: transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease), border-color var(--dur) var(--ease);
+855: }
+856: .article-mini:hover { transform: translateY(-5px); border-color: var(--blue-200); box-shadow: var(--shadow-md); }
+857: .article-mini-media { position: relative; overflow: hidden; background: linear-gradient(160deg, #eef4ff, #ffffff); }
+858: .article-mini-media img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s var(--ease); }
+859: .article-mini:hover .article-mini-media img { transform: scale(1.05); }
+860: .article-mini-body { display: flex; flex-direction: column; padding: 24px 26px; }
+861: .article-mini-body h3 { font-size: 1.05rem; margin-bottom: 8px; }
+862: .article-mini-body h3 a { color: var(--ink); }
+863: .article-mini-body h3 a:hover { color: var(--blue-600); }
+864: .article-mini-body p { color: var(--muted); font-size: 0.87rem; margin-bottom: 14px; }
+865: .article-mini-body .link-arrow { margin-top: auto; font-size: 0.85rem; }
+866: 
+867: .article-meta {
+868:   display: flex;
+869:   align-items: center;
+870:   gap: 10px;
+871:   margin-bottom: 14px;
+872:   color: var(--muted);
+873:   font-size: 0.78rem;
+874: }
+875: .article-meta .tag {
+876:   padding: 5px 12px;
+877:   border-radius: var(--radius-pill);
+878:   background: var(--blue-50);
+879:   color: var(--blue-700);
+880:   font-size: 0.7rem;
+881:   font-weight: 600;
+882:   letter-spacing: 0.1em;
+883:   text-transform: uppercase;
+884:   line-height: 1;
+885: }
+886: .article-meta .dot { width: 4px; height: 4px; border-radius: 50%; background: var(--blue-200); }
+887: 
+888: /* --------------------------------------------------------------------------
+889:    12. FAQ (accordion)
+890:    -------------------------------------------------------------------------- */
+891: .faq-layout {
+892:   display: grid;
+893:   grid-template-columns: minmax(0, 0.72fr) minmax(0, 1.28fr);
+894:   gap: 64px;
+895:   align-items: start;
+896: }
+897: .faq-aside .section-head { margin-bottom: 24px; }
+898: 
+899: .faq-list { display: grid; gap: 12px; }
+900: .faq-item {
+901:   background: #fff;
+902:   border: 1px solid var(--line);
+903:   border-radius: var(--radius);
+904:   overflow: hidden;
+905:   transition: border-color var(--dur) var(--ease), box-shadow var(--dur) var(--ease);
+906: }
+907: .faq-item:hover,
+908: .faq-item.is-open { border-color: var(--blue-200); box-shadow: var(--shadow-sm); }
+909: 
+910: .faq-question {
+911:   display: flex;
+912:   align-items: center;
+913:   justify-content: space-between;
+914:   gap: 22px;
+915:   width: 100%;
+916:   padding: 22px 26px;
+917:   background: none;
+918:   border: 0;
+919:   text-align: left;
+920:   color: var(--ink);
+921:   font-family: var(--font-head);
+922:   font-size: 1.02rem;
+923:   font-weight: 700;
+924:   line-height: 1.5;
+925:   letter-spacing: -0.012em;
+926:   transition: color var(--dur) var(--ease);
+927: }
+928: .faq-question:hover { color: var(--blue-700); }
+929: 
+930: .faq-icon {
+931:   position: relative;
+932:   flex: none;
+933:   width: 34px;
+934:   height: 34px;
+935:   border-radius: 50%;
+936:   background: var(--blue-50);
+937:   transition: background var(--dur) var(--ease), transform var(--dur) var(--ease);
+938: }
+939: .faq-icon::before,
+940: .faq-icon::after {
+941:   content: "";
+942:   position: absolute;
+943:   top: 50%;
+944:   left: 50%;
+945:   border-radius: 2px;
+946:   background: var(--blue-600);
+947:   transition: transform var(--dur) var(--ease), background var(--dur) var(--ease);
+948: }
+949: .faq-icon::before { width: 12px; height: 2px; transform: translate(-50%, -50%); }
+950: .faq-icon::after { width: 2px; height: 12px; transform: translate(-50%, -50%); }
+951: .faq-item.is-open .faq-icon { background: var(--blue-600); transform: rotate(180deg); }
+952: .faq-item.is-open .faq-icon::before,
+953: .faq-item.is-open .faq-icon::after { background: #fff; }
+954: .faq-item.is-open .faq-icon::after { transform: translate(-50%, -50%) scaleY(0); }
+955: 
+956: .faq-answer {
+957:   display: grid;
+958:   grid-template-rows: 0fr;
+959:   transition: grid-template-rows 0.42s var(--ease);
+960: }
+961: .faq-item.is-open .faq-answer { grid-template-rows: 1fr; }
+962: .faq-answer-inner { overflow: hidden; }
+963: .faq-answer p {
+964:   padding: 0 26px 26px;
+965:   margin: 0;
+966:   color: var(--muted);
+967:   font-size: 0.92rem;
+968:   line-height: 1.8;
+969: }
+970: .faq-answer p b { color: var(--ink); font-weight: 600; }
+971: 
+972: /* --------------------------------------------------------------------------
+973:    13. CTA (full-width, biru)
+974:    -------------------------------------------------------------------------- */
+975: .cta {
+976:   position: relative;
+977:   padding: 104px 0;
+978:   background: linear-gradient(120deg, var(--blue-700) 0%, var(--blue-600) 52%, var(--blue-900) 100%);
+979:   overflow: hidden;
+980: }
+981: .cta::before,
+982: .cta::after {
+983:   content: "";
+984:   position: absolute;
+985:   border-radius: 50%;
+986:   pointer-events: none;
+987: }
+988: .cta::before {
+989:   width: 620px;
+990:   height: 620px;
+991:   top: -300px;
+992:   right: -160px;
+993:   background: radial-gradient(circle, rgba(255, 255, 255, 0.16), transparent 66%);
+994: }
+995: .cta::after {
+996:   width: 460px;
+997:   height: 460px;
+998:   bottom: -260px;
+999:   left: -120px;
+1000:   background: radial-gradient(circle, rgba(255, 255, 255, 0.1), transparent 68%);
+1001: }
+1002: .cta-inner { position: relative; z-index: 1; max-width: 900px; margin-inline: auto; text-align: center; }
+1003: .cta h2 {
+1004:   color: #fff;
+1005:   font-size: clamp(1.72rem, 3vw, 2.55rem);
+1006:   line-height: 1.22;
+1007:   margin-bottom: 20px;
+1008: }
+1009: .cta p { color: rgba(233, 240, 255, 0.88); font-size: 1.02rem; margin-bottom: 34px; }
+1010: .cta .btn-group { justify-content: center; }
+1011: /* Baris kontak (nomor, email, lokasi, ikon, garis atas) di dalam CTA sudah
+1012:    dihapus dari HTML, sehingga aturan .cta-contact tidak lagi dipakai. */
+1013: 
+1014: /* --------------------------------------------------------------------------
+1015:    14. Footer
+1016:    -------------------------------------------------------------------------- */
+1017: .site-footer {
+1018:   background: #fff;
+1019:   border-top: 1px solid var(--line-soft);
+1020:   padding: 84px 0 0;
+1021: }
+1022: .footer-grid {
+1023:   display: grid;
+1024:   grid-template-columns: minmax(0, 1.45fr) repeat(2, minmax(0, 1fr));
+1025:   gap: 48px;
+1026:   padding-bottom: 60px;
+1027: }
+1028: .footer-brand .brand { margin-bottom: 26px; }
+1029: /* Logo footer = 2,5x ukuran asli footer (38px -> 95px), jadi masih dalam rentang
+1030:    2-2,5x dan lebih kecil dari 228px (3x) sebelumnya. Hanya tinggi yang diatur dan
+1031:    lebarnya `auto` (dari .brand-logo), sehingga rasio asli 1:1 logo tetap utuh
+1032:    (tidak gepeng); file sumber 500x500 px dirender di 95px jadi tetap tajam.
+1033:    Aturan ini lebih spesifik dari .brand-logo sehingga logo di navbar tetap 38px. */
+1034: .footer-brand .brand-logo { height: 95px; }
+1035: .footer-about { color: var(--muted); font-size: 0.9rem; max-width: 360px; margin-bottom: 24px; }
+1036: /* Blok ikon sosial di footer sudah dihapus: bila .footer-about kini menjadi elemen
+1037:    terakhir di kolomnya, margin bawahnya dihilangkan agar tidak menyisakan ruang kosong. */
+1038: .footer-brand > .footer-about:last-child { margin-bottom: 0; }
+1039: 
+1040: .footer-social { display: flex; gap: 10px; }
+1041: .footer-social a {
+1042:   display: grid;
+1043:   place-items: center;
+1044:   width: 40px;
+1045:   height: 40px;
+1046:   border-radius: 12px;
+1047:   border: 1px solid var(--line);
+1048:   background: #fff;
+1049:   color: var(--ink-soft);
+1050:   transition: transform var(--dur) var(--ease), border-color var(--dur) var(--ease), color var(--dur) var(--ease), background var(--dur) var(--ease);
+1051: }
+1052: .footer-social a:hover {
+1053:   transform: translateY(-3px);
+1054:   border-color: var(--blue-200);
+1055:   background: var(--blue-50);
+1056:   color: var(--blue-700);
+1057: }
+1058: .footer-social svg { width: 18px; height: 18px; }
+1059: 
+1060: .footer-col h3 {
+1061:   margin-bottom: 18px;
+1062:   font-family: var(--font-head);
+1063:   font-size: 0.95rem;
+1064:   font-weight: 800;
+1065:   letter-spacing: -0.01em;
+1066: }
+1067: .footer-links { list-style: none; margin: 0; padding: 0; display: grid; gap: 11px; }
+1068: .footer-links li { margin: 0; }
+1069: .footer-links a {
+1070:   color: var(--muted);
+1071:   font-size: 0.89rem;
+1072:   transition: color var(--dur) var(--ease), padding-left var(--dur) var(--ease);
+1073: }
+1074: .footer-links a:hover { color: var(--blue-700); padding-left: 5px; }
+1075: 
+1076: .footer-contact { list-style: none; margin: 0; padding: 0; display: grid; gap: 16px; }
+1077: .footer-contact li { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 12px; margin: 0; }
+1078: .footer-contact svg { width: 17px; height: 17px; margin-top: 4px; color: var(--blue-600); flex: none; }
+1079: .footer-contact strong { display: block; font-size: 0.74rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+1080: .footer-contact a,
+1081: .footer-contact span.value { color: var(--ink-soft); font-size: 0.89rem; }
+1082: 
+1083: .footer-bottom {
+1084:   display: flex;
+1085:   align-items: center;
+1086:   justify-content: space-between;
+1087:   gap: 18px;
+1088:   flex-wrap: wrap;
+1089:   padding: 26px 0;
+1090:   border-top: 1px solid var(--line-soft);
+1091: }
+1092: .footer-bottom p {
+1093:   margin: 0 auto;
+1094:   color: var(--muted);
+1095:   font-size: 0.83rem;
+1096:   text-align: center;
+1097: }
+1098: .footer-bottom-links {
+1099:   display: none;
+1100: }
+1101: 
+1102: /* --------------------------------------------------------------------------
+1103:    15. Sub-pages (produk, portofolio, artikel, kontak)
+1104:    -------------------------------------------------------------------------- */
+1105: .page-hero {
+1106:   position: relative;
+1107:   padding: 72px 0 80px;
+1108:   background:
+1109:     radial-gradient(760px 380px at 90% -10%, rgba(47, 124, 255, 0.13), transparent 62%),
+1110:     linear-gradient(180deg, #ffffff, var(--surface-blue));
+1111:   border-bottom: 1px solid var(--line-soft);
+1112:   overflow: hidden;
+1113: }
+1114: .page-hero-grid {
+1115:   display: grid;
+1116:   grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+1117:   gap: 56px;
+1118:   align-items: center;
+1119: }
+1120: .page-hero h1 { font-size: clamp(1.95rem, 3.5vw, 2.9rem); }
+1121: .page-hero .hero-lead { margin-bottom: 30px; }
+1122: 
+1123: .breadcrumb {
+1124:   display: flex;
+1125:   align-items: center;
+1126:   flex-wrap: wrap;
+1127:   gap: 9px;
+1128:   margin: 0 0 22px;
+1129:   padding: 0;
+1130:   list-style: none;
+1131:   color: var(--muted);
+1132:   font-size: 0.8rem;
+1133: }
+1134: .breadcrumb li { margin: 0; display: inline-flex; align-items: center; gap: 9px; }
+1135: .breadcrumb li + li::before { content: "/"; color: var(--blue-200); }
+1136: .breadcrumb a { color: var(--muted); }
+1137: .breadcrumb a:hover { color: var(--blue-700); }
+1138: .breadcrumb [aria-current] { color: var(--ink); font-weight: 500; }
+1139: 
+1140: .page-media {
+1141:   border-radius: var(--radius-lg);
+1142:   border: 1px solid var(--line);
+1143:   background: #fff;
+1144:   overflow: hidden;
+1145:   box-shadow: var(--shadow-md);
+1146: }
+1147: 
+1148: .prose { max-width: 780px; color: var(--ink-soft); }
+1149: .prose h2 { margin-top: 46px; font-size: clamp(1.4rem, 2.2vw, 1.95rem); }
+1150: .prose h3 { margin-top: 34px; font-size: 1.2rem; }
+1151: .prose p, .prose li { font-size: 0.98rem; line-height: 1.85; color: var(--ink-soft); }
+1152: .prose ul, .prose ol { padding-left: 1.2rem; }
+1153: .prose li { margin-bottom: 8px; }
+1154: .prose .lead { font-size: 1.08rem; color: var(--ink-soft); }
+1155: .prose img { border-radius: var(--radius); border: 1px solid var(--line-soft); margin: 28px 0; }
+1156: .prose blockquote {
+1157:   margin: 30px 0;
+1158:   padding: 22px 26px;
+1159:   border-left: 3px solid var(--blue-600);
+1160:   border-radius: 0 var(--radius) var(--radius) 0;
+1161:   background: var(--surface-blue);
+1162:   color: var(--ink);
+1163:   font-family: var(--font-head);
+1164:   font-weight: 600;
+1165:   line-height: 1.6;
+1166: }
+1167: 
+1168: .note-card {
+1169:   margin: 32px 0;
+1170:   padding: 26px 28px;
+1171:   border: 1px solid var(--line);
+1172:   border-radius: var(--radius);
+1173:   background: #fff;
+1174:   box-shadow: var(--shadow-xs);
+1175: }
+1176: .note-card h4 { margin-bottom: 10px; }
+1177: .note-card p, .note-card li { font-size: 0.92rem; color: var(--muted); }
+1178: 
+1179: .spec-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 0.92rem; }
+1180: .spec-table caption { text-align: left; color: var(--muted); font-size: 0.82rem; padding-bottom: 12px; }
+1181: .spec-table th,
+1182: .spec-table td { padding: 15px 18px; border-bottom: 1px solid var(--line-soft); text-align: left; vertical-align: top; }
+1183: .spec-table thead th {
+1184:   background: var(--surface-soft);
+1185:   color: var(--ink);
+1186:   font-family: var(--font-head);
+1187:   font-size: 0.86rem;
+1188:   font-weight: 700;
+1189:   border-bottom: 1px solid var(--line);
+1190: }
+1191: .spec-table tbody th { color: var(--ink); font-weight: 600; width: 34%; }
+1192: .spec-table tbody tr:hover { background: var(--blue-50); }
+1193: 
+1194: .info-grid {
+1195:   display: grid;
+1196:   grid-template-columns: repeat(3, minmax(0, 1fr));
+1197:   gap: 22px;
+1198: }
+1199: .info-card {
+1200:   padding: 28px;
+1201:   border: 1px solid var(--line-soft);
+1202:   border-radius: var(--radius);
+1203:   background: #fff;
+1204:   box-shadow: var(--shadow-xs);
+1205:   transition: transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease), border-color var(--dur) var(--ease);
+1206: }
+1207: .info-card:hover { transform: translateY(-5px); border-color: var(--blue-200); box-shadow: var(--shadow-md); }
+1208: .info-card h3 { font-size: 1.04rem; margin-bottom: 8px; }
+1209: .info-card p { color: var(--muted); font-size: 0.9rem; margin: 0; }
+1210: .info-icon {
+1211:   display: grid;
+1212:   place-items: center;
+1213:   width: 46px;
+1214:   height: 46px;
+1215:   margin-bottom: 16px;
+1216:   border-radius: 14px;
+1217:   background: var(--blue-50);
+1218:   color: var(--blue-600);
+1219: }
+1220: .info-icon svg { width: 22px; height: 22px; }
+1221: 
+1222: .portfolio-grid {
+1223:   display: grid;
+1224:   grid-template-columns: repeat(3, minmax(0, 1fr));
+1225:   gap: 24px;
+1226: }
+1227: .portfolio-card {
+1228:   border: 1px solid var(--line);
+1229:   border-radius: var(--radius-lg);
+1230:   background: #fff;
+1231:   overflow: hidden;
+1232:   box-shadow: var(--shadow-xs);
+1233:   transition: transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease), border-color var(--dur) var(--ease);
+1234: }
+1235: .portfolio-card:hover { transform: translateY(-6px); border-color: var(--blue-200); box-shadow: var(--shadow-md); }
+1236: .portfolio-media { aspect-ratio: 4 / 3; overflow: hidden; border-bottom: 1px solid var(--line-soft); background: var(--surface-soft); }
+1237: .portfolio-media img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s var(--ease); }
+1238: .portfolio-card:hover .portfolio-media img { transform: scale(1.05); }
+1239: .portfolio-body { padding: 24px 26px 26px; }
+1240: .portfolio-body h3 { font-size: 1.08rem; margin-bottom: 8px; }
+1241: .portfolio-body p { color: var(--muted); font-size: 0.88rem; margin: 0 0 14px; }
+1242: 
+1243: .form-panel {
+1244:   padding: 34px;
+1245:   border: 1px solid var(--line);
+1246:   border-radius: var(--radius-lg);
+1247:   background: #fff;
+1248:   box-shadow: var(--shadow-sm);
+1249: }
+1250: .form-row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+1251: .field { display: flex; flex-direction: column; gap: 8px; margin-bottom: 18px; }
+1252: .field label { color: var(--ink); font-size: 0.86rem; font-weight: 600; }
+1253: .field input,
+1254: .field select,
+1255: .field textarea {
+1256:   width: 100%;
+1257:   padding: 14px 16px;
+1258:   border: 1px solid var(--line);
+1259:   border-radius: var(--radius-sm);
+1260:   background: #fff;
+1261:   font-size: 0.92rem;
+1262:   transition: border-color var(--dur) var(--ease), box-shadow var(--dur) var(--ease);
+1263: }
+1264: .field input:focus,
+1265: .field select:focus,
+1266: .field textarea:focus {
+1267:   outline: none;
+1268:   border-color: var(--blue-500);
+1269:   box-shadow: 0 0 0 4px rgba(47, 124, 255, 0.14);
+1270: }
+1271: .field textarea { min-height: 132px; resize: vertical; }
+1272: .field .hint { color: var(--muted); font-size: 0.78rem; }
+1273: .form-status { margin-top: 16px; font-size: 0.88rem; color: var(--blue-700); }
+1274: 
+1275: /* --------------------------------------------------------------------------
+1276:    16. Motion & reveal
+1277:    -------------------------------------------------------------------------- */
+1278: /* GPU-friendly: hanya opacity + transform, tanpa memaksa layout/reflow.
+1279:    Fade-up saat elemen masuk viewport: opacity 0 â†’ 1, translateY(30px) â†’ 0. */
+1280: [data-reveal] {
+1281:   opacity: 0;
+1282:   transform: translate3d(0, var(--reveal-shift), 0);
+1283:   will-change: opacity, transform;
+1284: }
+1285: 
+1286: /* Transisi dipasang hanya saat proses reveal berjalan agar tidak ada
+1287:    perbedaan tampilan sebelum/sesudah JS aktif (aman jika JS mati). */
+1288: [data-reveal].reveal-ready {
+1289:   transition: opacity var(--reveal-dur) var(--ease-out) var(--reveal-delay),
+1290:               transform var(--reveal-dur) var(--ease-out) var(--reveal-delay);
+1291: }
+1292: 
+1293: [data-reveal].show {
+1294:   opacity: 1;
+1295:   transform: translate3d(0, 0, 0);
+1296:   will-change: auto;
+1297: }
+1298: 
+1299: /* Stagger 0.1â€“0.15s antar elemen dalam satu section */
+1300: [data-reveal-delay="1"] { --reveal-delay: 0.1s; }
+1301: [data-reveal-delay="2"] { --reveal-delay: 0.115s; }
+1302: [data-reveal-delay="3"] { --reveal-delay: 0.13s; }
+1303: [data-reveal-delay="4"] { --reveal-delay: 0.15s; }
+1304: 
+1305: /* --------------------------------------------------------------------------
+1306:    Hero: entrance animation satu kali (bukan loop) â€” hanya transform/opacity
+1307:    -------------------------------------------------------------------------- */
+1308: .hero .hero-grid > * {
+1309:   opacity: 0;
+1310:   transform: translate3d(0, var(--reveal-shift), 0);
+1311: }
+1312: 
+1313: .hero.is-entered .hero-grid > * {
+1314:   animation: fxHeroIn var(--reveal-dur) var(--ease-out) both;
+1315:   animation-delay: var(--hero-delay, 0s);
+1316: }
+1317: .hero.is-entered .hero-grid > *:nth-child(2) { --hero-delay: 0.16s; }
+1318: 
+1319: @keyframes fxHeroIn {
+1320:   from { opacity: 0; transform: translate3d(0, var(--reveal-shift), 0); }
+1321:   to { opacity: 1; transform: translate3d(0, 0, 0); }
+1322: }
+1323: 
+1324: @media (hover: hover) and (pointer: fine) {
+1325:   .btn, .btn svg, .nav-link, .nav-link .caret, .nav-toggle,
+1326:   .nav-toggle-bars i, .product-card, .solution-card, .portfolio-card,
+1327:   .info-card, .article-mini, .point, .footer-social a {
+1328:     backface-visibility: hidden;
+1329:   }
+1330: }
+1331: 
+1332: @media (max-width: 768px) {
+1333:   /* Kurangi beban compositor di HP tanpa mengubah tampilan/layout. */
+1334:   :root { --reveal-shift: 22px; }
+1335:   [data-reveal-delay="2"] { --reveal-delay: 0.1s; }
+1336:   [data-reveal-delay="3"] { --reveal-delay: 0.11s; }
+1337:   [data-reveal-delay="4"] { --reveal-delay: 0.12s; }
+1338: }
+1339: 
+1340: @media (prefers-reduced-motion: reduce) {
+1341:   /* Tanpa animasi sama sekali â€” elemen langsung tampil normal. */
+1342:   [data-reveal],
+1343:   [data-reveal].show,
+1344:   .hero .hero-grid > *,
+1345:   .hero.is-entered .hero-grid > * {
+1346:     transition: none !important;
+1347:     animation: none !important;
+1348:     opacity: 1 !important;
+1349:     transform: none !important;
+1350:   }
+1351: }
+1352: 
+1353: @media (max-width: 1180px) {
+1354:   .solution-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+1355:   .hero-grid { gap: 44px; }
+1356:   .split { gap: 48px; }
+1357: }
+1358: 
+1359: @media (max-width: 1024px) {
+1360:   /* Gerak reveal sedikit lebih kecil agar tetap nyaman di layar sedang */
+1361:   :root { --header-h: 58px; --reveal-shift: 26px; }
+1362: 
+1363:   .section { padding: 88px 0; }
+1364: 
+1365:   .nav-toggle { display: inline-flex; }
+1366: 
+1367:   .nav {
+1368:     position: fixed;
+1369:     inset: calc(var(--header-h) + 1px) 0 auto 0;
+1370:     display: block;
+1371:     padding: 16px var(--gutter) 30px;
+1372:     background: #fff;
+1373:     border-bottom: 1px solid var(--line-soft);
+1374:     box-shadow: var(--shadow-md);
+1375:     max-height: calc(100vh - var(--header-h));
+1376:     overflow-y: auto;
+1377:     opacity: 0;
+1378:     visibility: hidden;
+1379:     transform: translateY(-12px);
+1380:     transition: opacity var(--dur) var(--ease), transform var(--dur) var(--ease), visibility var(--dur);
+1381:   }
+1382:   body.nav-open .nav { opacity: 1; visibility: visible; transform: none; }
+1383: 
+1384:   .nav-list { flex-direction: column; align-items: stretch; gap: 0; }
+1385:   .nav-link {
+1386:     justify-content: space-between;
+1387:     padding: 13px 14px;
+1388:     border-radius: var(--radius-xs);
+1389:     font-size: 0.94rem;
+1390:   }
+1391:   .dropdown {
+1392:     position: static;
+1393:     min-width: 0;
+1394:     margin: 4px 0 10px;
+1395:     padding: 6px;
+1396:     opacity: 1;
+1397:     visibility: visible;
+1398:     transform: none;
+1399:     box-shadow: none;
+1400:     border-color: var(--line-soft);
+1401:     background: var(--surface-soft);
+1402:     display: none;
+1403:   }
+1404:   .nav-item.has-dropdown.is-open .dropdown { display: block; }
+1405:   .site-header .btn-sm { display: flex; width: 100%; margin-top: 14px; }
+1406: 
+1407:   .hero { padding: 72px 0 84px; }
+1408:   /* Layar sedang & kecil: teks hero memakai hampir seluruh lebar, jadi overlay
+1409:      gelap dilebarkan (sisi kiri tetap paling pekat, kanan tetap lebih terang)
+1410:      agar teks tetap terbaca di atas foto. */
+1411:   .hero::after {
+1412:     background-image:
+1413:       linear-gradient(90deg, rgba(7, 17, 48, 0.9) 0%, rgba(7, 17, 48, 0.78) 55%, rgba(7, 17, 48, 0.52) 100%),
+1414:       linear-gradient(180deg, rgba(7, 17, 48, 0.3) 0%, rgba(7, 17, 48, 0.55) 100%);
+1415:   }
+1416:   /* Layar kecil: hanya ada teks, jarak tetap konsisten dengan grid satu kolom */
+1417:   .hero-grid,
+1418:   .split,
+1419:   .page-hero-grid { grid-template-columns: minmax(0, 1fr); }
+1420: 
+1421:   .product-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+1422:   .article-layout { grid-template-columns: minmax(0, 1fr); }
+1423:   .article-stack { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+1424:   .faq-layout { grid-template-columns: minmax(0, 1fr); gap: 40px; }
+1425:   .portfolio-grid,
+1426:   .info-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+1427:   .footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px; }
+1428:   /* Footer kini hanya punya dua kolom tautan: brand dibuat selebar grid agar
+1429:      kolom "Informasi Perusahaan" dan "Kontak" sejajar rapi di baris berikutnya. */
+1430:   .footer-grid > .footer-brand { grid-column: 1 / -1; }
+1431:   .split.reverse > *:first-child { order: 2; }
+1432: }
+1433: 
+1434: @media (max-width: 768px) {
+1435:   /* Layar kecil: gerak lebih pendek agar animasi tetap terasa ringan */
+1436:   :root { --gutter: 20px; }
+1437: 
+1438:   .section { padding: 72px 0; }
+1439:   .section-head { margin-bottom: 40px; }
+1440:   .brand-logo { height: 32px; }
+1441:   /* Logo footer juga 2,5x ukuran asli di layar kecil (32px -> 80px) */
+1442:   .footer-brand .brand-logo { height: 80px; }
+1443:   .nav-link { padding: 12px 12px; font-size: 0.9rem; }
+1444: 
+1445:   h1 { font-size: clamp(1.9rem, 7.4vw, 2.4rem); }
+1446:   h2 { font-size: clamp(1.5rem, 6vw, 1.95rem); }
+1447: 
+1448:   .hero { padding: 60px 0 68px; }
+1449:   .hero h1 { font-size: clamp(1.08rem, 4.14vw, 1.35rem); }
+1450: 
+1451:   .btn { padding: 14px 22px; font-size: 0.9rem; }
+1452:   .btn-group { gap: 10px; }
+1453:   .btn-group .btn { flex: 1 1 auto; }
+1454: 
+1455:   .product-grid { grid-template-columns: minmax(0, 1fr); }
+1456:   .solution-grid { grid-template-columns: minmax(0, 1fr); }
+1457:   .article-stack { grid-template-columns: minmax(0, 1fr); }
+1458:   .article-mini { grid-template-columns: 118px minmax(0, 1fr); }
+1459:   .portfolio-grid,
+1460:   .info-grid { grid-template-columns: minmax(0, 1fr); }
+1461:   .form-row { grid-template-columns: minmax(0, 1fr); }
+1462:   .form-panel { padding: 24px; }
+1463: 
+1464:   .cta { padding: 76px 0; }
+1465: 
+1466:   .site-footer { padding-top: 64px; }
+1467:   .footer-grid { grid-template-columns: minmax(0, 1fr); gap: 36px; padding-bottom: 44px; }
+1468:   .footer-bottom { flex-direction: column; align-items: flex-start; }
+1469: 
+1470:   .split-note { padding: 18px; }
+1471:   .point,
+1472:   .advantage-item { padding: 22px; gap: 16px; }
+1473:   .advantage-item:hover { transform: translateY(-4px); }
+1474: 
+1475:   .page-hero { padding: 52px 0 62px; }
+1476:   .prose h2 { margin-top: 36px; }
+1477:   .spec-table th,
+1478:   .spec-table td { padding: 13px 14px; font-size: 0.86rem; }
+1479:   .spec-table tbody th { width: 42%; }
+1480: }
+1481: 
+1482: @media (max-width: 480px) {
+1483:   .article-mini { grid-template-columns: minmax(0, 1fr); }
+1484:   .article-mini-media { aspect-ratio: 16 / 9; }
+1485:   .faq-question { padding: 18px 20px; font-size: 0.96rem; gap: 14px; }
+1486:   .faq-answer p { padding: 0 20px 22px; }
+1487:   .article-feature-body { padding: 24px; }
+1488: }
+1489: /* --------------------------------------------------------------------------
+1490:    18. Utilities
+1491:    -------------------------------------------------------------------------- */
+1492: .faq-item h3 { margin: 0; }
+1493: .section-foot { margin-top: 40px; }
+1494: .section-foot.center { text-align: center; }
+1495: /* --------------------------------------------------------------------------
+1496:    16. Modal detail produk ("Lihat Detail")
+1497:    Fitur tambahan â€” tidak mengubah card produk atau section lain sama sekali.
+1498:    -------------------------------------------------------------------------- */
+1499: .product-modal {
+1500:   position: fixed;
+1501:   inset: 0;
+1502:   z-index: 1000;
+1503:   display: grid;
+1504:   place-items: center;
+1505:   padding: 24px;
+1506: }
+1507: .product-modal[hidden] { display: none; }
+1508: 
+1509: /* Overlay gelap di belakang modal. */
+1510: .product-modal-overlay {
+1511:   position: absolute;
+1512:   inset: 0;
+1513:   background: rgba(10, 22, 51, 0.55);
+1514:   opacity: 0;
+1515:   transition: opacity var(--dur-slow) var(--ease-out);
+1516: }
+1517: .product-modal.is-open .product-modal-overlay { opacity: 1; }
+1518: 
+1519: /* Kotak modal: fade + scale ringan saat muncul/keluar. */
+1520: .product-modal-dialog {
+1521:   position: relative;
+1522:   z-index: 1;
+1523:   width: min(760px, 100%);
+1524:   max-height: min(86vh, 720px);
+1525:   overflow: auto;
+1526:   display: grid;
+1527:   grid-template-columns: minmax(0, 1fr);
+1528:   gap: 0;
+1529:   background: #fff;
+1530:   border-radius: var(--radius-lg);
+1531:   box-shadow: 0 24px 64px rgba(8, 42, 122, 0.35);
+1532:   opacity: 0;
+1533:   transform: scale(0.94) translateY(12px);
+1534:   transition: opacity var(--dur-slow) var(--ease-out), transform var(--dur-slow) var(--ease-out);
+1535: }
+1536: .product-modal.is-open .product-modal-dialog {
+1537:   opacity: 1;
+1538:   transform: scale(1) translateY(0);
+1539: }
+1540: 
+1541: .product-modal-media { background: var(--blue-50); }
+1542: .product-modal-media img { width: 100%; height: auto; display: block; }
+1543: 
+1544: .product-modal-body { padding: 26px 30px 30px; }
+1545: .product-modal-body h3 { font-size: 1.35rem; margin: 6px 0 10px; }
+1546: .product-modal-body p { color: var(--muted); line-height: 1.75; margin: 0 0 18px; }
+1547: .product-modal-body h4 {
+1548:   font-size: 0.95rem;
+1549:   text-transform: uppercase;
+1550:   letter-spacing: 0.06em;
+1551:   color: var(--blue-700);
+1552:   margin: 0 0 10px;
+1553: }
+1554: .product-modal-body ul { margin: 0 0 20px; padding-left: 20px; color: var(--muted); line-height: 1.8; font-size: 0.92rem; }
+1555: 
+1556: .product-modal-close {
+1557:   position: absolute;
+1558:   top: 12px;
+1559:   right: 14px;
+1560:   z-index: 2;
+1561:   width: 38px;
+1562:   height: 38px;
+1563:   display: grid;
+1564:   place-items: center;
+1565:   border: 1px solid var(--line-soft);
+1566:   border-radius: 50%;
+1567:   background: rgba(255, 255, 255, 0.92);
+1568:   color: var(--ink);
+1569:   font-size: 1.3rem;
+1570:   line-height: 1;
+1571:   cursor: pointer;
+1572:   transition: background var(--dur) var(--ease), color var(--dur) var(--ease);
+1573: }
+1574: .product-modal-close:hover { background: var(--blue-600); color: #fff; }
+1575: 
+1576: body.modal-open { overflow: hidden; }
+1577: 
+1578: @media (min-width: 640px) {
+1579:   .product-modal-dialog { grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); }
+1580:   .product-modal-media img { height: 100%; object-fit: cover; }
+1581: }
+1582: 
+1583: @media (prefers-reduced-motion: reduce) {
+1584:   .product-modal-overlay,
+1585:   .product-modal-dialog { transition: none; }
+1586: }
+1587: 
+1588: /* --------------------------------------------------------------------------
+1589:    17. Detail artikel di halaman yang sama ("Baca Selengkapnya")
+1590:    Fitur tambahan â€” tidak mengubah daftar/section Artikel sebelum diklik.
+1591:    Layout: kiri foto besar, kanan kategori + tanggal + judul + deskripsi.
+1592:    -------------------------------------------------------------------------- */
+1593: .article-detail {
+1594:   scroll-margin-top: calc(var(--header-h) + 20px);
+1595:   opacity: 0;
+1596:   transform: translateY(26px);
+1597:   transition: opacity var(--dur-slow) var(--ease-out), transform var(--dur-slow) var(--ease-out);
+1598: }
+1599: .article-detail.is-open { opacity: 1; transform: translateY(0); }
+1600: 
+1601: .article-detail-grid {
+1602:   display: grid;
+1603:   grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+1604:   gap: 0;
+1605:   align-items: stretch;
+1606:   background: #fff;
+1607:   border: 1px solid var(--line);
+1608:   border-radius: var(--radius-lg);
+1609:   box-shadow: var(--shadow-xs);
+1610:   overflow: hidden;
+1611: }
+1612: 
+1613: .article-detail-media {
+1614:   background: linear-gradient(160deg, #eef4ff, #ffffff);
+1615:   overflow: hidden;
+1616: }
+1617: .article-detail-media img {
+1618:   width: 100%;
+1619:   height: 100%;
+1620:   object-fit: cover;
+1621:   display: block;
+1622: }
+1623: 
+1624: .article-detail-body { padding: 34px 36px; display: flex; flex-direction: column; align-items: flex-start; }
+1625: .article-detail-body h3 { font-size: clamp(1.25rem, 2vw, 1.55rem); margin-bottom: 12px; }
+1626: .article-detail-body p { color: var(--muted); font-size: 0.94rem; line-height: 1.85; margin: 0 24px; }
+1627: 
+1628: @media (max-width: 900px) {
+1629:   .article-detail-grid { grid-template-columns: minmax(0, 1fr); }
+1630:   .article-detail-media img { height: auto; aspect-ratio: 16 / 9; }
+1631:   .article-detail-body { padding: 26px 28px 30px; }
+1632: }
+1633: 
+1634: @media (prefers-reduced-motion: reduce) {
+1635:   .article-detail { transition: none; transform: none; }
+1636: }

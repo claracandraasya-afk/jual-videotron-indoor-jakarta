@@ -1,0 +1,117 @@
+﻿461:     );
+462: 
+463:     document.addEventListener("keydown", function (event) {
+464:       if (event.key === "Escape" && !productModal.hidden) closeProductModal();
+465:     });
+466:   }
+467: 
+468:   /* ------------------------------------------------------------------
+469:      Detail artikel di halaman yang sama ("Baca Selengkapnya")
+470:      - Klik: daftar artikel disembunyikan, panel detail muncul dengan
+471:        animasi fade + slide (murni CSS via class .is-open).
+472:      - "Kembali ke Artikel": panel ditutup, daftar tampil lagi,
+473:        posisi scroll dikembalikan seperti sebelumnya.
+474:      - Isi panel per artikel diambil dari ARTICLES (data di bawah).
+475:      ------------------------------------------------------------------ */
+476:   var ARTICLES = {
+477:     memilih: {
+478:       tag: "Panduan",
+479:       date: "12 Januari 2026",
+480:       title: "Cara Memilih Videotron Indoor yang Tepat untuk Kebutuhan Bisnis Anda",
+481:       desc:
+482:         "Pixel pitch, ukuran layar, kecerahan, sampai sistem kontrol â€” delapan hal yang perlu dipertimbangkan sebelum memesan videotron indoor. Panduan ini membantu Anda mencocokkan spesifikasi dengan jarak pandang penonton, ukuran ruangan, dan jenis konten yang akan ditayangkan, sehingga anggaran yang keluar benar-benar sepadan dengan kualitas tampilan yang didapat.",
+483:       image: "images/artikel-cara-memilih-videotron.png",
+484:       alt: "Ilustrasi panduan memilih videotron indoor dengan perbandingan spesifikasi"
+485:     },
+486:     harga: {
+487:       tag: "Harga",
+488:       date: "05 Januari 2026",
+489:       title: "Harga Videotron Indoor Jakarta dan Faktor yang Mempengaruhinya",
+490:       desc:
+491:         "Ulasan lengkap komponen biaya videotron indoor: mulai dari modul LED, receiving card, sistem kontrol, hingga pekerjaan instalasi dan rangka pendukung. Dilengkapi tips menyusun anggaran secara realistis â€” termasuk bagian mana yang bisa dihemat dan bagian mana yang sebaiknya tidak dikorbankan agar layar tetap awet untuk pemakaian jangka panjang.",
+492:       image: "images/artikel-harga-videotron.png",
+493:       alt: "Ilustrasi komponen biaya dan kisaran harga videotron indoor Jakarta"
+494:     },
+495:     penggunaan: {
+496:       tag: "Penggunaan",
+497:       date: "28 Desember 2025",
+498:       title: "Penggunaan Videotron Indoor: dari Lobi Kantor hingga Ruang Event",
+499:       desc:
+500:         "Contoh pemanfaatan videotron indoor yang terbukti efektif di lapangan: penyambutan tamu di lobi kantor, promosi tenant di mall, media pembelajaran di sekolah dan kampus, sampai layar utama di ruang event dan hotel. Setiap skenario dibahas bersama rekomendasi ukuran dan spesifikasi agar hasilnya maksimal sesuai karakter ruangannya.",
+501:       image: "images/artikel-penggunaan-videotron.png",
+502:       alt: "Ilustrasi penggunaan videotron indoor di berbagai ruangan"
+503:     }
+504:   };
+505: 
+506:   var articleDetail = document.getElementById("article-detail");
+507: 
+508:   if (articleDetail) {
+509:     var articleList = articleDetail.parentElement.querySelector(".article-layout");
+510:     var adImg = document.getElementById("article-detail-img");
+511:     var adTag = document.getElementById("article-detail-tag");
+512:     var adDate = document.getElementById("article-detail-date");
+513:     var adTitle = document.getElementById("article-detail-title");
+514:     var adText = document.getElementById("article-detail-text");
+515:     var adBack = document.getElementById("article-detail-back");
+516:     var articleScrollY = 0;
+517: 
+518:     function openArticleDetail(key) {
+519:       var data = ARTICLES[key];
+520:       if (!data || articleDetail.hidden === false) return;
+521: 
+522:       adImg.src = data.image;
+523:       adImg.alt = data.alt;
+524:       adTag.textContent = data.tag;
+525:       adDate.textContent = data.date;
+526:       adTitle.textContent = data.title;
+527:       adText.textContent = data.desc;
+528: 
+529:       articleScrollY = window.scrollY || window.pageYOffset;
+530:       if (articleList) articleList.hidden = true;
+531:       articleDetail.hidden = false;
+532: 
+533:       /* Dua frame agar transisi fade + slide sempat berjalan. */
+534:       window.requestAnimationFrame(function () {
+535:         window.requestAnimationFrame(function () {
+536:           articleDetail.classList.add("is-open");
+537:         });
+538:       });
+539: 
+540:       articleDetail.setAttribute("tabindex", "-1");
+541:       articleDetail.focus({ preventScroll: true });
+542:       articleDetail.scrollIntoView({ behavior: "smooth", block: "start" });
+543:     }
+544: 
+545:     function closeArticleDetail() {
+546:       if (articleDetail.hidden) return;
+547:       articleDetail.classList.remove("is-open");
+548:       window.setTimeout(function () {
+549:         articleDetail.hidden = true;
+550:         if (articleList) articleList.hidden = false;
+551:         window.scrollTo(0, articleScrollY);
+552:       }, 320);
+553:     }
+554: 
+555:     Array.prototype.forEach.call(
+556:       document.querySelectorAll("[data-article-detail]"),
+557:       function (trigger) {
+558:         trigger.addEventListener("click", function (event) {
+559:           event.preventDefault();
+560:           openArticleDetail(trigger.getAttribute("data-article-detail"));
+561:         });
+562:       }
+563:     );
+564: 
+565:     if (adBack) adBack.addEventListener("click", closeArticleDetail);
+566:   }
+567: 
+568:   /* ------------------------------------------------------------------
+569:      Tahun berjalan di footer
+570:      ------------------------------------------------------------------ */
+571:   var yearSlots = document.querySelectorAll("[data-year]");
+572:   var thisYear = String(new Date().getFullYear());
+573: 
+574:   Array.prototype.forEach.call(yearSlots, function (slot) {
+575:     slot.textContent = thisYear;
+576:   });
+577: })();

@@ -1,0 +1,58 @@
+﻿336: 
+337:   /* ------------------------------------------------------------------
+338:      Modal detail produk ("Lihat Detail" pada card)
+339:      - Satu elemen modal diisi sesuai tombol yang diklik (data per produk).
+340:      - Tutup: tombol X, klik area di luar modal, atau tombol Escape.
+341:      - Animasi fade + scale murni lewat class .is-open (CSS).
+342:      ------------------------------------------------------------------ */
+343:   var PRODUCT_DETAILS = {
+344:     hikvision: {
+345:       brand: "Hikvision",
+346:       title: "Videotron Indoor Hikvision",
+347:       desc:
+348:         "Pilihan populer untuk lobi, showroom, dan ruang meeting. Modul LED indoor Hikvision menghadirkan tampilan tajam dengan pixel pitch rapat, sistem kontrol yang mudah dioperasikan, serta perawatan sederhana sehingga layar tetap prima untuk pemakaian harian jangka panjang.",
+349:       specs: [
+350:         "Pixel pitch indoor: P1.25 / P1.56 / P1.86 (disesuaikan jarak pandang)",
+351:         "Kecerahan 600â€“800 nits, nyaman untuk ruangan dengan pencahayaan campuran",
+352:         "Refresh rate tinggi, tampilan mulus tanpa flicker di depan kamera",
+353:         "Sistem kontrol user-friendly, bisa dijalankan tim non-IT",
+354:         "Garansi resmi + dukungan sparepart modul dan receiving card",
+355:         "Instalasi rapi di Jakarta & sekitarnya oleh teknisi berpengalaman"
+356:       ],
+357:       image: "images/videotron-hikvision.png",
+358:       link: "produk-hikvision.html"
+359:     },
+360:     samsung: {
+361:       brand: "Samsung",
+362:       title: "Videotron Indoor Samsung",
+363:       desc:
+364:         "Untuk kebutuhan tampilan premium tanpa sambungan terlihat. Videotron indoor Samsung memakai modul bezel-less dengan micro pixel pitch sehingga konten tampil menyatu penuh â€” ideal bagi brand yang menonjolkan kualitas visual di area publik seperti flagship store, gallery, dan aula perusahaan.",
+365:       specs: [
+366:         "Micro pixel pitch: P0.9 / P1.2 untuk jarak pandang sangat dekat",
+367:         "Kecerahan hingga 900 nits dengan kalibrasi warna presisi",
+368:         "Desain bezel-less, sambungan modul nyaris tidak terlihat",
+369:         "Kedalaman hitam & kontras tinggi untuk konten visual premium",
+370:         "Manajemen konten terpusat untuk banyak layar sekaligus",
+371:         "Garansi resmi Samsung + layanan purnajual terjadwal"
+372:       ],
+373:       image: "images/videotron-samsung.png",
+374:       link: "produk-samsung.html"
+375:     },
+376:     lg: {
+377:       brand: "LG",
+378:       title: "Videotron Indoor LG",
+379:       desc:
+380:         "Solusi efisien untuk instalasi cepat, ringan, dan rapi. Modul LED indoor LG dirancang tipis dengan bobot ringan sehingga cocok untuk kantor, kampus, maupun ruang event yang kebutuhan display-nya dinamis â€” termasuk pemasangan sementara untuk kegiatan tertentu.",
+381:       specs: [
+382:         "Pixel pitch indoor: P1.5 / P1.8 / P2.0 sesuai skema ruang",
+383:         "Bodi ultra slim & ringan, cocok untuk dinding ringan dan portable",
+384:         "Instalasi cepat dengan sistem mounting praktis",
+385:         "Konsumsi daya efisien untuk operasional harian berkepanjangan",
+386:         "Kompatibel dengan berbagai sumber konten (PC, player, media box)",
+387:         "Garansi resmi + opsi sewa untuk kebutuhan event"
+388:       ],
+389:       image: "images/videotron-LG.png",
+390:       link: "produk-lg.html"
+391:     }
+392:   };
+393: 

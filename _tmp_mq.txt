@@ -1,0 +1,46 @@
+﻿
+LineNumber Line                                                                          
+---------- ----                                                                          
+        54   --reveal-dur: 0.6s;                                                         
+        56   --reveal-shift: 30px;                                                       
+       816 @media (min-width: 1025px) {                                                  
+       824 @media (max-width: 768px) {                                                   
+       828 @media (prefers-reduced-motion: reduce) {                                     
+      1299    16. Motion & reveal                                                        
+      1303 [data-reveal] {                                                               
+      1305   transform: translate3d(0, var(--reveal-shift), 0);                          
+      1309 /* Transisi dipasang hanya saat proses reveal berjalan agar tidak ada         
+      1311 [data-reveal].reveal-ready {                                                  
+      1312   transition: opacity var(--reveal-dur) var(--ease-out) var(--reveal-delay),  
+      1313               transform var(--reveal-dur) var(--ease-out) var(--reveal-delay);
+      1316 [data-reveal].show {                                                          
+      1323 [data-reveal-delay="1"] { --reveal-delay: 0.1s; }                             
+      1324 [data-reveal-delay="2"] { --reveal-delay: 0.115s; }                           
+      1325 [data-reveal-delay="3"] { --reveal-delay: 0.13s; }                            
+      1326 [data-reveal-delay="4"] { --reveal-delay: 0.15s; }                            
+      1333   transform: translate3d(0, var(--reveal-shift), 0);                          
+      1337   animation: fxHeroIn var(--reveal-dur) var(--ease-out) both;                 
+      1343   from { opacity: 0; transform: translate3d(0, var(--reveal-shift), 0); }     
+      1347 @media (hover: hover) and (pointer: fine) {                                   
+      1355 @media (max-width: 768px) {                                                   
+      1357   :root { --reveal-shift: 22px; }                                             
+      1358   [data-reveal-delay="2"] { --reveal-delay: 0.1s; }                           
+      1359   [data-reveal-delay="3"] { --reveal-delay: 0.11s; }                          
+      1360   [data-reveal-delay="4"] { --reveal-delay: 0.12s; }                          
+      1363 @media (prefers-reduced-motion: reduce) {                                     
+      1365   [data-reveal],                                                              
+      1366   [data-reveal].show,                                                         
+      1376 @media (max-width: 1180px) {                                                  
+      1382 @media (max-width: 1024px) {                                                  
+      1383   /* Gerak reveal sedikit lebih kecil agar tetap nyaman di layar sedang */    
+      1384   :root { --header-h: 58px; --reveal-shift: 26px; }                           
+      1457 @media (max-width: 768px) {                                                   
+      1508 @media (max-width: 480px) {                                                   
+      1650 @media (min-width: 640px) {                                                   
+      1655 @media (prefers-reduced-motion: reduce) {                                     
+      1700 @media (max-width: 900px) {                                                   
+      1706 @media (prefers-reduced-motion: reduce) {                                     
+      1775 @media (max-width: 991px) {                                                   
+      1780 @media (max-width: 575px) {                                                   
+
+

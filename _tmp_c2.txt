@@ -1,0 +1,250 @@
+﻿561:   font-size: 0.95rem;
+562: }
+563: .point h3 { margin: 2px 0 6px; font-size: 1.08rem; }
+564: .point p { margin: 0; color: var(--muted); font-size: 0.92rem; line-height: 1.7; }
+565: 
+566: /* --------------------------------------------------------------------------
+567:    8. Produk (product cards)
+568:    -------------------------------------------------------------------------- */
+569: .product-grid {
+570:   display: grid;
+571:   grid-template-columns: repeat(3, minmax(0, 1fr));
+572:   gap: 26px;
+573: }
+574: 
+575: .product-card {
+576:   display: flex;
+577:   flex-direction: column;
+578:   background: #fff;
+579:   border: 1px solid var(--line);
+580:   border-radius: var(--radius-lg);
+581:   overflow: hidden;
+582:   box-shadow: var(--shadow-xs);
+583:   transition: transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease), border-color var(--dur) var(--ease);
+584: }
+585: .product-card:hover {
+586:   transform: translateY(-6px);
+587:   border-color: var(--blue-200);
+588:   box-shadow: var(--shadow-md);
+589: }
+590: 
+591: .product-media {
+592:   position: relative;
+593:   aspect-ratio: 4 / 3;
+594:   background: linear-gradient(160deg, #f4f8ff, #ffffff 70%);
+595:   border-bottom: 1px solid var(--line-soft);
+596:   overflow: hidden;
+597: }
+598: .product-media img {
+599:   width: 100%;
+600:   height: 100%;
+601:   object-fit: cover;
+602:   transition: transform 0.6s var(--ease);
+603: }
+604: .product-card:hover .product-media img { transform: scale(1.045); }
+605: 
+606: .product-body { display: flex; flex-direction: column; flex: 1; padding: 26px 26px 28px; }
+607: .product-brand {
+608:   margin-bottom: 8px;
+609:   color: var(--blue-600);
+610:   font-family: var(--font-body);
+611:   font-size: 0.74rem;
+612:   font-weight: 600;
+613:   letter-spacing: 0.16em;
+614:   text-transform: uppercase;
+615: }
+616: .product-body h3 { margin-bottom: 10px; font-size: 1.2rem; }
+617: .product-body > p { color: var(--muted); font-size: 0.9rem; margin-bottom: 18px; }
+618: 
+619: .spec-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; }
+620: .spec-pill {
+621:   padding: 7px 13px;
+622:   border-radius: var(--radius-pill);
+623:   background: var(--surface-soft);
+624:   border: 1px solid var(--line-soft);
+625:   color: var(--ink-soft);
+626:   font-size: 0.78rem;
+627:   line-height: 1;
+628: }
+629: .spec-pill b { color: var(--ink); font-weight: 600; }
+630: 
+631: .feature-list { display: grid; gap: 9px; margin: 0 0 24px; padding: 0; list-style: none; }
+632: .feature-list li {
+633:   position: relative;
+634:   margin: 0;
+635:   padding-left: 26px;
+636:   color: var(--ink-soft);
+637:   font-size: 0.87rem;
+638:   line-height: 1.6;
+639: }
+640: .feature-list li::before {
+641:   content: "";
+642:   position: absolute;
+643:   left: 0;
+644:   top: 0.42em;
+645:   width: 14px;
+646:   height: 14px;
+647:   border-radius: 50%;
+648:   background: var(--blue-50) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231157ee' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E") center/9px no-repeat;
+649: }
+650: .product-foot { margin-top: auto; padding-top: 20px; border-top: 1px solid var(--line-soft); }
+651: 
+652: /* --------------------------------------------------------------------------
+653:    9. Solusi (4 card grid)
+654:    -------------------------------------------------------------------------- */
+655: .solution-grid {
+656:   display: grid;
+657:   grid-template-columns: repeat(4, minmax(0, 1fr));
+658:   gap: 24px;
+659: }
+660: 
+661: .solution-card {
+662:   display: flex;
+663:   flex-direction: column;
+664:   border: 1px solid var(--line);
+665:   border-radius: var(--radius-lg);
+666:   background: #fff;
+667:   overflow: hidden;
+668:   box-shadow: var(--shadow-xs);
+669:   transition: transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease), border-color var(--dur) var(--ease);
+670: }
+671: .solution-card:hover { transform: translateY(-6px); border-color: var(--blue-200); box-shadow: var(--shadow-md); }
+672: 
+673: .solution-visual {
+674:   position: relative;
+675:   aspect-ratio: 16 / 11;
+676:   overflow: hidden;
+677:   background: linear-gradient(160deg, #eef4ff, #ffffff);
+678:   border-bottom: 1px solid var(--line-soft);
+679: }
+680: .solution-visual img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s var(--ease); }
+681: .solution-card:hover .solution-visual img { transform: scale(1.05); }
+682: 
+683: .solution-body { display: flex; flex-direction: column; flex: 1; padding: 24px 24px 26px; }
+684: .solution-label {
+685:   margin-bottom: 10px;
+686:   color: var(--blue-600);
+687:   font-family: var(--font-body);
+688:   font-size: 0.72rem;
+689:   font-weight: 600;
+690:   letter-spacing: 0.14em;
+691:   text-transform: uppercase;
+692:   line-height: 1.4;
+693: }
+694: .solution-body h3 { margin-bottom: 10px; font-size: 1.1rem; }
+695: .solution-body p { color: var(--muted); font-size: 0.88rem; margin: 0 0 18px; }
+696: .solution-body .link-arrow { margin-top: auto; font-size: 0.86rem; }
+697: .solution-body .link-arrow {
+698:   display: none;
+699: }
+700: 
+701: /* --------------------------------------------------------------------------
+702:    10. Keunggulan
+703:    -------------------------------------------------------------------------- */
+704: .advantage-media {
+705:   position: relative;
+706:   border-radius: var(--radius-lg);
+707:   border: 1px solid var(--line);
+708:   background: linear-gradient(160deg, #f4f8ff, #ffffff 72%);
+709:   overflow: hidden;
+710:   box-shadow: var(--shadow-sm);
+711: }
+712: .advantage-media img { width: 100%; }
+713: 
+714: /* Gambar pada keunggulan berganti mengikuti kartu yang aktif saat scroll.
+715:    Semua gambar ditumpuk pada kotak yang sama dan hanya opacity yang berubah,
+716:    sehingga tinggi kolom tidak bergeser. Gambar pertama tetap berada pada
+717:    aliran normal agar kolom tetap punya tinggi meski JS mati. */
+718: .advantage-media-img {
+719:   position: absolute;
+720:   inset: 0;
+721:   width: 100%;
+722:   height: 100%;
+723:   object-fit: cover;
+724:   opacity: 0;
+725:   transition: opacity var(--dur-slow) var(--ease-out);
+726: }
+727: .advantage-media-img:first-child {
+728:   position: relative;
+729:   inset: auto;
+730:   height: auto;
+731: }
+732: .advantage-media-img.is-active { opacity: 1; }
+733: 
+734: .advantage-list { display: grid; gap: 16px; margin: 0; padding: 0; list-style: none; }
+735: .advantage-list li { margin: 0; }
+736: 
+737: .advantage-item {
+738:   display: grid;
+739:   grid-template-columns: auto minmax(0, 1fr);
+740:   gap: 18px;
+741:   padding: 24px 26px;
+742:   background: #fff;
+743:   border: 1px solid var(--line-soft);
+744:   border-radius: var(--radius);
+745:   box-shadow: var(--shadow-xs);
+746:   transition: transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease), border-color var(--dur) var(--ease),
+747:     background var(--dur) var(--ease), color var(--dur) var(--ease);
+748: }
+749: .advantage-item:hover { transform: translateX(6px); border-color: var(--blue-200); box-shadow: var(--shadow-md); }
+750: .advantage-icon {
+751:   display: grid;
+752:   place-items: center;
+753:   width: 50px;
+754:   height: 50px;
+755:   border-radius: 16px;
+756:   background: linear-gradient(150deg, var(--blue-600), var(--blue-900));
+757:   color: #fff;
+758:   box-shadow: var(--shadow-blue);
+759: }
+760: .advantage-icon svg { width: 23px; height: 23px; }
+761: .advantage-item h3 { margin: 2px 0 6px; font-size: 1.05rem; }
+762: .advantage-item p { margin: 0; color: var(--muted); font-size: 0.9rem; line-height: 1.7; }
+763: 
+764: /* Kartu saat hover (atau aktif lewat JS): warna elemen dibalik.
+765:    - Card besar: background biru.
+766:    - Kotak ikon: background putih, ikon di dalamnya biru.
+767:    - Judul & deskripsi: putih.
+768:    Hanya warna/latar/bayangan yang berubah â€” layout, ukuran, dan spacing
+769:    tetap sama. Saat kursor keluar, kartu kembali ke desain awal (putih). */
+770: .advantage-item:hover {
+771:   background: linear-gradient(150deg, var(--blue-600), var(--blue-900));
+772:   border-color: transparent;
+773:   box-shadow: var(--shadow-blue);
+774: }
+775: .advantage-item:hover h3,
+776: .advantage-item:hover p {
+777:   color: #fff;
+778: }
+779: .advantage-item:hover .advantage-icon {
+780:   background: #fff;
+781:   box-shadow: 0 6px 16px rgba(8, 42, 122, 0.35);
+782:   color: var(--blue-900);
+783: }
+784: .advantage-item:hover .advantage-icon svg {
+785:   fill: none;
+786:   stroke: var(--blue-900);
+787:   color: var(--blue-900);
+788: }
+789: 
+790: /* Kolom gambar mengikuti scroll di layar lebar agar pergantian gambar tetap
+791:    terlihat selagi kartu di kolom kanan bergulir. Hanya berlaku di layout dua
+792:    kolom; pada layout satu kolom posisinya tetap seperti semula. */
+793: @media (min-width: 1025px) {
+794:   #keunggulan .split > .advantage-media-col {
+795:     position: sticky;
+796:     top: calc(var(--header-h) + 28px);
+797:     align-self: start;
+798:   }
+799: }
+800: 
+801: @media (max-width: 768px) {
+802:   .advantage-item:hover { transform: translateY(-4px); }
+803: }
+804: 
+805: @media (prefers-reduced-motion: reduce) {
+806:   /* Tanpa animasi: gambar langsung bertukar. */
+807:   .advantage-media-img { transition: none; }
+808: }
+809: 
+810: /* --------------------------------------------------------------------------

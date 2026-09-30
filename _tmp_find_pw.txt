@@ -1,0 +1,8 @@
+﻿C:\Users\WINDOWS 11\AppData\Roaming\npm\node_modules\playwright = False
+C:\Users\WINDOWS 11\AppData\Roaming\npm\node_modules\playwright-core = False
+C:\Program Files\nodejs\node_modules\playwright = False
+C:\Users\WINDOWS 11\node_modules\playwright = False
+.links
+chromium-1243
+ffmpeg-1011
+winldd-1007

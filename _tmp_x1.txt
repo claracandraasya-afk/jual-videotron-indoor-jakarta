@@ -1,0 +1,74 @@
+﻿62:   <main id="konten">
+63:     <!-- 1. PAGE HERO -->
+64:     <section class="page-hero">
+65:       <div class="container">
+66:         <div class="page-hero-grid">
+67:           <div>
+68:             <ul class="breadcrumb">
+69:               <li><a href="index.html">Beranda</a></li>
+70:               <li><span aria-current="page">Artikel</span></li>
+71:             </ul>
+72:             <h1>Artikel &amp; Insight Videotron Indoor</h1>
+73:             <p class="hero-lead">
+74:               Panduan praktis dari tim kami untuk membantu Anda mengambil keputusan sebelum membeli videotron
+75:               indoor di Jakarta &mdash; mulai dari pemilihan pixel pitch, penyusunan anggaran, hingga contoh
+76:               penerapannya di berbagai ruangan.
+77:             </p>
+78:             <div class="btn-group">
+79:               <a class="btn btn-primary btn-lg" href="index.html#konsultasi">
+80:                 Konsultasikan Sekarang
+81:                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+82:               </a>
+83:               <a class="btn btn-outline btn-lg" href="index.html#produk">Lihat Pilihan Produk</a>
+84:             </div>
+85:           </div>
+86: 
+87:           <div class="page-media">
+88:             <img src="images/artikel-cara-memilih-videotron.png" alt="Ilustrasi panduan memilih videotron indoor dengan perbandingan spesifikasi" width="800" height="450" decoding="async">
+89:           </div>
+90:         </div>
+91:       </div>
+92:     </section>
+93: 
+94:     <!-- 2. DAFTAR ARTIKEL -->
+95:     <section class="section">
+96:       <div class="container">
+97:         <div class="section-head" data-reveal>
+98:           <span class="eyebrow">Artikel &amp; Insight</span>
+99:           <h2>Semua Artikel Videotron Indoor</h2>
+100:           <p>Panduan dan ulasan dari tim kami seputar pemilihan produk, estimasi biaya, sampai penerapan videotron indoor untuk kebutuhan bisnis dan institusi.</p>
+101:         </div>
+102: 
+103:         <div class="article-layout">
+104:           <article class="article-feature" data-reveal>
+105:             <div class="article-feature-media">
+106:               <img src="images/artikel-cara-memilih-videotron.png" alt="Ilustrasi panduan memilih videotron indoor dengan perbandingan spesifikasi" width="800" height="450" loading="lazy" decoding="async">
+107:             </div>
+108:             <div class="article-feature-body">
+109:               <div class="article-meta">
+110:                 <span class="tag">Panduan</span>
+111:                 <span class="dot" aria-hidden="true"></span>
+112:                 <span>12 Januari 2026</span>
+113:                 <span class="dot" aria-hidden="true"></span>
+114:                 <span>7 menit baca</span>
+115:               </div>
+116:               <h3><a href="artikel-cara-memilih-videotron-indoor.html">Cara Memilih Videotron Indoor yang Tepat untuk Kebutuhan Bisnis Anda</a></h3>
+117:               <p>Pixel pitch, ukuran layar, kecerahan, sampai sistem kontrol &mdash; ketahui delapan hal yang perlu dipertimbangkan sebelum memesan videotron indoor agar tidak salah spesifikasi.</p>
+118:               <a class="link-arrow" href="artikel-cara-memilih-videotron-indoor.html">Baca Selengkapnya <span aria-hidden="true">&rarr;</span></a>
+119:             </div>
+120:           </article>
+121: 
+122:           <div class="article-stack">
+123:             <article class="article-mini" data-reveal data-delay="1">
+124:               <div class="article-mini-media">
+125:                 <img src="images/artikel-harga-videotron.png" alt="Ilustrasi komponen biaya dan kisaran harga videotron indoor Jakarta" width="800" height="450" loading="lazy" decoding="async">
+126:               </div>
+127:               <div class="article-mini-body">
+128:                 <div class="article-meta">
+129:                   <span class="tag">Harga</span>
+130:                   <span class="dot" aria-hidden="true"></span>
+131:                   <span>05 Januari 2026</span>
+132:                 </div>
+133:                 <h3><a href="artikel-harga-videotron-indoor-jakarta.html">Harga Videotron Indoor Jakarta dan Faktor yang Mempengaruhinya</a></h3>
+134:                 <p>Ulasan komponen biaya mulai dari modul LED hingga instalasi, lengkap dengan tips menyusun anggaran secara realistis.</p>
+135:                 <a class="link-arrow" href="artikel-harga-videotron-indoor-jakarta.html">Baca Selengkapnya <span aria-hidden="true">&rarr;</span></a>
