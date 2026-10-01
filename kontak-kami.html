@@ -76,6 +76,14 @@
       line-height: 1.6;
     }
     .kk-about-list li strong { color: var(--ink); }
+    .kk-map iframe {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      height: auto;
+      min-height: 340px;
+      border: 0;
+    }
     @media (max-width: 1024px) {
       .kk-layout { grid-template-columns: minmax(0, 1fr); gap: 36px; }
     }
@@ -140,7 +148,7 @@
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.1 7-11a7 7 0 1 0-14 0c0 4.9 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>
               <div>
                 <strong>Alamat</strong>
-                <span class="value">Jl. Mangga Dua Raya No. 88, Jakarta Utara 14430</span>
+                <span class="value">Jl. Penjernihan II No.7, RT.11/RW.6, Bend. Hilir, Kecamatan Tanah Abang, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10210</span>
               </div>
             </div>
 
@@ -157,43 +165,26 @@
                 Hubungi via WhatsApp
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
               </a>
-              <a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&amp;query=Jl.%20Mangga%20Dua%20Raya%20No.%2088%2C%20Jakarta%20Utara%2014430" target="_blank" rel="noopener">
+              <a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&amp;query=Jl.%20Penjernihan%20II%20No.7%2C%20RT.11%2FRW.6%2C%20Bend.%20Hilir%2C%20Kecamatan%20Tanah%20Abang%2C%20Kota%20Jakarta%20Pusat%2C%20Daerah%20Khusus%20Ibukota%20Jakarta%2010210" target="_blank" rel="noopener">
                 Lihat Lokasi
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.1 7-11a7 7 0 1 0-14 0c0 4.9 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>
               </a>
             </div>
           </div>
 
-          <div class="page-media" data-reveal data-reveal-delay="1">
-            <img src="images/hero-section.png" alt="Videotron indoor hasil instalasi proyek kami tampil di ruang publik" width="800" height="450" loading="lazy" decoding="async">
+          <div class="page-media kk-map" data-reveal data-reveal-delay="1">
+            <iframe
+              src="https://www.google.com/maps?q=Jl.%20Penjernihan%20II%20No.7%2C%20RT.11%2FRW.6%2C%20Bend.%20Hilir%2C%20Kecamatan%20Tanah%20Abang%2C%20Kota%20Jakarta%20Pusat%2C%20Daerah%20Khusus%20Ibukota%20Jakarta%2010210&amp;output=embed"
+              title="Lokasi Jual Videotron Indoor Jakarta di Google Maps"
+              loading="lazy"
+              allowfullscreen
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
 
         </div>
       </div>
     </section>
 
-    <!-- 3. INFORMASI PERUSAHAAN -->
-    <section class="section section-soft section-line-top">
-      <div class="container">
-        <div class="kk-layout">
-          <div data-reveal>
-            <div class="section-head">
-              <span class="eyebrow">Tentang Kami</span>
-              <h2>Informasi Perusahaan</h2>
-            </div>
-          </div>
-          <div class="kk-card" data-reveal data-reveal-delay="1">
-            <ul class="kk-about-list">
-              <li><strong>Nama:</strong> Jual Videotron Indoor Jakarta</li>
-              <li><strong>Bidang usaha:</strong> Penjualan, instalasi, dan layanan videotron indoor di Jakarta dan sekitarnya.</li>
-              <li><strong>Area layanan:</strong> Jakarta, Bogor, Depok, Tangerang, Bekasi (Jabodetabek).</li>
-              <li><strong>Alamat:</strong> Jl. Mangga Dua Raya No. 88, Jakarta Utara 14430</li>
-              <li><strong>Telepon / WhatsApp:</strong> <a href="tel:+6281210002020">+62 812-1000-2020</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
   </main>
 
   <footer class="site-footer">
