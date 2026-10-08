@@ -329,7 +329,7 @@ function productImage(p) {
 }
 
 for (const p of PRODUCTS) {
-  writeFileSync(`images/hikvision/${p.code}.svg`, productImage(p));
+  writeFileSync(`images/${p.code}.svg`, productImage(p));
 }
 
 /* ---------- Halaman detail ---------- */
@@ -402,7 +402,7 @@ const HEADER = `<!DOCTYPE html>
 
         <div class="product-detail-grid">
           <div class="product-detail-media">
-            <img src="images/hikvision/__CODE__.svg" alt="__ALT__" width="800" height="600" decoding="async">
+            <img src="images/__CODE__.svg" alt="__ALT__" width="800" height="600" decoding="async">
           </div>
 
           <div class="product-detail-info">

@@ -1,3 +1,0 @@
-﻿main.js OK
-C:\Users\WINDOWS 11\AppData\Local\ms-playwright\chromium-1243\chrome-win64\chrome.exe
-qa page written: 27104 bytes

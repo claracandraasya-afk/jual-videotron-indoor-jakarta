@@ -1,2 +1,0 @@
-﻿False
-no NODE_PATH

@@ -1,3 +1,0 @@
-﻿chrome=True
-playwright=NONE
-edge=True

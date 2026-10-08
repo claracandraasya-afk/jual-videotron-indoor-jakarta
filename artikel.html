@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="id" class="no-js">
 <head>
   <meta charset="UTF-8">
@@ -19,26 +19,38 @@
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 
-  <!-- Gaya khusus halaman Artikel (prefix art-) â€” tidak memengaruhi halaman lain. -->
+  <!-- Gaya khusus halaman Artikel -->
   <style>
     .art-grid {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 26px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
     }
 
-    /* Card artikel: featured & biasa memakai komponen dasar yang sama. */
+    .art-grid .art-card:first-child {
+      grid-column: 1 / -1;
+    }
+
+    .art-grid .art-card:first-child .art-body {
+      padding: 24px 26px 26px;
+    }
+
+    .art-grid .art-card:first-child .art-body h2 {
+      font-size: 1.22rem;
+    }
+
     .art-card {
       display: flex;
       flex-direction: column;
+      min-width: 0;
       background: #fff;
       border: 1px solid var(--line-soft);
       border-radius: var(--radius-lg);
       overflow: hidden;
       box-shadow: 0 1px 2px rgba(15, 30, 70, 0.04);
-      transition: transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease),
-        border-color var(--dur) var(--ease);
+      transition: transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease), border-color var(--dur) var(--ease);
     }
+
     .art-card:hover {
       transform: translateY(-4px);
       border-color: var(--blue-100, var(--blue-200));
@@ -51,71 +63,76 @@
       background: var(--surface-soft);
       border-bottom: 1px solid var(--line-soft);
     }
+
     .art-media img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      display: block;
       transition: transform 0.55s var(--ease);
     }
+
     .art-card:hover .art-media img { transform: scale(1.035); }
 
     .art-body {
       display: flex;
       flex-direction: column;
       flex: 1;
-      padding: 22px 24px 24px;
+      padding: 20px 22px 22px;
     }
+
     .art-meta {
       display: flex;
       align-items: center;
       flex-wrap: wrap;
-      gap: 9px;
-      margin-bottom: 12px;
-      font-size: 0.78rem;
+      gap: 8px;
+      margin-bottom: 10px;
+      font-size: 0.72rem;
       color: var(--muted);
     }
+
     .art-meta .tag {
-      padding: 4px 11px;
+      padding: 4px 9px;
       border-radius: var(--radius-pill, 999px);
       background: var(--blue-50);
       color: var(--blue-700);
-      font-size: 0.72rem;
+      font-size: 0.68rem;
       font-weight: 600;
       letter-spacing: 0.04em;
     }
-    .art-meta .dot { width: 4px; height: 4px; border-radius: 50%; background: var(--blue-200); }
-    .art-body h3 {
-      margin: 0 0 10px;
-      font-size: 1.12rem;
+
+    .art-meta .dot {
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: var(--blue-200);
+    }
+
+    .art-body h2 {
+      margin: 0 0 9px;
+      font-size: 1.05rem;
       line-height: 1.4;
     }
-    .art-body h3 a { color: var(--ink); }
-    .art-body h3 a:hover { color: var(--blue-700); }
+
+    .art-body h2 a { color: var(--ink); }
+    .art-body h2 a:hover { color: var(--blue-700); }
+
     .art-body p {
-      margin: 0 0 18px;
+      margin: 0 0 16px;
       color: var(--muted);
-      font-size: 0.9rem;
-      line-height: 1.7;
+      font-size: 0.84rem;
+      line-height: 1.65;
     }
-    .art-body .link-arrow { margin-top: auto; }
 
-    /* Featured article: lebih besar, gambar di atas + body di bawah. */
-    .art-featured {
-      margin-bottom: 26px;
+    .art-body .link-arrow {
+      margin-top: auto;
+      font-size: 0.82rem;
     }
-    .art-featured .art-media { aspect-ratio: 21 / 9; }
-    .art-featured .art-body { padding: 28px 32px 30px; }
-    .art-featured h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); }
-    .art-featured p { font-size: 0.96rem; max-width: 640px; }
 
-    @media (max-width: 1024px) {
-      .art-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    }
-    @media (max-width: 768px) {
-      .art-grid { grid-template-columns: minmax(0, 1fr); gap: 20px; }
-      .art-featured { margin-bottom: 20px; }
-      .art-featured .art-media { aspect-ratio: 16 / 9; }
-      .art-featured .art-body { padding: 22px 22px 24px; }
+    @media (max-width: 700px) {
+      .art-grid { grid-template-columns: minmax(0, 1fr); gap: 18px; }
+      .art-grid .art-card:first-child { grid-column: auto; }
+      .art-body { padding: 18px 20px 20px; }
     }
   </style>
 </head>
@@ -179,142 +196,59 @@
     </section>
 
 <!-- 2. DAFTAR ARTIKEL -->
-<section class="section article-list-section">
-  <div class="container">
-
-    <div class="article-list-layout">
-
-      <!-- ARTIKEL UTAMA -->
-      <div class="article-main-list">
-
-        <article class="art-card art-featured" data-reveal>
-          <div class="art-media">
-            <img
-              src="images/artikel-cara-memilih-videotron.png"
-              alt="Cara memilih videotron indoor"
-              width="800"
-              height="450"
-              loading="lazy"
-              decoding="async"
-            >
-          </div>
-
-          <div class="art-body">
-
-            <div class="art-meta">
-              <span class="tag">Panduan</span>
-              <span class="dot"></span>
-              <span>12 Januari 2026</span>
-              <span class="dot"></span>
-              <span>7 menit baca</span>
-            </div>
-
-            <h2>
-              <a href="artikel-cara-memilih-videotron-indoor.html">
-                Cara Memilih Videotron Indoor yang Tepat untuk Kebutuhan Bisnis Anda
-              </a>
-            </h2>
-
-            <p>
-              Pixel pitch, ukuran layar, kecerahan, sampai sistem kontrol
-              — ketahui hal yang perlu dipertimbangkan sebelum memesan
-              videotron indoor agar tidak salah spesifikasi.
-            </p>
-
-            <a
-              class="link-arrow"
-              href="artikel-cara-memilih-videotron-indoor.html"
-            >
-              Baca Selengkapnya
-              <span aria-hidden="true">&rarr;</span>
+    <section class="section article-list-section">
+      <div class="container">
+<div class="art-grid">
+          <article class="art-card" data-reveal>
+            <a class="art-media" href="artikel-cara-memilih-videotron-indoor.html" aria-label="Baca Cara Memilih Videotron Indoor yang Tepat untuk Kebutuhan Bisnis Anda">
+              <img src="images/artikel-cara-memilih-videotron.png" alt="Cara memilih videotron indoor" width="800" height="450" loading="lazy" decoding="async">
             </a>
+            <div class="art-body">
+              <div class="art-meta">
+                <span class="tag">Panduan</span>
+                <span class="dot"></span>
+                <span>12 Januari 2026</span>
+              </div>
+              <h2><a href="artikel-cara-memilih-videotron-indoor.html">Cara Memilih Videotron Indoor yang Tepat untuk Kebutuhan Bisnis Anda</a></h2>
+              <p>Pixel pitch, ukuran layar, kecerahan, dan sistem kontrol adalah beberapa hal penting sebelum memilih videotron indoor.</p>
+              <a class="link-arrow" href="artikel-cara-memilih-videotron-indoor.html">Baca Selengkapnya <span aria-hidden="true">&rarr;</span></a>
+            </div>
+          </article>
 
-          </div>
-        </article>
+          <article class="art-card" data-reveal>
+            <a class="art-media" href="artikel-harga-videotron-indoor-jakarta.html" aria-label="Baca Harga Videotron Indoor Jakarta dan Faktor yang Mempengaruhinya">
+              <img src="images/artikel-harga-videotron.png" alt="Harga videotron indoor Jakarta" width="800" height="450" loading="lazy" decoding="async">
+            </a>
+            <div class="art-body">
+              <div class="art-meta">
+                <span class="tag">Produk</span>
+                <span class="dot"></span>
+                <span>05 Januari 2026</span>
+              </div>
+              <h2><a href="artikel-harga-videotron-indoor-jakarta.html">Harga Videotron Indoor Jakarta dan Faktor yang Mempengaruhinya</a></h2>
+              <p>Kenali faktor yang memengaruhi harga videotron indoor agar perencanaan kebutuhan dan anggaran lebih tepat.</p>
+              <a class="link-arrow" href="artikel-harga-videotron-indoor-jakarta.html">Baca Selengkapnya <span aria-hidden="true">&rarr;</span></a>
+            </div>
+          </article>
 
-      </div>
-
-
-      <!-- ARTIKEL TERKAIT -->
-      <aside class="article-side-list">
-
-        <div class="side-list-head">
-          <span class="eyebrow">Artikel Terbaru</span>
-          <h2>Artikel Terkait</h2>
+          <article class="art-card" data-reveal>
+            <a class="art-media" href="artikel-penggunaan-videotron-indoor.html" aria-label="Baca Penggunaan Videotron Indoor dari Lobi Kantor hingga Ruang Event">
+              <img src="images/artikel-penggunaan-videotron.png" alt="Penggunaan videotron indoor" width="800" height="450" loading="lazy" decoding="async">
+            </a>
+            <div class="art-body">
+              <div class="art-meta">
+                <span class="tag">Tips &amp; Insight</span>
+                <span class="dot"></span>
+                <span>28 Desember 2025</span>
+              </div>
+              <h2><a href="artikel-penggunaan-videotron-indoor.html">Penggunaan Videotron Indoor: dari Lobi Kantor hingga Ruang Event</a></h2>
+              <p>Contoh penggunaan videotron indoor untuk lobi kantor, ruang event, retail, dan berbagai kebutuhan ruang publik.</p>
+              <a class="link-arrow" href="artikel-penggunaan-videotron-indoor.html">Baca Selengkapnya <span aria-hidden="true">&rarr;</span></a>
+            </div>
+          </article>
         </div>
-
-
-        <article class="side-article">
-
-          <a href="artikel-harga-videotron-indoor-jakarta.html">
-            <img
-              src="images/artikel-harga-videotron.png"
-              alt="Harga videotron indoor Jakarta"
-              loading="lazy"
-            >
-          </a>
-
-          <div>
-            <div class="art-meta">
-              <span class="tag">Produk</span>
-              <span>05 Januari 2026</span>
-            </div>
-
-            <h3>
-              <a href="artikel-harga-videotron-indoor-jakarta.html">
-                Harga Videotron Indoor Jakarta dan Faktor yang Mempengaruhinya
-              </a>
-            </h3>
-
-            <a
-              class="side-read-more"
-              href="artikel-harga-videotron-indoor-jakarta.html"
-            >
-              Baca Artikel →
-            </a>
-          </div>
-
-        </article>
-
-
-        <article class="side-article">
-
-          <a href="artikel-penggunaan-videotron-indoor.html">
-            <img
-              src="images/artikel-penggunaan-videotron.png"
-              alt="Penggunaan videotron indoor"
-              loading="lazy"
-            >
-          </a>
-
-          <div>
-            <div class="art-meta">
-              <span class="tag">Tips &amp; Insight</span>
-              <span>28 Desember 2025</span>
-            </div>
-
-            <h3>
-              <a href="artikel-penggunaan-videotron-indoor.html">
-                Penggunaan Videotron Indoor: dari Lobi Kantor hingga Ruang Event
-              </a>
-            </h3>
-
-            <a
-              class="side-read-more"
-              href="artikel-penggunaan-videotron-indoor.html"
-            >
-              Baca Artikel →
-            </a>
-          </div>
-
-        </article>
-
-      </aside>
-
-    </div>
-
-  </div>
-</section>
+      </div>
+    </section>
 
   </main>
 
