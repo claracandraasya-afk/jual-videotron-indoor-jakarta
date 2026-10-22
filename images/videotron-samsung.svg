@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img" aria-labelledby="t">
+  <title id="t">Videotron indoor Samsung seri LED indoor micro pixel pitch</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#eef4ff"/>
+    </linearGradient>
+    <linearGradient id="screen" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2f7cff"/>
+      <stop offset="0.5" stop-color="#0b45c4"/>
+      <stop offset="1" stop-color="#082a7a"/>
+    </linearGradient>
+    <linearGradient id="sheen" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.34"/>
+      <stop offset="0.55" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <pattern id="px" width="5" height="5" patternUnits="userSpaceOnUse">
+      <circle cx="2.5" cy="2.5" r="1.2" fill="#ffffff" opacity="0.2"/>
+    </pattern>
+    <filter id="b" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="22"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <ellipse cx="400" cy="290" rx="330" ry="185" fill="#2f7cff" opacity="0.14" filter="url(#b)"/>
+
+  <!-- bezel-less wall -->
+  <rect x="80" y="108" width="640" height="344" rx="10" fill="#0a1633" opacity="0.1"/>
+  <rect x="84" y="112" width="632" height="336" rx="8" fill="url(#screen)"/>
+  <rect x="84" y="112" width="632" height="336" rx="8" fill="url(#px)"/>
+  <rect x="84" y="112" width="632" height="336" rx="8" fill="url(#sheen)"/>
+
+  <!-- content: product visual -->
+  <rect x="140" y="176" width="256" height="196" rx="14" fill="#ffffff" opacity="0.12"/>
+  <circle cx="268" cy="274" r="62" fill="#ffffff" opacity="0.16"/>
+  <rect x="226" y="252" width="84" height="44" rx="10" fill="#ffffff" opacity="0.9"/>
+  <path d="M248 286l22-28 22 28z" fill="#0b45c4" opacity="0.75"/>
+
+  <g>
+    <rect x="440" y="196" width="228" height="14" rx="7" fill="#ffffff" opacity="0.7"/>
+    <rect x="440" y="228" width="176" height="14" rx="7" fill="#ffffff" opacity="0.42"/>
+    <rect x="440" y="260" width="204" height="14" rx="7" fill="#ffffff" opacity="0.26"/>
+    <rect x="440" y="322" width="86" height="34" rx="17" fill="#ffffff" opacity="0.85"/>
+    <rect x="538" y="322" width="86" height="34" rx="17" fill="#ffffff" opacity="0.3"/>
+  </g>
+
+  <!-- micro pixel pitch pattern highlight -->
+  <g stroke="#ffffff" stroke-opacity="0.28" stroke-width="1">
+    <path d="M84 168h632M84 224h632M84 280h632M84 336h632M84 392h632"/>
+    <path d="M184 112v336M284 112v336M384 112v336M484 112v336M584 112v336"/>
+  </g>
+
+  <ellipse cx="400" cy="462" rx="264" ry="24" fill="#0a1633" opacity="0.08"/>
+
+  <g>
+    <rect x="540" y="52" width="214" height="60" rx="16" fill="#ffffff" stroke="#e4e9f2"/>
+    <circle cx="570" cy="82" r="14" fill="#f2f7ff"/>
+    <path d="M564 82h12M570 76v12" stroke="#1157ee" stroke-width="3" stroke-linecap="round"/>
+    <rect x="594" y="68" width="132" height="10" rx="5" fill="#0a1633" opacity="0.75"/>
+    <rect x="594" y="87" width="84" height="8" rx="4" fill="#8b95a9" opacity="0.7"/>
+  </g>
+  <g>
+    <rect x="44" y="196" width="142" height="54" rx="14" fill="#ffffff" stroke="#e4e9f2"/>
+    <rect x="64" y="212" width="100" height="9" rx="4" fill="#0a1633" opacity="0.7"/>
+    <rect x="64" y="228" width="62" height="8" rx="4" fill="#8b95a9" opacity="0.7"/>
+  </g>
+</svg>
